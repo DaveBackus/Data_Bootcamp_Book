@@ -2,39 +2,77 @@
 
 
 ---
-**Overview.**  An introduction to core(?) Python. It's not enough to do anything interesting yet, but the same tools and ideas will show up throughout the course.
+**Overview.**  We work our way through some Python basics. It's not enough to do anything interesting, but the same concepts show up in other situations.    
 
-**Python tools.**  Core Python, data types (numbers, strings), lists, functions, objects and methods.
+**Python tools.**  numbers, strings, lists, functions, objects and methods.
 
-
-**Applications.**  String and list manipulation.  (That may sound like gibberish now, but it will help us later.)
+**Buzzwords.** Isn't that enough?  
 
 ---
 
-Basic programming.  Not enough to do anything interesting, but a good foundation for what follows.
+We work our way through the rudiments of Python programming.  You'll hear terms like "floats" and "strings,"" and "objects" and "methods.""  Don't panic, it's just jargon.  We are doing this in Python, of course, but most of the concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear in more practical settings.  
+
+Your first job is to start up Spyder.  If you don't know what that means, return to the previous chapter. Once you've done that,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "modules" or "packages" that allow Python to do more advanced things -- data management and graphics, for example.
 
 
 ## The logic of Python programs
 
-work through a set of commands in order, not like Excel
+In a spreadsheet program, such as Excel, we can connect cells to other cells.  When we change one, any other cells conected to it adjust automatically.  
 
-Lines.  Each line is a new command.
-Unlike Excel, the program goes through the lines one at a time.
+Most computer programs, including Python programs, don't work that way.  They run one line at a time, starting at the top of the program and following instructions until they reach the end or stop for some other reason.  A program is just a detailed list of things we want the computer to do.  Most of the programs in this course have the structure:  
 
-Continuation automatic if you have parens or brackets that need to be closed (``implicit'').
-Blank lines fine, often helpful in making code easier to read.
+* Input data.  
+* Manipulate the data until it's in the form we want. 
+* Produce some graphics that summarize the data in a compelling way.  
+
+Each of these bullets would be associated with a number of lines of code, but that's the basic idea:  do one thing at a time until we have something useful. 
+
+"One thing at a time" is also good advice.  As you learn to write more complex programs, it's good practice to break a long program into smaller manageable pieces.  You'll see how that works as we go along.  
+
+
+## Calculations with numbers
+
+One of the things we can do in Python is numerical calculations.  which is a good thing:  that's a lot of what managing data is all about, diving one thing by another, adding things, up, and so on. Here are some simple calculations you can type into Spyder's IPython console one at a time.  For each one, pay attention to what happens:  
+
+* 2*3
+* 2 * 3
+* 2/3
+* 2^3 
+* 2**3
+* log(3) 
+
+The first one multiplies 2 times 3, and gives us 6 as the answer.  The input and output for the first one look like this in the console:
+```
+In [1]: 2*3
+Out[1]: 6
+```
+As we continue, the number [1] increases to [2], [3], and so on.  The second calculation, ```2 * 3```, does the same thing.  The point is that space around the * doesn't change the output.  The third one is division.  The input and output are 
+```
+In [3]: 2/3
+Out[3]: 0.6666666666666666
+```
+The fourth one, which we might guess is 2 to the power 3, gives us 
+```
+In [4]: 2^3
+Out[4]: 1
+```
+We expected this to give us 8, what's going on?  The short answer is that this doesn't do powers, it does something else (mtyn).  If we want to do exponentiation, we do it this way:
+```
+In [4]: 2**3
+Out[4]: 8
+```
+The last one is the log function.  It gives us (among other things) the message:  ```NameError: name 'log' is not defined`'``.   We can use functions like ```log`` and ``sqrt``, just as we do in Excel, but we need to import them specially.  
+
+
+
+## Assignments
+
+  x = 2, y = 3.5, z = x/y, etc
 
 More
 \href{https://docs.python.org/3.4/reference/lexical_analysis.html#line-structure}{here}
 and \href{http://stackoverflow.com/questions/53162/how-can-i-do-a-line-break-line-continuation-in-python}
 {here}.
-
-
-## Operations with numbers
-
-Operations:  2*3, 2 * 3, 2/3, 2^3, 2**3, log(3), etc
-
-Assignments:  x = 2, y = 3.5, z = x/y, etc
 
 
 ## Comments and printing
@@ -44,7 +82,8 @@ Comments:  , """, #%%, print(x), etc. :
 %[?? more on print?]
 
 
-## Strings:  a = 'some', b = 'thing', c = a+b, d = '11.32', etc.
+## Strings
+ a = 'some', b = 'thing', c = a+b, d = '11.32', etc.
 
 
 ## Quotes
@@ -136,6 +175,12 @@ all = numbers + strings, type(all),
 print(all),
 all[0], all[-1], all[3:], etc.}
 
+
+## Python 2 and 3
+
+There's a lot of code around written in earlier versions of Python, typically Python 2.7.  It's there because the people who wrote it started before Python 3 was up and running.  Since we're starting from scratch, we are planting ourselves firmly in Python 3 territory.  Still, you're likely to run across examples of Python 2 on the internet. The easiest way to tell the difference is the print command:  ```print(x)``` in Python 3 was ```print x`` (no parentheses) in Python 2.  There are lots of other differences, which is why it's essential we all use Python 3.  
+
+
 ## Programming style
 
 Yes, style counts.
@@ -168,9 +213,11 @@ of organization, we can look up its properties when we need to.
 
 ??
 
-## References
+## Resources 
 
-* Codecademy...
+Here are some online resources we have found helpful:  
+
+* Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).
 
 * Sargent-Stachurski...
 
