@@ -34,7 +34,7 @@ import pandas as pd
 We've found that csv files
 are the most useful common data format, far better than xls or xlsx.
 Its simple structure (entries separated by commas, tabs, or spaces) allows easy and rapid input.
-That's a general statement, not a statement about Python.
+That's a general statement, not a statement about Python.`
 
 Suppose you have (as we do) a csv file you'd like to input into Python.
 We can read it with the ``read_csv`` command in pandas:
