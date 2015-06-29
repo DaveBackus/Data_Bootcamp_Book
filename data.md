@@ -17,9 +17,31 @@
 
 ## Places to look
 
+Spend a couple hours some time, sitting in a comfortable chair and browsing these sources:  
+
+**Blogs with data.** 
+
+http://conversableeconomist.blogspot.com/
+FRED blog 
+r bloggers (an aggregator) 
 
 
 
+
+**Data journalism.** 
+
+Upshot
+
+538 
+
+Quartz:  http://atlas.qz.com/  Note data source link and download.
+
+
+**Graphics.** 
+
+Flowing data 
+
+DataViz and Data Viz Done Right 
 
 ## Reading data into Python
 

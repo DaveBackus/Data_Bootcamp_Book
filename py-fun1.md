@@ -2,17 +2,17 @@
 
 
 ---
-**Overview.**  We work our way through some Python basics. It's not enough to do anything interesting, but the same concepts show up in other situations.    
+**Overview.**  We work our way through some Python basics. We don't cover enough ground to do serious data work, but it lays a solid foundation  to build on.  
 
-**Python tools.**  numbers, strings, lists, functions, objects and methods.
+**Python tools.**  Numbers, strings, lists, functions, objects and methods.
 
 **Buzzwords.** Isn't that enough?  
 
 ---
 
-We work our way through the rudiments of Python programming.  You'll hear terms like "floats" and "strings,"" and "objects" and "methods.""  Don't panic, it's just jargon.  We are doing this in Python, of course, but most of the concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear in more practical settings.  
+We're now ready to do some programming.  We'll start with the rudiments of Python.  We'll run across terms like "strings," "objects," and "methods."  Don't panic, it's just jargon.  This is Python, of course, but most of the concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear in more practical settings.  
 
-Your first job is to start up Spyder.  If you don't know what that means, return to the previous chapter. Once you've done that,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "modules" or "packages" that allow Python to do more advanced things -- data management and graphics, for example.
+We intersperse Python concepts with an introduction to Spyder, the Python environment we described earlier.  Your first job is to start up Spyder.  If you don't know what that means, return to the previous chapter. Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "modules" or "packages" that allow Python to do more advanced things -- data management and graphics, for example.  We'll deal with them later.  
 
 
 ## The logic of Python programs
@@ -25,14 +25,14 @@ Most computer programs, including Python programs, don't work that way.  They ru
 * Manipulate the data until it's in the form we want. 
 * Produce some graphics that summarize the data in a compelling way.  
 
-Each of these bullets would be associated with a number of lines of code, but that's the basic idea:  do one thing at a time until we have something useful. 
+Each of these bullets is typically associated with a number of lines of code, but that's the basic idea:  Do one thing at a time until we have something useful. 
 
 "One thing at a time" is also good advice.  As you learn to write more complex programs, it's good practice to break a long program into smaller manageable pieces.  You'll see how that works as we go along.  
 
 
 ## Calculations with numbers
 
-One of the things we can do in Python is numerical calculations.  which is a good thing:  that's a lot of what managing data is all about, diving one thing by another, adding things, up, and so on. Here are some simple calculations you can type into Spyder's IPython console one at a time.  For each one, pay attention to what happens:  
+One of the things we can do in Python is numerical calculations.  That's a good thing:  that's a lot of what managing data is all about, adding things up, dividing one thing by another, and so on. Here are some simple calculations you can type into Spyder's IPython console one at a time.  For each one, pay close attention to what happens:  
 
 * 2*3
 * 2 * 3
@@ -61,13 +61,29 @@ We expected this to give us 8, what's going on?  The short answer is that this d
 In [4]: 2**3
 Out[4]: 8
 ```
-The last one is the log function.  It gives us (among other things) the message:  ```NameError: name 'log' is not defined`'``.   We can use functions like ```log`` and ``sqrt``, just as we do in Excel, but we need to import them specially.  
+The last one is the log function.  It gives us (among other things) the message:  ```NameError: name 'log' is not defined```.   We can use functions like `log` and `sqrt`, just as we do in Excel, but we need to import them specially.  (And we will, but not yet.)
 
 
+## Assignments -- and Spyder 
 
-## Assignments
+Now let's write a program in the editor.  Copy these commands into a new program in the Spyder editor:  
+```Python 
+w = 2*3 
+x = 2**3 
+y = x/w
+z = a/x 
+```
+What do they do? Well, the first one takes the value 2 and stores it in the variable w.  We say we assigned 2 to w.  The second line assigns the value 2**3 = 8 to a new variable x.  And the third line divides x by w and assigns it to y.  We'll hold off on the last line.  
 
-  x = 2, y = 3.5, z = x/y, etc
+If we save this to a file (we have this and other commands in the file bootcamp_basics.py), we can run it in Spyder by clicking on the green arrow at the top of the editor window.  
+
+If we run the code, the last line triggers an error message:  ``NameError: name 'a' is not defined.''  Because, of course, we have not assigned anything to a or otherwise said what it might be.  
+
+Double assignments. ...  If you find this confusing, here's good advice:  don't do it!  
+
+## Lines and cells 
+
+?? 
 
 More
 \href{https://docs.python.org/3.4/reference/lexical_analysis.html#line-structure}{here}
@@ -75,7 +91,11 @@ and \href{http://stackoverflow.com/questions/53162/how-can-i-do-a-line-break-lin
 {here}.
 
 
+
+
 ## Comments and printing
+
+
 
 Comments:  , """, #%%, print(x), etc. :
 
@@ -83,6 +103,7 @@ Comments:  , """, #%%, print(x), etc. :
 
 
 ## Strings
+
  a = 'some', b = 'thing', c = a+b, d = '11.32', etc.
 
 
@@ -108,6 +129,7 @@ There are lots of occasions when we want --- or need -- to change type.
 Suppose, for example, we want to convert {\tt year = '2011'},
 which is defined as a string, to a number.
 We can do that with {\tt int(year)}.  (Or {\tt float}, but we have something else in mind.
+
 
 ## Functions and methods
 
@@ -167,6 +189,13 @@ Take ```lastfirst```
 
 Collections of things, possibly different, defined by square brackets
 {\tt []} with commas between items.
+
+
+## Copies 
+
+
+## Slicing
+
 Slicing conventions similar to strings.
 Examples:  {\tt numbers = [x, y, z], type(numbers),
 print(numbers),
@@ -174,6 +203,15 @@ strings = [a, b, c, d],
 all = numbers + strings, type(all),
 print(all),
 all[0], all[-1], all[3:], etc.}
+
+Examples:  Add first and list, first and last with space in middle.  
+
+**Exercise.** 
+Last comma first.  
+
+**Exercise.** 
+Convert to lower case.  Upper case.  
+Last name upper case.  
 
 
 ## Python 2 and 3
@@ -183,7 +221,7 @@ There's a lot of code around written in earlier versions of Python, typically Py
 
 ## Programming style
 
-Yes, style counts.
+Yes, style counts.  
 
 PEP8 etc \\
 \url{https://google-styleguide.googlecode.com/svn/trunk/pyguide.html}
@@ -198,11 +236,13 @@ Do in class?  \\
 \url{http://www.reddit.com/r/Python/comments/35ubwo/newbie_for_programming_i_am_working_on_this/}
 
 
-\item {\bf Other data structures.\/} [??]
-The term data structure refers to the organization of a collection of data.
-A list is a data structure.  ...
+##  Other data structures
 
-\url{http://en.wikipedia.org/wiki/Data_structure}
+This whole section is mtyn:  we recommend you skim it, but don't worry about the details, you can come back to them if needed.  
+
+The term **data structure** refers to the organization of a collection of data.  A list is a data structure.  ...  
+
+http://en.wikipedia.org/wiki/Data_structure
 
 Examples: tuples, dictionaries, and sets.  We'll cover them later as needed.
 If you run across one of these terms, keep in mind it's just a different form
@@ -217,13 +257,22 @@ of organization, we can look up its properties when we need to.
 
 Here are some online resources we have found helpful:  
 
-* Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).
 
-* Sargent-Stachurski...
+* Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).
 
 *  {Python tutorial},
 \href{https://docs.python.org/3.4/tutorial/introduction.html}{Section 3}.
 
-\item ** check this out:  \url{https://wiki.python.org/moin/SimplePrograms}
+
+* check this out:  https://wiki.python.org/moin/SimplePrograms
+
+* Django Girls...  http://tutorial.djangogirls.org/en/python_introduction/index.html
+Django is for web development..
+
+
+
+* Sargent-Stachurski...
+
+
 
 This is a test

@@ -6,11 +6,13 @@
 
 **Python tools.**  Importing packages, graphing with Matplotlib.
 
+**Buzzwords.** Data visualization, 
+
 **Applications.**  Incomes of college majors.??
 
 ---
 
-Graphics are one of the great advances of the modern world.  Graphs have always been helpful in describing data or concepts, but they're a lot easier now that they were a few decades ago. We've gotten so good at drawing pictures that we invented a new term:  data visualization.
+Computer graphics are one of the great advances of the modern world.  Graphs have always been helpful in describing data or concepts, but they're a lot easier to produce now than they were a few decades ago. In fact, we've gotten so good at drawing pictures that we invented a new term:  data visualization**.
 
 That's the good news.  The bad news, or at least a fact of life, is that graphics have lots of moving parts.  ...
 
