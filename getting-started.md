@@ -79,8 +79,9 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 
 * Create a new file.  Click on File (upper left), then New file.  That should give you a new file with some junk at the top that you can ignore or delete.  
 * Add code to file.  Enter the following lines of code at the bottom of your file (cut and paste should do it): 
+
 ```
-import sys      # import system moodule (don't ask) 
+import sys      # import system module (don't ask) 
 
 print('\nWhat version of Python? \n', sys.version, '\n', sep='') 
 
@@ -90,6 +91,7 @@ if float(sys.version_info[0]) < 3.0:
 else:
     print('Congratulations, Python is up to date!')
 ```
+
 * Comments (mtyn):  (i) Anything following a hashtag (#) is a comment.  (ii) Blank lines are optional here, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Contratulations, etc."
 * Save your code.  Click on File at the top left, then Save As, and save in the directory of your choice under the name "bootcamp\_test.py" (Python programs always have the extension py).  We recommend the directory "Data\_Bootcamp" that we suggested earlier. 
 * Run it.  Click on the green triangle above the editor and run your program.  
