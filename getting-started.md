@@ -80,7 +80,7 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 * Create a new file.  Click on File (upper left), then New file.  That should give you a new file with some junk at the top that you can ignore or delete.  
 * Add code to file.  Enter the following lines of code at the bottom of your file (cut and paste should do it): 
 
-```
+   ```Python
 import sys      # import system module (don't ask) 
 
 print('\nWhat version of Python? \n', sys.version, '\n', sep='') 
