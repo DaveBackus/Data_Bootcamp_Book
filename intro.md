@@ -63,10 +63,16 @@ Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-wh
 
 He adds:  "Python people are pretty cool," so there's that, too. (Ford's article, "What is Code," takes up a whole issue of Bloomberg BusinessWeek.  It's a classic, well worth the time.)
 
+## Our plan
+
+The book mixed data and programming together.  That makes it easier to understand the context, but somewhat harder to use the book as a programming reference.  We wtill think it makes sense.  
+
+The next two chapters, however, are concerned only with Python.  It's essential to have the basics covered before we move on to other things, so that's what we do.  
+
 
 ## Work habits
 
-There's no shortcut in learning how to code:  you simply need to spend hours -- and hours -- doing it.  Progress will seem slow at first, but if you stick with it things will start to look familiar, and even make sense.  As you work your way up the learning curve, keep this advice in mind:  
+There are no shortcuts in learning how to code:  you simply need to spend hours -- and hours -- doing it.  Progress will seem slow at first, but if you stick with it things will start to look familiar, and even make sense.  As you work your way up the learning curve, keep this advice in mind:  
 
 **Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around.  Have fun!
 
@@ -74,7 +80,7 @@ There's no shortcut in learning how to code:  you simply need to spend hours -- 
 
 **Work on your Google fu.**  You will find that many of your questions have been asked before -- and answered.  One way to find them:  Google something like "python [problem]."  There are answers in lots of places, but one of the best is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
 
-**Ask for help.**  If you get stuck, ask for help --- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
+**Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
 
 
 <!-- ## References --> 

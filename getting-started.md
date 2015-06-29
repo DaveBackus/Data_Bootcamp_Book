@@ -10,25 +10,25 @@
 
 ---
 
-We're going to install Python.  There are lots of ways to do this, but we recommend one.  Then we'll run a test program to make sure everything is working.  
+There are lots of ways to install Python, but we recommend one:  Anaconda.  We show you how to install Anaconda, then run a test program to make sure everything is working.  
 
-Modern programming languages have a number of moving parts.  One part is the program itself.  A second is the collection of packages that do specific things.  Python, for example, has packages that extend Python to manage data, create graphs, and perform statistical analysis. Together, these components are referred to as a **distribution**.  We'll use the Anaconda distribution, which includes Python and some of its more popular packages. The good people at [Continuum Analytics](https://store.continuum.io/cshop/anaconda/) have made sure that all of these parts work together (most of the time).  
+Modern programming languages have a number of moving parts.  One part is the program itself.  A second is the collection of packages that do specific things.  Python, for example, has packages that extend Python to manage data, create graphs, perform statistical analysis, and manage web sites. Together, these components are referred to as a **distribution**.  We'll use the Anaconda distribution, which includes Python and some of its more popular packages. The good people at [Continuum Analytics](https://store.continuum.io/cshop/anaconda/) have made sure that all of these parts work together (most of the time).  
 
 Another important part of a programming language is the user-interface or **environment** for writing code and executing it.  We'll use two.  **Spyder** is an editor with a button to run code and windows for experimenting and checking documentation.  An **IPython notebook** is a combination of code, output, and documentation that we can run interactively in **Jupyter**.  Both of these environments call on Python more or less automatically:  press a button and you're good to go.  Even better, both come with the Anaconda distribution. 
 
 
-## Downloading Anaconda 
+## Installing Anaconda 
 
 Follow these instructions.  By which we mean: **follow these instructions exactly!** Creativity is a wonderful thing, but here it will cost you dearly. 
  
 
-**1. Download the Anaconda installer.**  Click [here](http://continuum.io/downloads) to go to the download page.  Click on the logo of your operating system (Windows, Mac OS, or Linux) and "I want Python 3.4" to choose the appropriate version.  Then click on "Python 3.4 Graphical Installer" to download the installer.
+**Step 1. Download the Anaconda installer.**  Click [here](http://continuum.io/downloads) to go to the download page.  Click on the logo of your operating system (Windows, Mac OS, or Linux) and "I want Python 3.4" to choose the appropriate version.  Then click on "Python 3.4 Graphical Installer" to download the installer.
 
 **Make sure you get Python 3.4.**  If you accidentally install Python 2.7, or anything other than 3.4, you should uninstall it and start over.  
 
-**2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says.  
+**Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says.  
 
-**3. Find and run Launcher.**  You should now have Anaconda’s Launcher ready to go.  The trick is finding it.  Look or search wherever programs are on your computer.  In Windows 7, you click on the Start button and go to all programs. You should see an Anaconda folder, which contains (among other things) Launcher. Click on it.  In Windows 8, type “Launcher” into the search box.  On Macs, Finder is similar. 
+**Step 3. Find and run Launcher.**  You should now have Anaconda’s Launcher ready to go.  The trick is finding it.  Look or search wherever programs are on your computer.  In Windows 7, you click on the Start button and go to all programs. You should see an Anaconda folder, which contains (among other things) Launcher. Click on it.  In Windows 8, type “Launcher” into the search box.  On Macs, Finder is similar. 
 <!-- more ?? Macs? Windows 9/10 -->
 
 **Pro tip.**  Once you find Launcher, you might put a shortcut in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 

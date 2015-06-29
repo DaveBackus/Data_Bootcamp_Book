@@ -1,7 +1,7 @@
 # Summary
 
 * [Preface](README.md)
-* [What's this about?](intro.md)
+* [What's this book about?](intro.md)
 * [Getting started](getting-started.md)
 * [Python fundamentals](py-fun1.md)
 * [The data mentality](data.md)
