@@ -80,7 +80,7 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 * Create a new file.  Click on File (upper left), then New file.  That should give you a new file with some junk at the top that you can ignore or delete.  
 * Add code to file.  Enter the following lines of code at the bottom of your file (cut and paste should do it): 
 
-   ```Python
+   ```
 import sys      # import system module (don't ask) 
 
 print('\nWhat version of Python? \n', sys.version, '\n', sep='') 
@@ -89,7 +89,7 @@ if float(sys.version_info[0]) < 3.0:
     raise Exception('Program halted, old version of Python. \n', 
                     'Sorry, you need to install Anaconda again.')
 else:
-    print('Congratulations, Python is up to date!')
+    print('Congratulations, you have Python 3!')
 ```
 
 * Comments (mtyn):  (i) Anything following a hashtag (#) is a comment.  (ii) Blank lines are optional here, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Contratulations, etc."
