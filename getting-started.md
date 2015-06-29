@@ -10,11 +10,11 @@
 
 ---
 
-We're going to install Python.  There are lots of ways to do this, but recommend one.  Then we'll run a test program to make sure everything is working.  
+We're going to install Python.  There are lots of ways to do this, but we recommend one.  Then we'll run a test program to make sure everything is working.  
 
 Modern programming languages have a number of moving parts.  One part is the program itself.  A second is the collection of packages that do specific things.  Python, for example, has packages that extend Python to manage data, create graphs, and perform statistical analysis. Together, these components are referred to as a **distribution**.  We'll use the Anaconda distribution, which includes Python and some of its more popular packages. The good people at [Continuum Analytics](https://store.continuum.io/cshop/anaconda/) have made sure that all of these parts work together (most of the time).  
 
-Another important part of a programming language is the user-interface or **environment** for writing code and executing it.  We'll use two.  **Spyder** is an editor with a button to run code and windows for experimenting and checking documentation.  An **IPython notebook** is a combination of code, output, and documentation that we can run interactively in **Jupyter**.  Both of these environments call on Python more or less automatically:  press a button and you're good to go.
+Another important part of a programming language is the user-interface or **environment** for writing code and executing it.  We'll use two.  **Spyder** is an editor with a button to run code and windows for experimenting and checking documentation.  An **IPython notebook** is a combination of code, output, and documentation that we can run interactively in **Jupyter**.  Both of these environments call on Python more or less automatically:  press a button and you're good to go.  Even better, both come with the Anaconda distribution. 
 
 
 ## Downloading Anaconda 
@@ -33,12 +33,12 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 
 **Pro tip.**  Once you find Launcher, you might put a shortcut in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 
 
-Once Launcher is running -- it can take 60 seconds or more -- you should see a teardrop with a snake in the upper left (an anaconda?) followed by the word Launcher.  Also at the top it should say Python 3.4.x.  Below that is a list of apps: programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for running Python programs.  We'll use both. <!-- If there’s an update button to the right of ipython-notebook, click on it.  [??] -->  There's more documentation at [the link](http://docs.continuum.io/anaconda-launcher/index.html). 
+Once Launcher is running -- it can take 60 seconds or more -- you should see a teardrop with a snake in the upper left (an anaconda?) followed by the word Launcher.  Also at the top it should say Python 3.4.x.  Below that is a list of apps: programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for running Python programs.  We'll use both.  
 
 You now have Python installed and ready to run.  Congratulations!  
 
 
-## Environments
+## Environments 
 
 Environments are software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and the IPython notebook.  
 
@@ -56,7 +56,7 @@ From here, we can launch our two favorite Python evironments.
 
 To start Spyder from Launcher, click on the Launch button to the right of spyder-app. We find it a little slow, but it should start up eventually.  Spyder has a number of different windows. The most important are:   
 
-* The editor.  This is on the left.  We can write and edit programs here and save them to your hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this another time.    
+* Editor.  This is on the left.  We can write and edit programs here and save them to your hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this another time.    
 * IPython console.  This is on the right at the bottom -- look for the tab with this label.  Here we can write and test single lines of code and see how they work.  Also some other things that we'll touch on later.    
 * Object explorer.  This is on the right at the top.  Here we can get documentation on Python commands, which is really useful.  
 
@@ -96,7 +96,7 @@ else:
 * Save your code.  Click on File at the top left, then Save As, and save in the directory of your choice under the name "bootcamp\_test.py" (Python programs always have the extension py).  We recommend the directory "Data\_Bootcamp" that we suggested earlier. 
 * Run it.  Click on the green triangle above the editor and run your program.  
 
-The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but better to know that now than run into problems later. Have a cold drink anyway and collect your th
+The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but better to know that now than run into problems later. Have a cold drink anyway and catch your breath.  
 
 
 **IPython**.  We prefer to write code in an editor and will stick with Spyder for most of the course.  But some people prefer IPython notebooks.  They're good for talks if you want to show both code and output, and intersperse it with text.  They can also be used for reports.  As we've seen from examples, you can read through them more easily than naked code.  Here are [three](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point.   
@@ -104,21 +104,21 @@ The output appears in the IPython console in the lower right corner.  If you get
 To run the same code in an IPython notebook, start up the IPython/Jupyter app in Launcher.  (If you're not sure how to do that, go back to the previous section.) Once you have it up and running:  
 
 * Choose the directory. You should see the directory structure of your computer in Jupyter.  Navigate to the "Data_Bootcamp" directory (folder), whch we hope you created earlier, or some other directory where you'd like to store files for this course.  
-<!-- (If you haven't created the directory yet -- what are you waiting for? -- you can create it here.  Choose Folder in the New menu in the upper right corner.  That will add Untitled Folder in your list of files.  Click on the box next to it, and Click on Rename in the top left corner.) -->
 * Create a new notebook.  Click on the New menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.  
 * Set the file name.  To the right of the word Jupyter, you'll see the word Untitled.  Change it to bootcamp_test.  
 * Enter code.  Click on the menu below the word Help and choose Code.  Then enter the code listed above in the empty cell.  
 * Run code.  Click on Cell at the top and choose Run All.    
 
-Output will appear in the same cell below your code.  If it says "Congratulations," you're all set.  
+Output will appear in the same cell below your code.  If it says "Congratulations etc." you're all set.  
 
 ## We're now ready to go 
 
-If all went as planned, you're now ready to write and run Python programs in two environments.  That's more than enough.  Take a bow and accept the applause you've earned.  
+You're now ready to write and run Python programs in two environments.  That's more than enough.  Take a bow.  
 
 
 ## Wordplay
 
 Python is named for Monty Python, a group of comedians whose humor appeals to the tech crowd.  Idle, a well-know Python editor, is a reference to Python-member Eric Idle.  The [Python Package Index](https://pypi.python.org/pypi), a repository of Python packages, is commonly known as the [Cheese Shop](http://youtu.be/PPN3KTtrnZM), a reference to a famous Monty Python skit.  Anaconda is, of course, a play on the snake theme.   
+
 
 
