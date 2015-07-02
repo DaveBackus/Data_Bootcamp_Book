@@ -69,3 +69,14 @@ We'll focus here on the input-output tools:
 ## Object-oriented matplotlib
 
 
+
+## Links 
+
+Viz of the Day
+Tableau
+Viz Wiz
+
+Graphic Detail
+
+
+

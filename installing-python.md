@@ -63,7 +63,7 @@ To start Spyder from Launcher, click on the Launch button to the right of spyder
 You can move these windows around by dragging and dropping.  If you mess up and want to revert to the original, look for View at the top and click on "Reset window layout." 
 
 
-**IPython.**  IPython is another graphical environment, one that allows you to combine code, output, words, and graphics.  Lots of people use IPython notebooks to write Python programs and, especially, to present their work.  We'll use them in class once we get going.  Here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb); there's a more extensive list in the [IPython gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
+**IPython.**  IPython ("interactive Python") is another graphical environment, one that allows you to combine code, output, words, and graphics.  Lots of people use IPython notebooks to write Python programs and, especially, to present their work.  We'll use them in class once we get going.  Here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb); there's a more extensive list in the [IPython gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
 
 To create or run an IPython notebook from Launcher, click on the Launch button to the right of ipython-notebook.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see at the top the word "Jupyter," which is the name of this environment.  (It used to say IPython, but now the same environment handles code in Julia, R, and other languages.)  Just below you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.  
 
@@ -80,7 +80,7 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 * Create a new file.  Click on File (upper left), then New file.  That should give you a new file with some junk at the top that you can ignore or delete.  
 * Add code to file.  Enter the following lines of code at the bottom of your file (cut and paste should do it): 
 
-   ```
+```python 
 import sys      # import system module (don't ask) 
 
 print('\nWhat version of Python? \n', sys.version, '\n', sep='') 
@@ -111,9 +111,10 @@ To run the same code in an IPython notebook, start up the IPython/Jupyter app in
 
 Output will appear in the same cell below your code.  If it says "Congratulations etc." you're all set.  
 
-## We're now ready to go 
 
-You're now ready to write and run Python programs in two environments.  That's more than enough.  Take a bow.  
+## We're ready to go! 
+
+We're now ready to write and run Python programs in two environments.  That's more than enough.  Take a bow.  
 
 
 ## Wordplay

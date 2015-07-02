@@ -1,47 +1,14 @@
-# The data mentality
 
-
----
-**Overview.**
-
-**Python tools.**  Pandas data input from csv and xls files, general properties of DataFrames.
-
-**Applications.**  Income by college major.??
+# Working with data 
 
 ---
+**Overview.** 
 
-## The data mentality
+**Python tools.**  
 
+**Buzzwords.**  
 
-
-
-## Places to look
-
-Spend a couple hours some time, sitting in a comfortable chair and browsing these sources:  
-
-**Blogs with data.** 
-
-http://conversableeconomist.blogspot.com/
-FRED blog 
-r bloggers (an aggregator) 
-
-
-
-
-**Data journalism.** 
-
-Upshot
-
-538 
-
-Quartz:  http://atlas.qz.com/  Note data source link and download.
-
-
-**Graphics.** 
-
-Flowing data 
-
-DataViz and Data Viz Done Right 
+---
 
 ## Reading data into Python
 
@@ -51,6 +18,11 @@ We'll talk more about packages later, but for now just put these lines above...
 ```
 import pandas as pd
 ```
+
+We'll talk more later about how to import packages that extend Python's capabilities.  Pandas is the data management package... as [they say](http://pandas.pydata.org/):  "open source library for high-performance, easy-to-use data structures and data analysis tools in Python."
+
+
+
 
 **Reading csv files.**
 We've found that csv files
@@ -72,6 +44,9 @@ If you try {\tt type(df)} you'll find that {\tt df} is a DataFrame,
 the standard object type in pandas.
 It's a table of numbers, much like a sheet in a spreadsheet program,
 with labels for rows (the index) and columns (the variables).
+
+
+## Data frames 
 
 Some of the methods you could try:
 {\tt df.columns} (the column labels),
