@@ -79,4 +79,8 @@ Viz Wiz
 Graphic Detail
 
 
+# Examples 
+
+http://fivethirtyeight.com/datalab/the-extreme-economic-outlier-that-is-greece-in-7-charts/
+
 

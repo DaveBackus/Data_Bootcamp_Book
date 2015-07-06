@@ -28,6 +28,8 @@ r bloggers (an aggregator)
 
 
 
+
+
 **Data journalism.** 
 
 Upshot
@@ -43,7 +45,9 @@ Flowing data
 
 DataViz and Data Viz Done Right 
 
+Atlas
 
+https://public.tableau.com/s/gallery
 
 ***************************
 

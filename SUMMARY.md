@@ -10,3 +10,4 @@
 * [Emerging market indicators](emerging.md)
 * [Randomness in economic and financial data](random.md)
 * [Business cycle indicators](indicators.md)
+* [Other cool stuff](other.md)

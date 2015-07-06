@@ -290,6 +290,8 @@ In some cases, we even use function() if we don't have any input.  [??]
 Here's a \href{https://docs.python.org/3.4/library/functions.html}{list}.
 print...  len...  [??]
 
+https://www.reddit.com/r/Python/comments/3c344g/so_apparently_type_is_of_type_type/
+
 **Exercise.**
 Wbat do the functions ```float```, ```int```, and ```str``` do?
 What other functions would you like to know about?
@@ -376,6 +378,8 @@ of organization, we can look up its properties when we need to.
 
 ??
 
+Check this out https://alexbers.com/python_quiz/ 
+
 ## Resources 
 
 Here are some online resources we have found helpful:  
@@ -395,6 +399,8 @@ Django is for web development..
 
 
 * Sargent-Stachurski...
+
+https://www.kevinsheppard.com/Python_Course 
 
 
 
