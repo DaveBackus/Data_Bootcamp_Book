@@ -2,6 +2,8 @@
 
 This [GitBook](https://www.gitbook.com/book/davebackus/test/details) was written by Dave Backus, Chase Coleman, and Spencer Lyon for a [course](https://github.com/DaveBackus/Data_Bootcamp#data-bootcamp) at NYU's Stern School of Business.  The intent is to give students experience with economic and financial data and to introduce programming novices to the benefits of moving beyond Excel.  It's based on the Python programming language, which we think is the tool of choice for modern data analysis.  We use Python's data management (pandas) and graphics (matplotlib) packages extensively.  
 
+The book comes in multiple formats.  You can access it on the internet.  Or you can download (and print) a pdf file.  The former comes with links, which we think is a huge advantage, and can be updated quickly, but if you like paper by all means try the pdf.   
+
 
 ## Acknowledgements 
 

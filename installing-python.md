@@ -1,4 +1,4 @@
-# Getting started with Python 
+# Installing Python 
 
 
 ---
@@ -6,7 +6,7 @@
 
 **Python tools.**  Anaconda distribution, Spyder and IPython coding environments.  
 
-**Buzzwords.**  Distribution, environment, mtyn. 
+**Buzzwords.**  Distribution, environment, IPython notebook, mtyn. 
 
 ---
 
@@ -14,7 +14,7 @@ There are lots of ways to install Python, but we recommend one:  Anaconda.  We s
 
 Modern programming languages have a number of moving parts.  One part is the program itself.  A second is the collection of packages that do specific things.  Python, for example, has packages that extend Python to manage data, create graphs, perform statistical analysis, and manage web sites. Together, these components are referred to as a **distribution**.  We'll use the Anaconda distribution, which includes Python and some of its more popular packages. The good people at [Continuum Analytics](https://store.continuum.io/cshop/anaconda/) have made sure that all of these parts work together (most of the time).  
 
-Another important part of a programming language is the user-interface or **environment** for writing code and executing it.  We'll use two.  **Spyder** is an editor with a button to run code and windows for experimenting and checking documentation.  An **IPython notebook** is a combination of code, output, and documentation that we can run interactively in **Jupyter**.  Both of these environments call on Python more or less automatically:  press a button and you're good to go.  Even better, both come with the Anaconda distribution. 
+Another important part of a programming language is the user-interface or **environment** for writing code and executing it.  We'll use two.  **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  An **IPython notebook** is a combination of code, output, and documentation that we can run interactively in **Jupyter**.  Both of these environments call on Python more or less automatically:  press a button and you're good to go.  Even better, both come with the Anaconda distribution. 
 
 
 ## Installing Anaconda 
@@ -33,14 +33,14 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 
 **Pro tip.**  Once you find Launcher, you might put a shortcut in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 
 
-Once Launcher is running -- it can take 60 seconds or more -- you should see a teardrop with a snake in the upper left (an anaconda?) followed by the word Launcher.  Also at the top it should say Python 3.4.x.  Below that is a list of apps: programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for running Python programs.  We'll use both.  
+Once Launcher is running -- be patient, it can take 60 seconds or more -- you should see a teardrop with a snake in the upper left (an anaconda?) followed by the word Launcher.  Also at the top it should say Python 3.4.x.  Below that is a list of apps: programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for running Python programs.  
 
 You now have Python installed and ready to run.  Congratulations!  
 
 
-## Environments 
+## Coding environments 
 
-Environments are software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and the IPython notebook.  
+Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and the IPython notebook.  
 
 We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  It should look like [this picture](http://continuum.io/blog/new-launcher).  You will see a list of applications:  
 
@@ -52,18 +52,18 @@ We access both through Launcher.  If Launcher is open, great.  If not, please st
 From here, we can launch our two favorite Python evironments. 
 
 
-**Spyder.**  Spyder is a graphical environment with an editor for writing programs, a console for trying out one line at a time, and access to help.  It’s our preferred Python environment. Experts often use their own editors, but unless you’re one of them this is a great place to start.  
+**Spyder.**  Spyder is a graphical environment with an editor for writing programs, a console for trying out one line at a time, and access to help.  It’s our preferred Python environment. Experts often use their own editors, but unless you’re one of them this is where you should start.  
 
 To start Spyder from Launcher, click on the Launch button to the right of spyder-app. We find it a little slow, but it should start up eventually.  Spyder has a number of different windows. The most important are:   
 
-* Editor.  This is on the left.  We can write and edit programs here and save them to your hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this another time.    
+* Editor.  This is on the left.  We can write and edit programs here and save them to our hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this later on.    
 * IPython console.  This is on the right at the bottom -- look for the tab with this label.  Here we can write and test single lines of code and see how they work.  Also some other things that we'll touch on later.    
 * Object explorer.  This is on the right at the top.  Here we can get documentation on Python commands, which is really useful.  
 
 You can move these windows around by dragging and dropping.  If you mess up and want to revert to the original, look for View at the top and click on "Reset window layout." 
 
 
-**IPython.**  IPython ("interactive Python") is another graphical environment, one that allows you to combine code, output, words, and graphics.  Lots of people use IPython notebooks to write Python programs and, especially, to present their work.  We'll use them in class once we get going.  Here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb); there's a more extensive list in the [IPython gallery](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
+**IPython.**  IPython ("interactive Python") is another graphical environment, one that allows you to combine code, output, words, and graphics.  Lots of people use IPython notebooks to write Python programs and, especially, to present their work. By icnluding text and output along with the code, we can make a notebook look like presentation slides.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb) and a [more extensive collection](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
 
 To create or run an IPython notebook from Launcher, click on the Launch button to the right of ipython-notebook.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see at the top the word "Jupyter," which is the name of this environment.  (It used to say IPython, but now the same environment handles code in Julia, R, and other languages.)  Just below you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.  
 
@@ -96,7 +96,7 @@ else:
 * Save your code.  Click on File at the top left, then Save As, and save in the directory of your choice under the name "bootcamp\_test.py" (Python programs always have the extension py).  We recommend the directory "Data\_Bootcamp" that we suggested earlier. 
 * Run it.  Click on the green triangle above the editor and run your program.  
 
-The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but better to know that now than run into problems later. Have a cold drink anyway and catch your breath.  
+The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but it's better to know now than run into problems later. Have a cold drink anyway and catch your breath.  
 
 
 **IPython**.  We prefer to write code in an editor and will stick with Spyder for most of the course.  But some people prefer IPython notebooks.  They're good for talks if you want to show both code and output, and intersperse it with text.  They can also be used for reports.  As we've seen from examples, you can read through them more easily than naked code.  Here are [three](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point.   
@@ -114,7 +114,7 @@ Output will appear in the same cell below your code.  If it says "Congratulation
 
 ## We're ready to go! 
 
-We're now ready to write and run Python programs in two environments.  That's more than enough.  Take a bow.  
+We're now ready to write and run Python programs in two environments.  That's more than enough for one day.  Take a bow.  
 
 
 ## Wordplay

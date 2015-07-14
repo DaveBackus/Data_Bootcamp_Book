@@ -2,15 +2,15 @@
 
 
 ---
-**Overview.**
-
-**Python tools.**  Pandas data input from csv and xls files, general properties of DataFrames.
-
-**Applications.**  Income by college major.??
+**Overview.** Some ideas for thinking about data. 
 
 ---
 
-## The data mentality
+**This is, obviously, not yet fleshed out.  Soon!!**
+
+## Thinking about data 
+
+We're surrounded by data:  spreadsheets of numbers, graphs in reports and newspaper articles...  
 
 
 
@@ -80,13 +80,15 @@ Process
 Remember:  “ideas have friends”  
 
 Common mistakes -- and solutions to them  
-Mistake:  Reject an idea before you’ve given it enough thought.  Solution:  Collect ideas first, whittle them down later.  
-Mistake:  Choose a project that’s too large.  Solution:  Think it over for a while, choose a small part.  (You can always do more later.) 
-Mistake:  Pick a dataset that’s not available or doesn’t have what you need.  Solution:  Start with what you have, ask what you can do with it.    
+
+* Mistake:  Reject an idea before you’ve given it enough thought.  Solution:  Collect ideas first, whittle them down later.  
+* Mistake:  Choose a project that’s too large.  Solution:  Think it over for a while, choose a manageable piece of the larger project.  (You can always do more later.) 
+* Mistake:  Pick a dataset that’s not available or doesn’t have what you need.  Solution:  Start with what you have, ask what you can do with it.   (We call this the [Jeopardy](https://en.wikipedia.org/wiki/Jeopardy!) approach:  ask a question you have the answer to.) 
 
 Project alternatives 
-Implement a new tool and write a guide for other students (plot.ly, Google Viz, ...) 
-Learn how to use a new dataset and write a guide for other students (ACS, ATUS, PSID, IMDb,...)  
+
+* Implement a new tool and write a guide for other students (plot.ly, Google Viz, ...) 
+* Learn how to use a new dataset and write a guide for other students (ACS, ATUS, PSID, IMDb,...)  
 
 Idea machines (examples of interesting data work)  
 https://benjaminlmoore.wordpress.com/ 

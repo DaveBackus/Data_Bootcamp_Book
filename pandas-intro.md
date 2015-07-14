@@ -171,3 +171,6 @@ print(df3.columns)
 For more, see the section of the Python tutorial that describes the
 \href{https://docs.python.org/3.4/library/zipfile.html#module-zipfile}{zipfile module}.
 
+
+
+https://realpython.com/blog/python/working-with-large-excel-files-in-pandas/ 

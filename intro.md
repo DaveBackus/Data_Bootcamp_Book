@@ -8,8 +8,7 @@
 
 ---
 
-This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  If you make it to the end, you'll have a better idea where to find data that's useful to you and your business.  You will also have command over tools you can use to do something interesting with it. We also think you will be more successful, your life will be more interesting, food will taste better, and your children will be better looking, but that might be boasting.  
-
+This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  If you make it to the end, you'll have a better idea where to find data that's useful to you and your business.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, but maybe that's us.  
 
 ## Answers to common questions 
 
@@ -17,7 +16,7 @@ This book -- and the course we developed it for -- is about data, primarily econ
 
 **Can’t I do what I need in Excel?**  Excel is a great program, but once you have a little programming experience it will remind you of doing arithmetic on your fingers.  With Python, you will be able do routine tasks more efficiently (“[automate the boring stuff](https://automatetheboringstuff.com/),” as one guide suggests), handle larger data sets, and generally do things that spreadsheet programs can’t do.    
 
-**What are the prerequisites?**  There are none.  We start at the very beginning and go from there.  What you'll need is the **courage** to take on a challenge and the **patience** to debug [programs that don’t quite work](http://junkcharts.typepad.com/numbersruleyourworld/2015/06/the-day-after-the-half-day-in-the-life-of-a-data-scientist.html) -- and they never work the first time, and often not the second or third time either.    
+**What are the prerequisites?**  There are none.  We start at the very beginning and go from there.  What you'll need is the **courage** to take on a challenge and the **patience** to debug [programs that don’t quite work](http://junkcharts.typepad.com/numbersruleyourworld/2015/06/the-day-after-the-half-day-in-the-life-of-a-data-scientist.html) -- and they never work the first time, and often not the second or third time either.  Don't panic.  Ask for help and remind yourself that patience is a virtue. 
 
 **What if my quant skills are weak or nonexistent?**  Then this is the course for you!  We do our best to make the material accessible.  We’re looking beyond quants to marketing, management, and humanities majors.  One of our design team was an English major.  
 
@@ -32,7 +31,7 @@ This book -- and the course we developed it for -- is about data, primarily econ
 
 We're living in a world of data: data about the economy, data about financial markets, data about your business.  
 
-Our former students tell us that data skills keep them in business.  One of our alums analyzes television data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages player and attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are needed in their jobs.  A recent marketing major, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
+Many of our former students tell us that data skills keep them in business.  One of our alums analyzes television data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages player and attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are, if not absolutely required, at least very useful in their jobs.  A marketing major, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
 
 
 ## Why Python?   
@@ -48,14 +47,14 @@ The closest competitors to Python for our purposes are probably [Matlab][1] and 
 
 R would be our second choice for data work after Python.  Like Python, it's free. It's the leading program among professional statisticians and has lots of  packages (add-ons) for data analysis. It's a great program, and it does lots of things, but it's not a general-purpose programming language. If you want to try it out, let us know, we can point you to some resources. The wildly popular [Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/), for example, combines R with an introduction to modern statistical methods. 
 
-Python is our first choice.  Although it's a general purpose language, we'll use it for data work, where it has become an able competitor to R. Our focus is economic and financial data, but the same methods can be applied to data from any source, including proprietary data at your company.  One of our former students is using it to study patterns of survival on the [Titanic](http://www.kaggle.com/c/titanic-gettingStarted) and Neilsen television ratings. Another is using it to [process text](http://www.nltk.org/) from news sources and analyst reports.  Thanks to hedge fund [AQR and others](http://pandas.pydata.org/community.html#history-of-development), the data-analytic toolsets in Python now rival stat-focused languages like R.   
+Python is our first choice.  Although it's a general purpose language, we'll use it for data work, where it has become an able competitor to R. Our focus is economic and financial data, but the same methods can be applied to data from any source, including proprietary business data.  One of our former students is using it to study patterns of survival on the [Titanic](http://www.kaggle.com/c/titanic-gettingStarted) and Neilsen television ratings. Another is using it to [process text](http://www.nltk.org/) from news sources and analyst reports.  Thanks to hedge fund [AQR and others](http://pandas.pydata.org/community.html#history-of-development), the data-analytic toolsets in Python now rival stat-focused languages like R.   
 
 That's our opinion anyway, but see also [this discussion](http://quant-econ.net/about_lectures.html#how-about-other-languages) from our friends Tom Sargent and John Stachurski.  Or [this one](http://www.dataschool.io/python-or-r-for-data-science/) from Kevin Markham. Or this [exchange](http://www.quora.com/Which-is-better-for-data-analysis-R-or-Python) on Quora.
 
 
 ## Everyone likes Python 
 
-Python isn't just a useful language, it's one people like.  We're talking about programmers here, for the most part, but even us novices find that it has a casual simplicity and elegance that makes coding fun. See, for example, this classic [xkcd cartoon](https://xkcd.com/353/). 
+Python isn't just a useful language, it's one people like.  We're talking about programmers here, for the most part, but even us novices find that its casual simplicity makes coding fun. See, for example, this classic [xkcd cartoon](https://xkcd.com/353/). 
 
 Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/):  
 
@@ -63,24 +62,28 @@ Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-wh
 
 He adds:  "Python people are pretty cool," so there's that, too. (Ford's article, "What is Code," takes up a whole issue of Bloomberg BusinessWeek.  It's a classic, well worth the time.)
 
-## Our plan
-
-The book mixed data and programming together.  That makes it easier to understand the context, but somewhat harder to use the book as a programming reference.  We wtill think it makes sense.  
-
-The next two chapters, however, are concerned only with Python.  It's essential to have the basics covered before we move on to other things, so that's what we do.  
-
 
 ## Work habits
 
-There are no shortcuts in learning how to code:  you simply need to spend hours -- and hours -- doing it.  Progress will seem slow at first, but if you stick with it things will start to look familiar, and even make sense.  As you work your way up the learning curve, keep this advice in mind:  
+There are no shortcuts in learning how to code:  you simply need to spend hours -- and hours -- doing it.  Progress will seem slow at first, but if you stick with it things will start to look familiar, and even make sense. You may even think of projects and assignments as fun, and revel in your new-found power over data.  
 
-**Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around.  Have fun!
+As you work your way up the learning curve, keep this advice in mind:  
 
-**Make friends.**  Coding is hard to do on your own.  A second pair of eyes is indespensible.  So work with friends, and make new friends who know how to code.   
+**Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around, try new things, have fun.  
+
+**Make friends.**  Coding is hard to do on your own.  A second pair of eyes is indespensible.  So work with friends, and make new friends who know how to code.  Intense coding sessions are a great way to develop relationships.   
 
 **Work on your Google fu.**  You will find that many of your questions have been asked before -- and answered.  One way to find them:  Google something like "python [problem]."  There are answers in lots of places, but one of the best is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
 
 **Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
+
+
+## Our plan
+
+The book mixes data and programming together.  Typically when we learn about a new tool, we have specific applications in mind.  That makes it easier to understand the context, but somewhat harder to use the book as a programming reference.  We still think it makes sense.  
+
+The next two chapters, however, are concerned only with Python.  It's essential to have the basics covered before we move on to other things, so that's what we do.  
+
 
 
 <!-- ## References --> 

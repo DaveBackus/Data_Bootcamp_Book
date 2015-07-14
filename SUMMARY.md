@@ -2,8 +2,8 @@
 
 * [Preface](README.md)
 * [What's this book about?](intro.md)
+* [The data mentality](data-mentality.md)* [The data mentality](data-mentality.md)
 * [Installing Python](installing-python.md)
-* [The data mentality](data-mentality.md)
 * [Python fundamentals](py-fun1.md) 
 * [Managing data](pandas-intro.md)
 * [Visualizing data](graphs.md)

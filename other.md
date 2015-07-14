@@ -1,7 +1,5 @@
 # Other cool stuff 
 
-# Visualizing data
-
 
 ---
 **Overview.**
@@ -17,6 +15,10 @@
 
 ## Scraping
 
+Scrapy
+
+Beautfiul Soup 
+
 
 
 ## Natural language 
@@ -30,3 +32,6 @@ https://www.youtube.com/watch?v=AOU-Yw1qdJs
 http://www.nyu.edu/projects/politicsdatalab/learning_extra.html
 
 
+## Plot.ly 
+
+## Google App Engine 
