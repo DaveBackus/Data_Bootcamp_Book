@@ -13,12 +13,20 @@
 ---
 
 
+## Debugging 
+
+
+## Dashboards 
+
+http://multithreaded.stitchfix.com/blog/2015/07/16/pyxley/
+
 ## Scraping
 
 Scrapy
 
 Beautfiul Soup 
 
+http://pbpython.com/web-scraping-mn-budget.html 
 
 
 ## Natural language 

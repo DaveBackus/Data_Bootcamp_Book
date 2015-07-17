@@ -1,10 +1,10 @@
-# What's this book about?  
+# Where are we headed?
 
 ---
 
 **Overview.**  Data skills are enormously valuable in the modern world.  We're going to give you those skills, show you how to apply them to economic and financial data, and maybe tell a few bad jokes along the way.  Join us!   
 
-**Buzzwords.** Python, Google fu.
+**Buzzwords.** Python, Google fu, code.
 
 ---
 
@@ -24,7 +24,7 @@ This book -- and the course we developed it for -- is about data, primarily econ
 
 **Should I take this course if I already know how to code?**  You’re welcome to, and you will learn a lot about data.  But please don’t scare the other students.  
 
-**Is there anything Python can't do?**  Well, [it can't swallow a porcupine](http://www.telegraph.co.uk/news/worldnews/11697672/Python-chokes-to-death-after-eating-porcupine.html).  
+**Is there anything Python can't do?**  Well, [it can't swallow a porcupine](http://www.telegraph.co.uk/news/worldnews/11697672/Python-chokes-to-death-after-eating-porcupine.html).  People are working on everything else.  
 
  
 ## Why data?  
@@ -36,7 +36,7 @@ Many of our former students tell us that data skills keep them in business.  One
 
 ## Why Python?   
 
-Python is a popular general-purpose programming language that has been used for a broad range of applications. Google uses it.  So does Instagram. Dropbox is written entirely in Python.  
+Python is a popular general-purpose programming language that has been used for a broad range of applications. Google uses it.  So do Instagram and Netflix. Dropbox is written entirely in Python.  
 
 We think Python is the language of choice right now if you want a user-friendly introduction to programming and a useful tool for day-to-day data work.  It has a  broad range of applications and an enormous community of users.  You'll come to appreciate both. And it's free and open source. Free means you pay nothing.  Open source means  you can look at the code if you want to see how something works.  
 
@@ -60,7 +60,8 @@ Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-wh
 
 > People love it and want it to work everywhere and do everything. They’ve spent tens of thousands of hours making that possible and then given the fruit of their labor away. That’s a powerful indicator. A huge amount of effort has gone into making Python practical as well as pleasurable to use. 
 
-He adds:  "Python people are pretty cool," so there's that, too. (Ford's article, "What is Code," takes up a whole issue of Bloomberg BusinessWeek.  It's a classic, well worth the time.)
+He adds:  "Python people are pretty cool," so there's that, too. (Ford's article, "What is Code," takes up a whole issue of Bloomberg BusinessWeek.  It's a classic, well worth the time.)  
+
 
 
 ## Work habits
@@ -78,13 +79,13 @@ As you work your way up the learning curve, keep this advice in mind:
 **Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
 
 
-## Our plan
+## Our plan 
 
-The book mixes data and programming together.  Typically when we learn about a new tool, we have specific applications in mind.  That makes it easier to understand the context, but somewhat harder to use the book as a programming reference.  We still think it makes sense.  
+**We leap right in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means that the work load is heaviest at the start.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
 
-The next two chapters, however, are concerned only with Python.  It's essential to have the basics covered before we move on to other things, so that's what we do.  
+**We mix code and applications.**  We attack data applications and programming together.  After covering Python basics, we generally organize things around specific applications, covering the relevant aspects of Python along the way.  We think it helps to have a context for what we're learning, but the downside is that it's somewhat harder to use the book as a programming reference.  We still think it makes sense:  our goal isn't to produce programmers, but people who know enough about programming to gain insights into data.  
 
+**We like the online version of the book.**  We sometimes print out the pdf ourselves, but the online version comes with links, color coding, and a more attractive layout.  We think it's a superior user experience -- but please tell us if you think we're wrong. 
 
-
-<!-- ## References --> 
+<!-- ## References ?? --> 
 

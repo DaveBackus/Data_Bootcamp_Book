@@ -8,6 +8,20 @@
 
 **This is, obviously, not yet fleshed out.  Soon!!**
 
+
+Data analysis starts with a question.  Generally, we want to learn something.  In our world, we might ask
+
+* How does average income vary across countries?
+* How do returns on European stocks compare to those on US stocks?  
+* Where do our customers live?
+
+You get the idea.  The starting point is your question.  
+
+Once you have a question, you can start looking at data.  You might ask:  What data would be helpful in answering my question?  Where do I find it?  
+
+The question comes from you.  What we'll provide is a mentality for thinking about data.  We think about data all the time.  If we read The Economist and see an interesting graphic, we look immediately at the ??
+
+
 ## Thinking about data 
 
 We're surrounded by data:  spreadsheets of numbers, graphs in reports and newspaper articles...  

@@ -1,4 +1,4 @@
-# Python fundamentals
+# Python fundamentals 2 
 
 
 ---
@@ -9,6 +9,7 @@
 **Buzzwords.** 
 
 ---
+
 
 
 ## Conditionals 
