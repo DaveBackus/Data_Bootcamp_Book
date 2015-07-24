@@ -29,6 +29,8 @@ lists
 functions and methods... 
 
 
+
+
 ## IPython notebooks 
 
 basics...
@@ -37,6 +39,18 @@ markdown...
 
 matplotlib flag 
 
+**Pro tips.** 
+
+* Close running notebooks.  go to the run tab and shut down other notebooks.  If none, you're ok.  
+
+* List keyboard shortcuts.  Type h.  
+
+* %matplotlib inline 
+
+
+## IPython Magics 
+
+%%time 
 
 ##  Matplotlib 1:  the pyplot module 
 
@@ -48,6 +62,20 @@ Functions and methods...
 
 
 
+
+## Dataframe methods	
+
+
+Special methods for dataframes...  
+
+
+
+## Examples 
+
+http://fivethirtyeight.com/datalab/the-extreme-economic-outlier-that-is-greece-in-7-charts/
+
+Chetty 100 x 100 heatmap?
+http://www.equality-of-opportunity.org/images/online_data_tables.xls 
 
 ## Style sheets 
 
@@ -78,11 +106,6 @@ Viz Wiz
 Graphic Detail*
 
 
-## Examples 
-
-http://fivethirtyeight.com/datalab/the-extreme-economic-outlier-that-is-greece-in-7-charts/
-
-
 
 ## Resources 
 
@@ -96,6 +119,18 @@ http://fivethirtyeight.com/datalab/the-extreme-economic-outlier-that-is-greece-i
 
 * [Practical business Python](http://pbpython.com/visualization-tools-1.html) is a terrific blog.  This post concerns Python visualization packages.  He likes Seaborn.  
 
+https://github.com/rasbt/matplotlib-gallery 
 
+Check this out:  https://youtu.be/MKucn8NtVeI?list=PLYx7XA2nY5Gcpabmu61kKcToLz0FapmHu
 
+Colormap:  https://www.youtube.com/watch?v=xAoljeRJ3lU
+
+http://nbviewer.ipython.org/gist/msund/11349097
+https://www.reddit.com/r/Python/comments/2cfulw/indepth_matplotlib_tutorials_beginner_to_advanced/ 
+http://pythonprogramming.net/matplotlib-graphing-series/
+
+https://conference.scipy.org/scipy2013/tutorial_detail.php?id=103
+
+Jake:  https://vimeo.com/53057312
+http://jakevdp.github.io/mpl_tutorial/ 
 

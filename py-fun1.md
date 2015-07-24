@@ -8,6 +8,8 @@
 
 **Buzzwords.** Isn't that enough?  
 
+**Trigger warning.**  Technical content, cannot be mastered without time and effort.  
+
 ---
 
 We're now ready to explore the rudiments of Python.  We'll run across terms like "strings," "objects," and "methods."  Don't panic, it's just jargon.  This is Python, of course, but most of the concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
@@ -392,7 +394,9 @@ There's a lot of code around written in earlier versions of Python, typically Py
 
 Here are some online resources we have found helpful:  
 
-* Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement looks funny.  If we were to recommend one outside resource, this would be it.  
+* Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement looks funny.  
+  
+  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with the course.  If you do, stop when you get to Advanced Topics. And expect to spend more than the 13 hours they suggest.  
 
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  
 

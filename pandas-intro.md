@@ -23,7 +23,7 @@ Along the way we describe how Python uses collections of tools (**packages**) to
 
 ## Reminders 
 
-??
+Methods... ??
 
 
 ## Python packages
@@ -135,7 +135,20 @@ This reads the file {\tt test1.csv} into {\tt df}.
 If you try {\tt type(df)} you'll find that {\tt df} is a DataFrame,
 the standard object type in pandas.
 It's a table of numbers, much like a sheet in a spreadsheet program,
-with labels for rows (the index) and columns (the variables).
+with labels for rows (the index) and columns (the variables).  
+
+What do we get?  Try type.  DataFrame!  What's that?  A table of numbers with labels for rows and columns.  
+
+df.head()
+df.tail()
+
+These are dfs too.  head = df.head()...  
+
+
+## Spreadsheet and csv files 
+
+http://www.win-vector.com/blog/2012/12/please-stop-using-excel-like-formats-to-exchange-data/
+http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/ 
 
 
 ## Data frames 
@@ -145,7 +158,7 @@ Some of the methods you could try:
 {\tt df.columns.tolist()} (the column labels as a list),
 {\tt df.index} (the row labels),
 {\tt df.head(2)} (the top two rows),
-{\tt df.tail()} (the bottom five rows),
+{\tt df.tail()} (the bottom five rows), 
 {\tt df.tail(2)} (the bottom two rows),
 {\tt df.describe()} (summary statistics),
 and {\tt df.info()} (information about the form of the data).
@@ -227,6 +240,32 @@ and recommended by some of our former students.
 \begin{verbatim}
 clip = pd.read_clipboard()
 \end{verbatim}
+
+
+Brandon Rhodes' movie data...  https://github.com/brandon-rhodes/pycon-pandas-tutorial
+
+
+## Examples 
+
+WEO 
+
+Gelman's speed dating data:  http://www.stat.columbia.edu/~gelman/arm/examples/speed.dating/
+
+Stern teaching data 
+
+Movie data from Rhodes 
+
+Chetty 100 x 100 data 
+
+
+## Exporting data
+
+write as csv or xls 
+
+
+## More
+
+unstack... (Rhodes 1:34) 
 
 
 ## Reading zipped files 
