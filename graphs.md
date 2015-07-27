@@ -121,13 +121,17 @@ Graphic Detail*
 
 https://github.com/rasbt/matplotlib-gallery 
 
-Check this out:  https://youtu.be/MKucn8NtVeI?list=PLYx7XA2nY5Gcpabmu61kKcToLz0FapmHu
+Check this out:  Benjamin Root and Joe Kington, SciPy 2015.
+https://youtu.be/MKucn8NtVeI
+https://github.com/WeatherGod/AnatomyOfMatplotlib
 
-Colormap:  https://www.youtube.com/watch?v=xAoljeRJ3lU
+Colormap:  https://www.youtube.com/watch?v=xAoljeRJ3lU .  Sort of interesting, moderately technical, short.  
 
 http://nbviewer.ipython.org/gist/msund/11349097
 https://www.reddit.com/r/Python/comments/2cfulw/indepth_matplotlib_tutorials_beginner_to_advanced/ 
 http://pythonprogramming.net/matplotlib-graphing-series/
+
+
 
 https://conference.scipy.org/scipy2013/tutorial_detail.php?id=103
 

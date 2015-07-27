@@ -22,7 +22,7 @@ Series
 ## Pandas as Excel 
 
 
-## Pandas as SQL 
+## Merging
 
 
 We'll talk more about packages later, but for now just put these lines above...

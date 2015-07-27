@@ -51,6 +51,8 @@ Python is our first choice.  Although it's a general purpose language, we'll use
 
 That's our opinion anyway, but see also [this discussion](http://quant-econ.net/about_lectures.html#how-about-other-languages) from our friends Tom Sargent and John Stachurski.  Or [this one](http://www.dataschool.io/python-or-r-for-data-science/) from Kevin Markham. Or this [exchange](http://www.quora.com/Which-is-better-for-data-analysis-R-or-Python) on Quora.
 
+**Overall, more important to do one than none** ??
+
 
 ## Everyone likes Python 
 
@@ -61,6 +63,11 @@ Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-wh
 > People love it and want it to work everywhere and do everything. They’ve spent tens of thousands of hours making that possible and then given the fruit of their labor away. That’s a powerful indicator. A huge amount of effort has gone into making Python practical as well as pleasurable to use. 
 
 He adds:  "Python people are pretty cool," so there's that, too. (Ford's article, "What is Code," takes up a whole issue of Bloomberg BusinessWeek.  It's a classic, well worth the time.)  
+
+
+## Wordplay
+
+Python is named for Monty Python, a group of comedians whose humor appeals to the tech crowd.  Idle, a well-know Python editor, is a reference to Python-member Eric Idle.  The [Python Package Index](https://pypi.python.org/pypi), a repository of Python packages, is commonly known as the [Cheese Shop](http://youtu.be/PPN3KTtrnZM), a reference to a famous Monty Python skit.  The Anaconda distribution (next chapter) is, of course, a play on the snake theme.  
 
 
 
@@ -81,11 +88,13 @@ As you work your way up the learning curve, keep this advice in mind:
 
 ## Our plan 
 
-**We leap right in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means that the work load is heaviest at the start.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
+**Leap in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means that the work load is heaviest at the start.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
 
-**We mix code and applications.**  We attack data applications and programming together.  After covering Python basics, we generally organize things around specific applications, covering the relevant aspects of Python along the way.  We think it helps to have a context for what we're learning, but the downside is that it's somewhat harder to use the book as a programming reference.  We still think it makes sense:  our goal isn't to produce programmers, but people who know enough about programming to gain insights into data.  
+*Code and applications.**  We attack data applications and programming together.  After covering Python basics, we generally organize things around specific applications, covering the relevant aspects of Python along the way.  We think it helps to have a context for what we're learning, but the downside is that it's somewhat harder to use the book as a programming reference.  We still think it makes sense:  our goal isn't to produce programmers, but people who know enough about programming to gain insights into data.  
 
-**We like the online version of the book.**  We sometimes print out the pdf ourselves, but the online version comes with links, color coding, and a more attractive layout.  We think it's a superior user experience -- but please tell us if you think we're wrong. 
+**Online book preferred.**  We sometimes print out the pdf ourselves, but the online version comes with links, color coding, and a more attractive layout.  We think it's a superior user experience -- but please tell us if you think we're wrong. 
+
+**Code is posted.**  At the end of each chapter, we post a link to the code.  We suggest you download it and run it yourself.  
 
 <!-- ## References ?? --> 
 

@@ -112,14 +112,8 @@ To run the same code in an IPython notebook, start up the IPython/Jupyter app in
 Output will appear in the same cell below your code.  If it says "Congratulations etc." you're all set.  
 
 
-## We're ready to go! 
+## Let's go! 
 
 We're now ready to write and run Python programs in two environments.  That's more than enough for one day.  Take a bow.  
-
-
-## Wordplay
-
-Python is named for Monty Python, a group of comedians whose humor appeals to the tech crowd.  Idle, a well-know Python editor, is a reference to Python-member Eric Idle.  The [Python Package Index](https://pypi.python.org/pypi), a repository of Python packages, is commonly known as the [Cheese Shop](http://youtu.be/PPN3KTtrnZM), a reference to a famous Monty Python skit.  Anaconda is, of course, a play on the snake theme.   
-
 
 
