@@ -58,6 +58,8 @@ Yes, style counts.
 PEP8 etc \\
 \url{https://google-styleguide.googlecode.com/svn/trunk/pyguide.html}
 
+https://www.python.org/dev/peps/pep-0008/
+
 Examples:  \\
 \url{http://www.reddit.com/r/Python/comments/3639nl/what_is_the_most_beautiful_piece_of_python_code/}\\
 \url{https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/routing.py} \\

@@ -8,11 +8,13 @@
 
 **Buzzwords.**  Distribution, environment, IPython notebook, mtyn. 
 
+**Code.** The [code](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/bootcamp_test.py) used in this chapter.  (Click on the RAW button at the top and save on your computer.)   
+
 ---
 
 There are lots of ways to install Python, but we recommend one:  Anaconda.  We show you how to install Anaconda, then run a test program to make sure everything is working.  
 
-Modern programming languages have a number of moving parts.  One part is the program itself.  A second is the collection of packages that do specific things.  Python, for example, has packages that extend Python to manage data, create graphs, perform statistical analysis, and manage web sites. Together, these components are referred to as a **distribution**.  We'll use the Anaconda distribution, which includes Python and some of its more popular packages. The good people at [Continuum Analytics](https://store.continuum.io/cshop/anaconda/) have made sure that all of these parts work together (most of the time).  
+Modern programming languages have a number of moving parts.  One part is the program itself, in this case the program that runs Python code.  A second is the collection of packages that do specific things.  Python, for example, has packages that extend Python to manage data, create graphs, perform statistical analysis, and manage web sites. Together, these components are referred to as a **distribution**.  We'll use the Anaconda distribution, which includes Python and some of its more popular packages. The good people at [Continuum Analytics](https://store.continuum.io/cshop/anaconda/) have made sure that all of these parts (usually) work together.  
 
 Another important part of a programming language is the user-interface or **environment** for writing code and executing it.  We'll use two.  **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  An **IPython notebook** is a combination of code, output, and documentation that we can run interactively in **Jupyter**.  Both of these environments call on Python more or less automatically:  press a button and you're good to go.  Even better, both come with the Anaconda distribution. 
 

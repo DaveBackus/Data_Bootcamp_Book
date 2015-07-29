@@ -10,6 +10,8 @@
 
 **Applications.**  Incomes of college majors.??
 
+**Code.** ??
+
 ---
 
 Computer graphics are one of the great advances of the modern world.  Graphs have always been helpful in describing data or concepts, but they're a lot easier to produce now than they were a few years ago. In fact, we've gotten so good at drawing pictures that we invented a new term for it:  **visualization**.  
@@ -79,7 +81,7 @@ http://www.equality-of-opportunity.org/images/online_data_tables.xls
 
 ## Style sheets 
 
-```
+```python 
 import matplotlib.pyplot as plt
 
 # http://matplotlib.org/users/style_sheets.html

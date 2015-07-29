@@ -36,9 +36,9 @@ Many of our former students tell us that data skills keep them in business.  One
 
 ## Why Python?   
 
-Python is a popular general-purpose programming language that has been used for a broad range of applications. Google uses it.  So do Instagram and Netflix. Dropbox is written entirely in Python.  
+Python is a popular general-purpose programming language that has been used for a broad range of applications. Google uses it.  So do Instagram and Netflix. Dropbox is written in Python.  
 
-We think Python is the language of choice right now if you want a user-friendly introduction to programming and a useful tool for day-to-day data work.  It has a  broad range of applications and an enormous community of users.  You'll come to appreciate both. And it's free and open source. Free means you pay nothing.  Open source means  you can look at the code if you want to see how something works.  
+We think Python is the language of choice right now if you want a user-friendly introduction to programming and a useful tool for day-to-day data work.  It's a high-level language, which means the language does a lot of the work.  It has a  broad range of applications and an enormous community of users.  You'll come to appreciate both. And it's free and open source. Free means you pay nothing.  Open source means  you can look at the code if you want to see how something works.  
 
 The closest competitors to Python for our purposes are probably [Matlab][1] and [R][2].  Matlab is a vector language, which means the kinds of things you do cell by cell in Excel you can do for a whole column or table in one line of code.  It was great in the 1980s, and we still use it for some things, but it's missing many of the convenient features of more modern languages.  It's not easy, for example, to read data straight from the internet. And functions must be stand-alone files, which gets annoying.  It's also expensive.  Outside universities, they seem to price it with investment banks in mind.  
 
@@ -94,7 +94,11 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Online book preferred.**  We sometimes print out the pdf ourselves, but the online version comes with links, color coding, and a more attractive layout.  We think it's a superior user experience -- but please tell us if you think we're wrong. 
 
-**Code is posted.**  At the end of each chapter, we post a link to the code.  We suggest you download it and run it yourself.  
+
+## Resources 
+
+All of the materials for this book and the associated course are posted on the web.  This book is hosted by [GitBook](https://www.gitbook.com/book/davebackus/test/details).  Other materials are available from our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp).  We give links to relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/DaveBackus/Data_Bootcamp/tree/master/Code) of the GitHub repo.  
+
 
 <!-- ## References ?? --> 
 
