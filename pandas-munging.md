@@ -55,6 +55,9 @@ data types for variables (info?)
 
 ## Stack and unstack...  
 
+
+unstack... (Rhodes 1:34) 
+
 unstack:  Brandon Rhodes at 2:00 
  
 

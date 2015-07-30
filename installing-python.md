@@ -6,7 +6,7 @@
 
 **Python tools.**  Anaconda distribution, Spyder and IPython coding environments.  
 
-**Buzzwords.**  Distribution, environment, IPython notebook, mtyn. 
+**Buzzwords.**  Distribution, environment, mtyn. 
 
 **Code.** The [code](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/bootcamp_test.py) used in this chapter.  (Click on the RAW button at the top and save on your computer.)   
 

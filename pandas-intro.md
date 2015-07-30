@@ -1,5 +1,5 @@
 
-# Working with data 
+# Managing data 1  
 
 ---
 **Overview.** We introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
@@ -15,6 +15,8 @@
 ---
 
 We're ready now to look at some data.  This could be any data, really, but if you have something that appeals to you, we'll show you how to get it into Python.  We explain how to read spreadsheets into Python, even spreadsheets that are posted on the internet.  Along the way we describe how Python uses collections of tools (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
+
+?? Recall program structure:  get data etc.  First step now.  
 
 
 ## Reminders 
@@ -201,7 +203,7 @@ Other methods we could try:
 
 
 
-## Reading other kinds of files   
+## Other data input    
 
 We can read other kinds of files in much the same way.  Some examples show how this works:  
 
@@ -251,12 +253,18 @@ weo = pd.read_csv(url, sep='\t')    # tab = \t
 **Example (IMDB).** 
 Brandon Rhodes' movie data...  https://github.com/brandon-rhodes/pycon-pandas-tutorial
 
-
+http://pages.stern.nyu.edu/~dbackus/csv/cast.csv
+http://pages.stern.nyu.edu/~dbackus/csv/titles.csv
+http://pages.stern.nyu.edu/~dbackus/csv/release_dates.csv 
 
 **Example (Stern teaching data).** 
 
 
-**Example (Big Mac currency index).** 
+**Example.** Chetty's income data...  
+
+**Example (Big Mac currency index).**  This is an xls file with multiple sheets.  
+http://infographics.economist.com/2015/databank/BMfile2000-Jul2015.xls
+
 
 
 
@@ -275,70 +283,10 @@ Output methods:  to_excel, to_csv ...
 Graphical methods:  
 
 
-## Examples 
 
-Read one or more of these into Python and describe their contents.  
-
+## Resources 
 
 
-Gelman's speed dating data:  http://www.stat.columbia.edu/~gelman/arm/examples/speed.dating/
-
-
-Movie data from Rhodes 
-
-Chetty 100 x 100 data 
-
-Kaggle's Titanic data (who survived):  http://www.analyticsvidhya.com/blog/2014/08/baby-steps-python-performing-exploratory-analysis-python/ 
-
-
-## Exporting data
-
-write as csv or xls 
-
-
-## More
-
-unstack... (Rhodes 1:34) 
-
-
-## Reading zipped files 
-
-The `zipfile` module (part of basic Python) lets you do whatever you want with zip files.
-Some examples:
-
-```
-import pandas as pd
-import urllib
-import zipfile
-import os
-
-url  = 'http://databank.worldbank.org/data/download/WDI_csv.zip'
-file = os.path.basename(url)            # strip out file name
-urllib.request.urlretrieve(url, file)   # copy to disk
-
-# see what's there
-print(['Is zipfile?', zipfile.is_zipfile(file)])
-zf = zipfile.ZipFile(file, 'r')
-print('List of zipfile contents (two versions)')
-[print(file) for file in zf.namelist()]
-zf.printdir()
-
-# extract a component
-csv = zf.extract('WDI_Data.csv')        # copy to disk
-df1 = pd.read_csv('WDI_Data.csv')       # read
-print(df1.columns)                      # check contents
-
-# alternative:  open and read
-csv = zf.open('WDI_Data.csv')
-df2 = pd.read_csv(csv)
-print(df3.columns)
-```
-
-For more, see the section of the Python tutorial that describes the
-\href{https://docs.python.org/3.4/library/zipfile.html#module-zipfile}{zipfile module}.
-
-Big Mac index
-http://infographics.economist.com/2015/databank/BMfile2000-Jul2015.xls
 
 https://realpython.com/blog/python/working-with-large-excel-files-in-pandas/ 
 
@@ -349,6 +297,5 @@ http://www.nytimes.com/interactive/2015/02/17/upshot/what-do-people-actually-ord
 https://raw.githubusercontent.com/TheUpshot/chipotle/master/orders.tsv
 http://www.danielforsyth.me/pandas-burritos-analyzing-chipotle-order-data-2/ 
 
-Spreadsheets:  
-http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/
-
+http://pandas.pydata.org/pandas-docs/stable/cookbook.html#data-in-out
+http://pandas.pydata.org/pandas-docs/stable/io.html 
