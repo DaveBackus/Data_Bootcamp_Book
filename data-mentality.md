@@ -110,3 +110,6 @@ https://benjaminlmoore.wordpress.com/
 
 Project ideas:  https://docs.google.com/document/d/1hsuYz2IMoPPwba66BlyMW0tnMxuZPyH4F3ybc13Zsfk/edit?usp=sharing 
 
+## Resources 
+
+??

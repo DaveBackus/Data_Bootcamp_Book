@@ -78,3 +78,6 @@ Evidently Pandas is smart...
 Brandon Rhodes.  This is great.  
 https://youtu.be/5JnMutdy6Fw
 https://github.com/brandon-rhodes/pycon-pandas-tutorial/
+
+Kaggle example:  http://blog.kaggle.com/2013/01/17/getting-started-with-pandas-predicting-sat-scores-for-new-york-city-schools/ 
+

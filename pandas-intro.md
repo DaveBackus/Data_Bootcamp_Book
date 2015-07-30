@@ -287,7 +287,6 @@ Graphical methods:
 ## Resources 
 
 
-
 https://realpython.com/blog/python/working-with-large-excel-files-in-pandas/ 
 
 Kaggle example:  http://blog.kaggle.com/2013/01/17/getting-started-with-pandas-predicting-sat-scores-for-new-york-city-schools/ 
