@@ -8,11 +8,11 @@
 
 **Buzzwords.**  Distribution, environment, mtyn. 
 
-**Code.** The [code](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/bootcamp_test.py) used in this chapter.  (Click on the RAW button at the top and save on your computer.)   
+**Code.** [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_test.py).   
 
 ---
 
-There are lots of ways to install Python, but we recommend one:  Anaconda.  We show you how to install Anaconda, then run a test program to make sure everything is working.  
+There are lots of ways to install Python, but we recommend one:  **Anaconda**.  We show you how to install Anaconda, then run a test program to make sure everything is working.  
 
 Modern programming languages have a number of moving parts.  One part is the program itself, in this case the program that runs Python code.  A second is the collection of packages that do specific things.  Python, for example, has packages that extend Python to manage data, create graphs, perform statistical analysis, and manage web sites. Together, these components are referred to as a **distribution**.  We'll use the Anaconda distribution, which includes Python and some of its more popular packages. The good people at [Continuum Analytics](https://store.continuum.io/cshop/anaconda/) have made sure that all of these parts (usually) work together.  
 
@@ -44,7 +44,7 @@ You now have Python installed and ready to run.  Congratulations!
 
 Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and the IPython notebook.  
 
-We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  It should look like [this picture](http://continuum.io/blog/new-launcher).  You will see a list of applications:  
+We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  It should look (roughly) like [this picture](http://continuum.io/blog/new-launcher).  You will see a list of applications:  
 
 * glueviz 
 * ipython-notebook 

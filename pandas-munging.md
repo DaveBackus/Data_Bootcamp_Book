@@ -61,7 +61,11 @@ unstack... (Rhodes 1:34)
 unstack:  Brandon Rhodes at 2:00 
  
 
-**Pivot tables.** You can all of it and more with set_index, sort_index, and unstack.  2:10m
+## Pivot tables 
+
+https://en.wikipedia.org/wiki/Pivot_table 
+
+Rhodes:  You can all of it and more with set_index, sort_index, and unstack.  2:10m
 
 
 
@@ -71,6 +75,11 @@ merge:  Brandon Rhodes at 2:10
 
 Evidently Pandas is smart... 
 
+
+## Examples 
+
+
+Auto safety:  http://www.nhtsa.gov/NCSA
 
 
 ## References 

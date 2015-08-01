@@ -10,7 +10,7 @@
 
 **Trigger warning.**  Technical content, cannot be mastered without time and effort.  
 
-**Code.**  Link [here](??).
+**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_1.py).
 
 ---
 
@@ -427,15 +427,9 @@ Find a method to replace the n's in `firstlast` with asterisks.
 There's a lot of code around written in earlier versions of Python, typically Python 2.7.  It's there because the people who wrote it started before Python 3 was up and running.  Since we're starting from scratch, we are planting ourselves firmly in Python 3 territory.  Still, you're likely to run across examples of Python 2 on the internet. The easiest way to tell the difference is the print command:  `print(x)` in Python 3 was `print x` (no parentheses) in Python 2.  There are lots of other differences, which is why it's essential we all use Python 3.  
 
 
-## Links 
+## Resources  
 
-The code we used is posted on GitHub at ??. 
-
-Some other resources we found helpful:  
-
-* Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement looks funny.  
-  
-  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with the course.  If you do, stop when you get to Advanced Topics. And expect to spend more than the 13 hours they suggest.   
+* Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with the course.  If you do, stop when you get to Advanced Topics. And expect to spend more than the 13 hours they suggest.   
 
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  It's also a good idea to get used to reading official documentation like this.  There are times when it's unavoidable.  
 

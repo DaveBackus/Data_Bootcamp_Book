@@ -41,6 +41,9 @@ markdown...
 
 matplotlib flag 
 
+Getting help 
+
+
 **Pro tips.** 
 
 * Close running notebooks.  go to the run tab and shut down other notebooks.  If none, you're ok.  
@@ -111,9 +114,17 @@ Graphic Detail*
 
 ## Resources 
 
+IPython 
+
+* http://blog.endpoint.com/2015/06/ipython-tips-and-tricks.html 
+
+Matplotlib 
+
 * Matplotlib's [Pyplot tutorial](http://matplotlib.org/users/pyplot_tutorial.html) is excellent. 
 
 * Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html) is also a great starting point.  Find an example you like, download the code, and adapt it to your needs.   
+
+* Another gallery:  https://www.getdatajoy.com/examples/python-plots 
 
 * Rougier, Mueller, and Varoquaux's [SciPy lecture notes](https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html) are also quite good.  It's aimed at scientists, so the examples tend to be mathematical.  Their [cookbook](http://wiki.scipy.org/Cookbook/Matplotlib) has a good collection of samples.  
 
@@ -132,7 +143,6 @@ Colormap:  https://www.youtube.com/watch?v=xAoljeRJ3lU .  Sort of interesting, m
 http://nbviewer.ipython.org/gist/msund/11349097
 https://www.reddit.com/r/Python/comments/2cfulw/indepth_matplotlib_tutorials_beginner_to_advanced/ 
 http://pythonprogramming.net/matplotlib-graphing-series/
-
 
 
 https://conference.scipy.org/scipy2013/tutorial_detail.php?id=103

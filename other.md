@@ -13,6 +13,10 @@
 ---
 
 
+## Animations 
+
+https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/
+
 ## Debugging 
 
 
@@ -27,6 +31,9 @@ Scrapy
 Beautfiul Soup 
 
 http://pbpython.com/web-scraping-mn-budget.html 
+
+http://savvastjortjoglou.com/nba-shot-sharts.html
+http://www.gregreda.com/tag/scraping.html 
 
 
 ## Natural language 

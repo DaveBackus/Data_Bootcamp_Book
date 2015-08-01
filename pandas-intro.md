@@ -10,7 +10,7 @@
 
 **Applications.**  College majors and income, Big Mac prices, Chipotle, income mobility. 
 
-**Code.** Link [here](??).
+**Code.** Link [here]().  ??
 
 ---
 
@@ -38,7 +38,7 @@ The standard packages -- which we'll talk more about in a minute -- are well wri
 
 Some of the leading packages for numerical ("scientific") computation  are
 
-* **[Pandas](http://pandas.pydata.org/).**  The leading package for managing and manipulating data and our focus in this chapter.  
+* **[Pandas](http://pandas.pydata.org/).**  The leading package for managing and manipulating data and our focus in this chapter. 
 
 * **[Matplotlib](http://matplotlib.org/).**  The leading graphics package for Python.  We'll use it extensively.  
 
@@ -102,10 +102,12 @@ Some fine points:
   ```
   This can be helpful if we're trying to track down an error.  Stack Overflow typically asks for the version number when you post a question.  
 
+  (Obscure note.  The double underscore often shows up in Python for basic things like this. When we tried to track down the logic, we ran into [this explanation](http://stackoverflow.com/questions/1301346/the-meaning-of-a-single-and-a-double-underscore-before-an-object-name-in-python), which confused us thoroughly. But see also [this](http://stackoverflow.com/questions/8689964/python-why-do-some-functions-have-underscores-before-and-after-the-functio).)
+
 
 **Exercise.** Import pandas.  What version are you running?  
 
-**Exercise.**  Suppose we import Pandas twice under different names, once as `import pandas as pd` and once as `import pandas as pa`.  What do you think happens?  Can you write a short program that tests your conjecture?  (This will take a little thought, feel free to consult your neighbor.)  
+**Exercise.**  Suppose you import Pandas twice under different names, once as `import pandas as pd` and once as `import pandas as pa`.  What do you think happens?  Can you write a short program that tests your conjecture?  (This will take a little thought, feel free to consult your neighbor.)  
 
 
 ## The Pandas package 
@@ -266,6 +268,11 @@ http://pages.stern.nyu.edu/~dbackus/csv/release_dates.csv
 http://infographics.economist.com/2015/databank/BMfile2000-Jul2015.xls
 
 
+**Example (speed dating).**  download tab delimited data and read it with `read_csv`. 
+ 
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/27893 
+
+Papers:  https://scholar.google.com/scholar?hl=en&q=fisman+speed+dating&btnG=&as_sdt=1%2C33
 
 
 **Exercise.** 
@@ -286,6 +293,9 @@ Graphical methods:
 
 ## Resources 
 
+* Brandon Rhodes' exceptionally good [PyCon video](https://github.com/brandon-rhodes/pycon-pandas-tutorial).  Two and a half hours will rarely be better spent.  
+
+* xlrd:  http://tech.novus.com/augmenting-your-excel-workflow-with-python/  In Anaconda.  See [here](https://www.reddit.com/r/Python/comments/3fbdur/augmenting_your_excel_workflow_with_python/) for comments on similar packages.  Several of them, including xlrd, are in [Anaconda](http://docs.continuum.io/anaconda/pkg-docs).  
 
 https://realpython.com/blog/python/working-with-large-excel-files-in-pandas/ 
 
@@ -298,3 +308,5 @@ http://www.danielforsyth.me/pandas-burritos-analyzing-chipotle-order-data-2/
 
 http://pandas.pydata.org/pandas-docs/stable/cookbook.html#data-in-out
 http://pandas.pydata.org/pandas-docs/stable/io.html 
+
+http://www.alfredo.motta.name/data-manipulation-primitives-in-r-and-python/ 
