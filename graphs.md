@@ -118,6 +118,8 @@ IPython
 
 * http://blog.endpoint.com/2015/06/ipython-tips-and-tricks.html 
 
+* https://github.com/rhiever/ipython-notebook-workshop
+
 Matplotlib 
 
 * Matplotlib's [Pyplot tutorial](http://matplotlib.org/users/pyplot_tutorial.html) is excellent. 
@@ -127,6 +129,8 @@ Matplotlib
 * Another gallery:  https://www.getdatajoy.com/examples/python-plots 
 
 * Rougier, Mueller, and Varoquaux's [SciPy lecture notes](https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html) are also quite good.  It's aimed at scientists, so the examples tend to be mathematical.  Their [cookbook](http://wiki.scipy.org/Cookbook/Matplotlib) has a good collection of samples.  
+
+* http://nbviewer.ipython.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb 
 
 * Sargent and Stachurski's [Quantitative Economics](http://quant-econ.net/) has a good overview of Matplotlib, but we find it a little terse.  
 
