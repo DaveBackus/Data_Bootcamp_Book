@@ -19,6 +19,7 @@ https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/
 
 ## Debugging 
 
+http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/
 
 ## Dashboards 
 
