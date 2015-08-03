@@ -2,9 +2,9 @@
 
 
 ---
-**Overview.**  Time to start programming!  We work our way through some simple programs using Python's core language.  We don't cover enough ground to do serious data work, but it lays a solid foundation to build on.  
+**Overview.**  Time to start programming!  We work our way through some simple programs using Python's core language.  We don't cover enough ground to do serious data work, but it lays a solid foundation to build on.  Part 1 of 2.  
 
-**Python tools.**  Syntax, numbers, calculations, strings, Spyder, lists, objects, methods, object explorer, tab completion.  
+**Python tools.**  Syntax, numbers, calculations, strings, Spyder, lists, functions, objects, methods, tab completion, object explorer.  
 
 **Buzzwords.** Isn't that enough?  
 
@@ -80,7 +80,7 @@ Our last calculation is the log function.  Entering `log(3)` generates the messa
 
 ## Assignments 
 
-We can also "assign" numbers to **variables**:  names we use to store information.  Try these examples by typing them into the IPython console one at at time:  
+Or maybe we should say "assignments."  We say we "assign" numbers to "variables," names we use to store information.  Try these examples by typing them into the IPython console one at at time:  
 ```
 x = 2 
 y = 3 
@@ -322,7 +322,7 @@ The first one gives us the number of characters in the string `a = 'some'`, name
 *  Type conversions.  Suppose we have an object of one type (the string `11.32`) and want to convert it to another (the floating point number `11.32`).  We could use the code 
 ```python 
 d = '11.32'
-d_flt = float (d)
+d_flt = float(d)
 ```
 The new variable `d_flt` has type `float`.  Similarly, we can convert it back to a string with the statement `d_str = str(d_num)`. 
 
@@ -340,11 +340,13 @@ We use the **object inspector** a lot.  If it fails, either because there's no h
 
 **Exercise.**  What is the length of the string `d = '11.32'`?  Does the answer make sense to you?  
 
-**Exercise.** What do the functions `min()` and `sorted()` do?  (It's conventional to include the parentheses to remind us that they're functions.)  Apply them to `'some'` and see what happens.  
+**Exercise.** What do the functions `min()` and `sorted()` do?  (It's conventional to include the parentheses to remind us that they're functions.  when we use them, the parentheses are required.)  Apply them to `'some'` and see what happens.  
 
 **Exercise.** Are there other functions that interest you?  See [here](https://docs.python.org/3.4/library/functions.html) for the official list.  Pick one and construct an example that uses it.  
 
 **Exercise.**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data.  How would we construct a string containing the following year?  
+
+**Exercise.** This one also came up in our work.  Suppose we have a variable `z = '12,345.6'`.  fWhat is its type?  Can we convert it to a floating point number without the comma?    
 
 
 
@@ -363,7 +365,7 @@ hello(somename)
 ```    
 The initial `def` statement defines the function, names it `hello`, identifies the input as `firstname`, and ends with a colon (:). The following statements are **indented by exactly four spaces** and specify what the function does.  In this case, it prints `Hello,` followed by whatever `firstname` hapens to be.  The indentation isn't optional, it's an essential part of the syntax.  Python understands that the function ends when the indentation ends.  The last two lines in our code block define the string `somename = 'Chase'` and call the function with `somename` as the input argument.  Note that the name in the function's definition and its use need not be the same. 
 
-By convention (but not necessity), Python aficionadas put two blank lines before and after function definitions to make then stand out more clearly.  We used one to save space, but would use two in a real program.  
+By convention (but not necessity), Python aficionados put two blank lines before and after function definitions to make then stand out more clearly.  We used one to save space, but would use two in a real program.  
 
 
 Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output.  It simply prints the input.  In other cases, we might want to send output back to the main program.  We do that with the `return` command.  Here's an example:  
@@ -429,15 +431,18 @@ There's a lot of code around written in earlier versions of Python, typically Py
 
 ## Resources  
 
+
+Good sources of additional information, with our favs on top:  
+
 * Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with the course.  If you do, stop when you get to Advanced Topics. And expect to spend more than the 13 hours they suggest.   
 
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  It's also a good idea to get used to reading official documentation like this.  There are times when it's unavoidable.  
 
-* [Python the hard way](http://learnpythonthehardway.org/book/) is also quite good, but you need to have Python set up yourself to do it. Ignore the sales pitch, you can use it for free.  Just keep clicking on the NEXT button to the right. 
+*Zed shaw's [Python the Hard Way](http://learnpythonthehardway.org/book/) is also quite good, but you need to have Python set up yourself to do it. Ignore the sales pitch, you can use it for free.  Just keep clicking on the NEXT button to the right. 
 
 * [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
 
-* Allen Downey's [Think Python](http://www.greenteapress.com/thinkpython/) is also quite good.  You can buy it, or access the pdf for free.  It's a little formal for our taste, but you might find that refreshing.  
+* Allen Downey's [Think Python](http://www.greenteapress.com/thinkpython/) is also quite good.  You can buy it or access the pdf for free.  It's a little formal for our taste, but you might find that refreshing.  
 
 Most of these sources go well beyond what we do in this chapter, but we'll catch up with most of this material in the near future.  
 

@@ -94,7 +94,7 @@ else:
     print('Congratulations, you have Python 3!')
 ```
 
-* Comments (mtyn):  (i) Anything following a hashtag (#) is a comment.  (ii) Blank lines are optional here, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Contratulations, etc."
+* Comments (mtyn):  (i) Anything following a hashtag (#) is a comment.  (ii) Blank lines are optional here, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Contratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else will generate an error.  
 * Save your code.  Click on File at the top left, then Save As, and save in the directory of your choice under the name "bootcamp\_test.py" (Python programs always have the extension py).  We recommend the directory "Data\_Bootcamp" that we suggested earlier. 
 * Run it.  Click on the green triangle above the editor and run your program.  
 

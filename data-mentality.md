@@ -77,7 +77,7 @@ The suggestion is to start somewhere -- anywhere -- and see where it leads.  Bou
 * Graphics blogs:  [Flowing data](https://flowingdata.com/), [Junk Charts](http://junkcharts.typepad.com/), [VizWiz](http://vizwiz.blogspot.com/), [Graphic detail](http://www.economist.com/blogs/graphicdetail), and [Data Viz Done Right](http://www.datavizdoneright.com/).  And here are a [couple](http://flowingdata.com/2012/04/27/data-and-visualization-blogs-worth-following/) [lists](http://vizwiz.blogspot.com/p/data-viz-blogs.html). The [Tableau public gallery](http://public.tableau.com/s/gallery) has some good examples. ([Tableau](http://www.tableau.com/) is a popular "data visualization" program.)  
 
 
-**Common mistakes -- and solutions to them.**  We mean this in a good way, but in our experience there are a number of things students do that make this harder than it should be.  Here's a list, with suggestions for overcoming them: 
+**Common mistakes -- and how to fix them.**  We mean this in a good way, but in our experience there are a number of things students do that make this harder than it should be.  Here's a list, with suggestions for overcoming them: 
 
 * Mistake:  **Reject an idea too soon,** before you’ve given it enough thought.  Solution:  Collect ideas first, whittle them down later.  Don't be critical too early.  
 * Mistake:  **Choose a project that’s too large**.  Solution:  Think it over for a while, choose a small part that you think is interesting on its own.  You can always do more later.   

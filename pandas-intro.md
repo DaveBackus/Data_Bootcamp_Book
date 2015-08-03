@@ -21,14 +21,7 @@ We're ready now to look at some data.  This could be any data, really, but if yo
 
 ## Reminders 
 
-Two things we'll use repeatedly:
-
-* The `type` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, and lists.  The typical type in this chapter is a **dataframe**, which we'll learn more about soon.  
-
-* Methods and tab completion.  It's common, even standard, in Python to work with objects using methods.  (If these words are confusing, go back to the previous chapter.)  To see what methods are available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook -- to get a list.  If our object is a dataframe, we'll find methods that describe its contents, compute statistics (mean, standard deviation), and even plot its components.  
-
-And while we're reviewing:   Save the code file for this chapter in your `Data_Bootcamp` directory and open it in Spyder.  
-
+??
 
 ## Python packages
 
