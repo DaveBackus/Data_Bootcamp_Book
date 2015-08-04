@@ -10,7 +10,7 @@
 
 **Trigger warning.**  Technical content, cannot be mastered without time and effort.  
 
-**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_1.py).
+**Code.**  [Link here](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_1.py).
 
 ---
 
@@ -172,7 +172,8 @@ The blank line comes from the empty space to the right of the first triple quote
 
 One of the rules of good code is that **we explain what we've done -- in the code**.  In this class, we might think about writing code that one of our classmates can understand without help.  That generally means we should include some explanation -- in the code -- of what we've done.  These explanations are referred to as comments.  
 
-You might have noticed in our test program the presence of the hash character (#).  Anything in a line after a hash is a comment, meaning it's ignored by Python.  We can make short comments at the end of lines, or longer comments by putting a hash in the first column of a line.  
+You might have noticed in our test program the presence of the hash character (#).  Anything in a line after a hash is a comment, meaning it's ignored by Python.  We can make short comments by putting hashes in the middle of lines, 
+or longer comments by putting a hash in the first column of a line.  
 
 Or -- and this is one of our favorites -- we can include an extensive comment by surrounding it with triple quotes.  Officially this defines a string, but it's a string we don't use except as a long comment.  Here's an example from the start of our test program: 
 ```python 
@@ -200,16 +201,16 @@ print('c = ', c')
 (If you don't recall how to open a new file in Spyder, see the previous chapter.) 
 
 
-To run this code, we need to save the file we copied it into.  In Spyder's editor, click on File in the upper left corner and choose Save.  To set the file name (the default `Untitled0.py` isn't all that informative), choose Save as and pick a file name you prefer. With, of course, the extension py. Once we've done this, we can run the file in Spyder by clicking on the green arrow at the top of the editor window.  
+To run this code, we need to save the file we copied it into.  In Spyder's editor, click on File in the upper left corner and choose Save.  To set the file name (the default `Untitled0.py` isn't all that informative), we choose Save As and pick a file name we prefer. With, of course, the extension py. Once we've done this, we can run the file in Spyder by clicking on the green arrow at the top of the editor window.  
 
-The first three lines produce no output.  The last one generates the output `c =  something` in the IPython console.  
+The first three lines produce no output.  The last one produces the output `c =  something` in the IPython console.  
 
 
-## Cells in Spyder 
+## Code cells in Spyder 
 
 Spyder has a feature we haven't seen in other Python editors:  we can carve out blocks of code ("cells") and run them separately.  That comes naturally in IPython notebooks, as we'll see later, and it's a useful feature of Spyder as well.  
 
-The idea is to put the separator `#%%` between blocks of code, called **cells**, so that we can run them separately.  Consider the code:  
+The idea is to put the separator `#%%` (hash, percent, percent) between blocks of code, called **cells**, so that we can run them separately.  Consider the code:  
 ```python 
 x = 2
 y = 3
@@ -221,9 +222,9 @@ b = 'thing'
 c = a + b 
 print('c =', c)
 ```
-The separator `#%%` in the middle divides this set of commands into two cells, which we can run separately.  That way we can run and test blocks of code without running the whole program.  It doesn't make much difference with code this simple, but in longer programs it can be a real time saver.   
+The separator `#%%` in the middle divides this set of commands into two cells that we can run one at a time.  That allows us to run and test blocks of code without running the whole program.  It doesn't make much difference with code this simple, but in longer programs it can be a real time saver.   
 
-Here's how it works.  In the Spyder editor, click on a code cell.  The cell will indicate its selection with a darker yellow background than the other cells.  Now go to the toolbar above the editor.  The large green triangle runs the whole program. The one to its right displays the text "Run current cell" if you move the cursor to it.  Click on it to run the selected cell.  
+Here's how it works.  In the Spyder editor, click on a code cell.  The cell will indicate its selection with a darker background than the other cells.  Now go to the toolbar above the editor.  The large green triangle runs the whole program. The one to its right displays the text "Run current cell" if you move the cursor to it.  Click on it to run the selected cell.  
 
 **Exercise.** Copy the code above into your Python program.  Run each cell.  Check the output to make sure it worked.  
 
@@ -233,7 +234,6 @@ Here's how it works.  In the Spyder editor, click on a code cell.  The cell will
 Lists are one of the fundamental Python **data structures**, a term that means a specific organization of data.  A Python list is what it sounds like:  an ordered collection of items.  The items can be lots of things:  numbers, strings, variables, or even other lists.  We can create them by putting square brackets around a collection of items separated by commas.  Here are some examples:  
 ```python 
 numberlist = [1, 5, -3]
-
 a = 'some'
 b = 'thing'
 c = a + b 
@@ -241,7 +241,7 @@ stringlist = [a, b, c]
 ```
 (We repeat the definitions of (a,b,c) for completeness, but they're not necessary if you have already defined them.)  Copy this code into Spyder and run it.  What do you see if you type `print(numberlist)` in the IPython console?  
 
-We can combine lists in two ways.  The statement `biglist = numberlist + stringlist` produces a list containing all the elements of `numberlist` and `stringlist`, so we have six items altogether.  Type `print(biglist)` to verify that.  By way of contrast, the statement `biglist2 = [numberlist, stringlist]` produces a new list with two items:  the lists `numberlist` and `stringlist`.  It's what we might call a "list of lists."  That's not something we're likely to do, to be honest.  (We did it once, but it was an accident.)  The point is simply that lists are flexible objects. 
+We can combine lists (literally) by adding them.  The statement `biglist = numberlist + stringlist` produces a list containing all the elements of `numberlist` and `stringlist`, so we have six items altogether.  Type `print(biglist)` to verify that.  By way of contrast, the statement `biglist2 = [numberlist, stringlist]` produces a new list with two items:  the lists `numberlist` and `stringlist`.  It's what we might call a "list of lists."  That's not something we're likely to do, to be honest.  (We did it once, but it was an accident.)  The point is simply that lists are flexible objects. 
 
 
 **Exercise.** Run the statements 
@@ -255,7 +255,7 @@ What is the output?  How would you explain it to your classmates?
 ## Slicing strings and lists 
 
 
-We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, perhaps because we're slicing off pieces.  The only tricky part of this is remembering that Python (like some other programming languages) starts numbering at zero.  
+We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, perhaps because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that Python (like some other programming languages) starts numbering at zero.  
 
 
 **Slicing strings.** Take, for example, the string `a = 'some'`.  If we want the first item/letter, we would type `a[0]`.  Yes, that's the first item; remember, we start at zero.  If we want the second, we type `a[1]`.  And so on.  And here's a good one:  If we want the last letter, we type `a[-1]`.  And if we want the one before the last one, we type `a[-2]` or `a[2]`.  Both give us `'m'`. 
@@ -275,9 +275,9 @@ print('c[1:] is', c[1:])
 ```
 The first print statement gives us `o`, the second letter of `something`.  We label it element 1 because we start numbering at zero.  The next one does the same.  Why?  The convention is to stop one before the second number, so this goes from 1 to 1, which is the second letter.  The next line gives us `om`, the second and third letters.  Why third?  Stick with us now, but here's the logic:  we go from 1 to 2 (one less than the second number), which is the second and third letters (we started counting at zero).  
 
-The last line has no second number.  By convention is goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, or `omething`.  
+The last line has no second number.  By convention is goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
 
-Are you dizzy yet?  Let's try a few more examples for practice.  
+Are you dizzy yet?  Let's try a few examples for practice.  
 
 
 **Exercise.** Find the last letter of the string `python = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
@@ -286,7 +286,7 @@ Are you dizzy yet?  Let's try a few more examples for practice.
 **Exercise.** Extract the string `'thon'` from `python`. 
 
 
-**Slicing lists.**  We count the same way we did with strings, but the objects here are items in lists not characters in strings.  Let's see if we can teach ourselves.  
+**Slicing lists.**  We count the same way we did with strings, but the objects here are items in lists rather than characters in strings.  Let's see if we can teach ourselves.  
 
 **Exercise.** Take the list `numberlist = [1, 5, -3]`.  Use slicing to set a variable `first` equal to the first item.  Set another variable `last` equal to the last item.  Set a third variable `allbutlast` equal to the list without its last item.  
 
@@ -350,45 +350,6 @@ We use the **object inspector** a lot.  If it fails, either because there's no h
 
 
 
-## Defining our own functions
-
-It's easy to create our own functions -- experienced programmers do it all the time.  The common view of programmers is that you should rarely copy lines of code.  If you're copying, that means you're repeating yourself.  What you should do instead is write a function once and use it twice.  More than that, breaking a long program into a small number of functions makes code easier for others to read, which is always a good thing.  
-
-A function has three components:  a name (what we call it), its input (a list of arguments), and its output (what it produces from the input).  Here's a classic example:    
-
-```python 
-def hello(firstname):  
-    print('Hello,', firstname)    
-
-somename = 'Chase'   
-hello(somename) 
-```    
-The initial `def` statement defines the function, names it `hello`, identifies the input as `firstname`, and ends with a colon (:). The following statements are **indented by exactly four spaces** and specify what the function does.  In this case, it prints `Hello,` followed by whatever `firstname` hapens to be.  The indentation isn't optional, it's an essential part of the syntax.  Python understands that the function ends when the indentation ends.  The last two lines in our code block define the string `somename = 'Chase'` and call the function with `somename` as the input argument.  Note that the name in the function's definition and its use need not be the same. 
-
-By convention (but not necessity), Python aficionados put two blank lines before and after function definitions to make then stand out more clearly.  We used one to save space, but would use two in a real program.  
-
-
-Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output.  It simply prints the input.  In other cases, we might want to send output back to the main program.  We do that with the `return` command.  Here's an example:  
-```python 
-def combine(first, last): 
-	"""
-	Function takes strings 'first' and 'last' and returns new string 'last, first'
-	"""
-	lastfirst = last + ', ' + first 
-    return lastfirst 
-
-first = 'Chase' 
-last = 'Coleman'
-both = combine(first, last)
-print(both)
-```   
-Note the comment in triple quotes. 
-
-**Exercise.**  What do you think this code does?  Run it and see.  
-
-**Exercise.**  Write a function that takes an integer as an input (say, 2010) and returns a string of the next year (say, 2011).  
-
-
 ## Objects and methods
 
 Lots of things in Python are referred to as **objects**: numbers, strings, variables, lists, and lots of other things.  (Experts would say at this point:  an object is an "instance" of a "class."  Ignore them.)  **Methods** are ready-to-go things we can do with them.  The available methods depend on the object.  A lot of Python is "object-oriented," which means we apply methods to objects to accomplish what you might think you need a function for.  Trust us, the jargon is more difficult than just doing it.  
@@ -438,13 +399,13 @@ Good sources of additional information, with our favs on top:
 
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  It's also a good idea to get used to reading official documentation like this.  There are times when it's unavoidable.  
 
-*Zed shaw's [Python the Hard Way](http://learnpythonthehardway.org/book/) is also quite good, but you need to have Python set up yourself to do it. Ignore the sales pitch, you can use it for free.  Just keep clicking on the NEXT button to the right. 
+* Zed Shaw's [Python the Hard Way](http://learnpythonthehardway.org/book/) is also quite good, but you need to have Python set up yourself to do it. Ignore the sales pitch, you can use it for free.  Just keep clicking on the NEXT button to the right. 
 
 * [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
 
-* Allen Downey's [Think Python](http://www.greenteapress.com/thinkpython/) is also quite good.  You can buy it or access the pdf for free.  It's a little formal for our taste, but you might find that refreshing.  
+* Allen Downey's [Think Python](http://www.greenteapress.com/thinkpython/) is a little formal for our taste, but you might find that refreshing. You can buy it or access the pdf for free.  
 
-Most of these sources go well beyond what we do in this chapter, but we'll catch up with most of this material in the near future.  
+Most of these sources go well beyond what we do in this chapter, but we'll catch up with most of this material in the next chapter.  
 
 <!-- http://tutorial.djangogirls.org/en/python_introduction/index.html -->
 

@@ -8,7 +8,7 @@
 
 **Buzzwords.**  Distribution, environment, mtyn. 
 
-**Code.** [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_test.py).   
+**Code.** [Link here](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_test.py).   
 
 ---
 
