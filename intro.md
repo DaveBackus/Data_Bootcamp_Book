@@ -90,6 +90,8 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Leap in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means that the work load is heaviest at the start.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
 
+**Stress the basics.**  We think once you understand the basics, you'll be in a good position to work out special cases on your own.  Plus that allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
+
 **Code and applications.**  We attack data applications and programming together.  After covering Python basics, we generally organize things around specific applications, covering the relevant aspects of Python along the way.  We think it helps to have a context for what we're learning, but the downside is that it's somewhat harder to use the book as a programming reference.  We still think it makes sense.  Our goal isn't to produce programmers, but people who know enough about programming to work well with data.  
 
 **Online book preferred.**  We sometimes print out the pdf ourselves, but the online version comes with links, color coding, and a more attractive layout.  We think it's a superior user experience -- but please tell us if you think we're wrong. 

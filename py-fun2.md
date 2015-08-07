@@ -312,13 +312,19 @@ Note the comment in triple quotes.
 
 
 
-##  Other data structures
+##  More about data structures
 
-This whole section is mtyn:  we recommend you skim it, but don't worry about the details, you can come back to them if needed.  
+This whole section is mtyn:  we recommend you skim it, but not worry about the details.  You can come back to them if needed.  
 
-The term **data structure** refers to the organization of a collection of data.  A list is a data structure.  ...  
+The term **[data structure][5]** refers to the organization of a collection of data.  A list is a data structure.  ...  Check the [tutorial](https://docs.python.org/3.4/tutorial/datastructures.html).  
 
-http://en.wikipedia.org/wiki/Data_structure
+[5]: http://en.wikipedia.org/wiki/Data_structure
+
+
+**Dictionaries.**   Keys and values.  Slicing:  `d[key]`.  
+
+
+**Tuples.** Things in parentheses separated by commas.  Used in dates.  
 
 Examples: tuples, dictionaries, and sets.  We'll cover them later as needed.
 If you run across one of these terms, keep in mind it's just a different form

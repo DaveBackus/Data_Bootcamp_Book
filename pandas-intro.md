@@ -273,15 +273,21 @@ Papers:  https://scholar.google.com/scholar?hl=en&q=fisman+speed+dating&btnG=&as
 
 
 
+## Output methods
 
-## More fun with dataframes 
-
-
-Output methods:  to_excel, to_csv ...
+ to_excel, to_csv ...
 
 
-Graphical methods:  
+## More about data frames
 
+Referring to series...  
+
+
+Creating new series 
+(This is great, all done at once.  Loop somewhere.)  
+
+
+plot methods...  
 
 
 ## Resources 

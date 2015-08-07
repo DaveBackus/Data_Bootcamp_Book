@@ -4,7 +4,7 @@
 ---
 **Overview.** We install Python, then run a test program to make sure it's working.    
 
-**Python tools.**  Anaconda distribution, Spyder and IPython coding environments.  
+**Python tools.**  Anaconda distribution, Spyder and IPython/Jupyter coding environments.  
 
 **Buzzwords.**  Distribution, environment, mtyn. 
 
@@ -56,18 +56,18 @@ From here, we can launch our two favorite Python evironments.
 
 **Spyder.**  Spyder is a graphical environment with an editor for writing programs, a console for trying out one line at a time, and access to help.  It’s our preferred Python environment. Experts often use their own editors, but unless you’re one of them this is where you should start.  
 
-To start Spyder from Launcher, click on the Launch button to the right of spyder-app. We find it a little slow, but it should start up eventually.  Spyder has a number of different windows. The most important are:   
+To start Spyder from Launcher, click on the Launch button to the right of spyder-app. We find it a little slow, but it should start up eventually.  You'll see that Spyder has a number of different windows. The most important are:   
 
 * Editor.  This is on the left.  We can write and edit programs here and save them to our hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this later on.    
 * IPython console.  This is on the right at the bottom -- look for the tab with this label.  Here we can write and test single lines of code and see how they work.  Also some other things that we'll touch on later.    
 * Object explorer.  This is on the right at the top.  Here we can get documentation on Python commands, which is really useful.  
 
-You can move these windows around by dragging and dropping.  If you mess up and want to revert to the original, look for View at the top and click on "Reset window layout." 
+You can move these windows around by dragging and dropping.  If you mess up -- it happens to the best of us -- look for View at the top and click on "Reset window layout." 
 
 
-**IPython.**  IPython ("interactive Python") is another graphical environment, one that allows you to combine code, output, words, and graphics.  Lots of people use IPython notebooks to write Python programs and, especially, to present their work. By icnluding text and output along with the code, we can make a notebook look like presentation slides.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb) and a [more extensive collection](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
+**IPython.**  IPython ("interactive Python") is another graphical environment, one that allows you to combine code, output, words, and graphics.  Lots of people use IPython notebooks to write Python programs and, especially, to present their work. By including text and output along with the code, we can make a notebook double as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb) and a [more extensive collection](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
 
-To create or run an IPython notebook from Launcher, click on the Launch button to the right of ipython-notebook.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see at the top the word "Jupyter," which is the name of this environment.  (It used to say IPython, but now the same environment handles code in Julia, R, and other languages.)  Just below you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.  
+To create or run an IPython notebook from Launcher, click on the Launch button to the right of ipython-notebook.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see at the top the word "Jupyter," which is the name of this environment.  (It used to say IPython, but now the same environment handles code in Julia, R, and other languages, which called for a [name change](http://ipython.org/#jupyter-and-the-future-of-ipython).)  Just below Jupyter you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.  
 
 
 **Pro tip.**  Create a directory (folder) on your computer with the name "Data_Bootcamp" and store your programs there.  It will make it easier to find them later.  By way of example, we have set up a Code directory in our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp) with separate Python and IPython subdirectories.  This is **mtyn** (more than you need), but since we'll be using the repository repeatedly it's worth taking a quick look now. 
@@ -94,14 +94,14 @@ else:
     print('Congratulations, you have Python 3!')
 ```
 
-* Comments (mtyn):  (i) Anything following a hashtag (#) is a comment.  (ii) Blank lines are optional here, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Contratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else will generate an error.  
+* Comments (mtyn):  (i) Anything following a hashtag (#) is a comment.  (ii) Blank lines are optional here, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Contratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
 * Save your code.  Click on File at the top left, then Save As, and save in the directory of your choice under the name "bootcamp\_test.py" (Python programs always have the extension py).  We recommend the directory "Data\_Bootcamp" that we suggested earlier. 
 * Run it.  Click on the green triangle above the editor and run your program.  
 
-The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but it's better to know now than run into problems later. Have a cold drink anyway and catch your breath.  
+The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but it's better to know that now than run into problems later. Have a cold drink anyway and catch your breath.  
 
 
-**IPython**.  We prefer to write code in an editor and will stick with Spyder for most of the course.  But some people prefer IPython notebooks.  They're good for talks if you want to show both code and output, and intersperse it with text.  They can also be used for reports.  As we've seen from examples, you can read through them more easily than naked code.  Here are [three](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point.   
+**IPython**.  We prefer to write code in an editor and will stick with Spyder for most of the course.  But some people prefer IPython notebooks.  They're good for talks and reports if you want to show both code and output, and intersperse it with text.  They can also be used for reports.  As we've seen from examples, you can read through them more easily than naked code.  Here are [three](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point. 
 
 To run the same code in an IPython notebook, start up the IPython/Jupyter app in Launcher.  (If you're not sure how to do that, go back to the previous section.) Once you have it up and running:  
 
@@ -109,7 +109,7 @@ To run the same code in an IPython notebook, start up the IPython/Jupyter app in
 * Create a new notebook.  Click on the New menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.  
 * Set the file name.  To the right of the word Jupyter, you'll see the word Untitled.  Change it to bootcamp_test.  
 * Enter code.  Click on the menu below the word Help and choose Code.  Then enter the code listed above in the empty cell.  
-* Run code.  Click on Cell at the top and choose Run All.    
+* Run the code.  Click on Cell at the top and choose Run All.    
 
 Output will appear in the same cell below your code.  If it says "Congratulations etc." you're all set.  
 
@@ -119,3 +119,9 @@ Output will appear in the same cell below your code.  If it says "Congratulation
 We're now ready to write and run Python programs in two environments.  That's more than enough for one day.  Take a bow.  
 
 
+## Resources 
+
+More on the Anaconda distribution and its contents:
+
+* Anaconda [download](http://continuum.io/downloads) and [package list](http://docs.continuum.io/anaconda/pkg-docs).  
+* Spyder [documentation](https://pythonhosted.org/spyder/).  

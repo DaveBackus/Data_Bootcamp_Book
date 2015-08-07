@@ -12,6 +12,10 @@
 
 ---
 
+## Maps 
+
+http://maxberggren.github.io/2015/08/04/basemap/ 
+http://matplotlib.org/basemap/users/examples.html 
 
 ## Animations 
 

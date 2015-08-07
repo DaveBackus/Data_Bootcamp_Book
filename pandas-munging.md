@@ -1,5 +1,5 @@
 
-# More working with data 
+# Emerging market indicators 
 
 ---
 **Overview.** 
@@ -78,7 +78,6 @@ Evidently Pandas is smart...
 
 ## Examples 
 
-
 Auto safety:  http://www.nhtsa.gov/NCSA
 
 
@@ -88,5 +87,14 @@ Brandon Rhodes.  This is great.
 https://youtu.be/5JnMutdy6Fw
 https://github.com/brandon-rhodes/pycon-pandas-tutorial/
 
+https://en.wikipedia.org/wiki/Pivot_table
+
+Other 
+
+* Groupby:  http://pandas.pydata.org/pandas-docs/stable/groupby.html
+* stack and unstack:  http://pandas.pydata.org/pandas-docs/stable/reshaping.html
+
 Kaggle example:  http://blog.kaggle.com/2013/01/17/getting-started-with-pandas-predicting-sat-scores-for-new-york-city-schools/ 
 
+
+SQL intro https://www.khanacademy.org/computing/hour-of-code/hour-of-sql/v/welcome-to-sql 
