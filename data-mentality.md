@@ -57,12 +57,14 @@ One of our goals is for you to produce a piece of work -- data and graphics -- t
 
 **Sample projects.** A typical project might be a short report that uses data and graphics to make a point. Here are some examples, chosen more for style than content, but feel free to add your own ideas:    
 
-**Refine this, more emphasis on econ/fin projects**
+<!-- **Refine this, more emphasis on econ/fin projects** -->
 
-* [NBA shot charts](http://savvastjortjoglou.com/nba-shot-sharts.html).  Even if you're not a backetball fan, this is a terrific project that produces some great pictures and shows you how along the way.  Here's the [IPython notebook](https://github.com/savvastj/blog/blob/master/content/NBA_shot_charts.ipynb).   
-* [US employment](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Projects/Employment-Population-Ratio_DavidCai_Jul_15.ipynb).  Student David Cai documents the recent decline in the fraction of adults working in the US.  The question is why. Are we getting lazier?  Or something else?  
+* [US employment](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Projects/Employment-Population-Ratio_DavidCai_Jul_15.ipynb).  Student David Cai documents the recent decline in the fraction of adults working in the US.  The question is why. Are we getting lazier?  Or something else? 
+* [World oil production](http://econbrowser.com/archives/2015/08/opec-and-world-oil-supplies).  The world oil price [dropped like a stone](https://research.stlouisfed.org/fred2/series/DCOILBRENTEU) in 2014.  Jim Hamilton tells us what happened to supply.   
+* [Chinese stock prices](http://www.moneyandbanking.com/commentary/2015/7/6/chinas-stock-market-boom-and-bust).  Steve Cecchetti and Kim Schoenholtz comment on the boom and bust and what it means for the development of China's financial institutions.   
+* [Reinhardt-Rogoff replication](http://nbviewer.ipython.org/github/vincentarelbundock/Reinhart-Rogoff/blob/master/reinhart-rogoff.ipynb).  Vincent Arel-Bundock reproduces the [famous mistake](http://www.bloomberg.com/bw/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history).  Carmen Reinhardt and Ken Rogoff claimed high levels of government debt were associated with slower economic growth.  The association is there, but it's slight once you eliminate their Excel errors.  (Yes, they should be embarrassed for using Excel. But no, it's still not a good idea to run up loads of debt.)  
 * [Movie hits and busts](http://www.randalolson.com/2014/12/29/the-biggest-box-office-booms-and-busts-since-1982/).  Movie data is always interesting, we'll see more of it later on.  
-* [Reinhardt-Rogoff replication](http://nbviewer.ipython.org/github/vincentarelbundock/Reinhart-Rogoff/blob/master/reinhart-rogoff.ipynb).  This reproduces the mistake in the famous paper that claimed high levels of government debt were associated with slower economic growth.  The association is there, but it's slight.  
+* [NBA shot charts](http://savvastjortjoglou.com/nba-shot-sharts.html).  Even if you're not a backetball fan, this is a terrific project that produces some great pictures and shows you how along the way.  Here's the [IPython notebook](https://github.com/savvastj/blog/blob/master/content/NBA_shot_charts.ipynb).   
 * [Citibike usage](https://wakari.io/sharing/bundle/paddy/pydata_citibike).  This service comes with a public data interface, one of many provided by local governments. Here's [another one](https://jakevdp.github.io/blog/2015/07/23/learning-seattles-work-habits-from-bicycle-counts/) about bikes, this time for Seattle.  There's a link to the IPython notebook at the end.  
 
 You might have noticed that several of these are **IPython notebooks**.  We'll learn more about them in a few weeks.  Their value in this context is that they allow us to combine code with text and graphics.  It's a great way to show not only what you've done but how you've done it.  
@@ -79,17 +81,17 @@ The suggestion is to start somewhere -- anywhere -- and see where it leads.  Bou
 
 **Idea machines.**  Another way to generate ideas is to skim blogs that look at data and graphics.  The latter is a reminder of the form of our output.  A good graphic is a wonderful thing, especially one that makes a compelling point.  Here are some of our favs.  Take an hour or two some time, find a comfortable chair, and look through them.  
 
-* Blogs with data and graphics:  [Conversable Economist](http://conversableeconomist.blogspot.com/), [FRED blog](https://fredblog.stlouisfed.org/), [R-bloggers](http://www.r-bloggers.com/), .  
-* Data journalism:  [538](http://fivethirtyeight.com/), [Upshot](http://www.nytimes.com/upshot/), [Quartz](http://qz.com/.  They often post data and code as well (look for their GitHub repositories).  
-* Graphics blogs:  [Flowing data](https://flowingdata.com/), [Junk Charts](http://junkcharts.typepad.com/), [VizWiz](http://vizwiz.blogspot.com/), [Graphic detail](http://www.economist.com/blogs/graphicdetail), and [Data Viz Done Right](http://www.datavizdoneright.com/).  And here are a [couple](http://flowingdata.com/2012/04/27/data-and-visualization-blogs-worth-following/) [lists](http://vizwiz.blogspot.com/p/data-viz-blogs.html). The [Tableau public gallery](http://public.tableau.com/s/gallery) has some good examples, including [this one](https://public.tableau.com/s/gallery/dementia-uk). ([Tableau](http://www.tableau.com/) is a popular "data visualization" program.)  
-* Datasets: here are [some](http://www.asdfree.com/p/about-faq.html) [good](https://sites.google.com/site/medevecon/development-economics/devecondata) [lists](http://flowingdata.com/2009/10/01/30-resources-to-find-the-data-you-need/). but you can also use your Google fu.  
+* Blogs with data and graphics:  [Conversable Economist](http://conversableeconomist.blogspot.com/), [FRED blog](https://fredblog.stlouisfed.org/), [R-bloggers](http://www.r-bloggers.com/).  
+* Data journalism:  [538](http://fivethirtyeight.com/), [Upshot](http://www.nytimes.com/upshot/), [Quartz](http://qz.com/.  Some of them post data and code as well (look for their GitHub repositories).  
+* Graphics blogs:  [Flowing data](https://flowingdata.com/), [Junk Charts](http://junkcharts.typepad.com/), [VizWiz](http://vizwiz.blogspot.com/), [Data Viz Done Right](http://www.datavizdoneright.com/), , [Graphic detail](http://www.economist.com/blogs/graphicdetail).  And here are a [couple](http://flowingdata.com/2012/04/27/data-and-visualization-blogs-worth-following/) [lists](http://vizwiz.blogspot.com/p/data-viz-blogs.html). The [Tableau public gallery](http://public.tableau.com/s/gallery) also has some good examples, including [this one](https://public.tableau.com/s/gallery/dementia-uk). ([Tableau](http://www.tableau.com/) is a popular "data visualization" program.)  
+* Datasets: here are [some](http://www.asdfree.com/p/about-faq.html) [good](https://sites.google.com/site/medevecon/development-economics/devecondata) [lists](http://flowingdata.com/2009/10/01/30-resources-to-find-the-data-you-need/), but you can also use your Google fu.  
 
 
 **Common mistakes -- and how to fix them.**  We mean this in a good way, but in our experience there are a number of things students do that make this harder than it should be.  Here's a list, with suggestions for overcoming them: 
 
 * Mistake:  **Reject an idea too soon,** before you’ve given it enough thought.  Solution:  Collect ideas first, whittle them down later.  Don't be critical too early.  
 * Mistake:  **Choose a project that’s too large**.  Solution:  Think it over for a while, choose a small part that you think is interesting on its own.  You can always do more later.   
-* Mistake:  **Pick a bad dataset**, one that’s not publically available or doesn’t have what you need.  Solution:  Start with what you have, ask what you can do with it.  We call this the Jeopardy approach:  start with the answer, come up with the question.  If that fails, find another dataset.  
+* Mistake:  **Pick a bad dataset**, one that’s not publically available or doesn’t have what you need.  Solution:  Start with what you have, ask what you can do with it.  We call this the [Jeopardy](https://en.wikipedia.org/wiki/Jeopardy!) approach:  start with the answer, come up with the question.  If that fails, find another dataset.  
 
 
 **Bottom line.**  Projects are less structured than most things you'll run across in the academic world.  It's challenging, at first, to work with so little structure, but most students find that the freedom to develop their own work is one of the most rewarding things they can do.  
@@ -101,12 +103,10 @@ The suggestion is to start somewhere -- anywhere -- and see where it leads.  Bou
 
 We've put together a longer [list of project ideas](https://docs.google.com/document/d/1hsuYz2IMoPPwba66BlyMW0tnMxuZPyH4F3ybc13Zsfk/edit?usp=sharing), some more fleshed out than others.  Give them a skim, see what appeals to you.  Or come up with your own.  
 
+If you're feeling brave, you could also take a look at our [enormous collection](https://docs.google.com/document/d/1TFm-UUigzlei4bQasUy755-IZfDUXEyTSqByZMS0XJQ/edit?usp=sharing) of economic, financial, and miscellaneous data sources and applications.  It's what our Aussie friend John Asker would call a dog's breakfast, but there's lots of cool stuff hidden there.  
+
+We've given you way too much information.  We suggest you pick a place to start and see what you come up with.  
+
 <!--
-More
-
-http://whatworkscities.bloomberg.org/
-
-https://data.cityofnewyork.us/
-
 **For later:  divide these links into econ/fin and other.  Do this throughout the chapter.**
 -->

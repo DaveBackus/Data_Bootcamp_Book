@@ -12,6 +12,12 @@
 
 ---
 
+## Using APIs
+
+https://www.codecademy.com/en/tracks/npr 
+https://www.codecademy.com/en/tracks/nhtsa
+
+
 ## Maps 
 
 http://maxberggren.github.io/2015/08/04/basemap/ 

@@ -1,27 +1,28 @@
 
-# Managing data 1  
+# Managing data 1 (and a look at Greek debt)  
 
 ---
-**Overview.** We introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
+**Overview.** Our goal is to plot government debt for Greece and compare it to other countries.  To do that, we introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
 
 **Python tools.**  Import, Pandas.  
 
 **Buzzwords.**  Package, dataframe.  
 
-**Applications.**  College majors and income, Big Mac prices, Chipotle, income mobility. 
+**Applications.**  Greek debt, college majors, income mobility. 
 
 **Code.** Link [here]().  ??
 
 ---
 
-We're ready now to look at some data.  This could be any data, really, but if you have something that appeals to you, we'll show you how to get it into Python.  We explain how to read spreadsheets into Python, even spreadsheets that are posted on the internet.  Along the way we describe how Python uses collections of tools (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
+We're ready now to look at some data, specifically data on the Greek government's debt.  Is there too much of it?  It's not immediately clear what "too much" means, but we can certainly compare it to some other countries.  We do that with the IMF's convenient *World Economic Outlook* ([WEO](http://www.imf.org/external/pubs/ft/weo/data/assump.htm)) dataset, which they kindly update twice a year.  It's in a (sort of) spreadsheet format, so we're on familiar ground.   The challenge is to read it into Python. 
 
-?? Recall program structure:  get data etc.  First step now.  
+We start, then, by describing how to get data into Python, particularly data in spreadsheets.  Along the way we describe how Python uses collections of tools (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
 
 
-## Reminders 
+##  Reminder 
 
-??
+You may recall that our canonical program structure consists of data input, data management, and graphics.  We'll spend most of our time on the first, but produce a simple plot by finding a suitable method.  
+
 
 ## Python packages
 
@@ -36,7 +37,6 @@ Some of the leading packages for numerical ("scientific") computation  are
 * **[Matplotlib](http://matplotlib.org/).**  The leading graphics package for Python.  We'll use it extensively.  
 
 * **[NumPy](http://www.numpy.org/).**  Tools for numerical computing, including linear algebra. Compare this to Excel, where the basic unit is a cell, a single number.  In NumPy the basic unit is a vector (a column) or matrix (a table or worksheet).  In this respect, it's a direct competitor to Matlab.  We won't see much of NumPy here -- maybe a little -- but it's the foundation for Pandas, which we'll use constantly.   
-
 
 All of these packages come with the [Anaconda distribution](http://docs.continuum.io/anaconda/pkg-docs.html).  We'll use all of them a bit, and Matplotlib and Pandas constantly.  
 
@@ -105,7 +105,7 @@ Some fine points:
 
 ## The Pandas package 
 
-Pandas is Python's data management package.  The authors [describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much anything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, compute pivot tables, and lots of other things.  And we can do all this on much larger files than Excel can handle.  
+Pandas is Python's data management package and an essential component of data work in Python.  The authors [describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much anything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, compute pivot tables, and lots of other things.  And we can do all this on much larger files than Excel can handle.  
 
 We'll come back to all of these things later in the course, but for now we'll focus on data input:  how to get data into a Python program.  
 
@@ -267,6 +267,9 @@ https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/27893
 
 Papers:  https://scholar.google.com/scholar?hl=en&q=fisman+speed+dating&btnG=&as_sdt=1%2C33
 
+**Example.** Beer ratings...   
+https://github.com/TomAugspurger/PyDataSeattle/blob/master/notebooks/3.%20Indexing.ipynb
+
 
 **Exercise.** 
 
@@ -307,5 +310,8 @@ http://www.danielforsyth.me/pandas-burritos-analyzing-chipotle-order-data-2/
 
 http://pandas.pydata.org/pandas-docs/stable/cookbook.html#data-in-out
 http://pandas.pydata.org/pandas-docs/stable/io.html 
+
+History of debt (see data link on left):  http://www.imf.org/external/ns/cs.aspx?id=262 
+
 
 http://www.alfredo.motta.name/data-manipulation-primitives-in-r-and-python/ 

@@ -12,6 +12,8 @@
 
 ---
 
+**Work in Progress**
+
 
 We continue our overview of Python's core language.  That's not what we'll use, for the most part, but the same concepts show up in other places.  We go through the material quickly, since we're more interested in the general ideas than the details.  
 
@@ -32,7 +34,7 @@ And while we're reviewing:   Save the code file for this chapter in your `Data_B
 
 ## Logical expressions 
 
-Sometimes want to do one thing if a condition is true, another if it's false.  For example, we might want to use observations for which the date is after January 1980, the country is India, or the population is greater than 5 million -- and not otherwise.  
+Sometimes we want to do one thing if a condition is true, another if it's false.  For example, we might want to use observations for which the date is after January 1980, the country is India, or the population is greater than 5 million -- and not otherwise.  
 
 Python -- like all modern programming languages -- has a collection of logical expressions to do things like this.  We refer to such expressions as **comparisons** because they involve the comparison of one thing with another; for example, the date of an observation and the date January 1980.  The result of a comparison is either `True` or `False`.  We refer to true/false variables like this as **Boolean**, a name derived from the 18th century mathematician and logician [George Boole](https://en.wikipedia.org/wiki/George_Boole).  
 
@@ -343,7 +345,7 @@ filter, ...
 
 ## Assignments and copies
 
-This is what programmers call a "[gotcha][8]," an unexpected or counterintuitive feature of a language.  This one has gotten all of us at one time or other.  It shows up in Numpy and Pandas, too.  
+This is what programmers call a "[gotcha][8]," an unexpected or counterintuitive feature of a language.  This one has gotten all of us at one time or other.  It shows up in the Pandas package, too.  
 
 
 [8]: https://en.wikipedia.org/wiki/Gotcha_(programming)
@@ -369,7 +371,11 @@ See the [Python documentation](https://docs.python.org/3.4/library/copy.html).
 
 ## Programming style  
 
-Yes, style counts.  
+Yes, style counts.  You're not only trying to get something done, you're also communicating with others who may look at your code.  A clear style makes that communication more effective.  
+
+* Lines must be no longer than 80 characters.
+* Skip two lines before and after a function definition. 
+* Adopt the style of your group.   
 
 PEP8 etc \\
 \url{https://google-styleguide.googlecode.com/svn/trunk/pyguide.html}
@@ -389,6 +395,6 @@ See the resources in the previous chapter, especially the link to [Codecademy](h
 Additional resources for specific topics:
 
 * The [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "trol flow language," which includes comparisons, conditional statements, and loops.  
+* Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of this course is also quite good.  
 * The infamous [PEP8](https://www.python.org/dev/peps/pep-0008/) and [Google](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html) describe programming style.  
-* Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  
 

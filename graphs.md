@@ -102,6 +102,15 @@ http://matplotlib.org/examples/showcase/xkcd.html
 
 fonts:  http://stackoverflow.com/questions/19663986/getting-xkcd-plots-using-matplotlib
 
+Revert to defaults:  http://stackoverflow.com/questions/26413185/how-to-recover-matplotlib-defaults-after-setting-stylesheet
+
+import matplotlib as mpl
+mpl.rcParams.update(mpl.rcParamsDefault)
+
+Also saw this:   plt.rcdefaults() 
+
+Diff in IPython...  
+
 ## Links 
 
 Viz of the Day

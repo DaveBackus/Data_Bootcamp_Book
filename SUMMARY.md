@@ -6,7 +6,7 @@
 * [Installing Python](installing-python.md)
 * [Python fundamentals 1](py-fun1.md) 
 * [Python fundamentals 2](py-fun2.md) 
-* [Managing data 1](pandas-intro.md)
+* [Managing data 1 (and a look at Greek debt)](pandas-intro.md)
 * [Visualizing data](graphs.md)
 * [Managing data 2](pandas-munging.md)
 * [Emerging market indicators](emerging.md)
