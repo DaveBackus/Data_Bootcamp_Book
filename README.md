@@ -1,6 +1,6 @@
 ## Warning
 
-This is a **work in progress**, target date January 2016.  We've now drafted 4-5 chapters, more in the works.  Suggestions welcome at db3@nyu.edu.  Even better,  [post an issue](https://github.com/DaveBackus/Data_Bootcamp_Book/issues).  
+This is **work in progress**, target date January 2016.  We've now drafted 4-5 chapters, more in the works.  Suggestions welcome at db3@nyu.edu.  Even better,  post an issue on [our repository](https://github.com/DaveBackus/Data_Bootcamp_Book/issues).  
 
 
 ## Preface
