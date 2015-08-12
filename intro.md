@@ -4,7 +4,7 @@
 
 **Overview.**  Data skills are enormously valuable in the modern world.  We're going to give you those skills, show you how to apply them to economic and financial data, and maybe tell a few bad jokes along the way.  Join us!   
 
-**Buzzwords.** Python, Google fu, code.  
+**Buzzwords.** Python, code, Google fu.  
 
 ---
 

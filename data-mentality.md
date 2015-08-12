@@ -67,7 +67,7 @@ One of our goals is for you to produce a piece of work -- data and graphics -- t
 * **[NBA shot charts](http://savvastjortjoglou.com/nba-shot-sharts.html).**  Even if you're not a backetball fan, this is a terrific project that produces some great pictures and shows you how along the way.  Here's the [IPython notebook](https://github.com/savvastj/blog/blob/master/content/NBA_shot_charts.ipynb). 
 * **[Uber and taxis](http://fivethirtyeight.com/features/uber-is-serving-new-yorks-outer-boroughs-more-than-taxis-are/).**  Evidently they're doing a better job than taxis of serving the outer boroughs of NYC. 
 * **[Twitter profiles](http://andrewshamlet.com/2015/07/13/part-3-most-common-words-used-in-tweets-by-taylor-swift-katy-perry-and-britney-spears/).**  Student Andrew Hamlet mines twitter data and documents patterns in tweets by Taylor Swift and others. 
-* **[Citibike usage](https://wakari.io/sharing/bundle/paddy/pydata_citibike).**  This service comes with a public data interface, one of many provided by local governments. Here's [another one](https://jakevdp.github.io/blog/2015/07/23/learning-seattles-work-habits-from-bicycle-counts/) about bikes, this time for Seattle.  There's a link to the IPython notebook at the end.  
+* **[Citibikes](https://wakari.io/sharing/bundle/paddy/pydata_citibike).**  This service comes with a public data interface, one of many provided by local governments. Here's [another one](https://jakevdp.github.io/blog/2015/07/23/learning-seattles-work-habits-from-bicycle-counts/) about bikes, this time for Seattle.  There's a link to the IPython notebook at the end.  
 
 You might have noticed that several of these are **IPython notebooks**.  We'll learn more about them in a few weeks.  Their value in this context is that they allow us to combine code with text and graphics.  It's a great way to show not only what you've done but how you've done it.  
 
@@ -104,7 +104,7 @@ The suggestion is to start somewhere -- anywhere -- and see where it leads.  Bou
 
 We've put together a longer [list of project ideas](https://docs.google.com/document/d/1hsuYz2IMoPPwba66BlyMW0tnMxuZPyH4F3ybc13Zsfk/edit?usp=sharing), some more fleshed out than others.  Give them a skim, see what appeals to you.  Or come up with your own.  
 
-If you're feeling brave, you could also take a look at our [enormous collection](https://docs.google.com/document/d/1TFm-UUigzlei4bQasUy755-IZfDUXEyTSqByZMS0XJQ/edit?usp=sharing) of economic, financial, and miscellaneous data sources and applications.  It's what our Aussie friend John Asker would call a dog's breakfast, but there's lots of cool stuff hidden there.  
+If you're feeling brave, you could also take a look at our [enormous collection](https://docs.google.com/document/d/1L2ZDKFyyqfOrCGbNcCIE9mmgap4tjkTNuw32hK4c6BI/edit?usp=sharing) of economic, financial, and miscellaneous data sources and applications.  It's what our Aussie friend John Asker would call a dog's breakfast, but there's lots of cool stuff hidden there.  
 
 We've given you way too much information.  We suggest you pick a place to start and see what you come up with.  
 
