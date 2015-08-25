@@ -8,7 +8,7 @@
 
 ---
 
-This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  If you make it to the end, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, but maybe that's us.  
+This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, but maybe that's us.  
 
 ## Answers to common questions 
 
@@ -22,7 +22,7 @@ This book -- and the course we developed it for -- is about data, primarily econ
 
 **Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to do things with data that Excel users can only dream about.  You will also be prepared to do more along similar lines, including the extensive collection of courses on **business analytics** and **data science** offered by NYU Stern's [IOMS group](http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept).  
 
-**Should I take this course if I already know how to code?**  You’re welcome to, and you will learn a lot about data.  But please don’t scare the other students.  
+**Should I take this course if I already know how to code?**  You’re welcome to, and you will learn a lot about dat  and the data components of Python.  But please don’t scare the other students.  
 
 **Is there anything Python can't do?**  Well, [it can't swallow a porcupine](http://www.telegraph.co.uk/news/worldnews/11697672/Python-chokes-to-death-after-eating-porcupine.html).  Someone is working on pretty much everything else.  
 
@@ -31,7 +31,7 @@ This book -- and the course we developed it for -- is about data, primarily econ
 
 We're living in a world of data: data about the economy, data about financial markets, data about your business.  Data doesn't solve all of our problems, but it's a valuable input to better decisions.  For example, how should you [choose a major](http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/)?  
 
-Many of our former students tell us that data skills keep them in business.  One of our alums analyzes television data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages player and attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are, if not absolutely required, at least very useful in their jobs.  One of our  marketing majors, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
+Many of our former students tell us that data skills keep them in business.  One of our alums analyzes television  viewer data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages player and attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are, if not required, at least very useful in their jobs.  One of our  marketing majors, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
 
 
 ## Why Python?   

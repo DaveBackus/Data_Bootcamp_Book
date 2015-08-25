@@ -15,19 +15,27 @@ What do we mean when we say something is "random"?  Well, we might mean [really 
 
 Examples:  
 * bar chart of equity returns
+* distribution of one-day currency changes:  euro, rmb, swf
 * Distribution of life times 
 
+http://ec2-52-21-49-3.compute-1.amazonaws.com:8000/user/PzkeYvpCRSF5/notebooks/nikkei_returns_data.ipynb
+http://www.mglerner.com/blog/?p=28 
+https://jakevdp.github.io/blog/2013/12/01/kernel-density-estimation/
 
-# Describing randomness
+
+## Describing randomness
 
 
 bar charts, pdfs, cdfs?
 
 
 
-# Scipy and Numpy
+## Scipy and Numpy
 
-Show tools, generate random data
+Show tools, generate random data 
+
+
+## Equity returns 
 
 
 # References 

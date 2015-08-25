@@ -2,7 +2,7 @@
 # Managing data 1 (and a look at Greek debt)  
 
 ---
-**Overview.** Our goal is to plot government debt for Greece and compare it to other countries.  To do that, we introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
+**Overview.** Our goal is to look at government debt in Greece and other countries.  To do that, we introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
 
 **Python tools.**  Import, Pandas.  
 
@@ -273,7 +273,9 @@ https://github.com/TomAugspurger/PyDataSeattle/blob/master/notebooks/3.%20Indexi
 
 **Exercise.** 
 
+## More...  
 
+Talk about using Stata or SAS programs, shows up in CPS and MEPS, probably others.  
 
 
 ## Output methods

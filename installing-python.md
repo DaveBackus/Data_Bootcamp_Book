@@ -24,7 +24,7 @@ Another important part of a programming language is the user-interface or **envi
 Follow these instructions.  By which we mean: **follow these instructions exactly!** Creativity is a wonderful thing, but here it will cost you dearly. 
  
 
-**Step 1. Download the Anaconda installer.**  Click [here](http://continuum.io/downloads) to go to the download page.  Click on the logo of your operating system (Windows, Mac OS, or Linux) and "I want Python 3.4" to choose the appropriate version.  Then click on "Python 3.4 Graphical Installer" to download the installer.
+**Step 1. Download the Anaconda installer.**  Click [here](http://continuum.io/downloads) to go to the download page. (If that link doesn't work for you, Google "Anaconda downloads.")  Click on the logo of your operating system (Windows, Mac OS, or Linux) and "I want Python 3.4" to choose the appropriate version.  Then click on "Python 3.4 Graphical Installer" to download the installer.
 
 **Make sure you get Python 3.4.**  If you accidentally install Python 2.7, or anything other than 3.4, you should uninstall it and start over.  
 
@@ -58,9 +58,9 @@ From here, we can launch our two favorite Python evironments.
 
 To start Spyder from Launcher, click on the Launch button to the right of spyder-app. We find it a little slow, but it should start up eventually.  You'll see that Spyder has a number of different windows. The most important are:   
 
-* Editor.  This is on the left.  We can write and edit programs here and save them to our hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this later on.    
-* IPython console.  This is on the right at the bottom -- look for the tab with this label.  Here we can write and test single lines of code and see how they work.  Also some other things that we'll touch on later.    
-* Object explorer.  This is on the right at the top.  Here we can get documentation on Python commands, which is really useful.  
+* **Editor.**  This is on the left.  We can write and edit programs here and save them to our hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this later on.    
+* **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  Here we can write and test single lines of code and see how they work.  Also some other things that we'll touch on later.    
+* **Object inspector.**  This is on the right at the top.  We can get Python documentation here, which is really useful.  
 
 You can move these windows around by dragging and dropping.  If you mess up -- it happens to the best of us -- look for View at the top and click on "Reset window layout." 
 
@@ -80,8 +80,7 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 **Spyder**.  Start up Spyder.  (If you're not sure how to do that, go back to the previous section.) Once you have Spyder up and running:  
 
 * Create a new file.  Click on File (upper left), then New file.  That should give you a new file with some junk at the top that you can ignore or delete.  
-* Add code to file.  Enter the following lines of code at the bottom of your file (cut and paste should do it): 
-
+* Add code to file.  Enter the following lines of code at the bottom of your file (you can cut and paste from the code file linked at the top): 
 ```python 
 import sys      # import system module (don't ask) 
 
@@ -125,3 +124,4 @@ More on the Anaconda distribution and its contents:
 
 * Anaconda [download](http://continuum.io/downloads) and [package list](http://docs.continuum.io/anaconda/pkg-docs).  
 * Spyder [documentation](https://pythonhosted.org/spyder/).  
+* IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  

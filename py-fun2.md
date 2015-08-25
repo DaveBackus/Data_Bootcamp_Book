@@ -61,7 +61,7 @@ name2 = 'Spencer'
 check =  name1 >= name2 
 print(check)
 ```
-Run it and see if you're right.  What is the value of the variable `check`?  What does the comparison mean here?  
+Run it and see if you're right.  What is the type of the variable `check`?  What is its value?  What does the comparison mean here?  
 
 **Exercise (continued).** Suppose we add the commands 
 ```python 
@@ -339,7 +339,10 @@ This is all mtyn, but we find it interesting.
 
 lambda
 
-filter, ...  
+map, reduce, filter, ...  
+
+
+[??] classes 
 
 
 
@@ -395,6 +398,6 @@ See the resources in the previous chapter, especially the link to [Codecademy](h
 Additional resources for specific topics:
 
 * The [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "trol flow language," which includes comparisons, conditional statements, and loops.  
-* Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of this course is also quite good.  
 * The infamous [PEP8](https://www.python.org/dev/peps/pep-0008/) and [Google](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html) describe programming style.  
-
+* Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of this course is also quite good.  
+* Ditto [Python Tips](http://book.pythontips.com/en/latest/), which starts at a level just above where we left off.  Lots of cool stuff if you'd like to push further into Python.  

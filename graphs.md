@@ -41,7 +41,7 @@ markdown...
 
 matplotlib flag 
 
-Getting help 
+Getting help:  command? for guide, command? for code.  
 
 css files ??
 
@@ -112,6 +112,7 @@ mpl.rcParams.update(mpl.rcParamsDefault)
 Also saw this:   plt.rcdefaults() 
 
 Diff in IPython...  
+
 
 ## Links 
 
