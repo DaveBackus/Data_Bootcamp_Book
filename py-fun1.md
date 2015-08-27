@@ -4,7 +4,7 @@
 ---
 **Overview.**  Time to start programming!  We work our way through some simple programs using Python's core language.  We don't cover enough ground to do serious data work, but it lays a solid foundation to build on.  Part 1 of 2.  
 
-**Python tools.**  Syntax, numbers, calculations, strings, Spyder, lists, functions, objects, methods, tab completion, object inspector.  
+**Python tools.**  Syntax, Spyder, numbers, calculations, strings, lists, functions, objects, methods, tab completion, object inspector.  
 
 **Buzzwords.** Isn't that enough?  
 
@@ -38,9 +38,9 @@ Each of these bullet points is typically associated with a number of lines of co
 
 ## Calculations in Spyder's IPython console 
 
-One of the things we'll do repeatedly in Python is calculations with numbers.  That's a lot of what managing data is all about: adding things up, dividing one thing by another, and so on. We'll do this initially in Spyder's IPython console, typically located in the upper right corner (look for a tab with this label).
+One of the things we'll do repeatedly in Python is calculations with numbers.  That's a lot of what managing data is all about: adding things up, dividing one thing by another, and so on. We'll do this initially in Spyder's **IPython console**, typically located in the upper right corner (look for a tab with this label).
 
-Here's how calculations work in Python.  Type these calculations in Spyder's IPython console one at a time:
+To see how calculations work in Python, type these expressions in Spyder's IPython console one at a time:
 ```
 2*3
 2 * 3
@@ -49,14 +49,14 @@ Here's how calculations work in Python.  Type these calculations in Spyder's IPy
 2**3
 log(3) 
 ```
-For each one, pay close attention to what happens.  The first one multiplies 2 times 3, and (hopefully) gives us 6 as the answer.  The input and output look like this in the console:
+With each one, pay close attention to what happens.  The first one multiplies 2 times 3, and (hopefully) gives us 6 as the answer.  The input and output look like this in the console:
 ```
 In [1]: 2*3
 Out[1]: 6
 ```
 The first line is our input, we typed it.  The second line is the response or output Python produces.  The numbers in square brackets are sequential:  The number [1] increases to [2], [3], and so on.  
 
-The second calculation, `2 * 3`, does the same thing.  The space around the * doesn't change the output.  As a general rule, we can put spaces wherever we think they make the code more readable.  
+The second calculation, `2 * 3`, does the same thing.  The spaces around the * don't change the output.  As a general rule, we can put spaces wherever we think they make the code more readable.  
 
 The third calculation is division.  The input and output are 
 ```
@@ -80,7 +80,7 @@ Our last calculation is the log function.  Entering `log(3)` generates the messa
 
 ## Assignments 
 
-Or maybe we should say "assignments" in scare quotes  We say we "assign" numbers to "variables," names we use to store information.  Try these examples by typing them into the IPython console one at at time:  
+Or maybe we should say "assignments" in scare quotes.  We say we "assign" numbers to "variables," names we use to store information.  Try these examples by typing them into the IPython console one at at time:  
 ```
 x = 2 
 y = 3 
@@ -99,7 +99,7 @@ Here's good advice from a friend:  **If you find it confusing, don't do it!**  T
 
 ## The `print()` function
 
-In the previous section, we calculated `z = x/y`, but Python simply computed the answer, it didn't report it back to us.  That's standard.  If we want to know the result of the calculation, we need to tell Python to report it back to us.  The simplest way to do this is with the print function.  The print function prints whatever we include in parentheses after the word print.  If we want to print more than one thing, we separate them with commas. That's the general structure of **functions** in Python:  a name (in this case `print`) followed by inputs (known as "arguments") in parentheses that are separated by commas.   
+In the previous section, we calculated `z = x/y`, but Python simply computed the answer, it didn't report it back to us.  That's how Python (and other languages) typically work.  If we want the result reported back to us, we need to say so.  The simplest way to do this is with the print function.  The print function prints whatever we include in parentheses after the word print.  If we want to print more than one thing, we separate them with commas. That's the general structure of **functions** in Python:  a name (in this case `print`) followed by inputs (known as "arguments") in parentheses that are separated by commas.   
 
 If we want to verify the calculation of `z`, we could type `print(z)` in the IPython console.  (If we're in the console, we could simply type `z`, but in other contexts we need the `print()` function.)  The input and output look like this:
 ```
@@ -111,14 +111,16 @@ If we want to print all the calculations from the previous section, we could typ
 In [8]: print(x, y, z)
 2 3 0.6666666666666666
 ```
-The spaces in output generated by the print statement are a matter of taste, we can change them to anything we like using the `sep` argument.  For example, to change them to (space, comma), we would type `print(x, y, z, sep=' ,')`.  Try it and see.  We'll talk more about getting help shortly, but in the meantime you might type `print?` in the IPython console.  What do you see?  What do you think it means?  Write down any questions you have.  
+The spaces in output generated by the print statement are a matter of taste, we can change them to anything we like using the `sep` argument.  For example, to change them to (comma, space), we would type `print(x, y, z, sep=', ')`.  Try it and see.  
 
-?? One last thing.  You'll note that ?? Escapes... \n, \t, etc 
+We'll talk more about getting help shortly, but in the meantime you might type `print?` in the IPython console.  What do you see?  What do you think it means?  Write down any questions you have.  
+
+<!-- ?? One last thing.  You'll note that ?? Escapes... \n, \t, etc -->
 
 
 ## Strings 
 
-We also want to to be able to work with non-numerical data, collections of characters that might include letters, numerals, or other symbols.  Variable names are a common example (GDP, Income, Volatility).  We refer to such constructs as **strings**. No, not the stuff we tie up packages with, but a "string" of characters like letters or numbers.  It's one of many mysterious uses of ordinary words that we'll run across as we learn to code.  For more on this one, see [here](http://stackoverflow.com/questions/880195/the-history-behind-the-definition-of-a-string).  
+We also want to to be able to work with non-numerical data, collections of characters that might include letters, numerals, or other symbols.  Variable names are a common example (GDP, Income, Volatility).  We refer to such constructs as **strings**. No, not the stuff we tie up packages with, but a "string" of characters like letters or numbers.  It's one of many mysterious uses of ordinary words we'll run across as we learn to code.  For more on this one, see [here](http://stackoverflow.com/questions/880195/the-history-behind-the-definition-of-a-string).  
 
 Type these examples into Spyder's IPython console, one at a time:  
 ```
@@ -145,7 +147,7 @@ Here we've taken the components of the previous print statement and expressed th
 
 ## Single, double, and triple quotes
 
-We defined strings by putting characters between single quotes, as in `a = 'some'`.  That will be our standard practice, but Python treats single and double quotes the same.  We could have typed `a = "some"` instead with the same effect.  The main reason for using single quotes is laziness (we don't have to hit the shift key).  We're not ones to disparage laziness, but the point is that there's little difference between the two.  On occasion, we use double quotes if the string includes a single quote: 
+We defined strings by putting characters between single quotes, as in `a = 'some'`.  That will be our standard practice, but Python treats single and double quotes the same.  We could have typed `a = "some"` (that is, with double quotes) with the same effect.  The main reason for using single quotes is laziness (we don't have to hit the shift key).  We're not ones to disparage laziness, but the point is that there's little difference between the two.  On occasion, we use double quotes if the string includes a single quote: 
 ```python
 f = "I don't believe it"
 print(f)
@@ -201,7 +203,7 @@ print('c =', c')
 (If you don't recall how to open a new file in Spyder, see the previous chapter.) 
 
 
-To run this code, we need to save the file we copied it into.  In Spyder's editor, click on File in the upper left corner and choose Save.  To set the file name (the default `Untitled0.py` isn't all that informative), we choose Save As and pick a file name we prefer. With, of course, the extension py. Once we've done this, we can run the file in Spyder by clicking on the green arrow at the top of the editor window.  
+To run this code, we need to save it in a file.  In Spyder's editor, click on "File" in the upper left corner and choose "Save.""  To set the file name (the default `Untitled0.py` isn't all that informative), we choose "Save as" and pick a file name we prefer. With, of course, the extension py. Once we've done this, we can run the file in Spyder by clicking on the green arrow at the top of the editor window.  
 
 The first three lines produce no output.  The last one produces the output `c =  something` in the IPython console.  
 
@@ -241,7 +243,9 @@ stringlist = [a, b, c]
 ```
 (We repeat the definitions of (a,b,c) for completeness, but they're not necessary if you have already defined them.)  Copy this code into Spyder and run it.  What do you see if you type `print(numberlist)` in the IPython console?  
 
-We can combine lists (literally) by adding them.  The statement `biglist = numberlist + stringlist` produces a list containing all the elements of `numberlist` and `stringlist`, so we have six items altogether.  Type `print(biglist)` to verify that.  In contrast, the statement `biglist2 = [numberlist, stringlist]` produces a new list with two items:  the lists `numberlist` and `stringlist`.  It's what we might call a "list of lists."  That's not something we're likely to do, to be honest.  (We did it once, but it was an accident.)  The point is simply that lists are flexible objects. 
+We can combine lists (literally) by adding them.  The statement `biglist = numberlist + stringlist` produces a list containing all the elements of `numberlist` and all the elements of `stringlist`, so we have six items altogether.  Type `print(biglist)` to make sure that's the case.  
+
+In contrast, the statement `biglist2 = [numberlist, stringlist]` produces a new list with two items:  the lists `numberlist` and `stringlist`.  It's what we might call a "list of lists."  That's not something we're likely to do, to be honest.  (We did it once, but it was an accident.)  The point is simply that lists are flexible objects. 
 
 
 **Exercise.** Run the statements 
@@ -252,13 +256,16 @@ print(mixedlist)
 What is the output?  How would you explain it to your classmates?  
 
 
+**Exercise.** Suppose `x = [1, 2, 3]` is a list.  What is `2*x`?  Try it and see.  
+
+
 ## Slicing strings and lists 
 
 
-We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, perhaps because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that Python (like some other programming languages) starts numbering at zero.  
+We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, probably because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that Python (also some other programming languages) starts numbering at zero.  
 
 
-**Slicing strings.** Take, for example, the string `a = 'some'`.  If we want the first item/letter, we would type `a[0]`.  Yes, that's the first item; remember, we start at zero.  If we want the second, we type `a[1]`.  And so on.  And here's a good one:  If we want the last letter, we type `a[-1]`.  And if we want the one before the last one, we type `a[-2]` or `a[2]`.  Both give us `'m'`. 
+**Slicing strings.** Take, for example, the string `a = 'some'`.  If we want the first item/letter, we would type `a[0]`.  Yes, that's the first item; remember, we start at zero.  If we want the second, we type `a[1]`.  And so on.  And here's a good one:  If we want the last letter, we type `a[-1]`.  And if we want the one before the last one, we type `a[-2]`.  In this case we get the same answer if we type `a[2]`.  Both give us `'m'`. 
 
 We can summarize the numbering system by writing the word `some` on a piece of paper with room between the letters.  Below them, write the numbers, in order:  0, 1, 2, 3.  Label this row "counting forward."  Below that, start from the right (below the `e`) and count backwards as we move left:  -1, -2, -3, -4.  Label this row "counting backwards."
 
@@ -277,12 +284,12 @@ The first print statement gives us `o`, the second letter of `something`.  We la
 
 The last line has no second number.  By convention it goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
 
-Are you dizzy yet?  To summarize, the counting conventions for a slice like `c[n1, n2]` work like this:
+Are you dizzy yet?  To summarize, the counting conventions for a slice like `c[n1:n2]` work like this:
 
-* We start at zero, so `n1` is really `n1+1`. So `c[3]` is really the fourth character.  
+* We start at zero, so `n1` is really `n1+1`. That means `c[3]` is the fourth character.  
 * We end at `n2-1`, so `c[3:7]` includes characters 4, 5, and 6.   
 
-Some examples for practice:  
+Some practice examples:  
 
 **Exercise.** Find the last letter of the string `python = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
 
@@ -295,7 +302,7 @@ Some examples for practice:
 
 ## Python's built-in functions
 
-We now have several kinds of **objects** to work with:  numbers, strings, and lists.  There are more on the way, but that's a good start.  But what can we do with them?  Python has two basic ways to do things:  **functions** and **methods**.  We'll talk about function in this section and methods in the next one.  We can identify functions because they come with arguments in parentheses -- the print function, for example.  
+We now have several kinds of **objects** to work with:  numbers, strings, and lists.  There are more on the way, but that's a good start.  And yes, the formal term is really **objects**.  But what can we do with them?  Python has two basic ways to do things:  **functions** and **methods**.  We'll talk about function in this section and methods in the next one.  We can identify functions because they come with arguments in parentheses -- the print function, for example.  
 
 **Common functions.** Python has a lot of basic "built-in" functions.  We won't use most of them, but here are some we've found useful:   
 
@@ -309,11 +316,11 @@ type('11.32')
 ```
 Think about this on your own for a minute.  What do you get?  What do you think the output means?  
 
-     Not to kill the suspense, but here's what we should get.  The first one gives us the output `int`, which stands for integer:  a whole number like 1, 2, 3, and so on.  The second one gives us `float`, a so-called "floating point number" like most of those we run across in Excel -- not a whole number.  The third one gives us `str`, which tells us that it's a string.  The fourth one is a list.  What's the last one?  It's a trick question:  it's a string, too, even though it looks like a number. 
+     Not to kill the suspense, but here's what we should get.  The first one gives us the output `int`, which stands for integer:  a whole number like 1, 2, 3, and so on.  The second one gives us `float`, a so-called "floating point number" like most of those we run across in Excel -- not a whole number.  The third one gives us `str`, which tells us that it's a string.  The fourth one is a list.  What's the last one?  That's a trick question:  it's a string, too, even though it looks like a number. 
 
     The type function is more helpful than you might guess.  A lot of what we do in programming is deal with objects of different types and, when necessary, convert one type to another.  The first step is to identify the type of the object of interest.  We don't see much of that in Excel because it deals with a limited set of inputs -- basically floating point numbers and strings.  
 
-* `len` (length).  This tells us the length of an object.  To see how it works, type the following into the IPython console:  
+* `len` (length).  This tells us the length of an object.  To see how it works, type the following in the IPython console:  
 ```python 
 len(a)
 len(c)
@@ -326,16 +333,16 @@ The first one gives us the number of characters in the string `a = 'some'`, name
 d = '11.32'
 d_flt = float(d)
 ```
-The new variable `d_flt` has type `float`.  Similarly, we can convert it back to a string with the statement `d_str = str(d_num)`. 
+The new variable `d_flt` has type `float`.  Similarly, we can convert it back to a string with the statement `d_str = str(d_num)`. We'll see a lot of this kind of thing when we start working with data.  
 
 <!-- ??  https://www.reddit.com/r/Python/comments/3c344g/so_apparently_type_is_of_type_type/ -->
 
 
-**Getting help in Spyder.**  If you want to know more about a function called (say) `function`, there are several ways to learn more in Spyder:  
+**Getting help in Spyder.**  If you want to know more about a function called (say) `foo`, there are several ways to learn more in Spyder:  
 
-* Type `function?` in the IPython console.  
-* Type `help(function)` in the IPython console.  
-* Type `function` in the Object inspector.  
+* Type `foo?` in the IPython console.  
+* Type `help(foo)` in the IPython console.  
+* Type `foo` in the Object inspector.  
 
 Try each of them with the functions `print`, `type`, and `len`.  What do you see?  We use the **object inspector** a lot.  If it fails, either because there's no help or the help is incomprehensible, we fall back on Google fu.  
 
@@ -348,22 +355,24 @@ Try each of them with the functions `print`, `type`, and `len`.  What do you see
 
 **Exercise.**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data.  How would we construct a string containing the following year?  
 
-**Exercise.** This one also came up in our work.  Suppose we have a variable `z = '12,345.6'`.  fWhat is its type?  Can we convert it to a floating point number without the comma?    
+**Exercise.** This one also came up in our work and takes some thought.  Suppose we have a variable `z = '12,345.6'`.  What is its type?  Can we convert it to a floating point number without the comma?  Hint:  What method can we use to get rid of the comma?    
+
+<!-- z = z.replace(',', '') -->
 
 
 
 ## Objects and methods
 
-Lots of things in Python are referred to as **objects**: numbers, strings, variables, lists, and lots of other things.  (Experts would say at this point:  an object is an "instance" of a "class."  Ignore them.)  **Methods** are ready-to-go things we can do with them.  The available methods depend on the object.  A lot of Python is "object-oriented," which means we apply methods to objects to accomplish what you might think you need a function for.  Trust us, the jargon is more difficult than just doing it.  
+As we noted, lots of things in Python are **objects**.  (Experts might say at this point:  an object is an "instance" of a "class."  Ignore them.)   **Methods** are ready-to-go things we can do with them.  The available methods depend on the object.  A lot of Python is "object-oriented," which means we apply methods to objects to accomplish what you might think you need a function for.  Trust us, the jargon is more difficult than just doing it.  
 
-How can we find the methods available to work with a given object?  Take, for example, the list `numberlist = [1, 5, -3]`.  To find the list of available methods, we can use the IPython console and type:  `numberlist.[tab]`.  This wonderful piece of technology is referred to as **tab completion**.  The ingredients here are the object (here ``numberlist`), the period or dot, and the tab key.  When you hit tab, that should pop up a window with a list of methods in alphabetical order.  In the example, that starts like this:  
+What methods are available to work with a given object?  Take, for example, the list `numberlist = [1, 5, -3]`.  To get the list of available methods, we use the IPython console and type:  `numberlist.[tab]`.  This wonderful piece of technology is referred to as **tab completion**.  The ingredients here are the object (here ``numberlist`), the period or dot, and the tab key.  When you hit tab, a window will pop up with a list of methods in alphabetical order.  In our example, the list starts like this:  
 ```python
 numberlist.append
 numberlist.clear
 numberlist.copy
 numberlist.count
 ```
-For more information, we type the relevant method into the object inspector.  For the method `numberlist.append`, we get the description
+If we want more information, we type the relevant method into the object inspector.  For the method `numberlist.append`, we get the description
 ```python 
 Definition:  append(object)
 Type:  Function of None module 
@@ -386,7 +395,6 @@ firstlast = firstname + ' ' + lastname
 Find a method to replace the n's in `firstlast` with asterisks.  
 
 
-
 ## Python 2 and 3
 
 There's a lot of code around written in earlier versions of Python, most commonly Python 2.7.  It's there because the people who wrote it started before Python 3 was up and running.  Since we're starting from scratch, we are planting ourselves firmly in Python 3 territory.  Still, you're likely to run across examples of Python 2 on the internet. The easiest way to tell the difference is the print command:  `print(x)` in Python 3 was `print x` (no parentheses) in Python 2.  There are lots of other differences, which is why it's essential we all use Python 3.  
@@ -397,7 +405,7 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 Good sources of additional information, with our favs on top:  
 
-* Codecademy has an excellent [introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, stop when you get to Advanced Topics.    
+* Codecademy has an excellent [Introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, stop when you get to Advanced Topics.    
 
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  It's also a good idea to get used to reading official documentation like this.  There are times when it's unavoidable.  
 

@@ -125,3 +125,5 @@ More on the Anaconda distribution and its contents:
 * Anaconda [download](http://continuum.io/downloads) and [package list](http://docs.continuum.io/anaconda/pkg-docs).  
 * Spyder [documentation](https://pythonhosted.org/spyder/).  
 * IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  
+
+If you decide you'd like to try R, [choose a "mirror"](https://cran.r-project.org/mirrors.html) and download the version for your computer.  We recommend you run it in [RStudio](https://www.rstudio.com/products/rstudio/download/), a convenient coding environment. Once you've installed both, start up RStudio and you're good to go.  

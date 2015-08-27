@@ -8,13 +8,13 @@
 
 ---
 
-This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, but maybe that's us.  
+This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's us.  
 
 ## Answers to common questions 
 
 **Why should I do this?**  It’s an investment in your future.  You will learn how to  process data and communicate its content effectively and efficiently.  You will be more valuable to current and future employers.   
 
-**Can’t I do what I need in Excel?**  Excel is a great program, but once you have a little programming experience it will remind you of doing arithmetic on your fingers.  With Python, you will be able do routine tasks more efficiently (“[automate the boring stuff](https://automatetheboringstuff.com/),” as one guide suggests), handle larger data sets, and generally do things that spreadsheet programs can’t do.    
+**Can’t I do what I need in Excel?**  Excel is a great program, but once you have a little programming experience it will remind you of doing arithmetic on your fingers.  With Python, you will be able do routine tasks more efficiently (“[automate the boring stuff](https://automatetheboringstuff.com/),” as one guide suggests), handle larger data sets, rearrange datasets at will, and generally do things that spreadsheet programs can’t do.    
 
 **What are the prerequisites?**  There are none.  We start at the very beginning and go from there.  What you'll need is the **courage** to take on a challenge and the **patience** to debug [programs that don’t quite work](http://junkcharts.typepad.com/numbersruleyourworld/2015/06/the-day-after-the-half-day-in-the-life-of-a-data-scientist.html) -- and they never work the first time, and often not the second or third time either.  Don't panic.  Ask for help and remind yourself that patience is a virtue. 
 
