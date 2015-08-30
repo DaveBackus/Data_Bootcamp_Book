@@ -1,12 +1,11 @@
-
-# Managing data 1 (and a look at Greek debt)  
+# Managing data 1 
 
 ---
 **Overview.** Our goal is to look at government debt in Greece and other countries.  To do that, we introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
 
 **Python tools.**  Import, Pandas.  
 
-**Buzzwords.**  Package, dataframe.  
+**Buzzwords.**  Package, dataframe, series, csv files.  
 
 **Applications.**  Greek debt, college majors, income mobility. 
 
@@ -14,7 +13,7 @@
 
 ---
 
-We're ready now to look at some data, specifically data on the Greek government's debt.  Is there too much of it?  It's not immediately clear what "too much" means, but we can certainly compare it to some other countries.  We do that with the IMF's convenient *World Economic Outlook* ([WEO](http://www.imf.org/external/pubs/ft/weo/data/assump.htm)) dataset, which they kindly update twice a year.  It's in a (sort of) spreadsheet format, so we're on familiar ground.   The challenge is to read it into Python. 
+We're ready now to look at some data, including data on the Greek government's debt.  Is there too much of it?  It's not immediately clear what "too much" means, but we can certainly compare it to some other countries.  We do that with the IMF's convenient *World Economic Outlook* ([WEO](http://www.imf.org/external/pubs/ft/weo/data/assump.htm)) dataset, which they kindly update twice a year.  It's in a (quasi-)spreadsheet format, so we're on familiar ground.   The challenge is to read it into Python and generate some graphs.  
 
 We start, then, by describing how to get data into Python, particularly data in spreadsheets.  Along the way we describe how Python uses collections of tools (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
 
@@ -113,7 +112,7 @@ We'll come back to all of these things later in the course, but for now we'll fo
 
 The simplest way to get data into a Python program is to read it from a file -- a spreadsheet file, for example.  The word "read" here means take what's in the file and somehow get it into Python.  Pandas can read lots of such files:  csv, xls, xlsx, and so on.  
 
-We'd like to read all of these files into Python.  The first step is to prepare some test files we can use.  Start Excel or the equivalent (did we really say that?) and open a new blank spreadsheet.  In column one ("A") put x1 at the top and the numbers 1, 4, and 5 below it.  In column two ("B") put x2, 2, 3, and 6.  
+We'd like to read all of these files into Python.  The first step is to prepare some test files we can use.  Start Excel or the equivalent (did we really say that?) and open a new blank spreadsheet.  In column one ("A") put x1 at the top and the numbers 1, 4, and 5 below it.  In column two ("B") put x2, 2, 3, and 6.  In column three ("C") put x3, 3, 4, and 7.  
 
 Now save the contents three times as, respectively, csv, xls, and xlsx files with filenames `test.csv`, `test.xls`, and `test.xlsx`.  Put all three in your `Data_Bootcamp` directory. 
 
@@ -191,11 +190,10 @@ These are dfs too.  head = df.head(), type(head)
 Other methods we could try:  
 
 * df.columns.tolist() (the column labels as a list),
-* df.describe() (summary statistics),
-* df.dtypes() (variable types),
+* df.describe() (summary statistics)
+* df.corr() (correlations between variables)
+* df.dtypes() (variable types)
 * df.info() (information about the form of the data).
-
-
 
 
 ## Other data input    
@@ -213,20 +211,59 @@ We can read other kinds of files in much the same way.  Some examples show how t
 
 
 
-* **xls and xlsx files.**  file = '../Data/test2.xlsx'
+* **xls and xlsx files.**  
+```python 
+file = '../Data/test2.xlsx'
 xls = pd.read_excel(file)       # default is first sheet
+```
 
+A digression on GitHub files.  GitHub has viewers for csv files (also some others) that make them easier to read online.  But they're not the real files.  If we use their urls to access data, we get junk.  The secret is to use the raw files:  click on the raw button above and to the right and you'll get (surprise) the raw file, aka the real thing.  Here's an example to practice on:  
 
-* **tab-delimited files.** WEO...  
+https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv
 
-  The IMF's World Economic Outlook.  The file is labelled xls, but it's tab-delimited (entries are separated by tabs).  
-
+**Exercise.** Read `test.xlsx` and `test.xls` from the GitHub repo.  The url's are
+```python
+url1 = 'https://github.com/DaveBackus/Data_Bootcamp/raw/master/Code/Python/test.xls'
+url1 = 'https://github.com/DaveBackus/Data_Bootcamp/raw/master/Code/Python/test.xlsx'
+``` 
+(Note the word "raw" in the address.)  
 
 * **Clipboard.**  Copy from clipboard.
 We're not fans of this, it makes replication hard, but it's awful convenient
 and recommended by one of our former students.  `clip = pd.read_clipboard()`
 
 
+**Exercise.** Input `test.csv` from the clipboard and assign it to the dataframe `df_clip`.  
+
+
+## Modifying dataframes:  column methods
+
+Referring to variables
+
+Renaming variables... 
+
+Single variables (series)
+
+New variables ... 
+
+Logs (np!) 
+
+Subsets of variables 
+
+Saving results:  assigne or `inplace=true'.  
+
+
+**Transpose**  Switch rows and columns... 
+
+
+## Modifying dataframes:  row methods
+
+Selecting the rows we want...  
+
+
+## Application:  Greek government debt in WEO
+
+Want operator:  graph Greek debt over time, compare to other countries.  
 
 **Example (WEO).** 
 ```python 
@@ -317,3 +354,5 @@ History of debt (see data link on left):  http://www.imf.org/external/ns/cs.aspx
 
 
 http://www.alfredo.motta.name/data-manipulation-primitives-in-r-and-python/ 
+
+http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/ 

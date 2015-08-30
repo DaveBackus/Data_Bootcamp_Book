@@ -1,14 +1,22 @@
-
 # Emerging market indicators 
 
 ---
-**Overview.** 
+**Overview.** We often get data in one form and want to change it to another.  Pandas has an exceptional collection of tools for doing this, but it takes us out of our Excel mindset.  
 
-**Python tools.**  
+**Python tools.**  Pandas, data frames, index, columns, transpose...  
 
-**Buzzwords.**  
+**Buzzwords.**  Want operator, selection (filtering), 
+
+**Applications.** 
 
 ---
+
+The idea is to get going, cover details later. 
+
+The idea is to start with what we want the end product to be:  to apply, in the words of a colleague, the **want operator**.   
+
+Applications:  growth by decade, debt, ... 
+
 
 ## Reminders
 
@@ -19,7 +27,29 @@ DataFrames
 Series 
 
 
+## Variable types 
+
+dtypes 
+
+conversion 
+
 ## Pandas as Excel 
+
+
+## Selection 
+
+aka filtering 
+
+
+## Indexes 
+
+
+
+## Columns 
+
+transpose 
+
+
 
 
 ## Merging
@@ -96,6 +126,15 @@ Other
 
 Kaggle example:  http://blog.kaggle.com/2013/01/17/getting-started-with-pandas-predicting-sat-scores-for-new-york-city-schools/ 
 
-Lots of examples:  http://tomaugspurger.github.io/
+Lots of examples:  
+http://tomaugspurger.github.io/
+http://nbviewer.ipython.org/github/TomAugspurger/PyDataSeattle/tree/master/notebooks/
 
 SQL intro https://www.khanacademy.org/computing/hour-of-code/hour-of-sql/v/welcome-to-sql 
+
+SQL and Pandas:  https://www.youtube.com/watch?v=1uVWjdAbgBg 
+
+http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/ 
+http://www.gregreda.com/2013/10/26/working-with-pandas-dataframes/
+
+http://manishamde.github.io/blog/2013/03/07/pandas-and-python-top-10/ 

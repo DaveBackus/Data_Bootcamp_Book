@@ -71,7 +71,7 @@ One of our goals is for you to produce a piece of work -- data and graphics -- t
 * **[Movie hits](http://www.randalolson.com/2014/12/29/the-biggest-box-office-booms-and-busts-since-1982/).**  Movie data is always interesting, we'll see more of it later on. 
 **[Textbooks](http://priceonomics.com/which-major-has-the-most-expensive-textbooks/).** Why are they so expensive?  What majors have the most expensive books?  (Not us, you may notice.) 
 * **[NBA shot charts](http://savvastjortjoglou.com/nba-shot-sharts.html).**  Even if you're not a backetball fan, this is a terrific project that produces some great pictures and shows you how along the way.  Here's the [IPython notebook](https://github.com/savvastj/blog/blob/master/content/NBA_shot_charts.ipynb). 
-* **[Uber and taxis](http://fivethirtyeight.com/features/uber-is-serving-new-yorks-outer-boroughs-more-than-taxis-are/).**  Evidently they're doing a better job than taxis of serving the outer boroughs of NYC. 
+* **[Uber and taxis](http://fivethirtyeight.com/features/uber-is-serving-new-yorks-outer-boroughs-more-than-taxis-are/).**  Evidently they're doing a better job than taxis of serving the outer boroughs of NYC. Data [here](https://github.com/fivethirtyeight/uber-tlc-foil-response).  
 * **[Twitter profiles](http://andrewshamlet.com/2015/07/13/part-3-most-common-words-used-in-tweets-by-taylor-swift-katy-perry-and-britney-spears/).**  Student Andrew Hamlet mines twitter data and documents patterns in tweets by Taylor Swift and others. 
 * **[Citibikes](https://wakari.io/sharing/bundle/paddy/pydata_citibike).**  This service comes with a public data interface, one of many provided by local governments. Here's [another one](https://jakevdp.github.io/blog/2015/07/23/learning-seattles-work-habits-from-bicycle-counts/) about bikes, this time for Seattle.  There's a link to the IPython notebook at the end.  
 
@@ -90,7 +90,7 @@ The suggestion is to start somewhere -- anywhere -- and see where it leads.  Bou
 **Idea machines.**  Another way to generate ideas is to skim artciles or blog posts that look at data and graphics.  A good graphic is a wonderful thing, especially one that makes a compelling point.  Here are some of our favs.  Take an hour or two some time, find a comfortable chair, and look through them.  
 
 * **Blogs with data.**  [Conversable Economist](http://conversableeconomist.blogspot.com/), [FRED blog](https://fredblog.stlouisfed.org/), [R-bloggers](http://www.r-bloggers.com/). There are lots more, but that's a start.      
-* **Data journalism.** [538](http://fivethirtyeight.com/), [Upshot](http://www.nytimes.com/upshot/), [Quartz](http://qz.com/).  Some of them post data and code as well (look for their GitHub repositories).  
+* **Data journalism.** [538](http://fivethirtyeight.com/), [Upshot](http://www.nytimes.com/upshot/), [Quartz](http://qz.com/).  Some of them post data and code as well (look for their GitHub repositories).  See, for example, 538's [analysis of Uber and taxi data](http://fivethirtyeight.com/features/public-transit-should-be-ubers-new-best-friend/).  
 * **Graphics blogs.**  [Flowing data](https://flowingdata.com/), [Junk Charts](http://junkcharts.typepad.com/), [VizWiz](http://vizwiz.blogspot.com/), [Data Viz Done Right](http://www.datavizdoneright.com/), [Graphic detail](http://www.economist.com/blogs/graphicdetail).  And here are a [couple](http://flowingdata.com/2012/04/27/data-and-visualization-blogs-worth-following/) [lists](http://vizwiz.blogspot.com/p/data-viz-blogs.html). The [Tableau public gallery](http://public.tableau.com/s/gallery) also has some good examples, including [this one](https://public.tableau.com/s/gallery/dementia-uk). ([Tableau](http://www.tableau.com/) is a popular "data visualization" program.)  
 * **Datasets.**  [FRED](https://research.stlouisfed.org/fred2/series/GDP) is our go-to source for macroeconomic data.  The "Notes" tab gives us the original source if we want to dig deeper.  The [World Bank](http://data.worldbank.org/) has a huge collection of emerging market indicators.  And here are [three](http://www.asdfree.com/p/about-faq.html) [good](https://sites.google.com/site/medevecon/development-economics/devecondata) [lists](http://flowingdata.com/2009/10/01/30-resources-to-find-the-data-you-need/) of data sources. You can also use your Google fu.  
 
@@ -107,14 +107,12 @@ The suggestion is to start somewhere -- anywhere -- and see where it leads.  Bou
 **Exercise.** Write down four project ideas.  Don't overthink this, one or two lines each will do.  
 
 
+We've given you way too much information.  We suggest you spend a couple hours some time in a comfortable spot, skim through the links, and write down anything that interests you.  Stop when your find your eyes blurring.  
+
+
 ## More lists
 
-In case you need more...  
-
-Nikkei
-
-
-We've given you way too much information.  We suggest you spend a couple hours some time in a comfortable spot, skim through the links, and write down anything that interests you.  Stop when your find your eyes blurring.  
+https://github.com/datasets
 
 
 ## Resources 

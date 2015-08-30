@@ -72,7 +72,7 @@ What is the value of `not_check`?  Explain the logic to your neighbor.
 
 
 
-**Multiple comparisons.**  We can string together two comparisons with the words `and` and `or`.  Consider the code 
+**Multiple comparisons.**  We can string together two or more comparisons with the words `and` and `or`.  Consider the code 
 ```python 
 x = 2/3 
 conditiona = x >= 0 
@@ -378,15 +378,14 @@ sum = reduce(lambda x,y: x+y, numlist)
 The difference here is that the computations cannot be done separately, they're all connected.  
 
 * **filter.**  Here we apply a logical condition to each element of a list or similar object and keep those for which the condition is true.  Two examples:  
-```python
+```python 
 numlist = [4, -2, 5]
 f = filter(lambda x:  x >= 0, numlist) 
 newlist = list(f)
-
 anylist = [2, 'Steelers', [1,2,3]]
 f = filter(lambda x: type(x) == str, anylist)
 newlist = list(f)
-```
+```  
 The first one has the answer `newlist = [4, 5]`, the second `newlist = ['Steelers']`.  Can you see why?  
 
 Some of us find this kind of syntax obscure and do our best to avoid it.  But similar ideas show up in lots of places.  
@@ -429,15 +428,16 @@ Here `y` hasn't changed, it's not connected to `x`.
 
 ## Programming style  
 
-Yes, style counts.  You're not only trying to get something done, you're also communicating with others who may look at your code.  A clear style makes that communication more effective.  
+Yes, style counts.  We're not only trying to get something done, we're also communicating with others who may look at our code and possibly use it.  A clear style makes that communication more effective.  
 
+* Put import statements at the top.
 * Lines should be no longer than 79 characters.
 * Skip two lines before and after a function definition. 
 * Adopt the style of your group.   
 
-You can find more in the classic "[PEP8](https://www.python.org/dev/peps/pep-0008/)" and Google's [style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). 
+You can find more along these lines in the classic "[PEP8](https://www.python.org/dev/peps/pep-0008/)" and Google's [style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). 
 
-Some programmers are religious about this.  We'd say simply to try to make your code readable.  
+Some programmers are religious about this.  We'd say simply to make your code readable.  
 
 
 <!-- 
@@ -453,5 +453,7 @@ See the resources in the previous chapter, especially the link to [Codecademy](h
 Additional resources for specific topics:
 
 * The [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language," which includes comparisons, conditional statements, and loops.  
-* Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of this course is also quite good.  
+* Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of his course is also quite good.  
 * Ditto [Python Tips](http://book.pythontips.com/en/latest/), which starts at a level a bit above where we left off.  Lots of cool stuff if you'd like to push further into Python.  
+
+  

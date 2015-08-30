@@ -419,7 +419,9 @@ Good sources of additional information, with our favs on top:
 
 * Sebastian Raschka has more than you'll ever need  about the [differences between Python 2 and 3](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html).    
 
-These sources go well beyond what we do in this chapter, but we'll catch up withsome of it in the next chapter. The rest we don't need, but if you're interested charge ahead anyway.  Who knows, it could turn out to be useful later on.  
+These sources go well beyond what we do in this chapter, but we'll catch up with some of it in the next chapter. The rest we don't need, but if you're interested feel free to charge ahead anyway.  Who knows, it could turn out to be useful later on.  
+
+List:  ??  http://noeticforce.com/best-free-tutorials-to-learn-python-pdfs-ebooks-online-interactive 
 
 <!-- http://tutorial.djangogirls.org/en/python_introduction/index.html -->
 

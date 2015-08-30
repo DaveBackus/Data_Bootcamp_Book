@@ -1,6 +1,6 @@
 ## Warning
 
-This is **work in progress**, target date January 2016.  We've now drafted 4-5 chapters, more in the works.  
+This is **work in progress**, target date January 2016.  We've written 5 chapters so far, the rest are rough notes or less.  
 
 ## Preface
 
