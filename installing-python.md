@@ -112,7 +112,6 @@ To run the same code in an IPython notebook, start up the IPython/Jupyter app in
 
 Output will appear in the same cell below your code.  If it says "Congratulations etc." you're all set.  
 
-
 ## Let's go! 
 
 We're now ready to write and run Python programs in two environments.  That's more than enough for one day.  Take a bow.  
@@ -127,4 +126,3 @@ More on the Anaconda distribution and its contents:
 * IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  
 * [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/).  More than you'll ever want or need about Anaconda and its components.  
 
-If you decide you'd like to try R, [choose a "mirror"](https://cran.r-project.org/mirrors.html) and download the version for your computer.  We recommend you run it in [RStudio](https://www.rstudio.com/products/rstudio/download/), a convenient coding environment. Once you've installed both, start up RStudio and you're good to go.  

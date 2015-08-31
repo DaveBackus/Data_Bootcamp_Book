@@ -41,7 +41,7 @@ Each of these bullet points is typically associated with a number of lines of co
 One of the things we'll do repeatedly in Python is calculations with numbers.  That's a lot of what managing data is all about: adding things up, dividing one thing by another, and so on. We'll do this initially in Spyder's **IPython console**, typically located in the upper right corner (look for a tab with this label).
 
 To see how calculations work in Python, type these expressions in Spyder's IPython console one at a time:
-```
+```python 
 2*3
 2 * 3
 2/3
@@ -50,7 +50,7 @@ To see how calculations work in Python, type these expressions in Spyder's IPyth
 log(3) 
 ```
 With each one, pay close attention to what happens.  The first one multiplies 2 times 3, and (hopefully) gives us 6 as the answer.  The input and output look like this in the console:
-```
+```python 
 In [1]: 2*3
 Out[1]: 6
 ```
@@ -59,21 +59,21 @@ The first line is our input, we typed it.  The second line is the response or ou
 The second calculation, `2 * 3`, does the same thing.  The spaces around the * don't change the output.  As a general rule, we can put spaces wherever we think they make the code more readable.  
 
 The third calculation is division.  The input and output are 
-```
+```python 
 In [3]: 2/3
 Out[3]: 0.6666666666666666
 ```
 The fourth calculation, `2^3`, gives us 
-```
+```python 
 In [4]: 2^3
 Out[4]: 1
 ```
 We might have expected the answer to be 8 (2 to the power 3), but evidently it's not.  What's going on?  The short answer is that the hat symbol `^` doesn't do powers in Python, as it does in Excel.  It does something else (mtyn).  If we want to use an exponent (power), we do it this way: 
-```
+```python 
 In [4]: 2**3
 Out[4]: 8
 ```
-Our last calculation is the log function.  Entering `log(3)` generates the message:  ```NameError: name 'log' is not defined```.   We can use functions like `log` and `sqrt` in Python, just as we do in Excel, but we need to import them specially.  (And we will, but not yet.)  This is an example of a **syntax error**:  we have used language that Python doesn't understand.  Here the message is pretty clear:  it doesn't know what `log` means.  In other cases, the error message may be more mysterious.  
+Our last calculation is the log function.  Entering `log(3)` generates the message:  `NameError: name 'log' is not defined`.   We can use functions like `log` and `sqrt` in Python, just as we do in Excel, but we need to import them specially.  (And we will, but not yet.)  This is an example of a **syntax error**:  we have used language that Python doesn't understand.  Here the message is pretty clear:  it doesn't know what `log` means.  In other cases, the error message may be more mysterious.  
 
 **Exercise.**  What happens if you try to calculate the square root of 2 with `sqrt(2)`, as you would in Excel?  Do any alternatives come to mind?  (Speak to your neighbors, see if they have any ideas.)
 
@@ -81,7 +81,7 @@ Our last calculation is the log function.  Entering `log(3)` generates the messa
 ## Assignments 
 
 Or maybe we should say "assignments" in scare quotes.  We say we "assign" numbers to "variables," names we use to store information.  Try these examples by typing them into the IPython console one at at time:  
-```
+```python 
 x = 2 
 y = 3 
 z = x/y 
@@ -89,7 +89,7 @@ z = x/y
 The first line takes the value 2 and stores it in the variable `x`.  We say we assigned the numerical value 2 to the variable `x`, which is now available for future calculations.  The second line assigns the value 3 to a new variable `y`. The last line takes `x`, divides it by `y`, and stores the result in `z`.   All of these lines are "assignments."  
 
 This is mtyn, but you can also do multiple assignments in the same line.  The first two lines above can be rewritten together as 
-```
+```python 
 x, y = 2, 3 
 ```
 This is sometimes helpful, sometimes confusing.  
@@ -102,12 +102,12 @@ Here's good advice from a friend:  **If you find it confusing, don't do it!**  T
 In the previous section, we calculated `z = x/y`, but Python simply computed the answer, it didn't report it back to us.  That's how Python (and other languages) typically work.  If we want the result reported back to us, we need to say so.  The simplest way to do this is with the print function.  The print function prints whatever we include in parentheses after the word print.  If we want to print more than one thing, we separate them with commas. That's the general structure of **functions** in Python:  a name (in this case `print`) followed by inputs (known as "arguments") in parentheses that are separated by commas.   
 
 If we want to verify the calculation of `z`, we could type `print(z)` in the IPython console.  (If we're in the console, we could simply type `z`, but in other contexts we need the `print()` function.)  The input and output look like this:
-```
+```python 
 In [7]: print(z)
 0.6666666666666666
 ```
 If we want to print all the calculations from the previous section, we could type `print(x, y, z)`:  
-```
+```python
 In [8]: print(x, y, z)
 2 3 0.6666666666666666
 ```
@@ -123,7 +123,7 @@ We'll talk more about getting help shortly, but in the meantime you might type `
 We also want to to be able to work with non-numerical data, collections of characters that might include letters, numerals, or other symbols.  Variable names are a common example (GDP, Income, Volatility).  We refer to such constructs as **strings**. No, not the stuff we tie up packages with, but a "string" of characters like letters or numbers.  It's one of many mysterious uses of ordinary words we'll run across as we learn to code.  For more on this one, see [here](http://stackoverflow.com/questions/880195/the-history-behind-the-definition-of-a-string).  
 
 Type these examples into Spyder's IPython console, one at a time:  
-```
+```python 
 a = 'some'
 b = 'thing' 
 c = a + b 
@@ -132,7 +132,7 @@ d = '11.32'
 What do you see?  The first two are probably obvious:  we assign the characters in single quotes on the right to the variables on the left.  The third line is something new:  we add the string `some` to the string `thing`.  What would you expect to get?  Try `print(c)` to see.  The answer is `c = 'something'`.  We've simply stitched the two strings together, one after the other.  We'll see that operations like this are extremely helpful when we're working with data. 
 
 Strings allow us to produce better-looking output.  For example, in the previous section we can change the statement `print(z)` to `print('The value of z is ', z)`.  The first argument (or input), `'The value of z is '`, is a string.  The second argument, `z`, is a variable.  Together they produce the output `The value of z is  0.6666666666666666`, which is clearer than the number `0.6666666666666666` on its own.  Here's the same thing spread over two lines:
-```
+```python
 message = 'The value of z is '
 print(message, z)
 ```
@@ -163,7 +163,7 @@ Our fathers brought forth. """
 print(longstring)
 ```
 This produces the output 
-```
+```python
 
 Four score and seven years ago
 Our fathers brought forth ... 
