@@ -9,7 +9,7 @@
 
 **Applications.**  Greek debt, college majors, income mobility. 
 
-**Code.** Link [here]().  ??
+**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_1.py).  
 
 ---
 
@@ -196,6 +196,14 @@ Other methods we could try:
 * df.info() (information about the form of the data).
 
 
+dtypes pretty good.  
+
+For object, get list of entries:  entries = df['var'].drop_duplicates()
+
+value counts 
+
+**Sorting.**
+
 ## Other data input    
 
 We can read other kinds of files in much the same way.  Some examples show how this works:  
@@ -208,7 +216,6 @@ We can read other kinds of files in much the same way.  Some examples show how t
   df = pd.read_csv(url)
   ```
   Run the code and print `df` to see what you get.  
-
 
 
 * **xls and xlsx files.**  
@@ -356,3 +363,5 @@ History of debt (see data link on left):  http://www.imf.org/external/ns/cs.aspx
 http://www.alfredo.motta.name/data-manipulation-primitives-in-r-and-python/ 
 
 http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/ 
+
+Cookbook:  http://pandas.pydata.org/pandas-docs/stable/tutorials.html#pandas-cookbook 

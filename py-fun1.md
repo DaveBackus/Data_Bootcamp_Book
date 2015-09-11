@@ -8,17 +8,17 @@
 
 **Buzzwords.** Isn't that enough?  
 
-**Trigger warning.**  Technical content, cannot be mastered without time and effort.  
+**Trigger warning.**  Technical content, cannot be mastered without effort.  
 
-**Code.**  [Link here](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_1.py).
+**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_1.py).
 
 ---
 
-We're now ready to explore the rudiments of Python.  We'll run across terms like "strings," "objects," and "methods."  Don't panic, it's just jargon.  This is Python, of course, but most of the concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
+We're now ready to explore the rudiments of Python.  We'll run across terms like "strings," "objects," and "methods."  Don't panic, it's just jargon.  This is Python, of course, but similar concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
 
 The beauty and challenge of writing computer programs is that we need to be precise.  If we mistype a variable or command, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  
 
-We intersperse Python concepts with an introduction to Spyder, the Python coding environment we described earlier.  Your first job is to **start up Spyder**.  If you don't know what that means, return to the previous chapter. Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "modules," "packages," or "libraries" that allow Python to do more advanced things -- data management and graphics, for example.  We'll deal with them later.  
+We mix Python concepts with an introduction to Spyder, the Python coding environment we described earlier.  Your first job is to **start up Spyder**.  If you don't know what that means, return to the previous chapter. Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "modules," "packages," or "libraries" that allow Python to do more advanced things -- data management and graphics, for example.  We'll deal with them later.  
 
 
 ## The logic of Python programs
@@ -34,6 +34,10 @@ Most of the programs in this course have the structure:
 * Produce some graphics that summarize the data in a compelling way.  
 
 Each of these bullet points is typically associated with a number of lines of code, possibly a large number, but that's the general idea.
+
+<!-- 
+Reminders:  Spyder, IPython...  
+-->
 
 
 ## Calculations in Spyder's IPython console 
@@ -80,7 +84,7 @@ Our last calculation is the log function.  Entering `log(3)` generates the messa
 
 ## Assignments 
 
-Or maybe we should say "assignments" in scare quotes.  We say we "assign" numbers to "variables," names we use to store information.  Try these examples by typing them into the IPython console one at at time:  
+Or maybe we should say "assignments" in scare quotes.  We say we "assign" numbers to "variables," names we use to store information.  Here are three examples;  type them into the IPython console one at at time. 
 ```python 
 x = 2 
 y = 3 
@@ -99,9 +103,9 @@ Here's good advice from a friend:  **If you find it confusing, don't do it!**  T
 
 ## The `print()` function
 
-In the previous section, we calculated `z = x/y`, but Python simply computed the answer, it didn't report it back to us.  That's how Python (and other languages) typically work.  If we want the result reported back to us, we need to say so.  The simplest way to do this is with the print function.  The print function prints whatever we include in parentheses after the word print.  If we want to print more than one thing, we separate them with commas. That's the general structure of **functions** in Python:  a name (in this case `print`) followed by inputs (known as "arguments") in parentheses that are separated by commas.   
+In the previous section, we calculated `z = x/y`, but Python simply computed the answer, it didn't report it back to us.  That's how Python -- and other languages -- typically work.  If we want to report the result, we need to say so.  The simplest way to do this is with the print function.  The print function prints whatever we include in parentheses after the word print:  for example, ``print(x)`.  If we want to print more than one thing, we separate them with commas; for example, `print(x, y)`. That's the **general structure of functions** in Python:  a function name (in this case `print`) followed by inputs (known as "arguments") in parentheses that are separated by commas.   
 
-If we want to verify the calculation of `z`, we could type `print(z)` in the IPython console.  (If we're in the console, we could simply type `z`, but in other contexts we need the `print()` function.)  The input and output look like this:
+If we want to verify the calculation of `z`, we can type `print(z)` in the IPython console.  (If we're in the console, we could simply type `z`, but in other contexts we need the `print()` function.)  The input and output look like this:
 ```python 
 In [7]: print(z)
 0.6666666666666666
@@ -114,6 +118,8 @@ In [8]: print(x, y, z)
 The spaces in output generated by the print statement are a matter of taste, we can change them to anything we like using the `sep` argument.  For example, to change them to (comma, space), we would type `print(x, y, z, sep=', ')`.  Try it and see.  
 
 We'll talk more about getting help shortly, but in the meantime you might type `print?` in the IPython console.  What do you see?  What do you think it means?  Write down any questions you have.  
+
+**Exercise.**  How would you print `x`, `y`, and `z` separated by colons (:)?  Add space to make the output look better.  
 
 <!-- ?? One last thing.  You'll note that ?? Escapes... \n, \t, etc -->
 
@@ -131,28 +137,28 @@ d = '11.32'
 ```
 What do you see?  The first two are probably obvious:  we assign the characters in single quotes on the right to the variables on the left.  The third line is something new:  we add the string `some` to the string `thing`.  What would you expect to get?  Try `print(c)` to see.  The answer is `c = 'something'`.  We've simply stitched the two strings together, one after the other.  We'll see that operations like this are extremely helpful when we're working with data. 
 
-Strings allow us to produce better-looking output.  For example, in the previous section we can change the statement `print(z)` to `print('The value of z is ', z)`.  The first argument (or input), `'The value of z is '`, is a string.  The second argument, `z`, is a variable.  Together they produce the output `The value of z is  0.6666666666666666`, which is clearer than the number `0.6666666666666666` on its own.  Here's the same thing spread over two lines:
+Strings also allow us to produce better-looking output.  For example, in the previous section we can change the statement `print(z)` to `print('The value of z is ', z)`.  The first argument (or input), `'The value of z is '`, is a string.  The second argument, `z`, is a variable.  Together they produce the output `The value of z is  0.6666666666666666`, which is clearer than the number `0.6666666666666666` on its own.  Here's the same thing spread over two lines:
 ```python
-message = 'The value of z is '
+message = 'The value of z is'
 print(message, z)
 ```
 Here we've taken the components of the previous print statement and expressed them in two statements to make it more readable.  (You might ask yourself:  Which do you prefer?  Why?)  
 
-**Exercise.** What is a string?  How would you explain it to a classmate?  
+**Exercise.** What is a string?  How would you explain it to a friend?  
 
-**Exercise.** What happens when you type `a * 5` into the console? What about `d * 5`?  What is going on here?  
+**Exercise.** What happens when you type `a * 3` into the console? What about `d * 3`?  What is going on here?  
 
-**Exercise.** This one's a little harder.  Assign your first name as a string to the variable `firstname` and your last name to the variable `lastname`.  Construct a new variable equal to your first name, a space, then your last name.  
+**Exercise.** This one's a little harder.  Assign your first name as a string to the variable `firstname` and your last name to the variable `lastname`.  Use them to construct a new variable equal to your first name, a space, then your last name.  
 
 
 ## Single, double, and triple quotes
 
-We defined strings by putting characters between single quotes, as in `a = 'some'`.  That will be our standard practice, but Python treats single and double quotes the same.  We could have typed `a = "some"` (that is, with double quotes) with the same effect.  The main reason for using single quotes is laziness (we don't have to hit the shift key).  We're not ones to disparage laziness, but the point is that there's little difference between the two.  On occasion, we use double quotes if the string includes a single quote: 
+We defined strings by putting characters between single quotes, as in `a = 'some'`.  That will be our standard practice, but **Python treats single and double quotes the same**.  We could have typed `a = "some"` (that is, with double quotes) with the same effect.  The main reason for using single quotes is laziness: we don't have to hit the shift key.  We're not ones to disparage laziness, but the point is that there's little difference between the two.  On occasion, we use double quotes if the string includes a single quote: 
 ```python
 f = "I don't believe it"
 print(f)
 ```
-The output of the print statement is `I don't believe it`, which includes the apostrophe. This doesn't come up very often, in our experience, but there it is just in case.  
+The output of the print statement is `I don't believe it`, which includes a single quote as an apostrophe. This doesn't come up very often, in our experience, but there it is just in case.  
 
 
 Triple quotes are similar, but they can be used to define strings that go over multiple lines: 
@@ -402,26 +408,25 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 ## Resources  
 
+**Warning.** We thought it would be useful to list our favorites sources of information on the same topics, but keep in mind that there's more here than a reasonable person could want.  It's there if you need it, but we think you're better off going into depth with one or two and ignoring the rest.  
 
-Good sources of additional information, with our favs on top:  
+With that out of the way, here are some good introductions to basic Python and related topics with our favs on top:  
 
 * Codecademy has an excellent [Introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, stop when you get to Advanced Topics.    
 
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  It's also a good idea to get used to reading official documentation like this.  There are times when it's unavoidable.  
 
-* Mark Lutz's [Learning Python](http://www.amazon.com/Learning-Python-5th-Mark-Lutz/dp/1449355730/) is a 1600-page monster, but it's clear and thorough, and comes with the elusive Glenn Okun stamp of approval.  The Kindle version comes with free updates. 
-
-* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
+* Mark Lutz's [Learning Python](http://www.amazon.com/Learning-Python-5th-Mark-Lutz/dp/1449355730/) is a 1600-page monster, but it's clear and thorough, and comes with the elusive Glenn Okun stamp of approval.  He tells us the Kindle version comes with free updates. 
 
 * Zed Shaw's [Python the Hard Way](http://learnpythonthehardway.org/book/) is also quite good, but you need to have Python set up yourself to do it. Ignore the sales pitch, you can use it for free.  Just keep clicking on the NEXT button to the right. 
 
 * Allen Downey's [Think Python](http://www.greenteapress.com/thinkpython/) is a little formal for our taste, but you might find that refreshing. You can buy it or access the pdf for free.  
 
-* Sebastian Raschka has more than you'll ever need  about the [differences between Python 2 and 3](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html).    
+* Sebastian Raschka has more than you'll ever need  about the [differences between Python 2 and 3](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html).   
 
-These sources go well beyond what we do in this chapter, but we'll catch up with some of it in the next chapter. The rest we don't need, but if you're interested feel free to charge ahead anyway.  Who knows, it could turn out to be useful later on.  
+* Here's a [list of free tutorials](http://noeticforce.com/best-free-tutorials-to-learn-python-pdfs-ebooks-online-interactive), but we think you can stop with the first one, Codecademy. 
 
-List:  ??  http://noeticforce.com/best-free-tutorials-to-learn-python-pdfs-ebooks-online-interactive 
+These sources go well beyond what we do in this chapter, but we'll catch up with some of it in the next chapter. The rest we don't need, but if you're interested feel free to charge ahead anyway.  
 
 <!-- http://tutorial.djangogirls.org/en/python_introduction/index.html -->
 

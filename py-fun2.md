@@ -2,17 +2,15 @@
 
 
 ---
-**Overview.**   More core Python.
+**Overview.**   More core Python. Part 2 of 2.  
 
 **Python tools.**  Comparisons, Boolean variables, conditionals (if, else), loops, function definitions.  
 
-**Buzzwords.** List comprehensions, data structures, gotchas, PEP8.  
+**Buzzwords.**  Data structures, list comprehensions, gotchas, PEP8.  
 
-**Code.**  [Link here](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_2.py).
+**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_2.py).
 
 ---
-
-**Work in Progress**
 
 
 We continue our overview of Python's core language.  That's not what we'll use, for the most part, but the same concepts show up in data work.  We go through the material quickly, since we're more interested in the general ideas than the details.  
@@ -47,7 +45,7 @@ test = x >= y
 print('test = ', test)
 print('test has type ', type(test))
 ```
-What value does `test` have?  What type is it?  Here `x` is 6 and `y` is 8.  The expression `x >= y` (`x` greater than or equal to `y`) is therefore false.  If we print `test`, we find that its value is indeed `False`.  If we ask its `type`, Python tells us `bool` (that is, Boolean).  
+What value does `test` have?  What type is it?  Here `x` is 6 and `y` is 8.  The expression `x >= y` (`x` greater than or equal to `y`) is therefore false.  If we print `test`, we find that its value is indeed `False`.  If we ask its `type`, Python tells us `bool` (that is, Boolean).  (Actually, it says `<class 'bool'>`, but we'll say `bool` for short.)
 
 We could, of course, have skipped the assignments here. The expression `x >= y` equals `False` whether we assign it to `test` or not.  Similarly, we can use `type(x>=y)` to find its type.  
 
@@ -76,7 +74,7 @@ What is the value of `not_check`?  Explain the logic to your neighbor.
 ```python 
 x = 2/3 
 conditiona = x >= 0 
-conditionb = y <= 5 
+conditionb = x <= 5 
 test1 = conditiona and conditionb
 test2 = conditiona or conditionb 
 ```
@@ -84,7 +82,6 @@ What are the values of `test1` and `test2`?  The expression `conditiona and cond
 
 
 **Warning.** We use multiple comparisons most often in Pandas, Python's data management package.  For reasons we won't go into, Pandas uses a different syntax:  `&` for `and `and `|` for `or`.  
-
 
 
 ## Conditionals (`if` and `else`)
@@ -107,7 +104,7 @@ if x > 6:
 
 print('Done!')
 ``` 
-The essential ingredient here is the comparison `x>6`, which in this case has the value `True`.  The `if` statement then directs the program to compute and print the square of `x`.  The key elements of the code are:
+The critical ingredient here is the comparison `x>6`, which in this case has the value `True`.  The `if` statement then directs the program to compute and print the square of `x`.  The key elements of the code are:
 
 * The initial `if` statement ends with a colon. That's standard Python syntax, we'll see it again.
 * The following **statements are indented four spaces**.  It's standard syntax and is not optional. Spyder does it automatically.  
@@ -137,10 +134,10 @@ Try this with `x=4` and `x=7`.  We've added print statements for the condition `
 name1 = 'Dave'
 name2 = 'Glenn'
 ```
-(The names on the right can be anything, but let's start with these.)  Write a program using `if` and `else` that prints out the name that comes first in alphabetical order.  
+(The names on the right can be anything, but let's start with these.)  Write a program using `if` and `else` that prints the name that comes first in alphabetical order.  
 
 
-## Loops 
+## Loops (`for`)
 
 There are lots of times we want to do the same thing many times, either on one object or on many similar objects.  An example of the former is to find an answer to progressively higher degrees of accuracy.  We repeat an operation as many times as we need to get a desired degree of accuracy.  An example of the latter is to print out a list of names, one at a time.  Both situations come up a lot.
 
@@ -212,8 +209,9 @@ print('At num =', num, 'we had sum =', sum)
 ```
 The `if` statement starts with a colon and the statement following it (`break`) is indented four spaces more (eight in total).  `break` is a special command that ends a loop early.  
 
-
+<!--
 **Exercise.**  [??] 
+-->
 
 
 ## Loops over lists and strings 
@@ -352,7 +350,7 @@ We access the value from the key with syntax of the form: `dict[key]`.  In the e
 This is all mtyn and we don't plan to use any of it.  We include it because we got carried away.  
 
 
-**lambda functions.** We can define one-line functions in a streamlined way.  To compute the ever-popular square of a number, we would define the function by 
+We can define one-line **lambda functions.** in a streamlined way.  To compute the ever-popular square of a number, we can define the function 
 ```python
 square = lambda x:  x**2
 ```
@@ -367,7 +365,7 @@ anylist = [2, 'Steelers', [1,2,3]]
 m = map(type, anylist)
 types = list(m)
 ```
-The last line is needed because `map` produces a "map object," which isn't all that helpfu on its own.  So we converted it to a list.  
+The last line is needed because `map` produces a "map object," which isn't all that helpful on its own.  So we converted it to a list.  
 
 * **reduce.** The statement `reduce(function, list)` applies a function to the elements of a list and produces a single value.  The idea is that the calculations are connected. For example, we could compute a sum one element at a time:  
 ```python
@@ -389,7 +387,6 @@ newlist = list(f)
 The first one has the answer `newlist = [4, 5]`, the second `newlist = ['Steelers']`.  Can you see why?  
 
 Some of us find this kind of syntax obscure and do our best to avoid it.  But similar ideas show up in lots of places.  
-
 
 ## Assignments and copies
 
@@ -442,8 +439,8 @@ Some programmers are religious about this.  We'd say simply to make your code re
 
 <!-- 
 \url{http://www.reddit.com/r/Python/comments/3639nl/what_is_the_most_beautiful_piece_of_python_code/}
-\url{https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/routing.py}  --> 
-
+\url{https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/routing.py}  
+--> 
 
 
 ## Resources 
@@ -452,8 +449,16 @@ See the resources in the previous chapter, especially the link to [Codecademy](h
 
 Additional resources for specific topics:
 
-* The [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language," which includes comparisons, conditional statements, and loops.  
+* The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language," which includes comparisons, conditional statements, and loops.  
+
 * Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of his course is also quite good.  
+
 * Ditto [Python Tips](http://book.pythontips.com/en/latest/), which starts at a level a bit above where we left off.  Lots of cool stuff if you'd like to push further into Python.  
+
+* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
+
+* The [Python Challenge](http://www.pythonchallenge.com/) is for people who like puzzles as well as coding.  
+
+
 
   

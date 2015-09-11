@@ -4,10 +4,11 @@
 ---
 **Overview.** Thinking about data, ideas for projects.  And remember:  ideas have friends.  
 
+<!-- are developed, not discovered.  -->  
+
 **Buzzwords.** Questions, data, idea machines. 
 
 ---
-
 
 Data analysis starts with a question.  Generally, we want to learn something.  In our world, we might ask
 
@@ -40,6 +41,7 @@ You can ask the same questions yourself.  Here are some examples to practice on:
 * **[Economic mobility](http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html).**  We love maps.  This one shows that kids do better (relative to their parents) in some places than others.  Why is that?  What's wrong with the South?  Why doesn't New York do better? 
 * **[The one percent](http://ramiro.org/notebook/top-incomes-share/).**  What share of income went to the top one percent?  Data for lots of countries over almost a century.  
 * **[V-Lab](http://vlab.stern.nyu.edu/en/).**  Rob Engle's market volatility website.  Data and graphs of volatility for US and Chinese stocks, currencies, government bonds, and many other things.  
+* **[Kaiser Slides](http://kff.org/kaiser-slides/). Healthcare-related charts from the Kaiser Family Foundation.   
 * **[Vaccination heatmaps](http://graphics.wsj.com/infectious-diseases-and-vaccines/).**  A striking visual representation of diseases over time, motivated by the decisions of some [rich people in California](http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map.html) [not to vaccinate](http://www.washingtonpost.com/blogs/wonkblog/wp/2015/01/27/californias-epidemic-of-vaccine-denial-mapped/) their children.  Here's a related [blog post](https://benjaminlmoore.wordpress.com/2015/04/09/recreating-the-vaccination-heatmaps-in-r/) with R code.  (Which reminds us:  If you see R code, you should think, great, we can convert it to Python.)
 * **[Bloomberg on mortality](http://www.bloomberg.com/dataview/2014-04-17/how-americans-die.html).**  This is really cool.  It's beyond us technically, at least for the moment, but the ingredients are all things we can access.  And between us friends, the decline in mortality (people are living longer) is one of the most interesting facts about the modern world.  Check Gapminder on life expectancy if that doesn't strike you.  
 
@@ -66,11 +68,13 @@ One of our goals is for you to produce a piece of work -- data and graphics -- t
 
 * **[Trend growth in the US](http://www.moneyandbanking.com/commentary/2015/2/23/forecasting-trend-growth-living-with-uncertainty).**  Steve Cecchetti and Kim Schoenholtz document the drop in our estimates of trend growth?  What happened?  Why?   
 * **[US employment](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Projects/Employment-Population-Ratio_DavidCai_Jul_15.ipynb).**  Student David Cai documents the recent decline in the fraction of adults working in the US.  The question is why. Are we getting lazier?  Or something else? 
+* **[Africa in numbers](http://www.theguardian.com/commentisfree/datablog/2015/sep/10/africa-in-numbers-how-its-countries-compare).**  Nice overview of African countries from the Guardian's data group.  
 * **[Reinhardt-Rogoff revisited](http://nbviewer.ipython.org/github/vincentarelbundock/Reinhart-Rogoff/blob/master/reinhart-rogoff.ipynb).**  Vincent Arel-Bundock reproduces the [famous mistake](http://www.bloomberg.com/bw/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history).  Carmen Reinhardt and Ken Rogoff claimed high levels of government debt were associated with slower economic growth.  The association is there, but it's slight once you eliminate their Excel errors.  (Yes, they should be embarrassed for using Excel. But no, it's still not a good idea to run up loads of debt.)  
 * **[Gender ratios by county](http://thomaz.me/data/visualizing-census-data-with-google-fusion-tables-tutorial/).**  Another map.  The same approach can be used to deal with lots of other census data:  income, age, education, ethnicity, and many other things.  
 * **[Movie hits](http://www.randalolson.com/2014/12/29/the-biggest-box-office-booms-and-busts-since-1982/).**  Movie data is always interesting, we'll see more of it later on. 
-**[Textbooks](http://priceonomics.com/which-major-has-the-most-expensive-textbooks/).** Why are they so expensive?  What majors have the most expensive books?  (Not us, you may notice.) 
+* **[Textbooks](http://priceonomics.com/which-major-has-the-most-expensive-textbooks/).** Why are they so expensive?  What majors have the most expensive books?  (Not us, you may notice.) 
 * **[NBA shot charts](http://savvastjortjoglou.com/nba-shot-sharts.html).**  Even if you're not a backetball fan, this is a terrific project that produces some great pictures and shows you how along the way.  Here's the [IPython notebook](https://github.com/savvastj/blog/blob/master/content/NBA_shot_charts.ipynb). 
+* **[Student debt](http://www.nytimes.com/2015/09/01/upshot/why-students-with-smallest-debts-need-the-greatest-help.html).  The best part is the [link](http://ifap.ed.gov/eannouncements/082015FederalStudentAidPostsUpdatedReportstoFSADataCenter.html) to the data.  
 * **[Uber and taxis](http://fivethirtyeight.com/features/uber-is-serving-new-yorks-outer-boroughs-more-than-taxis-are/).**  Evidently they're doing a better job than taxis of serving the outer boroughs of NYC. Data [here](https://github.com/fivethirtyeight/uber-tlc-foil-response).  
 * **[Twitter profiles](http://andrewshamlet.com/2015/07/13/part-3-most-common-words-used-in-tweets-by-taylor-swift-katy-perry-and-britney-spears/).**  Student Andrew Hamlet mines twitter data and documents patterns in tweets by Taylor Swift and others. 
 * **[Citibikes](https://wakari.io/sharing/bundle/paddy/pydata_citibike).**  This service comes with a public data interface, one of many provided by local governments. Here's [another one](https://jakevdp.github.io/blog/2015/07/23/learning-seattles-work-habits-from-bicycle-counts/) about bikes, this time for Seattle.  There's a link to the IPython notebook at the end.  
@@ -78,11 +82,13 @@ One of our goals is for you to produce a piece of work -- data and graphics -- t
 You might have noticed that several of these are **IPython notebooks**.  We'll learn more about them shortly.  Their value in this context is that they combine code with text and graphics.  They allow us to show off not only what we've done but how we've done it.  
 
 
-**Starting points.**  If you're looking for ideas, you can start almost anywhere.  We like to say **ideas have friends**:  once you have one idea, several others often pop into your mind. Here are some starting points:  
+**Starting points.**  If you're looking for ideas, you can start almost anywhere.  We like to say **ideas have friends**:  once you have one idea, several others often pop into your mind. Alternatively:  **good ideas are developed, not discovered**.  Similar thought, different words.  
+
+Here are some starting points:  
 
 * Start with what interests you:  Economics, finance, marketing, emerging markets, movies, sports. 
-* Start with output:  Find an analyst report, blog post, or graphic you like, ask where the data comes from, think about whether you can replicate and/or extend it.   
-* Start with input:  Start with a dataset you find interesting, ask what you might do with it.  
+* Start with the output you'd like:  Find an analyst report, blog post, or graphic you like, ask where the data comes from, think about whether you can replicate and/or extend it.   
+* Start with an input:  Find a dataset you find interesting, ask what you might do with it.  
 
 The suggestion is to start somewhere -- anywhere -- and see where it leads.  Bounce around ideas with friends.  Go for a long walk.  Be open to ill-formed thoughts, they sometimes turn into great ones.   
 
@@ -110,17 +116,16 @@ The suggestion is to start somewhere -- anywhere -- and see where it leads.  Bou
 We've given you way too much information.  We suggest you spend a couple hours some time in a comfortable spot, skim through the links, and write down anything that interests you.  Stop when your find your eyes blurring.  
 
 
-## More lists
-
-https://github.com/datasets
-
-
 ## Resources 
 
 We've put together a longer [list of project ideas](https://docs.google.com/document/d/1hsuYz2IMoPPwba66BlyMW0tnMxuZPyH4F3ybc13Zsfk/edit?usp=sharing), some more fleshed out than others.  Give them a skim, see what appeals to you.  Or come up with your own.  
 
 If you're feeling brave, you could also take a look at our [enormous collection](https://docs.google.com/document/d/1L2ZDKFyyqfOrCGbNcCIE9mmgap4tjkTNuw32hK4c6BI/edit?usp=sharing) of economic, financial, and miscellaneous data sources and applications.  It's what our Aussie friend John Asker would call a dog's breakfast, but we're convinced there's lots of cool stuff hidden there. 
 
-<!--
+Or you could look at some of the examples on the [website](http://www.d3mprof.com/) for Vishal Singh's course, Data-Driven Decision Making.  Actually, you might want to go there first, it has some great stuff.  
+
+Steve Levitt:  https://youtu.be/r5jATFtKtI8?t=5m10s
+
+<!-- ??
 **For later:  divide these links into econ/fin and other.  Do this throughout the chapter.**
 -->

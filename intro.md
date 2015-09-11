@@ -8,7 +8,7 @@
 
 ---
 
-This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's us.  
+This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
 
 ## Answers to common questions 
 
@@ -20,9 +20,9 @@ This book -- and the course we developed it for -- is about data, primarily econ
 
 **What if my quant skills are weak or nonexistent?**  Then this is the course for you!  We do our best to make the material accessible.  We’re looking beyond quants to marketing, management, and humanities majors.  One of our design team was an English major.  
 
-**Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to do things with data that Excel users can only dream about.  You will also be prepared to do more along similar lines, including the extensive collection of courses on **business analytics** and **data science** offered by NYU Stern's [IOMS group](http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept).  
+**Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to communicate with people who know more and do things yourself that Excel users can only dream about.  You will also be prepared to do more along similar lines, including the extensive collection of courses on **business analytics** and **data science** offered by NYU Stern's [IOMS group](http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept).  
 
-**Should I take this course if I already know how to code?**  You’re welcome to, and you will learn a lot about dat  and the data components of Python.  But please don’t scare the other students.  
+**Should I take this course if I already know how to code?**  You’re welcome to, and you will learn a lot about data  and the data components of Python.  But please don’t scare the other students.  
 
 **Is there anything Python can't do?**  Well, [it can't swallow a porcupine](http://www.telegraph.co.uk/news/worldnews/11697672/Python-chokes-to-death-after-eating-porcupine.html).  Someone is working on pretty much everything else.  
 
@@ -31,7 +31,7 @@ This book -- and the course we developed it for -- is about data, primarily econ
 
 We're living in a world of data: data about the economy, data about financial markets, data about your business.  Data doesn't solve all of our problems, but it's a valuable input to better decisions.  For example, how should you [choose a major](http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/)?  
 
-Many of our former students tell us that data skills keep them in business.  One of our alums analyzes television  viewer data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages player and attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are, if not required, at least very useful in their jobs.  One of our  marketing majors, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
+Many of our former students tell us that data skills keep them in business.  One of our alums analyzes television  viewer data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are, if not required, at least very useful in their jobs.  One of our  marketing majors, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
 
 
 ## Why Python?   
@@ -42,7 +42,7 @@ Many of our former students tell us that data skills keep them in business.  One
 
 We think Python is the language of choice right now if you want a user-friendly introduction to programming and a useful tool for day-to-day data work.  It's a high-level language, which means the language does a lot of the work.  It has a  broad range of applications and an enormous community of users.  You'll come to appreciate both. And it's free and open source. Free means you pay nothing.  Open source means  you can look at the code if you want to see how something works.  
 
-The closest competitors to Python for our purposes are probably [Matlab][1] and [R][2].  Matlab is a vector language, which means the kinds of things you do cell by cell in Excel you can do for a whole column or table in one line of code.  It was great in the 1980s, and we still use it for some things, but it's missing many of the convenient features of more modern languages.  It's not easy, for example, to read data straight from the internet. And functions must be stand-alone files, which gets annoying.  It's also expensive.  Outside universities, they seem to price it with investment banks in mind.  
+The closest competitors to Python for our purposes are probably [Matlab][1] and [R][2].  Matlab is a vector language, which means the kinds of things you do cell by cell in Excel you can do for a whole column or table in one line of code.  It was great in the 1980s, and we still use it for some things, but it's missing many of the convenient features of more modern languages.  It's not easy, for example, to read data straight from the internet. And functions must be stand-alone files, which gets annoying.  It's also expensive.  Outside universities, they price it with investment banks in mind.  
 
 [1]: https://en.wikipedia.org/wiki/MATLAB
 [2]: https://en.wikipedia.org/?title=R_(programming_language)
@@ -76,14 +76,16 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Make friends.**  Coding is hard to do on your own.  A second pair of eyes is indespensible.  So work with friends, and make new friends who know how to code.  Intense coding sessions are a great way to develop relationships.  
 
-**Work on your Google fu.**  You will find that many of your questions have been asked before -- and answered.  One way to find them:  Google something like "python [problem]."  There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
+**Work on your Google fu.**  You will find that many of your questions have been asked before.  Even beter, many they've been answered.  One way to find them:  Google something like "python [problem]."  There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
+
+**Be patient.** We know, it's easier to say than do, but it pays to take your time.  Coding in a hurry is a recipe for frustration and failure.  
 
 **Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
 
 
 ## Our plan 
 
-**Leap in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means that the work load is heaviest at the start.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
+**Leap in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means **the work load is heaviest at the start**.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
 
 **Stress the basics.**  We think once you understand the basics of Python, you'll be in a good position to work out special cases on your own.  Plus that allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
 

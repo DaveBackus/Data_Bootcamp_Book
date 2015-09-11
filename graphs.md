@@ -10,7 +10,7 @@
 
 **Applications.**  Incomes of college majors.??
 
-**Code.** ??
+**Code.** Link.
 
 ---
 
@@ -63,6 +63,8 @@ css files ??
 
 Functions and methods...
 
+
+**Add data source text at bottom**
 
 
 ## Object-oriented matplotlib
@@ -123,6 +125,8 @@ Viz Wiz
 Graphic Detail*
 
 
+Heatmaps:  http://stackoverflow.com/questions/14391959/heatmap-in-matplotlib-with-pcolor 
+
 
 ## Resources 
 
@@ -165,4 +169,3 @@ https://conference.scipy.org/scipy2013/tutorial_detail.php?id=103
 
 Jake:  https://vimeo.com/53057312
 http://jakevdp.github.io/mpl_tutorial/ 
-
