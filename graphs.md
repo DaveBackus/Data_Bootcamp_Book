@@ -169,3 +169,5 @@ https://conference.scipy.org/scipy2013/tutorial_detail.php?id=103
 
 Jake:  https://vimeo.com/53057312
 http://jakevdp.github.io/mpl_tutorial/ 
+
+Tufte interview:  http://adage.com/article/adagestat/edward-tufte-adagestat-q-a/230884/

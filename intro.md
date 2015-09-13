@@ -8,7 +8,7 @@
 
 ---
 
-This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means Python and its data-related packages.  By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
+This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means **[Python][10]** and its data-related packages.  By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
 
 ## Answers to common questions 
 

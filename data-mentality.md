@@ -2,9 +2,7 @@
 
 
 ---
-**Overview.** Thinking about data, ideas for projects.  And remember:  ideas have friends.  
-
-<!-- are developed, not discovered.  -->  
+**Overview.** Thinking about data, ideas for projects.  Things to remember:  (i) Ideas aren't discovered, they're developed.  (ii) Ideas have friends:  when you find one, others are nearby. 
 
 **Buzzwords.** Questions, data, idea machines. 
 
@@ -41,7 +39,7 @@ You can ask the same questions yourself.  Here are some examples to practice on:
 * **[Economic mobility](http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html).**  We love maps.  This one shows that kids do better (relative to their parents) in some places than others.  Why is that?  What's wrong with the South?  Why doesn't New York do better? 
 * **[The one percent](http://ramiro.org/notebook/top-incomes-share/).**  What share of income went to the top one percent?  Data for lots of countries over almost a century.  
 * **[V-Lab](http://vlab.stern.nyu.edu/en/).**  Rob Engle's market volatility website.  Data and graphs of volatility for US and Chinese stocks, currencies, government bonds, and many other things.  
-* **[Kaiser Slides](http://kff.org/kaiser-slides/). Healthcare-related charts from the Kaiser Family Foundation.   
+* **[Kaiser Slides](http://kff.org/kaiser-slides/).**  Healthcare-related charts from the Kaiser Family Foundation.   
 * **[Vaccination heatmaps](http://graphics.wsj.com/infectious-diseases-and-vaccines/).**  A striking visual representation of diseases over time, motivated by the decisions of some [rich people in California](http://www.nytimes.com/interactive/2015/02/06/us/california-measles-vaccines-map.html) [not to vaccinate](http://www.washingtonpost.com/blogs/wonkblog/wp/2015/01/27/californias-epidemic-of-vaccine-denial-mapped/) their children.  Here's a related [blog post](https://benjaminlmoore.wordpress.com/2015/04/09/recreating-the-vaccination-heatmaps-in-r/) with R code.  (Which reminds us:  If you see R code, you should think, great, we can convert it to Python.)
 * **[Bloomberg on mortality](http://www.bloomberg.com/dataview/2014-04-17/how-americans-die.html).**  This is really cool.  It's beyond us technically, at least for the moment, but the ingredients are all things we can access.  And between us friends, the decline in mortality (people are living longer) is one of the most interesting facts about the modern world.  Check Gapminder on life expectancy if that doesn't strike you.  
 

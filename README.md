@@ -1,12 +1,12 @@
 ## Preface
 
-This [GitBook](https://www.gitbook.com/book/davebackus/test/details) was written by Dave Backus, Chase Coleman, and Spencer Lyon for a [course](https://github.com/DaveBackus/Data_Bootcamp#data-bootcamp) at NYU's Stern School of Business.  Our goals are to give students experience with economic and financial data and to introduce programming novices to the benefits of moving beyond Excel.  It's based on the Python programming language, which we think is the tool of choice for modern data analysis.  We use Python's data management (pandas) and graphics (matplotlib) packages extensively.  
+This [GitBook](https://www.gitbook.com/book/davebackus/test/details) was written by Dave Backus, Chase Coleman, and Spencer Lyon for a [course](https://github.com/DaveBackus/Data_Bootcamp#data-bootcamp) at [NYU](http://www.nyu.edu/)'s [Stern School of Business](http://www.stern.nyu.edu/).  Our goals are to give students experience with economic and financial data and to introduce programming novices to the benefits of moving beyond Excel.  It's based on the Python programming language, which we think is the tool of choice for modern data analysis.  We use Python's data management (pandas) and graphics (matplotlib) packages extensively.  
 
 The book comes in multiple formats.  You can access it on the internet.  Or you can download (and print) a pdf file.  The former comes with links, which we think is a huge advantage, and can be updated quickly, but if you like paper by all means try the pdf.  All of them are available at 
 
 https://www.gitbook.com/book/davebackus/test/details
 
-Suggestions welcome at db3@nyu.edu.  Even better, post an issue on [our repository](https://github.com/DaveBackus/Data_Bootcamp_Book/issues).  
+Click [here](https://docs.google.com/document/d/1EYvjgbeXk-BUGVrrVzJGqsaGaxYng1qSSB_3cxdsyJE/edit) for a more elaborate sales pitch.  Suggestions welcome at db3@nyu.edu.  Even better, post an issue on our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp_Book/issues).  
 
 ## Warning
 
