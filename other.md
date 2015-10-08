@@ -23,6 +23,8 @@ https://www.codecademy.com/en/tracks/nhtsa
 http://maxberggren.github.io/2015/08/04/basemap/ 
 http://matplotlib.org/basemap/users/examples.html 
 
+http://geoffboeing.com/2014/08/visualizing-summer-travels-with-cartodb/ 
+
 ## Animations 
 
 https://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/
@@ -39,14 +41,13 @@ http://multithreaded.stitchfix.com/blog/2015/07/16/pyxley/
 
 ## Scraping websites
 
-Scrapy
-
-Beautful Soup 
+Scrapy, Beautful Soup 
 
 http://pbpython.com/web-scraping-mn-budget.html 
 
 http://savvastjortjoglou.com/nba-shot-sharts.html
 http://www.gregreda.com/tag/scraping.html 
+
 
 
 ## Natural language 
@@ -58,6 +59,13 @@ http://gaussiangeek.blogspot.com/2015/06/ever-since-i-heard-abbey-road-i.html
 Other resources from our politics group:
 https://www.youtube.com/watch?v=AOU-Yw1qdJs
 http://www.nyu.edu/projects/politicsdatalab/learning_extra.html
+
+http://spacy.io/
+
+
+## Fuzzy wuzzy 
+
+
 
 
 ## Plot.ly 
@@ -81,6 +89,7 @@ Here are [two](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments) [
 **Learn R.** If you want to learn how to program in R, there's lots of good stuff online -- too much, really.  We like these: 
 
 * [Try R](http://tryr.codeschool.com/) is like Codecademy, you run code online.  
+* [UCLA](http://www.ats.ucla.edu/stat/r/seminars/intro.htm) has an excellent set of slides.
 * Kelly Black has a [tutorial](http://www.cyclismo.org/tutorial/R/) that covers more advanced topics, including introductory statistics.  
 * [Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/) combines R programming with an introduction to modern statistics and machine learning.  
 

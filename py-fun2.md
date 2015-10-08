@@ -4,7 +4,7 @@
 ---
 **Overview.**   More core Python. Part 2 of 2.  
 
-**Python tools.**  Comparisons, Boolean variables, conditionals (if, else), loops, function definitions.  
+**Python tools.**  Comparisons, Boolean variables, conditionals (if, else), loops (for), function definitions.  
 
 **Buzzwords.**  Data structures, list comprehensions, gotchas, PEP8.  
 
@@ -81,7 +81,7 @@ test2 = conditiona or conditionb
 What are the values of `test1` and `test2`?  The expression `conditiona and conditionb` is true if both conditions are true, false otherwise.  The expression `conditiona or conditionb` is true if either one of the conditions is true. 
 
 
-**Warning.** We use multiple comparisons most often in Pandas, Python's data management package.  For reasons we won't go into, Pandas uses a different syntax:  `&` for `and `and `|` for `or`.  
+**Warning.** We use multiple comparisons most often in Pandas, Python's data management package.  For reasons we won't go into, Pandas uses a different syntax:  `&` replaces `and `and `|` replaces `or`.  
 
 
 ## Conditionals (`if` and `else`)
@@ -385,6 +385,8 @@ f = filter(lambda x: type(x) == str, anylist)
 newlist = list(f)
 ```  
 The first one has the answer `newlist = [4, 5]`, the second `newlist = ['Steelers']`.  Can you see why?  
+
+[?? talk about each one as an implicit loop?]
 
 Some of us find this kind of syntax obscure and do our best to avoid it.  But similar ideas show up in lots of places.  
 

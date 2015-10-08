@@ -22,6 +22,8 @@ Another important part of a programming language is the user-interface or **envi
 ## Installing Anaconda 
 
 Follow these instructions.  By which we mean: **follow these instructions exactly!** Creativity is a wonderful thing, but here it will cost you dearly. 
+
+**Warning.** They recently changed the download page, so this might not work exactly as described.  Yes, we did say exactly before, but they changed it up on us.  We'll fix this up when we get a chance, but right now it's not quite right.  We still have faith in your ability to download the program using the instructions on the page.  Make sure you get **Python 3.4** for **your operating system** (Windows, Mac Os, etc).  You want the **64-bit** version unless you have a really old computer.  
  
 
 **Step 1. Download the Anaconda installer.**  Click [here](http://continuum.io/downloads) to go to the download page. (If that link doesn't work for you, Google "Anaconda downloads.")  Click on "I Want Python 3.4."  Then click on the logo of your operating system (Windows, Mac OS, or Linux) and "Python 3.4 Graphical Installer" to download the installer.
@@ -104,7 +106,7 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but it's better to know that now than run into problems later. Have a cold drink anyway and catch your breath.  
 
 
-**IPython**.  We prefer to write code in an editor and will stick with Spyder for most of the course.  But some people prefer IPython notebooks.  They're good for talks if you want to intersperse code with text.  They can also be used for reports.  As we've seen from examples, you can read through them more easily than naked code.  Here are [three](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point. 
+**IPython**.  We prefer to write code in an editor and will stick with Spyder for the first few weeks of the course.  But some people prefer IPython notebooks.  They're good for talks if you want to intersperse code with text.  They can also be used for reports.  As we've seen from examples, you can read through them more easily than naked code.  Here are [three](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point. 
 
 To run the same code in an IPython notebook, start up the IPython/Jupyter app in Launcher.  (If you're not sure how to do that, go back to the previous section.) Once you have it up and running:  
 
@@ -131,6 +133,6 @@ More on the Anaconda distribution and its contents:
 
 * Anaconda [download](http://continuum.io/downloads) and [package list](http://docs.continuum.io/anaconda/pkg-docs).  
 * Spyder [documentation](https://pythonhosted.org/spyder/).  
-* IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  
-* [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/).  More than you'll ever want or need about Anaconda and its components.  
+* IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  You can also get help in Jupyter:  click on "Help" ar the top and choose "User Interface Tour."
+* [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/)to documentation and support.  More than you'll ever want or need. 
 

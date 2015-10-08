@@ -20,7 +20,7 @@ We start, then, by describing how to get data into Python, particularly data in 
 
 ##  Reminder 
 
-You may recall that our canonical program structure consists of data input, data management, and graphics.  We'll spend most of our time on the first, but produce a simple plot by finding a suitable method.  
+You may recall that our canonical program structure consists of data input, data management, and graphics.  We'll spend most of our time here on the first, but touch on the second and produce a simple plot by finding a suitable method.  
 
 
 ## Python packages
@@ -45,7 +45,7 @@ Here are some others you might run across:
 
 * **[Statsmodels](https://pypi.python.org/pypi/statsmodels).**  The basic statistics package. 
 
-* **[Scikit-learn](http://scikit-learn.org/stable/).** A package for "[machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)," which is the name computer scientists give to data work.  CS people have done some cool things.  They're also really good at naming things:  machine learning, visualization, support vector machine, random forests.  
+* **[Scikit-learn](http://scikit-learn.org/stable/).** A package for "[machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)," which is the name computer scientists give to data work.  CS people have done some cool things with data.  They're also really good at naming things:  machine learning, visualization, support vector machines, random forests.  
 
 * **[NLTK](http://www.nltk.org/).**  The so-called Natural Language Toolkit processes text.  Here "natural language" means "words."  Investors, for example, might process the words used in financial reports to detect mood or sentiment.  One of our students is using NLTK to analyze tweets.  The big-picture idea is that data can be anything, not just numbers.   
 
@@ -97,9 +97,9 @@ Some fine points:
   (Obscure note.  The double underscore often shows up in Python for basic things like this. When we tried to track down the logic, we ran into [this explanation](http://stackoverflow.com/questions/1301346/the-meaning-of-a-single-and-a-double-underscore-before-an-object-name-in-python), which confused us thoroughly. But see also [this](http://stackoverflow.com/questions/8689964/python-why-do-some-functions-have-underscores-before-and-after-the-functio).)
 
 
-**Exercise.** Import pandas.  What version are you running?  
+**Exercise.** Import Pandas.  What version are you running?  
 
-**Exercise.**  Suppose you import Pandas twice under different names, once as `import pandas as pd` and once as `import pandas as pa`.  What do you think happens?  Can you write a short program that tests your conjecture?  (This will take a little thought, feel free to consult your neighbor.)  
+**Exercise.**  Suppose you import Pandas twice under different names, once with `import pandas as pd` and once with `import pandas as pa`.  What do you think happens?  Can you write a short program that tests your conjecture?  (This will take a little thought, feel free to consult your neighbor.)  
 
 
 ## The Pandas package 
@@ -135,7 +135,9 @@ Since we're positive people, let's assume this runs without error.  If so, we ca
 
 --- 
 
-**Digression.** Prepare yourself for a long digression, possibly important, about the **current working directory** (cwd), the directory (folder) where Python looks for things.  If the code above generated an error, the most common reason is that Python looked for the file in the wrong place.  If that's the case, we have some work to do.  Debugging is like solving a mystery.  The first step is to collect data:   
+**Digression.** Prepare yourself for a long digression about the **current working directory** (cwd), the directory (folder) where Python looks for things.  If the code above generated an error, the most common reason is that Python looked for the file in the wrong place.  If that's the case, we have some work to do.  
+
+Fixing mistakes -- "debugging" -- is like solving a mystery. As Sherlock Homes said, the first step is to collect data:   
 
 * Check the cwd. We do that by running this mysterious code:  
   ```python 
@@ -174,18 +176,19 @@ The idea is to trigger an error message (the file `test0.csv` doesn't exist) so 
 
 ## Properties of dataframes 
 
-Ok, now we have a dataframe -- what's in it?  
+Ok, now we have a dataframe -- what's in it?  What can we do with it?  
 
 If you try `type(df)` you'll find that it's a DataFrame, the standard object type in pandas.
 It's a table of numbers, much like a sheet in a spreadsheet program,
 with labels for rows (the index) and columns (the variables).  
+
+`df.[tab]` 
 
 Get labels:  df.columns, df.index...  
 
 Look at it:  df.head(), df.head(7), df.tail().  
 
 These are dfs too.  head = df.head(), type(head)
-
 
 Other methods we could try:  
 
@@ -194,6 +197,9 @@ Other methods we could try:
 * df.corr() (correlations between variables)
 * df.dtypes() (variable types)
 * df.info() (information about the form of the data).
+* Transpose df.T
+
+**Exercise.** Find another method with tab completion.  What does it do?  ??
 
 
 dtypes pretty good.  
@@ -223,6 +229,9 @@ We can read other kinds of files in much the same way.  Some examples show how t
 file = '../Data/test2.xlsx'
 xls = pd.read_excel(file)       # default is first sheet
 ```
+
+**more on xls's**  Get list of sheets so we know what we're dealing with... 
+Also read a few rows, see what they look like... 
 
 A digression on GitHub files.  GitHub has viewers for csv files (also some others) that make them easier to read online.  But they're not the real files.  If we use their urls to access data, we get junk.  The secret is to use the raw files:  click on the raw button above and to the right and you'll get (surprise) the raw file, aka the real thing.  Here's an example to practice on:  
 
@@ -365,3 +374,5 @@ http://www.alfredo.motta.name/data-manipulation-primitives-in-r-and-python/
 http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/ 
 
 Cookbook:  http://pandas.pydata.org/pandas-docs/stable/tutorials.html#pandas-cookbook 
+
+Pandas plotting methods:  http://pandas.pydata.org/pandas-docs/version/0.10.1/visualization.html#autocorrelation-plot

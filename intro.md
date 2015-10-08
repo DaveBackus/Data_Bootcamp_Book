@@ -65,18 +65,19 @@ Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-wh
 He's alluding here to the vast community of users who are developing tools that allow Python to do all kinds of things.  Python's data tools are an example:  they're not part of the core langauage, they're add-ons developed by users.  He adds:  "Python people are pretty cool," so there's that, too. (Ford's article, "What is Code," takes up a whole issue of Bloomberg BusinessWeek.  It's a classic, well worth reading.)  
 
 
-
 ## Work habits
 
 There are no shortcuts in learning how to code.  You simply need to spend hours -- and hours -- doing it.  Progress will seem slow at first, but if you stick with it things will start to look familiar, and even make sense. You may even start to think of projects as fun, and revel in your new-found power over data.  
 
 As you work your way up the learning curve, keep this advice in mind:  
 
+**Stick with it.** Coding is a world of its own.  If it seems mysterious at first, don't panic:  Stick with it and it will start to make sense.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?)
+
 **Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around, try new things, have fun.  As you gain experience, you'll find that Python becomes your tool of choice.  
 
-**Make friends.**  Coding is hard to do on your own.  A second pair of eyes is indespensible.  So work with friends, and make new friends who know how to code.  Intense coding sessions are a great way to develop relationships.  
+**Make friends.**  Coding is hard to learn on your own.  A second pair of eyes is indespensible.  So work with friends, and make new friends who know how to code.  Intense coding sessions are a great way to develop relationships.  
 
-**Work on your Google fu.**  You will find that many of your questions have been asked before.  Even beter, many they've been answered.  One way to find them:  Google something like "python [problem]."  There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
+**Work on your Google fu.**  You will find that many of your questions have been asked before.  Even better, many they've been answered.  One way to find them:  Google something like "python [problem]."  There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
 
 **Be patient.** We know, it's easier to say than do, but it pays to take your time.  Coding in a hurry is a recipe for frustration and failure.  
 
@@ -101,8 +102,14 @@ Python is named for Monty Python, a group of comedians whose humor appeals to th
 
 ## Resources 
 
-All of the materials for this book and the associated course are posted on the web.  This book is hosted by [GitBook](https://www.gitbook.com/book/davebackus/test/details).  Other materials are available from our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp).  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/DaveBackus/Data_Bootcamp/tree/master/Code) of our GitHub repo.  
+The resources section at the end of each chapter is a collection of (mostly) links to things we've found useful. They're more than you need, but give you some recommended options if you want to follow up on a specific topic.  
+
+In this case we'll say simply that all of the materials for this book and the associated course are posted on the web.  This book is hosted by [GitBook](https://www.gitbook.com/book/davebackus/test/details).  Other materials are available from our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp).  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/DaveBackus/Data_Bootcamp/tree/master/Code) of our GitHub repo.  
 
 
 <!-- ## References ?? --> 
+
+<!-- It should be painfully obvious that learning how to program a computer has no direct connection to any high form of enlightenment -- no more than learning scientific technique, mathematics or engineering. And yet each of these can be vehicles for deep insights into the much larger worlds that the human mind is capable of understanding.
+http://worrydream.com/EnlightenedImaginationForCitizens/	
+--> 
 

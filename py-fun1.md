@@ -4,11 +4,11 @@
 ---
 **Overview.**  Time to start programming!  We work our way through some simple programs using Python's core language.  We don't cover enough ground to do serious data work, but it lays a solid foundation to build on.  Part 1 of 2.  
 
-**Python tools.**  Syntax, Spyder, numbers, calculations, strings, lists, functions, objects, methods, tab completion, object inspector.  
+**Python tools.**  Syntax, Spyder, numbers, calculations, strings, lists, built-in functions, objects, methods, tab completion, object inspector.  
 
 **Buzzwords.** Isn't that enough?  
 
-**Trigger warning.**  Technical content, cannot be mastered without effort.  
+**Trigger warning.**  Technical content, cannot be mastered without time and effort.  
 
 **Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_1.py).
 
@@ -412,7 +412,7 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 With that out of the way, here are some good introductions to basic Python and related topics with our favs on top:  
 
-* Codecademy has an excellent [Introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, stop when you get to Advanced Topics.    
+* Codecademy has an excellent [Introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, you can stop (as far as this course in concerned) when you get to Advanced Topics.    
 
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  It's also a good idea to get used to reading official documentation like this.  There are times when it's unavoidable.  
 
