@@ -376,3 +376,5 @@ http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/
 Cookbook:  http://pandas.pydata.org/pandas-docs/stable/tutorials.html#pandas-cookbook 
 
 Pandas plotting methods:  http://pandas.pydata.org/pandas-docs/version/0.10.1/visualization.html#autocorrelation-plot
+
+Another intro:  http://efavdb.com/pandas-tips-and-tricks/

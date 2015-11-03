@@ -33,6 +33,10 @@ We're living in a world of data: data about the economy, data about financial ma
 
 Many of our former students tell us that data skills keep them in business.  One of our alums analyzes television  viewer data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are, if not required, at least very useful in their jobs.  One of our  marketing majors, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
 
+## Overcoming fear 
+
+https://medium.com/keep-learning-keep-growing/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7 
+
 
 ## Why Python?   
 

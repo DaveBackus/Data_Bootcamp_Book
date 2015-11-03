@@ -462,5 +462,5 @@ Additional resources for specific topics:
 * The [Python Challenge](http://www.pythonchallenge.com/) is for people who like puzzles as well as coding.  
 
 
-
+Obscure but cool:  https://github.com/cosmologicon/pywat#python-wats 
   

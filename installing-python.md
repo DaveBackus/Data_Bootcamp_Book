@@ -44,7 +44,7 @@ You now have Python installed and ready to run.  Congratulations!
 
 ## Coding environments 
 
-Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and the IPython notebook.  
+Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and the IPython/Jupyter notebook.  
 
 We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  It should look (roughly) like [this picture](http://continuum.io/blog/new-launcher).  You will see a list of applications:  
 

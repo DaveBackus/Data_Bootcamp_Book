@@ -86,11 +86,46 @@ Here are [two](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments) [
 
 **Install R.** If you decide you'd like to try R some time, [choose a "mirror"](https://cran.r-project.org/mirrors.html) and download the appropriate version.  We recommend you run it in [RStudio](https://www.rstudio.com/products/rstudio/download/), a popular coding environment. Both are free.  Once you've installed them, start up RStudio and it will access R as needed. 
 
+Things to check out
+
+1. Conda.  This could have promise:  Continuum support of R.  Two things:
+
+* You can install from conda, which you have if you installed Anaconda.  
+
+* You can run in a Jupyter notebook, as Brian mentioned.   
+
+The bad news is that it doesn't seem to have RStudio, which I like.  
+
+More at  https://www.continuum.io/blog/developer/jupyter-and-conda-r
+
+2. List of online resources.  
+
+http://www.r-bloggers.com/learning-r-index-of-online-r-courses-october-2015/
+
+3. Princeton's intro.  
+
+http://data.princeton.edu/R/
+
 **Learn R.** If you want to learn how to program in R, there's lots of good stuff online -- too much, really.  We like these: 
 
 * [Try R](http://tryr.codeschool.com/) is like Codecademy, you run code online.  
-* [UCLA](http://www.ats.ucla.edu/stat/r/seminars/intro.htm) has an excellent set of slides.
+* Princeton:  http://data.princeton.edu/R/ 
+* List http://www.r-bloggers.com/learning-r-index-of-online-r-courses-october-2015/
 * Kelly Black has a [tutorial](http://www.cyclismo.org/tutorial/R/) that covers more advanced topics, including introductory statistics.  
 * [Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/) combines R programming with an introduction to modern statistics and machine learning.  
 
 We also like the blog aggregator **[R-bloggers](http://www.r-bloggers.com/)**, which is filled with applications, including code.  
+
+
+## Other languages 
+
+http://www.curiousefficiency.org/posts/2015/10/languages-to-improve-your-python.html
+
+## Google's Cloud Datalab
+
+https://cloud.google.com/datalab/
+
+Also Wakari, AWS...  
+
+## SQLite 
+

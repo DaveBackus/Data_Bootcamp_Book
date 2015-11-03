@@ -90,7 +90,13 @@ x = 2
 y = 3 
 z = x/y 
 ```
-The first line takes the value 2 and stores it in the variable `x`.  We say we assigned the numerical value 2 to the variable `x`, which is now available for future calculations.  The second line assigns the value 3 to a new variable `y`. The last line takes `x`, divides it by `y`, and stores the result in `z`.   All of these lines are "assignments."  
+What's going on here?  The first line takes the value 2 and stores it in `x`.  We refer to `x` as a "variable" and say we assigned the numerical value 2 to the variable `x`, which is now available for future calculations.  that's really helpful, because we can call on `x` whever we need to use it.  In Excel, we could put something in a cell (say, b7) and refer to it that way, but this is simpler for many purposes.  
+
+Continuing:  The second line assigns the value 3 to a new variable `y`. The last line takes `x`, divides it by `y`, and stores the result in `z`.   All of these lines are "assignments."  
+
+**Exercise.**  Suppose we borrow 200, pay interest of 5 percent.   If I pay interest plus principal after one year, what do is my total payment?  Compute this using the variables `principal` and `i`.  How does your answer change if the interest rate rises to 7 percent?  
+
+**Exercise.** Real GDP in the US (the total value of things produced) was 15.58 trillion in 2013 and 15.96 in 2014.  What was the growth rate?  
 
 This is mtyn, but you can also do multiple assignments in the same line.  The first two lines above can be rewritten together as 
 ```python 

@@ -121,7 +121,7 @@ We've put together a longer [list of project ideas](https://docs.google.com/docu
 
 If you're feeling brave, you could also take a look at our [enormous collection](https://docs.google.com/document/d/1L2ZDKFyyqfOrCGbNcCIE9mmgap4tjkTNuw32hK4c6BI/edit?usp=sharing) of economic, financial, and miscellaneous data sources and applications.  It's what our Aussie friend John Asker would call a dog's breakfast, but we're convinced there's lots of cool stuff hidden there. Or you could look at some of the examples on the [website](http://www.d3mprof.com/) fr Vishal Singh's course, Data-Driven Decision Making.  Actually, you might want to go there first, it has some great stuff.  
 
-Finally, if you have an hour to spend -- productively -- watch Steve Levitt's [video](https://youtu.be/r5jATFtKtI8?t=5m10s) comments about working with company data.  Entertaining and informative. 
+Finally, if you have an hour to spend (productively), watch Steve Levitt's [video](https://youtu.be/r5jATFtKtI8?t=5m10s) comments about working with company data.  Entertaining and informative. 
 
 <!-- ??
 **For later:  divide these links into econ/fin and other.  Do this throughout the chapter.**
