@@ -23,7 +23,9 @@ Another important part of a programming language is the user-interface or **envi
 
 Follow these instructions.  By which we mean: **follow these instructions exactly!** Creativity is a wonderful thing, but here it will cost you dearly. 
 
-**Warning.** They recently changed the download page, so this might not work exactly as described.  Yes, we did say exactly before, but they changed it up on us.  We'll fix this up when we get a chance, but right now it's not quite right.  We still have faith in your ability to download the program using the instructions on the page.  Make sure you get **Python 3.4** for **your operating system** (Windows, Mac Os, etc).  You want the **64-bit** version unless you have a really old computer.  
+**Warning.** They recently changed the download page, so this might not work exactly as described.  Yes, we did say exactly before, but they changed it up on us.  We'll fix this up when we get a chance, but right now it's not quite right.  We still have faith in your ability to download the program using the instructions on the page.  Make sure you get **Python 3.5** for **your operating system** (Windows, Mac Os, etc).  You want the **64-bit** version unless you have a really old computer.  
+
+One change we noticed is that we're now up to Python 3.5.  
  
 
 **Step 1. Download the Anaconda installer.**  Click [here](http://continuum.io/downloads) to go to the download page. (If that link doesn't work for you, Google "Anaconda downloads.")  Click on "I Want Python 3.4."  Then click on the logo of your operating system (Windows, Mac OS, or Linux) and "Python 3.4 Graphical Installer" to download the installer.

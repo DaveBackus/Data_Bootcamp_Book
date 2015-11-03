@@ -13,3 +13,4 @@
 * [Randomness in stock returns](random.md)
 * [Managing data 2](pandas-munging.md)
 * [Other cool stuff](other.md)
+* [Glossary](glossary.md)
