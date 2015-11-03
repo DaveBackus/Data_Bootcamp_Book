@@ -295,47 +295,6 @@ What is the output?  How would you explain it to your classmates?
 **Exercise.** Suppose `x = [1, 2, 3]` is a list.  What is `2*x`?  Try it and see.  
 
 
-## Slicing strings and lists 
-
-
-We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, probably because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that Python (also some other programming languages) starts numbering at zero.  
-
-
-**Slicing strings.** Take, for example, the string `a = 'some'`.  If we want the first item/letter, we would type `a[0]`.  Yes, that's the first item; remember, we start at zero.  If we want the second, we type `a[1]`.  And so on.  And here's a good one:  If we want the last letter, we type `a[-1]`.  And if we want the one before the last one, we type `a[-2]`.  In this case we get the same answer if we type `a[2]`.  Both give us `'m'`. 
-
-We can summarize the numbering system by writing the word `some` on a piece of paper with room between the letters.  Below them, write the numbers, in order:  0, 1, 2, 3.  Label this row "counting forward."  Below that, start from the right (below the `e`) and count backwards as we move left:  -1, -2, -3, -4.  Label this row "counting backwards."
-
-
-**Exercise.** Print the third letter of the string `firstname = 'Monty'`.  
-
-We can also slice off sequences of characters, but there's another tricky convention to deal with.  Let's see what the following commands do:  
-```python 
-c = 'something'
-print('c[1] is', c[1])
-print('c[1:2] is', c[1:2])
-print('c[1:3] is', c[1:3])
-print('c[1:] is', c[1:])
-```
-The first print statement gives us `o`, the second letter of `something`.  We label it element 1 because we start numbering at zero.  The next one does the same.  Why?  The convention is to stop one before the second number, so this goes from 1 to 1, which is the second letter.  The next line gives us `om`, the second and third letters.  Why third?  Stick with us now, but here's the logic:  we go from 1 to 2 (one less than the second number), which is the second and third letters (we started counting at zero).  
-
-The last line has no second number.  By convention it goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
-
-Are you dizzy yet?  To summarize, the counting conventions for a slice like `c[n1:n2]` work like this:
-
-* We start at zero, so `n1` is really `n1+1`. That means `c[3]` is the fourth character.  
-* We end at `n2-1`, so `c[3:7]` includes characters 4, 5, and 6.   
-
-Some practice examples:  
-
-**Exercise.** Find the last letter of the string `python = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
-
-**Exercise.** Extract the string `'thon'` from `python`. 
-
-**Slicing lists.**  We count the same way we did with strings, but the objects here are items in lists rather than characters in strings.  Let's see if we can teach ourselves.  
-
-**Exercise.** Take the list `numberlist = [1, 5, -3]`.  Use slicing to set a variable `first` equal to the first item.  Set another variable `last` equal to the last item.  Set a third variable `allbutlast` equal to the list without its last item.  
-
-
 ## Python's built-in functions
 
 We now have several kinds of **objects** to work with:  numbers, strings, and lists.  There are more on the way, but that's a good start.  And yes, the formal term is really **objects**.  But what can we do with them?  Python has two basic ways to do things:  **functions** and **methods**.  We'll talk about functions in this section and methods in the next one.  We can identify functions because they come with inputs -- more formally, arguments -- in parentheses.  You may recall this from our use of the print function:  `print(x, y, z)`, for example.  
