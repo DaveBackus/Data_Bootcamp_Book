@@ -2,9 +2,9 @@
 
 
 ---
-**Overview.**  Time to start programming!  We work our way through some simple programs using Python's core language.  Part 1 of 2.  
+**Overview.**  Time to start programming!  We work our way through the essentials of Python's core language.  Part 1 of 2.  
 
-**Python tools.**  Syntax, Spyder, calculations, strings, lists, built-in functions, objects, methods, tab completion, object inspector.  
+**Python tools.**  Syntax, Spyder, calculations, assignments, strings, lists, built-in functions, objects, methods, tab completion, object inspector.  
 
 **Buzzwords.** Isn't that enough?  
 
@@ -145,7 +145,7 @@ We also want to to be able to work with non-numerical data, collections of chara
 
 We create strings with quotation marks:  'Chase', "Spencer", 'Sarah', "apple", and even '12' are all strings.  Single and double quotes both work.  The last example is a confusing one, because it looks like a number.  It's not.  If we try to use it as a number, it doesn't work.  Try, for example, `'12'/3`.  This generates the error:  `TypeError: unsupported operand type(s) for /: 'str' and 'int'`.  What this means is that we tried to divide a string by an integer.  It's no different to Python than trying to divide your name by three, it can't make sense of it.  
 
-Thus we have that `12` is a number and `'12'` is a string.  
+Thus we see that `12` is a number, but `'12'` is a string.  
 
 Here are some other examples, which we assign to variable names for later use. Type them into Spyder's IPython console **one at a time**:  
 ```python 
@@ -265,6 +265,8 @@ Here's how it works:
 * Now go to the toolbar above the editor.  The large green triangle runs the whole program. The one to its right displays the text "Run current cell" if you move the cursor to it.  Click on it to run the selected cell.  
 
 **Exercise.** Copy the code above into your Python program.  Run each cell.  Check the output to make sure it worked.  
+
+**Exercise.** Add comments to the code you just wrote.  Now, while you're still thinking about it.  
 
 
 ## Lists
@@ -405,17 +407,13 @@ With that out of the way, here are some good introductions to basic Python and r
 
 * Codecademy has an excellent [Introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, you can stop (as far as this course in concerned) when you get to Advanced Topics.    
 
+* Here's a [list of free tutorials](http://noeticforce.com/best-free-tutorials-to-learn-python-pdfs-ebooks-online-interactive), but we think you can stop with the first one, Codecademy. 
+
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  It's also a good idea to get used to reading official documentation like this.  There are times when it's unavoidable.  
 
-* Mark Lutz's [Learning Python](http://www.amazon.com/Learning-Python-5th-Mark-Lutz/dp/1449355730/) is a 1600-page monster, but it's clear and thorough, and comes with the elusive Glenn Okun stamp of approval.  He tells us the Kindle version comes with free updates. 
-
-* Zed Shaw's [Python the Hard Way](http://learnpythonthehardway.org/book/) is also quite good, but you need to have Python set up yourself to do it. Ignore the sales pitch, you can use it for free.  Just keep clicking on the NEXT button to the right. 
-
-* Allen Downey's [Think Python](http://www.greenteapress.com/thinkpython/) is a little formal for our taste, but you might find that refreshing. You can buy it or access the pdf for free.  
+* Mark Lutz's [Learning Python](http://www.amazon.com/Learning-Python-5th-Mark-Lutz/dp/1449355730/) is a 1600-page monster that covers lots of things we won't use.  But it's clear and thorough, and comes with the elusive Glenn Okun stamp of approval.  He tells us the Kindle version comes with free updates. 
 
 * Sebastian Raschka has more than you'll ever need  about the [differences between Python 2 and 3](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html).   
-
-* Here's a [list of free tutorials](http://noeticforce.com/best-free-tutorials-to-learn-python-pdfs-ebooks-online-interactive), but we think you can stop with the first one, Codecademy. 
 
 These sources go well beyond what we do in this chapter, but we'll catch up with some of it in the next chapter. The rest we don't need, but if you're interested feel free to charge ahead anyway.  
 

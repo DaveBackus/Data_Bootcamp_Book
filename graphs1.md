@@ -47,6 +47,8 @@ Getting help:  command? for guide, command? for code.
 
 css files ??
 
+http://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/
+
 
 **Pro tips.** 
 
