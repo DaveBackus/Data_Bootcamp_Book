@@ -1,26 +1,38 @@
 # Managing data 1 
 
 ---
-**Overview.** Our goal is to look at government debt in Greece and other countries.  To do that, we introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
+**Overview.**  We introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
 
 **Python tools.**  Import, Pandas.  
 
 **Buzzwords.**  Package, dataframe, series, csv files.  
 
-**Applications.**  Greek debt, college majors, income mobility. 
+**Application.**  Income by college major. 
 
 **Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_1.py).  
 
 ---
 
-We're ready now to look at some data, including data on the Greek government's debt.  Is there too much of it?  It's not immediately clear what "too much" means, but we can certainly compare it to some other countries.  We do that with the IMF's convenient *World Economic Outlook* ([WEO](http://www.imf.org/external/pubs/ft/weo/data/assump.htm)) dataset, which they kindly update twice a year.  It's in a (quasi-)spreadsheet format, so we're on familiar ground.   The challenge is to read it into Python and generate some graphs.  
-
-We start, then, by describing how to get data into Python, particularly data in spreadsheets.  Along the way we describe how Python uses collections of tools (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
-
-
-##  Reminder 
+We're ready now to look at some data.  We start with getting data into Python, particularly data in spreadsheets.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
 
 You may recall that our canonical program structure consists of data input, data management, and graphics.  We'll spend most of our time here on the first, but touch on the second and produce a simple plot by finding a suitable method.  
+
+
+## Reminders 
+
+Some things we'll use repeatedly:
+
+* Lists and strings.  Strings are collections of characters in quotes:  `'this is a string'`.  Lists are collections of things in square brackets:  `[1, 'help', 3.14159]`.   
+
+* The `type()` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, and lists.  
+
+* Methods and objects.  It's common in Python to work with objects using methods.  (If these words are confusing, go back to the previous chapter.)  We apply the method `bar` to the object `foo` by typing `foo.bar`.  
+
+* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook -- to get a list.  That's referred to as "tab completion." 
+
+* Help.  We can get help for a function or method `foo` by typing `foo?` into the IPython console or `foo` in the Object explorer.  Try each of them with the `type()` function to remind yourself how this works.  
+
+And while we're reviewing:   Save the code file for this chapter in your `Data_Bootcamp` directory and open it in Spyder.  
 
 
 ## Python packages
@@ -101,10 +113,9 @@ Some fine points:
 
 **Exercise.**  Suppose you import Pandas twice under different names, once with `import pandas as pd` and once with `import pandas as pa`.  What do you think happens?  Can you write a short program that tests your conjecture?  (This will take a little thought, feel free to consult your neighbor.)  
 
-
 ## The Pandas package 
 
-Pandas is Python's data management package and an essential component of data work in Python.  The authors [describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much anything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, compute pivot tables, and lots of other things.  And we can do all this on much larger files than Excel can handle.  
+Pandas is Python's data management package and an essential part of data work in Python.  The authors [describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, compute pivot tables, and lots of other things.  And we can do all this on much larger files than Excel can handle.  
 
 We'll come back to all of these things later in the course, but for now we'll focus on data input:  how to get data into a Python program.  
 
@@ -118,7 +129,6 @@ Now save the contents three times as, respectively, csv, xls, and xlsx files wit
 
 
 ## Reading csv files
-
 
 We've found that **csv files** ("comma separated values") are the most useful common data format.  Their simple structure (entries separated by commas) allows easy and rapid input. That's a general statement, not a statement about Python.  They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) of translating Excel into other formats.  
 
@@ -275,6 +285,16 @@ Saving results:  assigne or `inplace=true'.
 ## Modifying dataframes:  row methods
 
 Selecting the rows we want...  
+
+
+
+## Accessing data from internet sources
+
+
+FRED, World Bank...  etc.  They have API's, which give us better access than even a csv...  
+
+
+Warning:  subject to change...
 
 
 ## Application:  Greek government debt in WEO

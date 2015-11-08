@@ -15,60 +15,9 @@
 
 We continue our overview of Python's core language.  That's not what we'll use, for the most part, but the same concepts show up in data work.  We go through the material quickly, since we're more interested in the general ideas than the details.  
 
+## Reminders
 
-## Reminders 
-
-Some things we'll use repeatedly:
-
-* The `type` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, and lists.  
-
-* Methods and objects.  It's common in Python to work with objects using methods.  (If these words are confusing, go back to the previous chapter.)  We apply the method `bar` to the object `foo` by typing `foo.bar`.  
-
-* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook -- to get a list.  That's referred to as "tab completion." 
-
-
-And while we're reviewing:   Save the code file for this chapter in your `Data_Bootcamp` directory and open it in Spyder.  
-
-
-## Slicing strings and lists 
-
-
-We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, probably because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that Python (also some other programming languages) starts numbering at zero.  
-
-
-**Slicing strings.** Take, for example, the string `a = 'some'`.  If we want the first item/letter, we would type `a[0]`.  Yes, that's the first item; remember, we start at zero.  If we want the second, we type `a[1]`.  And so on.  And here's a good one:  If we want the last letter, we type `a[-1]`.  And if we want the one before the last one, we type `a[-2]`.  In this case we get the same answer if we type `a[2]`.  Both give us `'m'`. 
-
-We can summarize the numbering system by writing the word `some` on a piece of paper with room between the letters.  Below them, write the numbers, in order:  0, 1, 2, 3.  Label this row "counting forward."  Below that, start from the right (below the `e`) and count backwards as we move left:  -1, -2, -3, -4.  Label this row "counting backwards."
-
-
-**Exercise.** Print the third letter of the string `firstname = 'Monty'`.  
-
-We can also slice off sequences of characters, but there's another tricky convention to deal with.  Let's see what the following commands do:  
-```python 
-c = 'something'
-print('c[1] is', c[1])
-print('c[1:2] is', c[1:2])
-print('c[1:3] is', c[1:3])
-print('c[1:] is', c[1:])
-```
-The first print statement gives us `o`, the second letter of `something`.  We label it element 1 because we start numbering at zero.  The next one does the same.  Why?  The convention is to stop one before the second number, so this goes from 1 to 1, which is the second letter.  The next line gives us `om`, the second and third letters.  Why third?  Stick with us now, but here's the logic:  we go from 1 to 2 (one less than the second number), which is the second and third letters (we started counting at zero).  
-
-The last line has no second number.  By convention it goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
-
-Are you dizzy yet?  To summarize, the counting conventions for a slice like `c[n1:n2]` work like this:
-
-* We start at zero, so `n1` is really `n1+1`. That means `c[3]` is the fourth character.  
-* We end at `n2-1`, so `c[3:7]` includes characters 4, 5, and 6.   
-
-Some practice examples:  
-
-**Exercise.** Find the last letter of the string `python = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
-
-**Exercise.** Extract the string `'thon'` from `python`. 
-
-**Slicing lists.**  We count the same way we did with strings, but the objects here are items in lists rather than characters in strings.  Let's see if we can teach ourselves.  
-
-**Exercise.** Take the list `numberlist = [1, 5, -3]`.  Use slicing to set a variable `first` equal to the first item.  Set another variable `last` equal to the last item.  Set a third variable `allbutlast` equal to the list without its last item.  
+??
 
 
 ## Logical expressions 
@@ -359,6 +308,8 @@ Note the comment in triple quotes.
 
 **Exercise (bond price).** Write a function that takes a bond's maturity, coupon, and yield as inputs and returns its price.  
 
+
+** ?? keyword arguments (sep section?) ?? **
 
 
 ##  More data structures

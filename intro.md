@@ -12,11 +12,11 @@ This book -- and the course we developed it for -- is about data, primarily econ
 
 ## Answers to common questions 
 
-**Why should I do this?**  It’s an investment in your future.  You will learn how to  process data and communicate its content effectively and efficiently.  You will be more valuable to current and future employers.   
+**Why should I do this?**  It’s an investment in your future.  You will learn how to  process data and communicate its content effectively and efficiently.  You will have more fun.  And you will be more valuable to current and future employers.   
 
 **Can’t I do what I need in Excel?**  Excel is a great program, but once you have a little programming experience it will remind you of doing arithmetic on your fingers.  With Python, you will be able do routine tasks more efficiently (“[automate the boring stuff](https://automatetheboringstuff.com/),” as one guide suggests), handle larger data sets, rearrange datasets at will, and generally do things that spreadsheet programs can’t do.    
 
-**What are the prerequisites?**  There are none.  We start at the very beginning and go from there.  What you'll need is the **courage** to take on a challenge and the **patience** to debug [programs that don’t quite work](http://junkcharts.typepad.com/numbersruleyourworld/2015/06/the-day-after-the-half-day-in-the-life-of-a-data-scientist.html) -- and they never work the first time, and often not the second or third time either.  Don't panic.  Ask for help and remind yourself that patience is a virtue. 
+**What are the prerequisites?**  There are none.  We start at the very beginning and go from there.  What you will need is the **courage** to take on a challenge and the **patience** to debug [programs that don’t quite work](http://junkcharts.typepad.com/numbersruleyourworld/2015/06/the-day-after-the-half-day-in-the-life-of-a-data-scientist.html) -- and they never work the first time, and often not the second or third time either.  Don't panic.  Ask for help and remind yourself that patience is a virtue. 
 
 **What if my quant skills are weak or nonexistent?**  Then this is the course for you!  We do our best to make the material accessible.  We’re looking beyond quants to marketing, management, and humanities majors.  One of our design team was an English major.  
 
@@ -29,13 +29,9 @@ This book -- and the course we developed it for -- is about data, primarily econ
  
 ## Why data?  
 
-We're living in a world of data: data about the economy, data about financial markets, data about your business.  Data doesn't solve all of our problems, but it's a valuable input to better decisions.  For example, how should you [choose a major](http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/)?  
+We're living in a world of data: data about the economy, data about financial markets, data about your business.  Data doesn't solve all our problems, but it's a valuable input to better decisions.  For example, how should you [choose a major](http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/)?  
 
 Many of our former students tell us that data skills keep them in business.  One of our alums analyzes television  viewer data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are, if not required, at least very useful in their jobs.  One of our  marketing majors, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
-
-## Overcoming fear 
-
-https://medium.com/keep-learning-keep-growing/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7 
 
 
 ## Why Python?   
@@ -66,8 +62,7 @@ Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-wh
 
 > People love it and want it to work everywhere and do everything. They’ve spent tens of thousands of hours making that possible and then given the fruit of their labor away. That’s a powerful indicator. A huge amount of effort has gone into making Python practical as well as pleasurable to use. 
 
-He's alluding here to the vast community of users who are developing tools that allow Python to do all kinds of things.  Python's data tools are an example:  they're not part of the core langauage, they're add-ons developed by users.  He adds:  "Python people are pretty cool," so there's that, too. (Ford's article, "What is Code," takes up a whole issue of Bloomberg BusinessWeek.  It's a classic, well worth reading.)  
-
+He's alluding here to the vast community of users who are developing tools that allow Python to do all kinds of things.  Python's data tools are an example:  they're not part of the core langauage, they're add-ons developed by users.  He adds:  "Python people are pretty cool," so there's that, too. 
 
 ## Work habits
 
@@ -75,24 +70,30 @@ There are no shortcuts in learning how to code.  You simply need to spend hours 
 
 As you work your way up the learning curve, keep this advice in mind:  
 
-**Stick with it.** Coding is a world of its own.  If it seems mysterious at first, don't panic:  Stick with it and it will start to make sense.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?)
+**Don't panic.**  Learning a new language takes some time, it won't happen in a week. 
 
-**Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around, try new things, have fun.  As you gain experience, you'll find that Python becomes your tool of choice.  
+**Stick with it.** The secret is to stick with it -- it will start to make sense.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?)
+
+<!--
+**Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around, try new things, have fun.  As you gain experience, you'll find that Python becomes easier.  
+-->
 
 **Make friends.**  Coding is hard to learn on your own.  A second pair of eyes is indespensible.  So work with friends, and make new friends who know how to code.  Intense coding sessions are a great way to develop relationships.  
 
+**Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
+
 **Work on your Google fu.**  You will find that many of your questions have been asked before.  Even better, many they've been answered.  One way to find them:  Google something like "python [problem]."  There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
 
+<!--
 **Be patient.** We know, it's easier to say than do, but it pays to take your time.  Coding in a hurry is a recipe for frustration and failure.  
-
-**Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
+-->
 
 
 ## Our plan 
 
 **Leap in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means **the work load is heaviest at the start**.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
 
-**Stress the basics.**  We think once you understand the basics of Python, you'll be in a good position to work out special cases on your own.  Plus that allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
+**Stress the basics, ignore the rest.**  We think once you understand the basics of Python, you'll be in a good position to work out special cases on your own.  That allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
 
 **Code and applications.**  We attack data applications and programming together.  After covering Python basics, we generally organize things around specific applications, covering the relevant aspects of Python along the way.  We think it helps to have a context for what we're learning, but the downside is that it's somewhat harder to use the book as a programming reference.  We still think it makes sense.  Our goal isn't to produce programmers, but people who know enough about programming to get along well with data.  
 
@@ -108,10 +109,15 @@ Python is named for Monty Python, a group of comedians whose humor appeals to th
 
 The resources section at the end of each chapter is a collection of (mostly) links to things we've found useful. They're more than you need, but give you some recommended options if you want to follow up on a specific topic.  
 
-In this case we'll say simply that all of the materials for this book and the associated course are posted on the web.  This book is hosted by [GitBook](https://www.gitbook.com/book/davebackus/test/details).  Other materials are available from our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp).  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/DaveBackus/Data_Bootcamp/tree/master/Code) of our GitHub repo.  
+In this case we'll say simply that all of the materials for this book and the associated course are posted on the web.  Book and code, respectively, are available at: 
+
+* Book.  It's hosted by [GitBook](https://www.gitbook.com/book/davebackus/test/details).  
+* Other materials.  Pretty much everything else is available on our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp).  
+* Code.  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/DaveBackus/Data_Bootcamp/tree/master/Code) of the GitHub repo.  If you save them, remember to click on the Raw button in the upper right.  
 
 
-<!-- ## References ?? --> 
+<!-- ## References ?? 
+--> 
 
 <!-- It should be painfully obvious that learning how to program a computer has no direct connection to any high form of enlightenment -- no more than learning scientific technique, mathematics or engineering. And yet each of these can be vehicles for deep insights into the much larger worlds that the human mind is capable of understanding.
 http://worrydream.com/EnlightenedImaginationForCitizens/	

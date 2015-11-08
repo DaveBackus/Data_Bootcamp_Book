@@ -16,12 +16,14 @@
 
 Computer graphics are one of the great advances of the modern world.  Graphs have always been helpful in describing data or concepts, but they're a lot easier to produce now than they were a few years ago. In fact, we've gotten so good at drawing pictures that we invented a new term for it:  **visualization**.  
 
+<!--
 ?? Have you ever done a graph in Excel, and then spent an hour or two fixing it up?? 
+-->
 
-That's the good news.  The bad news, or at least the reigning fact of life, is that graphics are inherently complicated.  Programs like Excel do their best to hide this fact, but if you ever try to customize a chart it quickly rears its ugly head.  A graph's features might include, for example:  the type (line, bar, etc); the color and thickness of lines, bars, or markers; title and axis labels; their location, fonts, and font sizes; tick marks (location, size); background color; grid lines (on or off); and so on.  So there's lots of stuff to keep track of.  
+That's the good news.  The bad news, or at least the reigning fact of life, is that graphics are inherently complicated.  Programs like Excel do their best to hide this fact, but if you ever try to customize a chart it quickly rears its ugly head.  Have you ever spent a couple hours trying to fine-tune an Excel graph?  More?  The problem is that even simple graphs have lots of moving parts:  the type (line, bar, etc); the color and thickness of lines, bars, or markers; title and axis labels; their location, fonts, and font sizes; tick marks (location, size); background color; grid lines (on or off); and so on.  So there's lots of stuff to keep track of.  
 
-We introduce graphics with **Matplotlib**, the leading collection of graphics tools in Python.  
-
+We introduce graphics with **Matplotlib**, the leading collection of graphics tools in Python, 
+show how to put it to work, and make a start on producing attractive visualizations.  
 
 
 ## Reminders 
