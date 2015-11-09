@@ -289,6 +289,7 @@ Here's how it works:
 
 **Exercise.** Add comments to the code you just wrote.  Do it now, while you're still thinking about it.  
 
+
 ## Lists
 
 Lists are one of the fundamental Python **data structures**, a term that means a specific organization of data.  A Python list is what it sounds like:  an ordered collection of items.  The items can be lots of things:  numbers, strings, variables, or even other lists.  We create them by putting square brackets around a collection of items separated by commas.  Here are some examples:  
@@ -352,7 +353,7 @@ Are you dizzy yet?  To summarize, the counting conventions for a slice like `c[n
 * We start at zero, so `n1` is really `n1+1`. That means `c[3]` is the fourth character.  
 * We end at `n2-1`, so `c[3:7]` includes characters 4, 5, and 6.   
 
-Some practice examples:  
+Some practice problems:  
 -->  
 
 **Exercise.** Find the last letter of the string `lastname = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
@@ -368,9 +369,9 @@ Some practice examples:
 
 ## Python's built-in functions
 
-We now have several kinds of **objects** to work with:  numbers, strings, and lists.  There are more on the way, but that's a good start.  And yes, the formal term is really **objects**.  But what can we do with them?  Python has two basic ways to express things we can do:  **functions** and **methods**.  We'll talk about functions in this section and methods in the next one.  We can identify functions because they come with inputs -- more formally, "arguments" -- in parentheses.  You may recall this from our use of the print function:  `print(x, y, z)`, for example.  
+We now have several kinds of **objects** to work with:  numbers, strings, and lists.  There are more on the way, but that's a good start.  And yes, the formal term is really **objects**.  But what can we do with them?  Python has two basic ways to express things we can do:  **functions** and **methods**.  We'll talk about functions in this section and methods in the next one.  
 
-**Common functions.** Python has a lot of basic "built-in" functions.  We won't use most of them, but here are some we've found useful, Try each of them in the Python file we created earlier.   
+Python has a lot of basic "built-in" functions.  We won't use most of them, but here are some we've found useful. Try each of them in the Python file we created earlier.   
 
 **The `type()` function.**  This tells us what kind of object we have.  To see how it works, type the following into the IPython console one line at a time:   
 ```python 
@@ -391,6 +392,7 @@ Not to kill the suspense, but here's what we should get:
 * `type(c)` gives us `str`, which tells us that `c` is a string.  
 * `type(stringlist)` tells us that `stringlist` is a list.  
 * What is `type('12')`?  That's a trick question:  it's a string, too, even though it looks like a number. 
+
 
 The type function is more helpful than you might guess.  A lot of what we do in programming is deal with objects of different types and, when necessary, convert one type to another.  The first step is to identify the type of the object of interest.  That will determine what we can do with the object later.   
 
@@ -424,6 +426,7 @@ d_flt = float(d)
 ```
 The new variable `d_flt` has type `float`.  (Check this to make sure.)  Similarly, we can convert it back to a string with the statement `d_str = str(d_num)`. We'll see a lot of this kind of thing when we start working with data.  
 
+
 <!-- ??  https://www.reddit.com/r/Python/comments/3c344g/so_apparently_type_is_of_type_type/ -->
 
 
@@ -438,7 +441,6 @@ The new variable `d_flt` has type `float`.  (Check this to make sure.)  Similarl
 **Exercise.** This one also came up in our work and takes some thought.  Suppose we have a variable `z = '12,345.6'`.  What is its type?  Can we convert it to a floating point number without the comma?  Hint:  What method can we use to get rid of the comma?    
 
 <!-- z = z.replace(',', '') -->
-
 
 
 ## Objects and methods
@@ -484,9 +486,9 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 ## Resources  
 
-**Warning.** We thought it would be useful to list our favorites sources of information on the same topics, but keep in mind that there's more here than a reasonable person could want.  It's there if you need it, but we think you're better off going into depth with one or two and ignoring the rest.  
+We thought it would be useful to list our favorites sources of information on the same topics at the end of each chapter, but keep in mind that there's more here than a reasonable person could want.  It's there if you need it, but we think you're generally better off going into depth with one or two and ignoring the rest.  
 
-With that out of the way, here are some good introductions to basic Python and related topics with our favs on top:  
+With that out of the way, here are some good introductions to basic Python and related topics:   
 
 * Codecademy has an excellent [Introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, you can stop (as far as this course in concerned) when you get to Advanced Topics.    
 
