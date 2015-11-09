@@ -8,7 +8,7 @@
 
 ---
 
-This book -- and the course we developed it for -- is about data, primarily economic and financial data, which is what we know best. It's also about tools for working with data, which in this case means **[Python][10]** and its data-related packages.  By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
+This book -- and the course we developed it for -- is about data.  It's also about tools for working with data, which in this case means **[Python][10]** and its data-related packages.  Our focus is economic and financial data, which is what we know best, but skills you learn can be applied to any data. By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
 
 ## Answers to common questions 
 
@@ -42,6 +42,8 @@ Many of our former students tell us that data skills keep them in business.  One
 
 We think Python is the language of choice right now if you want a user-friendly introduction to programming and a useful tool for day-to-day data work.  It's a high-level language, which means the language does a lot of the work.  It has a  broad range of applications and an enormous community of users.  You'll come to appreciate both. And it's free and open source. Free means you pay nothing.  Open source means  you can look at the code if you want to see how something works.  
 
+<!-- 
+
 The closest competitors to Python for our purposes are probably [Matlab][1] and [R][2].  Matlab is a vector language, which means the kinds of things you do cell by cell in Excel you can do for a whole column or table in one line of code.  It was great in the 1980s, and we still use it for some things, but it's missing many of the convenient features of more modern languages.  It's not easy, for example, to read data straight from the internet. And functions must be stand-alone files, which gets annoying.  It's also expensive.  Outside universities, they price it with investment banks in mind.  
 
 [1]: https://en.wikipedia.org/wiki/MATLAB
@@ -51,16 +53,16 @@ R would be our second choice for data work after Python.  Like Python, it's free
 
 Python is our first choice.  Although it's a general purpose language, we'll use it for data work, where it has become an able competitor to R. Our focus is economic and financial data, but the same methods can be applied to data from any source, including proprietary business data.  One of our former students is using it to study patterns of survival on the [Titanic](http://www.kaggle.com/c/titanic-gettingStarted) and Neilsen television ratings. Another is using it to [process text](http://www.nltk.org/) from news sources and analyst reports.  Thanks to hedge fund [AQR and others](http://pandas.pydata.org/community.html#history-of-development), the data-analytic toolsets in Python now rival stat-focused languages like R.   
 
-That's our opinion anyway, but the larger point is that learning a programming language -- any language -- is better than not learning one.  We'll use Python, but you could do similar things in R -- and many do.  See also [this discussion](http://quant-econ.net/about_lectures.html#how-about-other-languages) from our friends Tom Sargent and John Stachurski.  Or [this one](http://www.dataschool.io/python-or-r-for-data-science/) from Kevin Markham. Or this [exchange](http://www.quora.com/Which-is-better-for-data-analysis-R-or-Python) on Quora.
-
+That's our opinion anyway, but the larger point is that learning a programming language -- any language -- is better than not learning one.  We'll use Python, but you could do similar things in R -- and many do.  See also [this discussion](http://quant-econ.net/about_lectures.html#how-about-other-languages) from our friends Tom Sargent and John Stachurski.  Or [this one](http://www.dataschool.io/python-or-r-for-data-science/) from Kevin Markham. Or this [exchange](http://www.quora.com/Which-is-better-for-data-analysis-R-or-Python) on Quora. 
+--> 
 
 ## Everyone likes Python 
 
 Python isn't just a useful language, it's one people like.  We're talking about programmers here, for the most part, but even us novices find that its casual simplicity makes coding fun. See, for example, this classic [xkcd cartoon](https://xkcd.com/353/). 
 
-Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/):  
+Writer and programmer Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/):  
 
-> People love it and want it to work everywhere and do everything. They’ve spent tens of thousands of hours making that possible and then given the fruit of their labor away. That’s a powerful indicator. A huge amount of effort has gone into making Python practical as well as pleasurable to use. 
+> People love [Python] and want it to work everywhere and do everything. They’ve spent tens of thousands of hours making that possible and then given the fruit of their labor away. That’s a powerful indicator. A huge amount of effort has gone into making Python practical as well as pleasurable to use. 
 
 He's alluding here to the vast community of users who are developing tools that allow Python to do all kinds of things.  Python's data tools are an example:  they're not part of the core langauage, they're add-ons developed by users.  He adds:  "Python people are pretty cool," so there's that, too. 
 
@@ -72,7 +74,7 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Don't panic.**  Learning a new language takes some time, it won't happen in a week. 
 
-**Stick with it.** The secret is to stick with it -- it will start to make sense.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?)
+**Stick with it.** The secret is to stick with it.  Trust us, it will start to make sense in a couple weeks.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?)
 
 <!--
 **Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around, try new things, have fun.  As you gain experience, you'll find that Python becomes easier.  
@@ -82,7 +84,11 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
 
-**Work on your Google fu.**  You will find that many of your questions have been asked before.  Even better, many they've been answered.  One way to find them:  Google something like "python [problem]."  There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
+**Work on your [Google fu](http://english.stackexchange.com/questions/19967/what-does-google-fu-mean).**  With a little help from Google, you will find that many of your questions have been asked before.  Even better, many they've been answered.  One way to find them:  Google something like "python [problem]."  
+
+<!-- 
+There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
+--> 
 
 <!--
 **Be patient.** We know, it's easier to say than do, but it pays to take your time.  Coding in a hurry is a recipe for frustration and failure.  
@@ -95,7 +101,9 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Stress the basics, ignore the rest.**  We think once you understand the basics of Python, you'll be in a good position to work out special cases on your own.  That allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
 
+<!-- 
 **Code and applications.**  We attack data applications and programming together.  After covering Python basics, we generally organize things around specific applications, covering the relevant aspects of Python along the way.  We think it helps to have a context for what we're learning, but the downside is that it's somewhat harder to use the book as a programming reference.  We still think it makes sense.  Our goal isn't to produce programmers, but people who know enough about programming to get along well with data.  
+--> 
 
 **Online book preferred.**  We sometimes print out the pdf ourselves, but the online version comes with links, color coding, and a more attractive layout. It's also easy for us to update. We think it's a superior user experience. 
 
@@ -109,7 +117,7 @@ Python is named for Monty Python, a group of comedians whose humor appeals to th
 
 The resources section at the end of each chapter is a collection of (mostly) links to things we've found useful. They're more than you need, but give you some recommended options if you want to follow up on a specific topic.  
 
-In this case we'll say simply that all of the materials for this book and the associated course are posted on the web.  Book and code, respectively, are available at: 
+Here we'll say simply that all of the materials for this book and the associated course are posted on the web: 
 
 * Book.  It's hosted by [GitBook](https://www.gitbook.com/book/davebackus/test/details).  
 * Other materials.  Pretty much everything else is available on our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp).  

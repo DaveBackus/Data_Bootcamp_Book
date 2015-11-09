@@ -20,6 +20,8 @@ We continue our overview of Python's core language.  That's not what we'll use, 
 ??
 
 
+??  Add:  advanced slicing... 
+
 ## Logical expressions 
 
 Sometimes we want to do one thing if a condition is true, and another if it's false.  For example, we might want to use observations for which the date is after January 1980, the country is India, or the population is greater than 5 million -- and not otherwise.  
