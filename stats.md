@@ -1,6 +1,5 @@
 # Describing data 2:   multivariate data [??]
 
-
 ---
 **Overview.**
 

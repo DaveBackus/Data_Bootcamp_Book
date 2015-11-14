@@ -11,6 +11,8 @@
 
 ---
 
+**UNDER CONSTRUCTION** 
+
 Data analysis starts with a question.  Generally, we want to learn something.  In our world, we might ask
 
 * How is the US economy doing?  
@@ -33,6 +35,9 @@ You can ask the same questions yourself.  Here are some examples to practice on 
 
 <!-- * **[FRED](https://research.stlouisfed.org/fred2/series/GDP).**  Our go-to source for macroeconomic data.  The "Notes" tab gives us the original source if we want to dig deeper.  
 * **[Gapminder world](http://www.gapminder.org/world/).**  Great interactive graphic.  The [data page](http://www.gapminder.org/data/) gives sources. -->
+
+
+Somewhere?  http://iquantny.tumblr.com/ ??
 
 * **[Chinese stock prices](http://www.moneyandbanking.com/commentary/2015/7/6/chinas-stock-market-boom-and-bust).**  Steve Cecchetti and Kim Schoenholtz comment on the boom and bust and what it means for the development of China's financial institutions.   
 * **[Market caps of tech firms](http://www.economist.com/techfirms).**  Note how quickly tech firms come and go.  Is that true of other industries? 

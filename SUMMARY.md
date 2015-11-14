@@ -5,12 +5,16 @@
 * [The data mentality](data-mentality.md)* [The data mentality](data-mentality.md)
 * [Installing Python](installing-python.md)
 * [Python fundamentals 1](py-fun1.md) 
-* [Managing data 1](pandas-intro.md)
-* [Visualizing data](graphs.md)
-* [Python fundamentals 2](py-fun2.md) 
+* [Data input](pandas-intro.md)
+* [Introduction to Python graphics](graphs1.md)
+* [Python fundamentals 2](py-fun2.md)  
+
+<!--
 * [Emerging market indicators](emerging.md)
 * [Business cycle indicators](indicators.md)
 * [Randomness in stock returns](random.md)
 * [Managing data 2](pandas-munging.md)
 * [Other cool stuff](other.md)
+--> 
+
 * [Glossary](glossary.md)

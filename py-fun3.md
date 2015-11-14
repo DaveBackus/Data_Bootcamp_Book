@@ -9,7 +9,7 @@
 ---
 
 
-??  Add another chapter on classes, ietators, generators, ... 
+??  Add another chapter on classes, iterators, generators, ... 
 
 
 http://blog.lerner.co.il/pythons-objects-and-classes-a-visual-guide/ 

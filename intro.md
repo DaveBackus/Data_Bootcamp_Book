@@ -20,7 +20,7 @@ This book -- and the course we developed it for -- is about data.  It's also abo
 
 **What if my quant skills are weak or nonexistent?**  Then this is the course for you!  We do our best to make the material accessible.  We’re looking beyond quants to marketing, management, and humanities majors.  One of our design team was an English major.  
 
-**Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to communicate with people who know more and do things yourself that Excel users can only dream about.  You will also be prepared to do more along similar lines, including the extensive collection of courses on **business analytics** and **data science** offered by NYU Stern's [IOMS group](http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept).  
+**Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to communicate with people who know more and do things yourself that Excel users can only dream about.  You will also be prepared to do more along similar lines, including the extensive collection of courses on **business analytics** and **data science** offered by our [IOMS](http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept/) and [CS](https://www.cs.nyu.edu/web/index.html) groups.  
 
 **Should I take this course if I already know how to code?**  You’re welcome to, and you will learn a lot about data  and the data components of Python.  But please don’t scare the other students.  
 
@@ -36,7 +36,7 @@ Many of our former students tell us that data skills keep them in business.  One
 
 ## Why Python?   
 
-[Python][10] is a popular general-purpose programming language that has been used for a broad range of applications. Google uses it.  So do Instagram and Netflix. Dropbox is written in Python.  
+[Python][10] is a popular general-purpose programming language that has been used for a broad range of applications. Google uses it.  So do Instagram and Netflix. Dropbox is written in Python. 
 
 [10]: https://en.wikipedia.org/wiki/Python_(programming_language)
 
@@ -74,17 +74,17 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Don't panic.**  Learning a new language takes some time, it won't happen in a week. 
 
-**Stick with it.** The secret is to stick with it.  Trust us, it will start to make sense in a couple weeks.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?)
+**Stick with it.** The secret is to stick with it.  Trust us, it will start to make sense in a couple weeks.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?) 
 
 <!--
 **Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around, try new things, have fun.  As you gain experience, you'll find that Python becomes easier.  
--->
 
 **Make friends.**  Coding is hard to learn on your own.  A second pair of eyes is indespensible.  So work with friends, and make new friends who know how to code.  Intense coding sessions are a great way to develop relationships.  
+-->
 
 **Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
 
-**Work on your [Google fu](http://english.stackexchange.com/questions/19967/what-does-google-fu-mean).**  With a little help from Google, you will find that many of your questions have been asked before.  Even better, many they've been answered.  One way to find them:  Google something like "python [problem]."  
+**Work on your [Google fu](http://english.stackexchange.com/questions/19967/what-does-google-fu-mean).**  With a little help from Google, you will find that many of your questions have been asked before.  Even better, they have been answered.  One way to find them:  Google something like "python [problem]."  
 
 <!-- 
 There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
@@ -95,11 +95,13 @@ There are answers in lots of places, but the best one is [Stack Overflow](http:/
 -->
 
 
-## Our plan 
+## Our approach  
 
 **Leap in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means **the work load is heaviest at the start**.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
 
 **Stress the basics, ignore the rest.**  We think once you understand the basics of Python, you'll be in a good position to work out special cases on your own.  That allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
+
+**Learn to teach yourself.**  The best way to learn new things is to teach yourself:  Google your problem and find the resources you need.  We build that attitude in from the start, suggesting ways in which you can solve problems yourself.  But remember:  it also helps to be in a supportive environment, where you can ask for help when you need it.  
 
 <!-- 
 **Code and applications.**  We attack data applications and programming together.  After covering Python basics, we generally organize things around specific applications, covering the relevant aspects of Python along the way.  We think it helps to have a context for what we're learning, but the downside is that it's somewhat harder to use the book as a programming reference.  We still think it makes sense.  Our goal isn't to produce programmers, but people who know enough about programming to get along well with data.  
@@ -117,17 +119,14 @@ Python is named for Monty Python, a group of comedians whose humor appeals to th
 
 The resources section at the end of each chapter is a collection of (mostly) links to things we've found useful. They're more than you need, but give you some recommended options if you want to follow up on a specific topic.  
 
-Here we'll say simply that all of the materials for this book and the associated course are posted on the web: 
+Here we'll say simply that all of the materials for this book and the associated course are posted online: 
 
 * Book.  It's hosted by [GitBook](https://www.gitbook.com/book/davebackus/test/details).  
-* Other materials.  Pretty much everything else is available on our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp).  
-* Code.  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/DaveBackus/Data_Bootcamp/tree/master/Code) of the GitHub repo.  If you save them, remember to click on the Raw button in the upper right.  
+* Code.  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/DaveBackus/Data_Bootcamp/tree/master/Code) of the GitHub repo.  If you save them, **remember to click on the Raw button** in the upper right.  (This is an oddity of GitHub, which distinguishes between a display of the file and the file iself.)
+* Other materials.  Pretty much everything else is available on our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp). 
 
-
-<!-- ## References ?? 
---> 
-
-<!-- It should be painfully obvious that learning how to program a computer has no direct connection to any high form of enlightenment -- no more than learning scientific technique, mathematics or engineering. And yet each of these can be vehicles for deep insights into the much larger worlds that the human mind is capable of understanding.
+<!-- 
+A quotation:  It should be painfully obvious that learning how to program a computer has no direct connection to any high form of enlightenment -- no more than learning scientific technique, mathematics or engineering. And yet each of these can be vehicles for deep insights into the much larger worlds that the human mind is capable of understanding.
 http://worrydream.com/EnlightenedImaginationForCitizens/	
 --> 
 

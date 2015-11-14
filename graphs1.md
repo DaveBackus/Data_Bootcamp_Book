@@ -1,5 +1,4 @@
-# Visualizing data 
-
+# Introduction to Python graphics  
 
 ---
 **Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  
@@ -13,6 +12,9 @@
 **Code.** Link.
 
 ---
+
+**UNDER CONSTRUCTION**
+
 
 Computer graphics are one of the great advances of the modern world.  Graphs have always been helpful in describing data or concepts, but they're a lot easier to produce now than they were a few years ago. In fact, we've gotten so good at drawing pictures that we invented a new term for it:  **visualization**.  
 
@@ -29,68 +31,45 @@ show how to put it to work, and make a start on producing attractive visualizati
 ## Reminders 
 
 
-lists 
-
+Data structures:  strings, lists, dataframes  
 
 functions and methods... 
 
 
+## Three approaches to graphs 
+
+Matplotlib has a number of approaches ...
+
+* Approach #1:  Plot methods.  Apply a plot-like method to a dataframe or other data.   
+
+* Approach #2:  `plot(x,y)`.  Basic function for plotting y against x.  
+
+* Approach #3:  create figure objects, apply methods to them.  
+
+All three call on the same functionality, but they use different syntax.  
 
 
-## IPython notebooks 
+##  Approach #1:  Apply plot method to data 
 
-basics...
+This is the easiest, perfect for simple graphs.  
 
-markdown...  
-
-matplotlib flag 
-
-Getting help:  command? for guide, command? for code.  
-
-css files ??
-
-http://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/
+Special methods for dataframes...  One advantage is that ... 
 
 
-**Pro tips.** 
-
-* Close running notebooks.  go to the run tab and shut down other notebooks.  If none, you're ok.  
-
-* List keyboard shortcuts.  Type h.  
-
-* %matplotlib inline 
+plot, bar, barh, scatter ...
 
 
-## IPython Magics 
-
-%%time 
-
-##  Matplotlib 1:  the pyplot module 
-
-Functions and methods...
-
-
-**Add data source text at bottom**
-
-
-## Object-oriented matplotlib
+## Approach #2:  `plot(x,y)`
 
 
 
 
-## Dataframe methods	
-
-
-Special methods for dataframes...  
+## Approach #3:  apply methods to figure objects 
 
 
 
-## Examples 
 
-http://fivethirtyeight.com/datalab/the-extreme-economic-outlier-that-is-greece-in-7-charts/
 
-Chetty 100 x 100 heatmap?
-http://www.equality-of-opportunity.org/images/online_data_tables.xls 
 
 ## Style sheets 
 
@@ -103,6 +82,23 @@ plt.style.reload_library()  # does this reset default?
 ```
 
 
+Revert to defaults:  http://stackoverflow.com/questions/26413185/how-to-recover-matplotlib-defaults-after-setting-stylesheet
+
+import matplotlib as mpl
+mpl.rcParams.update(mpl.rcParamsDefault)
+
+Also saw this:   plt.rcdefaults() 
+
+
+
+## Examples 
+
+http://fivethirtyeight.com/datalab/the-extreme-economic-outlier-that-is-greece-in-7-charts/
+
+Chetty 100 x 100 heatmap?
+http://www.equality-of-opportunity.org/images/online_data_tables.xls 
+
+
 xkcd-style graphs 
 
 great example of documenting code:  https://jakevdp.github.io/blog/2012/10/07/xkcd-style-plots-in-matplotlib/
@@ -112,14 +108,6 @@ http://matplotlib.org/examples/showcase/xkcd.html
 
 fonts:  http://stackoverflow.com/questions/19663986/getting-xkcd-plots-using-matplotlib
 
-Revert to defaults:  http://stackoverflow.com/questions/26413185/how-to-recover-matplotlib-defaults-after-setting-stylesheet
-
-import matplotlib as mpl
-mpl.rcParams.update(mpl.rcParamsDefault)
-
-Also saw this:   plt.rcdefaults() 
-
-Diff in IPython...  
 
 
 ## Links 
@@ -135,12 +123,6 @@ Heatmaps:  http://stackoverflow.com/questions/14391959/heatmap-in-matplotlib-wit
 
 
 ## Resources 
-
-IPython 
-
-* http://blog.endpoint.com/2015/06/ipython-tips-and-tricks.html 
-
-* https://github.com/rhiever/ipython-notebook-workshop
 
 Matplotlib 
 

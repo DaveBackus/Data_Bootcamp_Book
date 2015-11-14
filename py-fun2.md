@@ -1,6 +1,5 @@
 # Python fundamentals 2 
 
-
 ---
 **Overview.**   More core Python. Part 2 of 2.  
 
@@ -12,6 +11,7 @@
 
 ---
 
+**UNDER CONSTRUCTION**
 
 We continue our overview of Python's core language.  That's not what we'll use, for the most part, but the same concepts show up in data work.  We go through the material quickly, since we're more interested in the general ideas than the details.  
 

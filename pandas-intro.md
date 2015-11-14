@@ -1,4 +1,4 @@
-# Managing data 1 
+# Data input 
 
 ---
 **Overview.**  We introduce packages (collections of tools that extend Python's capabilities) and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
@@ -7,11 +7,13 @@
 
 **Buzzwords.**  Package, dataframe, series, csv files.  
 
-**Application.**  Income by college major. 
+**Applications.**  Income by college major, Greek government debt, cell phone penetration by country. 
 
 **Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_1.py).  
 
 ---
+
+**UNDER CONSTRUCTION**
 
 We're ready now to look at some data.  We start with getting data into Python, particularly data in spreadsheets.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
 
@@ -39,7 +41,7 @@ And while we're reviewing:   Save the code file for this chapter in your `Data_B
 
 Python is not just a programming language, it's an open source collection of tools that includes both basic Python and a large collection of packages written by different people.  The terminology varies.  What we call a package others sometimes call a **library**.  The term **module** typically refers to a subset of basic Python or a package.  
 
-The standard packages -- which we'll talk more about in a minute -- are well written, well documented, and have armies of users who spot and correct problems.  Some of the others less so.  Our suggestion is to stick to the standard packages, specifically those in the Anaconda distribution, until you're reasonably comfortable with Python.
+The standard packages -- which we'll talk more about in a minute -- are well written, well documented, and have armies of users who spot and correct problems.  Some of the others less so.  Our suggestion is to stick to the standard packages, specifically those that come with the Anaconda distribution.  
 
 Some of the leading packages for numerical ("scientific") computation  are
 
@@ -47,10 +49,11 @@ Some of the leading packages for numerical ("scientific") computation  are
 
 * **[Matplotlib](http://matplotlib.org/).**  The leading graphics package for Python.  We'll use it extensively.  
 
-* **[NumPy](http://www.numpy.org/).**  Tools for numerical computing, including linear algebra. Compare this to Excel, where the basic unit is a cell, a single number.  In NumPy the basic unit is a vector (a column) or matrix (a table or worksheet).  In this respect, it's a direct competitor to Matlab.  We won't see much of NumPy here -- maybe a little -- but it's the foundation for Pandas, which we'll use constantly.   
+* **[NumPy](http://www.numpy.org/).**  Tools for numerical computing, including linear algebra. Compare this to Excel, where the basic unit is a cell, a single number.  In NumPy the basic unit is a vector (a column) or matrix (a table or worksheet).  We won't see much of NumPy here -- maybe a little -- but it's the foundation for Pandas, which we'll use constantly.   
 
-All of these packages come with the [Anaconda distribution](http://docs.continuum.io/anaconda/pkg-docs.html).  We'll use all of them a bit, and Matplotlib and Pandas constantly.  
+All of these packages come with the [Anaconda distribution](http://docs.continuum.io/anaconda/pkg-docs.html), which we've already installed.  We'll use Pandas and Matplotlib constantly.  
 
+<!-- 
 Here are some others you might run across:  
 
 * **[Seaborn](http://stanford.edu/~mwaskom/software/seaborn/).** A "wrapper" (isn't that a great term?) for Matplotlib that makes it easier to use.  
@@ -66,22 +69,22 @@ Here are some others you might run across:
 * **[Django](https://www.djangoproject.com/).**  A popular tool for website development.  
 
 We won't use them, but they're in Anaconda, too.  Feel free to give them a try.  If you do, please report back on your experience.  
+-->  
 
 
 ## Importing packages 
 
-In Python -- and many other languages -- we need to tell our program which packages we plan to use.  We do that with the `import` command.  
+In Python -- and many other languages, too -- we need to tell our program which packages we plan to use.  We do that with the `import` command.  
 
 Here are some examples applied to a mythical package `xyz` and mythical command `foo`:    
 
-* `from xyz import *`.  This imports all the commands from the package `xyz`.  A command `foo` is then executed by typing `foo`.  We don't usually do this, because it opens up the possibility that the same command exists in more than one package, which is virtually guaranteed to give us confusing output.  If `foo` is the only command we care about, we can use `from xyz import foo` instead.    
+* `import xyz as x`.  This imports the package `xyz` under the abbreviation `x`.  A command `foo` in `xyz` is then executed by typing `x.foo`.  This is the most common syntax and the one we'll use.  We use them ourselves and recommend the same, it makes code clearer to others.   
 
 * `import xyz`.  This imports the whole thing as well, but the language or syntax changes.  Here the command `foo` is executed by adding `xyz.` (note the period) before it:  `xyz.foo`.
 
-* `import xyz as x`.  This is the most common syntax.  It allows the shorthand `x.foo`, which saves us the effort of typing `xyz`.  Many packages have standard abbreviations.  We use them ourselves and recommend the same, it makes code clearer to others.   
+* `from xyz import *`.  This imports all the commands from the package `xyz`.  A command `foo` is then executed by typing `foo`.  We don't usually do this, because it opens up the possibility that the same command exists in more than one package, which is virtually guaranteed to give us confusing output.  If `foo` is the only command we care about, we can use `from xyz import foo` instead.    
 
-
-The last version of `import` is the one we typically use.  We'll see these examples repeatedly:
+The first version of `import` is the one we typically use.  We'll see these examples repeatedly:
 ```python 
 import pandas as pd
 import matplotlib.pyplot as plt 
@@ -119,13 +122,56 @@ Pandas is Python's data management package and an essential part of data work in
 
 We'll come back to all of these things later in the course, but for now we'll focus on data input:  how to get data into a Python program.  
 
-## Preparing test input 
+
+## Data input 1:  reading csv files  
+
+Talk about csv files, GH...  
+
+
+type(df) 
+
+## Properties of dataframes 
+
+Ok, now we have a dataframe -- what's in it?  What can we do with it?  
+
+If you try `type(df)` you'll find that it's a DataFrame, the standard object type in pandas.
+It's a table of numbers, much like a sheet in a spreadsheet program,
+with labels for rows (the index) and columns (the variables).  
+
+`df.[tab]` 
+
+Get labels:  df.columns, df.index...  
+
+Other methods we could try:  
+
+* df.columns.tolist() (the column labels as a list),
+* df.describe() (summary statistics)
+* df.corr() (correlations between variables)
+* df.dtypes() (variable types)
+* df.info() (information about the form of the data).
+* Transpose df.T
+
+
+**Exercise.** Find another method with tab completion.  What does it do?  ??
+
+dtypes pretty good.  
+
+For object, get list of entries:  entries = df['var'].drop_duplicates()
+
+value counts 
+
+**Sorting.**
+
+## Data input 2:  from a spreadsheet on your computer  
 
 The simplest way to get data into a Python program is to read it from a file -- a spreadsheet file, for example.  The word "read" here means take what's in the file and somehow get it into Python.  Pandas can read lots of such files:  csv, xls, xlsx, and so on.  
 
 We'd like to read all of these files into Python.  The first step is to prepare some test files we can use.  Start Excel or the equivalent (did we really say that?) and open a new blank spreadsheet.  In column one ("A") put x1 at the top and the numbers 1, 4, and 5 below it.  In column two ("B") put x2, 2, 3, and 6.  In column three ("C") put x3, 3, 4, and 7.  
 
 Now save the contents three times as, respectively, csv, xls, and xlsx files with filenames `test.csv`, `test.xls`, and `test.xlsx`.  Put all three in your `Data_Bootcamp` directory. 
+
+Excel 97-2003 (*.xls)
+CSV (Comma delimited) (*.csv) 
 
 
 ## Reading csv files
@@ -183,43 +229,6 @@ df = pd.read_csv(file)
 ```
 The idea is to trigger an error message (the file `test0.csv` doesn't exist) so that we know what that looks like.  
 
-
-## Properties of dataframes 
-
-Ok, now we have a dataframe -- what's in it?  What can we do with it?  
-
-If you try `type(df)` you'll find that it's a DataFrame, the standard object type in pandas.
-It's a table of numbers, much like a sheet in a spreadsheet program,
-with labels for rows (the index) and columns (the variables).  
-
-`df.[tab]` 
-
-Get labels:  df.columns, df.index...  
-
-Look at it:  df.head(), df.head(7), df.tail().  
-
-These are dfs too.  head = df.head(), type(head)
-
-Other methods we could try:  
-
-* df.columns.tolist() (the column labels as a list),
-* df.describe() (summary statistics)
-* df.corr() (correlations between variables)
-* df.dtypes() (variable types)
-* df.info() (information about the form of the data).
-* Transpose df.T
-
-**Exercise.** Find another method with tab completion.  What does it do?  ??
-
-
-dtypes pretty good.  
-
-For object, get list of entries:  entries = df['var'].drop_duplicates()
-
-value counts 
-
-**Sorting.**
-
 ## Other data input    
 
 We can read other kinds of files in much the same way.  Some examples show how this works:  
@@ -250,7 +259,7 @@ https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv
 **Exercise.** Read `test.xlsx` and `test.xls` from the GitHub repo.  The url's are
 ```python
 url1 = 'https://github.com/DaveBackus/Data_Bootcamp/raw/master/Code/Python/test.xls'
-url1 = 'https://github.com/DaveBackus/Data_Bootcamp/raw/master/Code/Python/test.xlsx'
+url2 = 'https://github.com/DaveBackus/Data_Bootcamp/raw/master/Code/Python/test.xlsx'
 ``` 
 (Note the word "raw" in the address.)  
 
@@ -261,34 +270,13 @@ and recommended by one of our former students.  `clip = pd.read_clipboard()`
 
 **Exercise.** Input `test.csv` from the clipboard and assign it to the dataframe `df_clip`.  
 
+## Output methods
 
-## Modifying dataframes:  column methods
-
-Referring to variables
-
-Renaming variables... 
-
-Single variables (series)
-
-New variables ... 
-
-Logs (np!) 
-
-Subsets of variables 
-
-Saving results:  assigne or `inplace=true'.  
-
-
-**Transpose**  Switch rows and columns... 
-
-
-## Modifying dataframes:  row methods
-
-Selecting the rows we want...  
+ to_excel, to_csv ...
 
 
 
-## Accessing data from internet sources
+## Data input 3:  internet sources
 
 
 FRED, World Bank...  etc.  They have API's, which give us better access than even a csv...  
@@ -297,7 +285,9 @@ FRED, World Bank...  etc.  They have API's, which give us better access than eve
 Warning:  subject to change...
 
 
-## Application:  Greek government debt in WEO
+
+
+## Examples 
 
 Want operator:  graph Greek debt over time, compare to other countries.  
 
@@ -313,6 +303,10 @@ weo = pd.read_csv(url, sep='\t')    # tab = \t
 
 
 **Example (incomes of college graduates by major).**    Also:  **Talk about RAW files** 
+
+**Example (Uber).**
+
+https://raw.githubusercontent.com/fivethirtyeight/uber-tlc-foil-response/master/uber-trip-data/uber-raw-data-sep14.csv 
 
 
 **Example (Chipotle).** 
@@ -333,6 +327,8 @@ http://pages.stern.nyu.edu/~dbackus/csv/release_dates.csv
 **Example (Big Mac currency index).**  This is an xls file with multiple sheets.  
 http://infographics.economist.com/2015/databank/BMfile2000-Jul2015.xls
 
+**Example (bond yields).**
+
 
 **Example (speed dating).**  download tab delimited data and read it with `read_csv`. 
  
@@ -346,26 +342,10 @@ https://github.com/TomAugspurger/PyDataSeattle/blob/master/notebooks/3.%20Indexi
 
 **Exercise.** 
 
-## More...  
 
-Talk about using Stata or SAS programs, shows up in CPS and MEPS, probably others.  
+## Copying and unzipping files (mtyn) 
 
-
-## Output methods
-
- to_excel, to_csv ...
-
-
-## More about data frames
-
-Referring to series...  
-
-
-Creating new series 
-(This is great, all done at once.  Loop somewhere.)  
-
-
-plot methods...  
+We'll skip this in class, but ...
 
 
 ## Resources 
