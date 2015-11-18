@@ -18,7 +18,7 @@ Also included in the Anaconda distribution are user-interfaces or **environments
 
 We'll use two Python environments in this class: 
  * **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  
- * **Jupyter** lets you create and run an **IPython notebook** , which is a combination of code, output, and documentation (IPython notebook:Jupyter::Word document:Microsoft Word). 
+ * **Jupyter** lets you create and run an **IPython notebook**, which is a combination of code, output, and documentation.  think to yourself:  IPython notebook is to Jupyer as Word document is to Microsoft Word. 
 
 
 ## Installing Anaconda 
@@ -27,16 +27,17 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 
 **Step 1. Download the Anaconda installer.** 
 * Click [HERE](http://continuum.io/downloads), or Google "Anaconda downloads."  
-* Scroll to find "Anaconda for Windows" or further down for Macs "Anaconda for OS X"
+* Scroll to find "Anaconda for Windows" or further down for Macs "Anaconda for OS X."
 * **Find the option for Python 3.5**, NOT Python 2.7 (if you get 2.7, you'll have to start over)
-* Click the 64-bit Graphical Installer to start the download
+* Click the 64-bit Graphical Installer to start the download. 
 
 **Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says.  
 
 **Step 3. Find and run Launcher.**  Look or search wherever programs are on your computer.    
  * Windows 7: Click on your "Start" button >>  All Programs >> Anaconda >> Launcher 
  * Windows 8: Type “Launcher” into your search box.  
- * Macs: Finder, Spotlight Search, and Launchpad all work - whatever you prefer
+ * Macs: Finder, Spotlight Search, and Launchpad all work -- whatever you prefer.  
+
 
 **Pro tip.**  Put a shortcut to Launcher in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 
 
@@ -44,6 +45,7 @@ Once Launcher is running -- be patient, it can take 60 seconds or more -- this i
  * Top left: A teardrop with a snake (an anaconda?) followed by the word Launcher.
  * Top middle: "Python 3.5.x." - NOT Python 2.7!!!
  * Main window:  a list of apps, which are programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for writing and running Python programs.  
+
 
 You now have Python installed and ready to run.  Congratulations!  
 
@@ -73,7 +75,7 @@ To start Spyder from Launcher, click on the Launch button to the right of spyder
 You can move these windows around by dragging and dropping.  If you mess up -- it happens to the best of us -- look for "View" at the top and click on "Reset window layout." 
 
 
-**IPython.**  IPython ("interactive Python") is another graphical environment, one that allows you to combine code, output, words, and graphics.  Lots of people use IPython notebooks to write Python programs and, especially, to present their work. By including text and output along with the code, a notebook can double as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb) and a [more extensive collection](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
+**IPython.**  IPython ("interactive Python") is another graphical environment, one that allows us to combine code, output, words, and graphics.  Lots of people use IPython notebooks to write Python programs and, especially, to present their work. By including text and output along with the code, a notebook can double as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb) and a [more extensive collection](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks).
 
 To create or run an IPython notebook from Launcher, click on the Launch button to the right of the ipython-notebook icon.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see at the top the word "Jupyter," which is the name of this environment.  (It used to say IPython, but now the same environment handles code in Julia, R, and other languages, which called for a [name change](http://ipython.org/#jupyter-and-the-future-of-ipython).)  Just below Jupyter you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.  
 
@@ -105,7 +107,7 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 
 * Comments (mtyn):  (i) Anything following a hash (#) is a comment.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
 
-* Save your code.  Click on File at the top left, then Save As, and save in the directory of your choice under the name "bootcamp\_test.py" (Python programs always have the extension py).  We recommend the directory "Data\_Bootcamp" that we suggested earlier. 
+* Save your code.  Click on File at the top left, then Save As, and save in the `Data_Bootcamp` directory under the name `bootcamp\_test.py` (Python programs always have the extension py).  
 
 * Run it.  Click on the green triangle above the editor and run your program.  
 
@@ -140,5 +142,5 @@ More on the Anaconda distribution and its contents:
 * Anaconda [download](http://continuum.io/downloads) and [package list](http://docs.continuum.io/anaconda/pkg-docs).  
 * Spyder [documentation](https://pythonhosted.org/spyder/).  
 * IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  You can also get help in Jupyter:  click on "Help" ar the top and choose "User Interface Tour."
-* [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/)to documentation and support.  More than you'll ever want or need. 
+* [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/) to documentation and support.  More than you'll ever want or need. 
 
