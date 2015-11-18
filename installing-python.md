@@ -6,40 +6,44 @@
 
 **Python tools.**  Anaconda distribution, Spyder and IPython/Jupyter coding environments.  
 
-**Buzzwords.**  Distribution, environment, mtyn. 
+**Buzzwords.**  Package, distribution, environment, mtyn. 
 
 **Code.** [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_test.py).   
 
----
+---  
 
-There are lots of ways to install Python, but we recommend one:  **Anaconda**.  We explain how to install Anaconda, then run a test program to make sure everything is working.  
+Python is a programming language, but it frequently needs additional **packages** to accomplish what you need it to do. A good analogy might be an operating system. You can't do a lot with Windows until you install software like Word or Excel. Similarly, you'll use "packages" in Python to expand its capabilities, like creating graphs, managing data or websites, and performing statistical analysis. We're going to use a **distribution** called Anaconda, which bundles Python and a bunch of useful packages together in a single download. 
 
-Modern programming languages have a number of moving parts.  One part is the program itself, in this case the program that runs Python code.  A second is the collection of "packages" that do specific things.  Python, for example, has packages that extend Python to manage data, create graphs, perform statistical analysis, and manage web sites. Together, these components are referred to as a **distribution**.  We'll use the Anaconda distribution, which includes Python and some of its more popular packages. The good people at [Continuum Analytics](https://store.continuum.io/cshop/anaconda/) have made sure that all of these parts (usually) work together.  
+Also included in the Anaconda distribution are user-interfaces or **environments** for writing code and executing it.  We'll use another analogy here: both Word and Google docs let you produce a text document, they are just different "environments" to achieve the same ends. People use different environments to write Python code depending on their needs and personal preferences.
 
-Another important part of a programming language is the user-interface or **environment** for writing code and executing it.  We'll use two.  **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  An **IPython notebook** is a combination of code, output, and documentation that we can run interactively in **Jupyter**.  Both of these environments call on Python more or less automatically:  press a button and you're good to go.  Even better, both come with the Anaconda distribution. 
+We'll use two Python environments in this class: 
+ * **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  
+ * **Jupyter** lets you create and run an **IPython notebook** , which is a combination of code, output, and documentation (IPython notebook:Jupyter::Word document:Microsoft Word). 
 
 
 ## Installing Anaconda 
 
 Follow these instructions.  By which we mean: **follow these instructions exactly!** Creativity is a wonderful thing, but here it will cost you dearly. 
 
-**Warning.** They recently changed the download page, so this might not work exactly as described.  Yes, we did say exactly before, but they changed it up on us.  We'll fix this up when we get a chance, but right now it's not quite right.  We still have faith in your ability to download the program using the instructions on the page.  Make sure you get **Python 3.5** for **your operating system** (Windows, Mac Os, etc).  You want the **64-bit** version unless you have a really old computer.  
-
-One change we noticed is that we're now up to Python 3.5.  
- 
-
-**Step 1. Download the Anaconda installer.**  Click [here](http://continuum.io/downloads) to go to the download page. (If that link doesn't work for you, Google "Anaconda downloads.")  Click on "I Want Python 3.4."  Then click on the logo of your operating system (Windows, Mac OS, or Linux) and "Python 3.4 Graphical Installer" to download the installer.
-
-**Make sure you get Python 3.4.**  If you accidentally install Python 2.7, or anything other than 3.4, you should uninstall it and start over.  
+**Step 1. Download the Anaconda installer.** 
+* Click [HERE](http://continuum.io/downloads), or Google "Anaconda downloads."  
+* Scroll to find "Anaconda for Windows" or further down for Macs "Anaconda for OS X"
+* **Find the option for Python 3.5**, NOT Python 2.7 (if you get 2.7, you'll have to start over)
+* Click the 64-bit Graphical Installer to start the download
 
 **Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says.  
 
-**Step 3. Find and run Launcher.**  You should now have Anaconda’s Launcher ready to go.  The trick is finding it.  Look or search wherever programs are on your computer.  In Windows 7, you click on the Start button and go to all programs. You should see an Anaconda folder, which contains (among other things) Launcher. Click on it.  In Windows 8, type “Launcher” into the search box.  On Macs, Finder is similar. 
-<!-- more ?? Macs? Windows 9/10 -->
+**Step 3. Find and run Launcher.**  Look or search wherever programs are on your computer.    
+ * Windows 7: Click on your "Start" button >>  All Programs >> Anaconda >> Launcher 
+ * Windows 8: Type “Launcher” into your search box.  
+ * Macs: Finder, Spotlight Search, and Launchpad all work - whatever you prefer
 
-**Pro tip.**  Once you find Launcher, you might put a shortcut in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 
+**Pro tip.**  Put a shortcut to Launcher in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 
 
-Once Launcher is running -- be patient, it can take 60 seconds or more -- you should see a teardrop with a snake in the upper left (an anaconda?) followed by the word Launcher.  Also at the top it should say Python 3.4.x.  Below that is a list of apps: programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for running Python programs.  
+Once Launcher is running -- be patient, it can take 60 seconds or more -- this is what you should see:
+ * Top left: A teardrop with a snake (an anaconda?) followed by the word Launcher.
+ * Top middle: "Python 3.5.x." - NOT Python 2.7!!!
+ * Main window:  a list of apps, which are programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for writing and running Python programs.  
 
 You now have Python installed and ready to run.  Congratulations!  
 
