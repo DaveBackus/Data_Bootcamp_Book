@@ -151,3 +151,5 @@ http://www.gregreda.com/2013/10/26/working-with-pandas-dataframes/
 http://manishamde.github.io/blog/2013/03/07/pandas-and-python-top-10/ 
 
 http://markthegraph.blogspot.com/2014/01/pandas-dataframe-cheat-sheet-and-python.html
+
+http://nicolas.kruchten.com/content/2015/09/jupyter_pivottablejs/

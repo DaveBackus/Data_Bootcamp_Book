@@ -8,7 +8,7 @@
 
 ---
 
-This book -- and the course we developed it for -- is about data.  It's also about tools for working with data, which in this case means **[Python][10]** and its data-related packages.  Our focus is economic and financial data, which is what we know best, but skills you learn can be applied to any data. By the end of the course, you'll have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
+This book -- and the course we developed it for -- is about data.  It's also about tools for working with data, which in this case means **[Python][10]** and its data-related tools.  Our focus is economic and financial data, which is what we know best, but the same tools can be applied to any data. By the end of the course, you will have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
 
 ## Answers to common questions 
 
@@ -29,7 +29,7 @@ This book -- and the course we developed it for -- is about data.  It's also abo
  
 ## Why data?  
 
-We're living in a world of data: data about the economy, data about financial markets, data about your business.  Data doesn't solve all our problems, but it's a valuable input to better decisions.  For example, how should you [choose a major](http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/)?  
+We're living in a world of data: data about the economy, data about financial markets, data about your business.  Data doesn't solve all our problems, but it's a valuable input to better decisions.  For example, how to choose a [college major](http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/).  
 
 Many of our former students tell us that data skills keep them in business.  One of our alums analyzes television  viewer data for a network.  The datasets are too large for Excel, so he uses Python.  Another manages attendence data for a major league baseball team.  A third works for a quantitative hedge fund, where Python is the tool of choice.  A fourth is worried that you won't need him after this course. Even students with non-technical backgrounds tell us that basic data and programming skills are, if not required, at least very useful in their jobs.  One of our  marketing majors, for example, needs to interface with her company's SQL database to get the data she needs to do her job.  
 
@@ -74,7 +74,7 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Don't panic.**  Learning a new language takes some time, it won't happen in a week. 
 
-**Stick with it.** The secret is to stick with it.  Trust us, it will start to make sense in a couple weeks.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?) 
+**Stick with it.** The secret is to keep working.  Trust us, things will start to make sense in a couple weeks.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?) 
 
 <!--
 **Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around, try new things, have fun.  As you gain experience, you'll find that Python becomes easier.  

@@ -5,7 +5,7 @@
 * [The data mentality](data-mentality.md)* [The data mentality](data-mentality.md)
 * [Installing Python](installing-python.md)
 * [Python fundamentals 1](py-fun1.md) 
-* [Data input](pandas-intro.md)
+* [Packages and data input](pandas-intro.md)
 * [Introduction to Python graphics](graphs1.md)
 * [Python fundamentals 2](py-fun2.md)  
 

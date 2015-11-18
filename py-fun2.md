@@ -1,9 +1,9 @@
 # Python fundamentals 2 
 
 ---
-**Overview.**   More core Python. Part 2 of 2.  
+**Overview.**   More core Python. Part 2.  
 
-**Python tools.**  Comparisons, Boolean variables, conditionals (if, else), loops (for), function definitions.  
+**Python tools.**  Comparisons, Boolean variables, conditionals (if, else), loops (for), function definitions, advanced slicing.  
 
 **Buzzwords.**  Data structures, list comprehensions, gotchas, PEP8.  
 
@@ -19,8 +19,6 @@ We continue our overview of Python's core language.  That's not what we'll use, 
 
 ??
 
-
-??  Add:  advanced slicing... 
 
 ## Logical expressions 
 
@@ -314,6 +312,11 @@ Note the comment in triple quotes.
 ** ?? keyword arguments (sep section?) ?? **
 
 
+## Advanced slicing
+
+Ranges, increments, backwards...  
+
+
 ##  More data structures
 
 This whole section is mtyn:  we recommend you skim it and not worry about the details.  We'll review it later as needed when it comes up.  
@@ -338,18 +341,17 @@ We access the value from the key with syntax of the form: `dict[key]`.  In the e
 **Exercise.** Construct a dictionary whose keys are names and values are phone numbers.  How would you access your neighbor's phone number?  
 
 
+<!--
 
 ## Special Python functions 
 
 This is all mtyn and we don't plan to use any of it.  We include it because we got carried away.  
-
 
 We can define one-line **lambda functions.** in a streamlined way.  To compute the ever-popular square of a number, we can define the function 
 ```python
 square = lambda x:  x**2
 ```
 We can now compute the square of 8 with `square(8)`.  
-
 
 There are three functions that do implicit loops of different kinds:
 
@@ -383,6 +385,8 @@ The first one has the answer `newlist = [4, 5]`, the second `newlist = ['Steeler
 [?? talk about each one as an implicit loop?]
 
 Some of us find this kind of syntax obscure and do our best to avoid it.  But similar ideas show up in lots of places.  
+--> 
+
 
 ## Assignments and copies
 

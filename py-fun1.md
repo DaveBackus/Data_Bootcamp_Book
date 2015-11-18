@@ -1,6 +1,5 @@
 # Python fundamentals 1
 
-
 ---
 **Overview.**  Time to start programming!  We work our way through some of the essentials of Python's core language.  Part 1.  
 
@@ -18,7 +17,7 @@ We're now ready to explore the rudiments of Python.  We'll run across terms like
 
 The beauty and challenge of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  
 
-We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  Your first job is to **start up Spyder**.  If you don't know what that means, return to the previous chapter. Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "modules," "packages," or "libraries" that allow Python to do more advanced things -- data management and graphics, for example.  Think of them as plug-ins or extensions that we can call on when needed. We'll deal with them later.  
+We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  Your first job is to **start up Spyder**.  If you don't know what that means, return to the previous chapter. Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "packages," "libraries," or "modules" that allow Python to do more advanced things -- data management and graphics, for example.  Think of them as plug-ins or extensions that we can call on when needed. We'll deal with them later.  
 
 
 ## The logic of Python programs
