@@ -1,4 +1,4 @@
-# Emerging market indicators 
+# Data munging:  Pandas revisited 
 
 ---
 **Overview.** We often get data in one form and want to change it to another.  Pandas has an exceptional collection of tools for doing this, but it takes us out of our Excel mindset.  

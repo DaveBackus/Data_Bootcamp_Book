@@ -18,7 +18,7 @@ Also included in the Anaconda distribution are user-interfaces or **environments
 
 We'll use two Python environments in this class: 
  * **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  
- * **Jupyter** lets you create and run an **IPython notebook**, which is a combination of code, output, and documentation.  think to yourself:  IPython notebook is to Jupyer as Word document is to Microsoft Word. 
+ * **Jupyter** lets you create and run an **IPython notebook**, which is a combination of code, output, and documentation.  Think to yourself:  An IPython notebook is to Jupyer as a Word document is to Microsoft Word. 
 
 
 ## Installing Anaconda 
@@ -144,3 +144,14 @@ More on the Anaconda distribution and its contents:
 * IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  You can also get help in Jupyter:  click on "Help" ar the top and choose "User Interface Tour."
 * [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/) to documentation and support.  More than you'll ever want or need. 
 
+
+<!--
+## Appendix:  Directory structures 
+
+Complete paths look like this:  
+* Windows: `C:\Users\userid\Data_Bootcamp` 
+* Mac:  `/Users/userid/Data_Bootcamp`
+
+How to get them?
+
+--> 

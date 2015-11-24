@@ -1,4 +1,4 @@
-# Introduction to Python graphics  
+# Python graphics: Matplotlib   
 
 ---
 **Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  
@@ -9,7 +9,7 @@
 
 **Applications.**  Incomes of college majors.??
 
-**Code.** Link.
+**Code.** [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_graphics_1.py).
 
 ---
 
@@ -46,7 +46,7 @@ Matplotlib has a number of approaches ...
 
 * Approach #3:  create figure objects, apply methods to them.  
 
-All three call on the same functionality, but they use different syntax.  
+All three call on the same functionality, but they use different syntax. 
 
 
 ##  Approach #1:  Apply plot method to data 

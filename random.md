@@ -1,4 +1,4 @@
-# Describing data 1:  univariate [??] 
+# Describing data 1:  Distributions of things
 
 
 ---

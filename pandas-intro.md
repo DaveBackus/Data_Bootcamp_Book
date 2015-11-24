@@ -1,4 +1,4 @@
-# Packages and data input 
+# Data input: Packages and Pandas 
 
 ---
 **Overview.**  We introduce "packages" -- collections of tools that extend Python's capabilities -- and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
@@ -23,11 +23,13 @@ You may recall that our canonical program structure consists of data input, data
 
 Some things we'll use repeatedly:
 
-* Lists and strings.  Strings are collections of characters in quotes:  `'this is a string'`.  Lists are collections of things in square brackets:  `[1, 'help', 3.14159]`.   
+* Assignments.  We say we assign what's on the right to the thing on the left:  `x = 17.4` assigns the number `17.4` to the variable `x`.  
+
+* Lists and strings.  Strings are collections of characters in quotes:  `'this is a string'`.  Lists are collections of things in square brackets:  `[1, 'help', 3.14159]`. 
 
 * The `type()` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, and lists.  
 
-* Methods and objects.  It's common in Python to work with objects using methods.  (If these words are confusing, go back to the previous chapter.)  We apply the method `bar` to the object `foo` by typing `foo.bar`.  
+* Methods and objects.  It's common in Python to work with objects using methods.  (If these words are confusing, go back to the previous chapter.)  We apply the method `justdoit` to the object `x` by typing `x.justdoit`.  
 
 * Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook -- to get a list.  That's referred to as "tab completion." 
 
@@ -327,6 +329,13 @@ url2 = 'https://github.com/DaveBackus/Data_Bootcamp/raw/master/Code/Python/test.
 
 Want operator:  graph Greek debt over time, compare to other countries.  
 
+**Example (Penn World Tables).**
+
+
+
+**Example (incomes of college graduates by major).**    Also:  **Talk about RAW files**
+
+
 **Example (WEO).** 
 ```python 
 url = 'http://www.imf.org/external/pubs/ft/weo/2014/01/weodata/WEOApr2014all.xls'
@@ -338,14 +347,7 @@ weo = pd.read_csv(url, sep='\t')    # tab = \t
 
 **Exercise.** Run the WEO code and list the contents.  What does the file look like?
 
-
-
-**Example (incomes of college graduates by major).**    Also:  **Talk about RAW files** 
-
-**Example (Uber).**
-
-https://raw.githubusercontent.com/fivethirtyeight/uber-tlc-foil-response/master/uber-trip-data/uber-raw-data-sep14.csv 
-
+ 
 
 **Example (Chipotle).** 
 
@@ -359,11 +361,13 @@ http://pages.stern.nyu.edu/~dbackus/csv/release_dates.csv
 
 **Example (Stern teaching data).** 
 
-
+<!--
 **Example.** Chetty's income data...  
 
 **Example (Big Mac currency index).**  This is an xls file with multiple sheets.  
 http://infographics.economist.com/2015/databank/BMfile2000-Jul2015.xls
+
+--> 
 
 **Example (bond yields).**
 

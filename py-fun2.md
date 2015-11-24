@@ -3,7 +3,7 @@
 ---
 **Overview.**   More core Python. Part 2.  
 
-**Python tools.**  Comparisons, Boolean variables, conditionals (if, else), loops (for), function definitions, advanced slicing.  
+**Python tools.**  Advanced slicing, comparisons, Boolean variables, conditionals (if, else), loops (for), function definitions.  
 
 **Buzzwords.**  Data structures, list comprehensions, gotchas, PEP8.  
 
@@ -15,9 +15,17 @@
 
 We continue our overview of Python's core language.  That's not what we'll use, for the most part, but the same concepts show up in data work.  We go through the material quickly, since we're more interested in the general ideas than the details.  
 
+
 ## Reminders
 
-??
+* Data structures are organizations of data.  Examples:  strings, lists, dataframes. 
+
+* Slicing strings and lists.  ..
+
+
+## Advanced slicing 
+
+Cover intervals ...
 
 
 ## Logical expressions 
