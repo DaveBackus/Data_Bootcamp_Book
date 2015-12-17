@@ -12,6 +12,8 @@
 
 ---
 
+The world is filled with differences.  People are large and small, old and young.  Countries are large and small, rich and poor.  Companies and ??  
+
 What do we mean when we say something is "random"?  Well, we might mean [really crazy](http://www.urbandictionary.com/define.php?term=Random).  But here we mean a number of different things could happen, but we're not sure ahead of time which one.  The Steelers might win or lose.  The stock market might go up or down?  The economy might grow quickly or slowly.  Your income might go up or down.  You get the idea.  
 
 
@@ -23,6 +25,8 @@ Examples:
 * income 
 * medical spending (MEPS)
 * Kevin Williams long-tail data...  
+
+**See figs 2-4:**  http://public.econ.duke.edu/~psarcidi/aa.pdf 
 
 * http://ec2-52-21-49-3.compute-1.amazonaws.com:8000/user/PzkeYvpCRSF5/notebooks/nikkei_returns_data.ipynb
 * http://www.mglerner.com/blog/?p=28 

@@ -70,7 +70,7 @@ The fourth calculation, `2^3`, gives us
 In [4]: 2^3
 Out[4]: 1
 ```
-We might have expected the answer to be 8 (2 to the power 3), but evidently it's not.  What's going on?  The short answer is that the hat symbol `^` doesn't do powers in Python, as it does in Excel.  It does something else (mtyn).  
+We might have expected the answer to be 8 (2 to the power 3), but evidently it's not.  What's going on?  The short answer is that the hat symbol `^` doesn't do powers/exponents in Python, as it does in Excel.  It does something else, which we won't go into.  
 
 This is a good opportunity to practice our **Google fu**:  
 
@@ -87,17 +87,21 @@ Our last calculation is the log function.  Entering `log(3)` generates the messa
 **Exercise.**  What happens if you try to calculate the square root of 2 with `sqrt(2)`, as you would in Excel?  Google the error and see if you can find out what happened, and how to fix it.  
 
 
-## Assignments 
+## Assigning values to variables  
 
-Or maybe we should say "assignments" in scare quotes.  We say we "assign" numbers to "variables," names we use to store information.  Here are three examples;  type them into the IPython console one at at time. 
+Or maybe we should say "assignments" in scare quotes.  We say we "assign" values to "variables," names we use to store information.  Here are three examples;  type them into the IPython console one at at time. 
 ```python 
 x = 2 
 y = 3 
 z = x/y 
 ```
-What's going on here?  The first line takes the value 2 and stores it in `x`, which we refer to as a "variable."  We say we "assigned" the numerical value 2 to the variable `x`, which is now available for future calculations.  That's really helpful, because we can call on `x` whever we need to use it.  In Excel, we could put something in a cell (say, b7) and refer to it that way, but giving it a name is simpler for many purposes.  
+What's going on here?  
 
-Continuing:  The second line assigns the value 3 to a new variable `y`. The last line takes `x`, divides it by `y`, and stores the result in `z`.   All of these lines are "assignments."  
+* The first line takes the value 2 and stores it in `x`.  We say we "assigned" the numerical value 2 to the variable `x`, which is now available for future calculations.  That's really helpful, because we can call on `x` whever we need to use it.  In Excel, we could put something in a cell (say, b7) and refer to it that way, but giving it a name is simpler for many purposes.  
+* The second line assigns the value 3 to a new variable `y`. 
+* The last line takes `x`, divides it by `y`, and stores the result in `z`.   
+
+All of these lines are "assignments."  
 
 **Exercise.** Type `w = 7` in the IPython console.  What does the code `w = w + 2` do?  Why is it not a violation of basic mathematics?  
 
@@ -108,7 +112,7 @@ Continuing:  The second line assigns the value 3 to a new variable `y`. The last
 **Exercise.**  Suppose we have two variables, `x` and `y`.  How would you switch their values, so that `x` takes on `y`'s value and `y` takes on `x`'s?  
 
 <!--
-This is mtyn, but you can also do multiple assignments in the same line.  The first two lines above can be rewritten together as 
+You can also do multiple assignments in the same line.  The first two lines above can be rewritten together as 
 ```python 
 x, y = 2, 3 
 ```
@@ -120,14 +124,14 @@ Here's good advice from a friend:  **If you find it confusing, don't do it!**  T
 
 ## The `print()` function
 
-Many of our programs will contain code of the form 
+Many of our programs contain code like 
 ```python 
 In [7]: print(z)
 0.6666666666666666
 ```
 Evidently what this has done is display the value of `z`, namely `0.6666666666666666`.  This is really helpful, because Python typically computes what we ask it to compute, but doesn't report the answer back to us.  That's how Python -- and other languages -- typically work.  If we want to report the result, we need to say so.  
 
-The simplest way to do this is with the print function.  The print function displays whatever we include in parentheses after the word print:  for example, ``print(x)`.  If we want to print more than one thing, we separate them with commas; for example, `print(x, y)`. That's the **general structure of functions** in Python:  a function name (in this case `print`) followed by inputs (known as "arguments") in parentheses that are separated by commas.  We usually refer to the `print()` function, with parentheses, to remind ourselves that it requires input of some kind.  
+The simplest way to do this is with the print function.  The print function displays whatever we include in parentheses after the word print:  for example, `print(x)`.  If we want to print more than one thing, we separate them with commas; for example, `print(x, y)`. That's the **general structure of functions** in Python:  a function name (in this case `print`) followed by inputs (known as "arguments") in parentheses that are separated by commas.  We usually refer to the `print()` function, with parentheses, to remind ourselves that it requires input of some kind.  
 
 As we have seen, if we want to verify the calculation of `z`, we can type `print(z)` in the IPython console.  If we want to print all the calculations from the previous section, we could type `print(x, y, z)`:  
 ```python
@@ -150,9 +154,11 @@ We'll talk more about getting help shortly, but in the meantime you might type `
 
 We use them both a lot.  If they fail, either because there's no help or the help is incomprehensible, we fall back on Google fu.  
 
-**Exercise.**  Use Spyder's help so that `x`, `y`, and `z` are separated by "space-comma" (`' ,'`).  
+These will take some thought:  
 
-**Exercise.**  What do the `sep` and `end` arguments do?  What does `end='\n'` do?  Try some examples to verify your guess. 
+**Exercise.**  Use Spyder's help to find out what the `sep` argument does. What happens if you set `sep=''` (single quotes with nothing in between)?  `sep='  '` (single quotes around a double space)?  Can you guess what is going on here?
+
+**Exercise.**  What does `end` argument do?  What does `end='\n'` do?  Try some examples to verify your guess. 
 
 <!-- ?? One last thing.  You'll note that ?? Escapes... \n, \t, etc -->
 
@@ -161,9 +167,9 @@ We use them both a lot.  If they fail, either because there's no help or the hel
 
 We also want to to be able to work with non-numerical data, collections of characters that might include letters, numbers, or other symbols.  Such things show up a lot in data work, as variable names (GDP, Income, Volatility) and even as data (country or customer names, for example).  We refer to such constructs as **strings**. No, not the stuff we tie up packages with, but a "string" of characters like letters or numbers.  It's one of many mysterious uses of ordinary words we'll run across as we learn to code.  For more on this one, see [here](http://stackoverflow.com/questions/880195/the-history-behind-the-definition-of-a-string).  
 
-We create strings with quotation marks:  'Chase', "Spencer", 'Sarah', "apple", and even '12' are all strings.  Single and double quotes both work.  The last example is a confusing one, because it looks like a number.  It's not.  If we try to use it as a number, it doesn't work.  Try, for example, `'12'/3`.  This generates the error:  `TypeError: unsupported operand type(s) for /: 'str' and 'int'`.  What this means is that we tried to divide a string (`'12'`) by an integer (`3`).  It's no different to Python than trying to divide your name by three, it can't make sense of it.  
+We create strings with quotation marks:  'Chase', "Spencer", 'Sarah', "apple", and even '12' are all strings.  Single and double quotes both work.  The last example is a confusing one, because it looks like a number.  It's not.  If we try to use it as a number, it doesn't work.  Try, for example, `'12'/3`.  This generates the error:  `TypeError: unsupported operand type(s) for /: 'str' and 'int'`.  What this means is that we tried to divide a string (`'12'`) by an integer (`3`).  That's no different to Python than trying to divide your name by three, it can't make sense of it.  
 
-Thus we see that `12` is a number, but `'12'` is a string.  
+We repeat:  A string is a collection of characters between quotation marks. The characters can be pretty much anything. `12` is a number, but `'12'` is a string.  
 
 Here are some other examples, which we assign to variable names for later use. Type them into Spyder's IPython console **one at a time**:  
 ```python 
@@ -176,7 +182,7 @@ What do you see?  The first two are probably obvious:  we assign the characters 
 
 The third line is something new:  we add the string `some` to the string `thing`.  What would you expect to get?  Try `print(c)` to find out.  That gives us the answer: `c = 'something'`.  We've simply stitched the two strings together, one after the other.  We'll see that operations like this are extremely helpful when we're working with data. 
 
-Strings also allow us to produce better-looking output.  For example, in the previous section we can change the statement `print(z)` to `print('The value of z is ', z)`.  The first argument (or input), `'The value of z is '`, is a string.  The second argument, `z`, is a variable.  Together they produce the output `The value of z is  0.6666666666666666`, which is clearer than the number `0.6666666666666666` on its own.  Here's the same thing spread over two lines:
+Strings also allow us to produce better-looking output.  For example, in the previous section we can change the statement `print(z)` to `print('The value of z is ', z)`.  The first argument (or input), `'The value of z is '`, is a string.  The second argument, `z`, is a variable.  Together they produce the output `The value of z is  0.6666666666666666`, which is clearer than the number `0.6666666666666666` on its own.  Or we could spread this over two lines:
 ```python
 message = 'The value of z is'
 print(message, z)
@@ -188,6 +194,7 @@ Here we've taken the components of the previous print statement and expressed th
 **Exercise.** This one's a little harder.  Assign your first name as a string to the variable `firstname` and your last name to the variable `lastname`.  Use them to construct a new variable equal to your first name, a space, then your last name.  
 
 **Exercise.** What happens when you type `a * 3` into the console? What about `d * 3`?  What is going on here?  
+
 
 ## Single, double, and triple quotes
 
@@ -216,22 +223,22 @@ This produces the output
 Four score and seven years ago
 Our fathers brought forth ... 
 ```
-The blank line comes from the empty space to the right of the first triple quote.  And yes: you can make triple quotes from single quotes, and all of  this is mtyn.
+The blank line comes from the empty space to the right of the first triple quote.  And yes: you can make triple quotes from single quotes, and all of  this is more than we need.
 
 
-## Comments 
+## Add comments to your code  
 
 One of the rules of good code is that **we explain what we've done -- in the code**.  In this class, we might think about writing code that one of our classmates can understand without help.  That generally means we should include some explanation -- in the code -- of what we've done.  These explanations are referred to as comments.  
 
-The simplest way to add a comment is to use the hash character (#).  Anything in a line after a hash is a comment, meaning it's ignored by Python.  We can make short comments by putting hashes in the middle of lines, or longer comments by putting a hash in the first column of a line.  Here are some examples: 
+The simplest way to add a comment is to use the hash character (`#`).  Anything in a line after a hash is a comment, meaning it's ignored by Python.  We can make short comments by putting hashes in the middle of lines, or longer comments by putting a hash in the first column of a line.  Here are some examples: 
 ```python
 # we're going to add 4 and 5
-4 + 5  			# here we're computing it 
-print(4+5)  	# here we're printing it 
+4 + 5           # here we're computing it 
+print(4+5)      # here we're printing it 
 ```
-We often put comments like this in our class code.  
+We often put comments like this in our code.  
 
-If we have a long comment, there's another method -- one of our favorites:  use triple quotes.  Officially triple quotes define strings just as single and doublt quotes do, with one exception:  they can go over multiple lines.  Unofficialy they're often use for longer comments.  Here's an example from the start of our test program: 
+If we have a long comment, there's another method (one of our favorites):  use triple quotes.  Officially triple quotes define strings just as single and double quotes do, with one exception:  they can go over multiple lines.  Unofficially they're often used for longer comments.  Here's an example from the start of our test program: 
 ```python 
 """
 Data Bootcamp test program checks to see that we're running Python 3.  
@@ -239,7 +246,7 @@ Written by Dave Backus, March 2015
 Created with Python 3.4 
 """
 ```
-We recommend putting something like this at the top of every program you write.  You'll thank us later, when you go back and try to figure out what it is you did a few months ago.  
+We recommend putting something like this at the top of every program you write.  You'll thank us later, when you go back and try to figure out what it is you did a few weeks ago.  
 
 
 ## Running programs in Spyder 
@@ -257,14 +264,14 @@ print('c =', c')
 (If you don't recall how to open a new file in Spyder, see the previous chapter.) 
 
 
-To run this code, we need to save it in a file.  In Spyder's editor, click on "File" in the upper left corner and choose "Save.""  To set the file name (the default `Untitled0.py` isn't all that informative), we choose "Save as" and pick a file name like `somename.py`.  The last part is important, it identifies it as a Python fgile.  Once we've done this, we can run the file in Spyder by clicking on the green arrow at the top of the editor window.  
+To run this code, we need to save it in a file.  In Spyder's editor, click on "File" in the upper left corner and choose "Save."  To set the file name (the default `Untitled0.py` isn't all that informative), we choose "Save as" and pick a file name like `somename.py`.  The part after the period -- the "extension" -- is important, it identifies the file as a Python program.  Once we've done this, we can run the file in Spyder by clicking on the green arrow at the top of the editor window.  
 
 The first three lines produce no output.  The last one produces the output `c =  something` in the IPython console.  
 
 
 ## Code cells in Spyder 
 
-Spyder has a cool feature we haven't seen in other Python editors:  we can carve out blocks of code ("cells") and run them separately.  That comes naturally in IPython notebooks, as we'll see later, and it's a useful feature of Spyder as well.  
+Spyder has a cool feature we haven't seen in other Python editors:  we can carve out blocks of code ("cells") and run them separately.  That comes naturally in IPython notebooks, too, as we'll see later.  
 
 The idea is to put the separator `#%%` (hash, percent, percent) between blocks of code, called **cells**, so that we can run them separately.  Consider the code:  
 ```python 
@@ -291,7 +298,11 @@ Here's how it works:
 
 ## Lists
 
-Lists are one of the fundamental Python **data structures**, a term that means a specific organization of data.  A Python list is what it sounds like:  an ordered collection of items.  The items can be lots of things:  numbers, strings, variables, or even other lists.  We create them by putting square brackets around a collection of items separated by commas.  Here are some examples:  
+<!-- 
+Lists are one of the fundamental Python **data structures**, a term that means a specific organization of data.
+-->
+
+A Python list is what it sounds like:  an ordered collection of items.  The items can be lots of things:  numbers, strings, variables, or even other lists.  We create them by putting **square brackets around a collection of items** separated by commas.  Here are some examples:  
 ```python 
 numberlist = [1, 5, -3]
 a = 'some'
@@ -301,9 +312,12 @@ stringlist = [a, b, c]
 ```
 Copy this code into Spyder and run it.  What do you see if you type `print(numberlist)` in the IPython console?  
 
-We can combine lists (literally) by adding them.  The statement `biglist = numberlist + stringlist` produces a list containing all the elements of `numberlist` and all the elements of `stringlist`, so we have six items altogether.  Type `print(biglist)` to make sure that's the case.  
+We can combine lists (literally) by adding them.  The statement `biglist = numberlist + stringlist` produces a list containing all the elements of `numberlist` plus all the elements of `stringlist`, so we have six items altogether.  Type `print(biglist)` to make sure that's the case.  
 
 In contrast, the statement `biglist2 = [numberlist, stringlist]` produces a new list with two items:  the lists `numberlist` and `stringlist`.  It's what we might call a "list of lists."  That's not something we're likely to do, to be honest.  (We did it once, but it was an accident.)  The point is simply that lists are flexible objects. 
+
+
+**Exercise.** How would you explain a list to a classmate?   
 
 
 **Exercise.** Run the statements 
@@ -390,16 +404,16 @@ Not to kill the suspense, but here's what we should get:
 * `type(2.5)` gives us `float`, a so-called "floating point number" like most of those we run across in Excel -- not a whole number.  
 * `type(c)` gives us `str`, which tells us that `c` is a string.  
 * `type(stringlist)` tells us that `stringlist` is a list.  
-* What is `type('12')`?  That's a trick question:  it's a string, too, even though it looks like a number. 
+* What is `type('12')`?  That's a trick question:  it's a string, too, even though it looks like a number.   
 
 
-The type function is more helpful than you might guess.  A lot of what we do in programming is deal with objects of different types and, when necessary, convert one type to another.  The first step is to identify the type of the object of interest.  That will determine what we can do with the object later.   
+The type function is more helpful than you might guess.  A lot of what we do in programming is deal with objects of different types and, when necessary, convert one type to another.  The first step is to identify the type of the object of interest.  
 
 **Exercise.** Try each of these and explain the output:
 ```python
 type('a')
 type('a1')
-type(a1.0')
+type('a1.0')
 type(1)
 type(1.0)
 type('1')
@@ -423,7 +437,7 @@ The first one gives us the number of characters in the string `a = 'some'` (name
 d = '11.32'
 d_flt = float(d)
 ```
-The new variable `d_flt` has type `float`.  (Check this to make sure.)  Similarly, we can convert it back to a string with the statement `d_str = str(d_num)`. We'll see a lot of this kind of thing when we start working with data.  
+The new variable `d_flt` has type `float`.  (Check to make sure.)  Similarly, we can convert it back to a string with the statement `d_str = str(d_num)`. We'll see a lot of this kind of thing when we start working with data.  
 
 
 <!-- ??  https://www.reddit.com/r/Python/comments/3c344g/so_apparently_type_is_of_type_type/ -->
@@ -485,7 +499,7 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 ## Resources  
 
-We thought it would be useful to list our favorites sources of information on the same topics at the end of each chapter, but keep in mind that there's more here than a reasonable person could want.  It's there if you need it, but we think you're generally better off going into depth with one or two and ignoring the rest.  
+We thought it would be useful to list our favorites sources of information on the same topics at the end of each chapter, but keep in mind that **there's more here than a reasonable person could want**.  
 
 With that out of the way, here are some good introductions to basic Python and related topics:   
 

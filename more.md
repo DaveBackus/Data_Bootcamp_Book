@@ -1,4 +1,4 @@
-# Other cool stuff 
+# More cool stuff 
 
 
 ---
@@ -39,6 +39,7 @@ http://blog.ionelmc.ro/2013/06/05/python-debugging-tools/
 
 http://multithreaded.stitchfix.com/blog/2015/07/16/pyxley/
 
+
 ## Scraping websites
 
 Scrapy, Beautful Soup 
@@ -50,7 +51,18 @@ http://www.gregreda.com/tag/scraping.html
 
 
 
-## Natural language 
+## Bokeh 
+
+http://rowanv.com/portfolio/oecd_unemployment/ 
+https://github.com/rowanv/giraffe_viz/blob/master/oecd_unemployment.py 
+
+## Dashboards
+
+This uses flask:  
+http://dash.rowanv.com/
+https://github.com/rowanv/giraffe_dash
+
+## Natural language processing  
 
 Processing text...  
 
@@ -63,9 +75,33 @@ http://www.nyu.edu/projects/politicsdatalab/learning_extra.html
 http://spacy.io/
 
 
+http://ptrckprry.com/course/ssd/nltk-tutorial.pdf
+http://ptrckprry.com/ssd/
+
+
 ## Fuzzy wuzzy 
 
 
+## Large datasets
+
+From Itamar:  I tried playing around with some of the examples below and others I found.
+My key insight is that the data sets are extremely large (at least few GB each), and therefore the way to access the data is by running SQL-lite queries as part of the API request and load to memory only aggregated data. 
+As far as I remember we said SQL is not a focus of this course. For that reason I don't think this data set can be handy for us. 
+Let me know if you guys think otherwise. 
+
+On Thursday, November 19, 2015 at 4:21:05 PM UTC-5, David Backus wrote:
+Data 
+https://data.cityofnewyork.us/
+https://nycopendata.socrata.com/dashboard
+
+Examples 
+https://plot.ly/ipython-notebooks/big-data-analytics-with-pandas-and-sqlite/
+http://iquantny.tumblr.com/
+http://fivethirtyeight.com/features/uber-is-serving-new-yorks-outer-boroughs-more-than-taxis-are/
+http://fivethirtyeight.com/features/how-data-made-me-a-believer-in-new-york-citys-restaurant-grades/
+
+
+Pokemon or Big Data?  https://pixelastic.github.io/pokemonorbigdata/
 
 
 ## Plot.ly 

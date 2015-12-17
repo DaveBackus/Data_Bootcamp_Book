@@ -2,13 +2,14 @@
 
 ---
 
-**Overview.**  Data skills are enormously valuable in the modern world.  We're going to give you those skills, show you how to apply them to economic and financial data, and maybe tell a few bad jokes along the way.  Join us!   
+**Overview.**  Data management skills are enormously valuable in the modern world.  We're going to give you those skills, show you how to apply them to economic and financial data, and maybe tell a few bad jokes along the way.  Join us!   
 
 **Buzzwords.** Python, code, Google fu.  
 
 ---
 
 This book -- and the course we developed it for -- is about data.  It's also about tools for working with data, which in this case means **[Python][10]** and its data-related tools.  Our focus is economic and financial data, which is what we know best, but the same tools can be applied to any data. By the end of the course, you will have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
+
 
 ## Answers to common questions 
 
@@ -20,7 +21,9 @@ This book -- and the course we developed it for -- is about data.  It's also abo
 
 **What if my quant skills are weak or nonexistent?**  Then this is the course for you!  We do our best to make the material accessible.  We’re looking beyond quants to marketing, management, and humanities majors.  One of our design team was an English major.  
 
-**Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to communicate with people who know more and do things yourself that Excel users can only dream about.  You will also be prepared to do more along similar lines, including the extensive collection of courses on **business analytics** and **data science** offered by our [IOMS](http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept/) and [CS](https://www.cs.nyu.edu/web/index.html) groups.  
+**Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to communicate with people who know more and do things yourself that Excel users can only dream about.  And you will be able to work effectively with people who know more.  
+
+**Will this turn me into a data scientist?**  Sadly, no. But you will have a solid foundation for pursuing the many technical topics that fall under the rubrics data science and machine learning.  See, for example, the extensive collection of courses on **business analytics** and **data science** offered by our [IOMS](http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept/) and [CS](https://www.cs.nyu.edu/web/index.html) groups.  
 
 **Should I take this course if I already know how to code?**  You’re welcome to, and you will learn a lot about data  and the data components of Python.  But please don’t scare the other students.  
 
@@ -66,9 +69,10 @@ Writer and programmer Paul Ford [puts it this way](http://www.bloomberg.com/grap
 
 He's alluding here to the vast community of users who are developing tools that allow Python to do all kinds of things.  Python's data tools are an example:  they're not part of the core langauage, they're add-ons developed by users.  He adds:  "Python people are pretty cool," so there's that, too. 
 
+
 ## Work habits
 
-There are no shortcuts in learning how to code.  You simply need to spend hours -- and hours -- doing it.  Progress will seem slow at first, but if you stick with it things will start to look familiar, and even make sense. You may even start to think of projects as fun, and revel in your new-found power over data.  
+There are no shortcuts in learning how to code.  You simply need to spend hours doing it.  Progress will seem slow at first, but if you stick with it things will start to look familiar, and even make sense. You may even start to think of projects as fun, and revel in your new-found power over data.  
 
 As you work your way up the learning curve, keep this advice in mind:  
 
@@ -99,7 +103,7 @@ There are answers in lots of places, but the best one is [Stack Overflow](http:/
 
 **Leap in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means **the work load is heaviest at the start**.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
 
-**Stress the basics, ignore the rest.**  We think once you understand the basics of Python, you'll be in a good position to work out special cases on your own.  That allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
+**Stress the basics, ignore the rest.**  We think once you understand the basics, you'll be in a good position to work out special cases on your own.  That allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
 
 **Learn to teach yourself.**  The best way to learn new things is to teach yourself:  Google your problem and find the resources you need.  We build that attitude in from the start, suggesting ways in which you can solve problems yourself.  But remember:  it also helps to be in a supportive environment, where you can ask for help when you need it.  
 

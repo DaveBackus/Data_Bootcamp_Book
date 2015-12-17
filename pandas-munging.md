@@ -19,53 +19,60 @@ The idea is to get going, cover details later.
 
 The idea is to start with what we want the end product to be:  to apply, in the words of a colleague, the **want operator**.   
 
-Applications:  growth by decade, debt, ... 
-
 
 ## Reminders
 
-Methods...
-
-DataFrames
-
-Series 
+DataFrames:  index, columns 
 
 
-## Variable types 
 
-dtypes 
-
-conversion 
-
-## Pandas as Excel 
+## Test cases 
 
 
-## Datasets
+WEO 
 
-WEO, Chipotle, ... 
+Teaching data 
 
 
-## Selection on indexes 
+IMDb data from Rhodes...  
+
+
+## Setting the index 
+
+
+
+## Multi-indexes 
+
+WEO 
+
+
+## Renaming variables 
+
+
+## Selecting variables (columns)
+
+
+## Selecting observations (rows)
 
 http://stackoverflow.com/questions/31593201/pandas-iloc-vs-ix-vs-loc-explanation
 
 
-## Selection on variables 
-
-aka filtering 
+## Grouping data 
 
 
 
-## Columns 
-
-transpose 
+## Combining dataframes 
 
 
 
+## SQL commands	
 
-## Merging
+
+A lot of this reproduces the functionality of a SQL database.  Pandas has added some commands that make this explicit.  
 
 
+
+<!-- 
 We'll talk more about packages later, but for now just put these lines above...
 
 ```python 
@@ -121,6 +128,8 @@ Evidently Pandas is smart...
 
 Auto safety:  http://www.nhtsa.gov/NCSA
 
+--> 
+
 
 ## References 
 
@@ -142,6 +151,8 @@ http://tomaugspurger.github.io/
 http://nbviewer.ipython.org/github/TomAugspurger/PyDataSeattle/tree/master/notebooks/
 
 SQL intro https://www.khanacademy.org/computing/hour-of-code/hour-of-sql/v/welcome-to-sql 
+
+https://www.reddit.com/r/Python/comments/3wa22v/120gb_csv_is_this_something_i_can_handle_in_python/ 
 
 SQL and Pandas:  https://www.youtube.com/watch?v=1uVWjdAbgBg 
 

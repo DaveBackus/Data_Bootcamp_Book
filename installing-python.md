@@ -28,7 +28,7 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 **Step 1. Download the Anaconda installer.** 
 * Click [HERE](http://continuum.io/downloads), or Google "Anaconda downloads."  
 * Scroll to find "Anaconda for Windows" or further down for Macs "Anaconda for OS X."
-* **Find the option for Python 3.5**, NOT Python 2.7 (if you get 2.7, you'll have to start over)
+* **Find the option for Python 3.5.** NOT Python 2.7!  If you get 2.7, you'll have to start over.  
 * Click the 64-bit Graphical Installer to start the download. 
 
 **Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says.  
@@ -36,7 +36,7 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 **Step 3. Find and run Launcher.**  Look or search wherever programs are on your computer.    
  * Windows 7: Click on your "Start" button >>  All Programs >> Anaconda >> Launcher 
  * Windows 8: Type “Launcher” into your search box.  
- * Macs: Finder, Spotlight Search, and Launchpad all work -- whatever you prefer.  
+ * Macs: Finder, Spotlight Search, and Launchpad all work -- whatever you prefer.    
 
 
 **Pro tip.**  Put a shortcut to Launcher in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 

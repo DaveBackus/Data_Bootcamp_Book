@@ -13,19 +13,52 @@
 
 **UNDER CONSTRUCTION**
 
-We continue our overview of Python's core language.  That's not what we'll use, for the most part, but the same concepts show up in data work.  We go through the material quickly, since we're more interested in the general ideas than the details.  
+We continue our overview of Python's core language.  We go through the material quickly, since we're more interested in the general ideas than the details.  
 
 
-## Reminders
+## Reminders 
 
-* Data structures are organizations of data.  Examples:  strings, lists, dataframes. 
+Some things we'll use a lot:
 
-* Slicing strings and lists.  ..
+* Assignments.  We say we assign what's on the right to the thing on the left:  `x = 17.4` assigns the number `17.4` to the variable `x`.  
+
+* Strings and lists.  Strings are collections of characters in quotes:  `'this is a string'`.  Lists are collections of things in square brackets:  `[1, 'help', 3.14159]`. 
+
+* The `type()` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, strings, and lists.  
+
+* Methods and objects.  It's common in Python to work with objects using methods.  (If these words are confusing, go back to the previous chapter.)  We apply the method `justdoit` to the object `x` by typing `x.justdoit`.  
+
+* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook.  That's referred to as "tab completion." 
+
+* Help.  We can get help for a function or method `foo` by typing `foo?` into the IPython console or `foo` in the Object explorer.  Try each of them with the `type()` function to remind yourself how this works.  
+
+And while we're reviewing:   Save the code file for this chapter in your `Data_Bootcamp` directory and open it in Spyder.  
 
 
 ## Advanced slicing 
 
 Cover intervals ...
+
+Recall...  
+
+We can also slice off sequences of characters, but there's another tricky convention to deal with.  Let's see what the following commands do:  
+```python 
+c = 'something'
+print('c[1] is', c[1])
+print('c[1:2] is', c[1:2])
+print('c[1:3] is', c[1:3])
+print('c[1:] is', c[1:])
+```
+The first print statement gives us `o`, the second letter of `something`.  We label it element 1 because we start numbering at zero.  The next one does the same.  Why?  The convention is to stop one before the second number, so this goes from 1 to 1, which is the second letter.  The next line gives us `om`, the second and third letters.  Why third?  Stick with us now, but here's the logic:  we go from 1 to 2 (one less than the second number), which is the second and third letters (we started counting at zero).  
+
+The last line has no second number.  By convention it goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
+
+Are you dizzy yet?  To summarize, the counting conventions for a slice like `c[n1:n2]` work like this:
+
+* We start at zero, so `n1` is really `n1+1`. That means `c[3]` is the fourth character.  
+* We end at `n2-1`, so `c[3:7]` includes characters 4, 5, and 6.   
+
+Some practice problems:  
 
 
 ## Logical expressions 
@@ -67,7 +100,6 @@ print(not_check)
 What is the value of `not_check`?  Explain the logic to your neighbor.  
 
 
-
 **Multiple comparisons.**  We can string together two or more comparisons with the words `and` and `or`.  Consider the code 
 ```python 
 x = 2/3 
@@ -86,13 +118,12 @@ What are the values of `test1` and `test2`?  The expression `conditiona and cond
 
 Now that we know what's true and what's false, we can build that into our code.  Conditional statements allow us to do different things depending on the result of a comparison or Boolean variable:  
 
-	if something is true, then do something.  
-	if something is false, do something else.  
+	if a condition is true, then do something.  
+	if a conditions is false, do something else.  
 
-Here "something" is a comparison or Boolean variable and is either true or false.  	
+Here "a condition" is a comparison or Boolean variable and is either true or false.   	
 
-
-Let's do an example.  We print the square of a number if the number is greater than six (that's the comparison or condition):
+Let's do an example.  We print the square of a number if the number is greater than six (that's the condition or comparison):
 ```python
 x = 7       		# we can change this later and see what happens
 
@@ -320,11 +351,6 @@ Note the comment in triple quotes.
 ** ?? keyword arguments (sep section?) ?? **
 
 
-## Advanced slicing
-
-Ranges, increments, backwards...  
-
-
 ##  More data structures
 
 This whole section is mtyn:  we recommend you skim it and not worry about the details.  We'll review it later as needed when it comes up.  
@@ -341,12 +367,11 @@ The term **[data structure][5]** refers to the organization of a collection of d
 ```python
 names = {'Dave': 'Backus', 'Chase': 'Coleman', 'Spencer': 'Lyon', 'Glenn': 'Okun'}
 ```
-If we try `type(names)`, the reply is `dict`, meaning dictionary.  The components of each pair are referred to as the "key" (the first part) and the value (the second).  
+If we try `type(names)`, the reply is `dict`, meaning dictionary.  The components of each pair are referred to as the "key" (the first part) and the "value" (the second).  
 
 We access the value from the key with syntax of the form: `dict[key]`.  In the example above, we get Glenn's last name by typing `names['Glenn']`.  
 
-
-**Exercise.** Construct a dictionary whose keys are names and values are phone numbers.  How would you access your neighbor's phone number?  
+**Exercise.** Construct a dictionary whose keys are names and values are email addresses.  (Three such pairs is enough to make the point.) How would you access your neighbor's email address?  
 
 
 <!--
@@ -444,7 +469,6 @@ You can find more along these lines in the classic "[PEP8](https://www.python.or
 
 Some programmers are religious about this.  We'd say simply to make your code readable.  
 
-
 <!-- 
 \url{http://www.reddit.com/r/Python/comments/3639nl/what_is_the_most_beautiful_piece_of_python_code/}
 \url{https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/routing.py}  
@@ -457,16 +481,20 @@ See the resources in the previous chapter, especially the link to [Codecademy](h
 
 Additional resources for specific topics:
 
-* The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language," which includes comparisons, conditional statements, and loops.  
+* The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language" that includes comparisons, conditional statements, and loops.  
 
+<!--
 * Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of his course is also quite good.  
 
 * Ditto [Python Tips](http://book.pythontips.com/en/latest/), which starts at a level a bit above where we left off.  Lots of cool stuff if you'd like to push further into Python.  
+-->
 
 * [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
 
-* The [Python Challenge](http://www.pythonchallenge.com/) is for people who like puzzles as well as coding.  
+<!--
+* The [Python Challenge](http://www.pythonchallenge.com/) is for people who like puzzles as well as coding.  Not for the faint of heart.  
+--> 
 
-
+<!--
 Obscure but cool:  https://github.com/cosmologicon/pywat#python-wats 
-  
+--> 
