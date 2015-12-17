@@ -99,7 +99,7 @@ What's going on here?
 
 * The first line takes the value 2 and stores it in `x`.  We say we "assigned" the numerical value 2 to the variable `x`, which is now available for future calculations.  That's really helpful, because we can call on `x` whever we need to use it.  In Excel, we could put something in a cell (say, b7) and refer to it that way, but giving it a name is simpler for many purposes.  
 * The second line assigns the value 3 to a new variable `y`. 
-* The last line takes `x`, divides it by `y`, and stores the result in `z`.   
+* The last line takes `x`, divides it by `y`, and assigns it to the variable `z`.   
 
 All of these lines are "assignments."  
 
@@ -499,9 +499,8 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 ## Resources  
 
-We thought it would be useful to list our favorites sources of information on the same topics at the end of each chapter, but keep in mind that **there's more here than a reasonable person could want**.  
 
-With that out of the way, here are some good introductions to basic Python and related topics:   
+If you'd like another source for comparison, here are some good introductions to basic Python and related topics:   
 
 * Codecademy has an excellent [Introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, you can stop (as far as this course in concerned) when you get to Advanced Topics.    
 

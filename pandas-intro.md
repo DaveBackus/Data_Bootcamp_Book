@@ -5,7 +5,7 @@
 
 **Python tools.**  Import, Pandas.  
 
-**Buzzwords.**  Package, dataframe, series, csv file, mtwn.  
+**Buzzwords.**  Package, dataframe, series, csv file.  
 
 **Applications.**  Income by college major, Greek government debt, cell phone penetration by country. 
 
@@ -17,11 +17,11 @@
 
 We're ready now to look at some data.  We start with getting data into Python, particularly data in spreadsheets.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
 
-You may recall that our canonical program structure consists of data input, data management, and graphics.  We'll spend most of our time here on the first, but touch on the second and produce a simple plot by finding a suitable method.  
+You may recall that our canonical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first, but touch on the second and produce a simple plot by finding a suitable method.  
 
 ## Reminders
 
-* Data structures are organizations of data.  Examples:  strings, lists, dataframes. 
+* Data structures are organizations of data.  Examples:  strings, lists, dictionaries, and now dataframes. 
 
 * Slicing strings and lists.  ..
 
@@ -78,7 +78,7 @@ The first version of `import` is the one we typically use.  We'll see these exam
 import pandas as pd
 import matplotlib.pyplot as plt 
 ```
-You might also go through earlier examples and identify the `import` statements you find.  By convention, they are placed at the top of the program.  What packages or modules have we used?  What do they do?  
+You might also go through earlier chapters and identify the `import` statements you find.  By convention, they are placed at the top of the program.  What packages or modules have we used?  What do they do?  
 
 
 Some fine points:  
