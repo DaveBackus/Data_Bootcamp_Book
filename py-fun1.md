@@ -13,9 +13,13 @@
 
 ---
 
-We're now ready to explore the rudiments of Python.  We'll run across terms like "strings," "objects," and "methods."  Don't panic, it's just jargon.  This is Python, of course, but similar concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
+We're now ready to explore the rudiments of Python.  We're going to **jump right in** to the deep end of the pool.  For a couple weeks, you may feel like you've been dropped into a foreign country where you don't speak the language.  You'll run across terms like "strings," "objects," "methods," and "tab completion."  Don't panic, it's just jargon.  Stick with it for a few weeks and you'll be fine.  Ask questions.  Really, **ask lots of questions**.
 
-The beauty and challenge of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  
+<!-- 
+This is Python, of course, but similar concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
+--> 
+
+The jargon comes with a purpose.  The beauty and challenge of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  
 
 We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  Your first job is to **start Spyder**.  If you don't know what that means, return to the previous chapter. Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "packages," "libraries," or "modules" that allow Python to do more advanced things -- data management and graphics, for example.  Think of them as plug-ins or extensions that we can call on when needed. We'll deal with them later.  
 
@@ -40,7 +44,7 @@ Reminders:  Spyder, IPython...
 
 ## Calculations in Spyder's IPython console 
 
-One of the things we'll do repeatedly in Python is calculations with numbers.  That's a lot of what managing data is all about: adding things up, dividing one thing by another, and so on. We'll do this initially in Spyder's **IPython console**, typically located in the lower right corner (look for a tab with this label).
+We'll do lots of numerical calculations.  That's what managing data is all about: adding things up, dividing one thing by another, and so on. We'll do this initially in Spyder's **IPython console**, typically located in the lower right corner (look for a tab with this label).
 
 To see how calculations work in Python, type these expressions in Spyder's IPython console **one at a time**:
 ```python 
