@@ -1,9 +1,9 @@
 # Python fundamentals 2 
 
 ---
-**Overview.**   More core Python. Part 2.  
+**Overview.**   More core Python. Part 2 of 2.  
 
-**Python tools.**  Comparisons, Boolean variables, conditionals (if, else), advanced slicing, loops (for), function definitions.  
+**Python tools.**  Slicing, comparisons, Boolean variables, conditionals (if, else), loops (for), function definitions.  
 
 **Buzzwords.**  Data structures, list comprehensions, gotchas, PEP8.  
 
@@ -39,6 +39,66 @@ Some things we'll use a lot:
 And while we're reviewing:   Save the code file for this chapter in your `Data_Bootcamp` directory and open it in Spyder.  
 
 
+## Slicing strings and lists 
+
+
+We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, probably because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that **Python starts numbering at zero**.  
+
+
+**Exercise.**  Take the string `a = 'some'`.  What is `a[1]`?  
+
+
+**Slicing strings.** What just happened?  Python starts numbering at zero.  If we want the first item/letter, we use `a[0]`.  If we want the second, we use `a[1]`.  And so on.  We can summarize the numbering convention by writing the word `some` on a piece of paper.  Below them, write the numbers, in order:  0, 1, 2, 3.  Label this row "counting forward."   
+
+We can also count backward, but again Python has its own numbering convention.  If we want the last letter, we use `a[-1]`.  And if we want the one before the last one, we type `a[-2]`.  In this case we get the same answer if we type `a[2]`.  Both give us `'m'`.  
+
+Let's track this "backward" numbering system in our example.  Below the "counting forward" numbers, start another row.  Below the letter `e` write -1.  As we move to the left, we type, -2, -3, -4.  Label this row "counting backward." 
+
+
+**Exercise.** Take the string `firstname = 'Monty'` and write below it the forward and backward counting conventions.  What is the third letter -- `n` -- in each system?   
+
+
+**Exercise.** Find the last letter of the string `lastname = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
+
+
+**Slicing lists.**  We count the same way we did with strings, but the objects here are items in lists rather than characters in strings.  Let's see if we can teach ourselves.  
+
+**Exercise.** Take the list `numberlist = [1, 5, -3]`.  Use slicing to set a variable `first` equal to the first item.  Set another variable `last` equal to the last item.  Set a third variable `middle` equal to the middle item.  
+
+
+## More slicing 
+
+We've seen how to "slice" (extract) an item from a string or list.  Here we'll show how to slice a range of items. For example, slice the last five characters from the string `c = 'something'`.  
+
+Recall that in Python we start counting at zero. If we want the first letter in `c`, we use `c[0]`.  If we want the second, we use `c[1]`.  
+
+If we want more than a single letter, we need to specify the start and end.  Let's look at some examples and see what they do:  
+```python 
+c = 'something'
+print('c[1] is', c[1])
+print('c[1:2] is', c[1:2])
+print('c[1:3] is', c[1:3])
+print('c[1:] is', c[1:])
+```
+Let's go through this line by line: 
+
+* The first print statement gives us `o`, the second letter of `something`.  We label it element 1 because we start numbering at zero.  
+* The next one does the same.  Why?  The convention is to stop one before the second number, so this goes from 1 to 1, which is the second letter.  
+* The following line gives us `om`, the second and third letters.  Why third?  Stick with us now, but here's the logic:  we go from 1 to 2 (one less than the second number), which is the second and third letters (we started counting at zero).  
+* The last line has no second number.  By convention it goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
+
+This is more than a little confusing, so let's summarize.  Take the string `c = 'something'` and write numbers below each letter:  0, 1, 2, 3, 4, 5, 6, 7, 8.  For a slice like `c[n1:n2]`, the counting conventions are:  
+
+* We start at zero, so `n1` is really `n1+1`. That means, for example, that `c[3]` is the fourth character, namely `e`.  
+* We end at `n2-1`, so `c[3:7]` includes characters 4, 5, 6, and 7, namely `ethi`.  Remember: `7` refers to the eighth item, but we end one before that.  (Yikes!) 
+* If `n1` is missing, we start with the first character.  If `n2` is missing, we end with the last item. Thus `c[3:]` gives us the fourth character to the end, namely `ething`.  And `c[:4]` gives us up to the fourth character, namely `some`.  
+
+Some practice:   
+
+**Exercise.** Set `lastname = 'Python'`. Extract the string `'thon'`. 
+
+**Exercise.** Set `numlist = [1, 7, 4, 3]`. Extract the middle two items and assign them to the variable `middle`. Extract all but the first item and assign them to the variable `allbutfirst`.  Extract all but the last item and assign them to the variable `allbutlast`.  
+
 
 ## Logical expressions (comparisons)
 
@@ -47,30 +107,29 @@ Sometimes we want to do one thing if a condition is true, and another if it's fa
 Python -- like all modern programming languages -- has a collection of logical expressions to do things like this.  We refer to such expressions as **comparisons** because they involve the comparison of one thing with another; for example, the date of an observation and the date January 1980.  The result of a comparison is either `True` or `False`.  We refer to true/false variables like this as **Boolean**, a name derived from the 18th century mathematician and logician [George](https://espresso.economist.com/a3e8029408056a0791626262beb1e74d) [Boole](https://en.wikipedia.org/wiki/George_Boole).  
 
 
-**Comparisons.**  Let's try some simple examples to see what we're dealing with.  Suppose we enter `1 > 0` in the IPython console.  What does this mean?  The input and output look like this:
+Let's try some simple examples to see what we're dealing with.  Suppose we enter `1 > 0` in the IPython console.  What does this mean?  The input and output look like this:
 ```python 
 In[1]:  1 > 0
 Out[1]: True
 ```
 The comparison `1 > 0` is interpretted as a question:  Is 1 greater than 0?  The answer is `True`.  If, instead, we enter `1 < 0` the answer is `False`.  
 
-We might wonder how Python treats such things -- what kind of object are we dealing with?  We can check with the `type()` function; for example, `type(1>0)`.  The answer in this case is `bool` (that is, Boolean), the name we give to expressions that take the values `True` and `False`.  (Actually, it says `<class 'bool'>`, but we'll say `bool` or Boolean.)
+We might wonder how Python treats such things.  What kind of object are we dealing with?  We can check with the `type()` function; for example, `type(1>0)`.  The answer in this case is `bool` (that is, Boolean), the name we give to expressions that take the values `True` and `False`.  (Actually, it says `<class 'bool'>`, but we'll say `bool` or Boolean.)
 
-Python comes with a list of "operators" we can use in comparisons.  Common ones include `==` (equals), `>` (greater than), `<=` (less than or equals), and `!=` (not equals).  You can find the complete set in the [Python documentation](https://docs.python.org/3.4/library/stdtypes.html).  We can also reverse comparisons with the word `not`.  For example, `not 1>0` is `False`.  (Think about that for a minute. And remind youself that spaces don't matter in expressions.) 
+Python comes with a list of "operators" we can use in comparisons.  Common ones include `==` (equals), `>` (greater than), `>=` (greater than or equals), and `!=` (not equals).  You can find the complete set in the [Python documentation](https://docs.python.org/3.4/library/stdtypes.html).  We can also reverse comparisons with the word `not`.  For example, `not 1>0` is `False`.  (Think about that for a minute. And remind youself that spaces don't matter in expressions.) 
 
 
 **Exercise.**  What is `2 >= 1`?  `2 >= 2`?  `not 2 >= 1`? If you're not sure, try them in the IPython console and see what you get.  
 
 **Exercise.**  What is the value of `"Sarah" == 'Sarah'`?  Can you explain why?  
 
-
 We can do the same thing with variables.  Suppose we want to compare the values of variables `x` and `y`.  Which one is bigger?  To see how this works, run the code 
 ```python
 x = 2*3
 y = 2**3 
-print('x greater than y is', x >= y)
+print('x greater than y is', x > y)
 ```
-Here `x` is 6 and `y` is 8.  The expression `x >= y` (`x` greater than or equal to `y`) is therefore false.  
+Here `x` is 6 and `y` is 8.  The expression `x > y` (`x` greater than `y`) is therefore false.  
 
 
 We can also assign comparisons to variables.  Here we assign the comparison of `x` and `y` to the variable `test`:  
@@ -78,11 +137,11 @@ We can also assign comparisons to variables.  Here we assign the comparison of `
 ```python
 x = 2*3
 y = 2**3 
-test = x >= y
+test = x > y
 print('test = ', test)
 print('test has type ', type(test))
 ```
-Here we find `test` is `False` and has type `<class 'bool'>`. 
+Here we find that `test` is `False` and has type `<class 'bool'>`. 
 
 
 **Exercise.** What do you think this code produces?  
@@ -120,7 +179,7 @@ Now that we know how to tell whether a comparision is true or false, we can buil
 
 To repeat:  a condition here is a comparison or Boolean variable and is either true or false.  
 
-We use `if` to tell Python what to do if the condition is true, and `else` to do the same if the condition is false.  You might picture a decision tree with two branches, one for true, one for false.  If Apple offers us a job, move to California.  If not, don't move.  
+We use `if` to tell Python what to do if the condition is true, and `else` to do the same if the condition is false.  Picture a decision tree with two branches, one for true, one for false.  If Apple offers us a job, move to California.  If not, stay in New York.  
 
 
 **`if` statements**  tell the program what to do if the condition is true.  Here's an example with the condition `1>0`.  If the condition is true, which it obviously is, then we print "1 is greater than 0."  If the condition is false, we do nothing. The code to do this is 
@@ -259,6 +318,8 @@ Extra credit:  How would you change the program to replace the consonants with a
 * Write a program that tells us the `type` of each element of `stuff`.  
 * Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the function `type` returns the value `str`.
 
+
+?? extract vowels, string what's left together.
 
 <!-- See [reddit](http://www.reddit.com/r/Python/comments/35ubwo/newbie_for_programming_i_am_working_on_this/).  -->
 
@@ -409,42 +470,6 @@ If we try `type(names)`, the reply is `dict`, meaning dictionary.  The component
 We access the value from the key with syntax of the form: `dict[key]`.  In the example above, we get Glenn's last name by typing `names['Glenn']`.  
 
 **Exercise.** Construct a dictionary whose keys are names and values are email addresses.  (Three such pairs is enough to make the point.) How would you access your neighbor's email address?  
-
-
-
-## Advanced slicing 
-
-We saw earlier how to "slice" (extract) an item from a string or list.  Here we'll show how to slice a range of items. For example, slice the last five characters from the string `c = 'something'`.  
-
-Recall that in Python we start counting at zero. If we want the first letter in `c`, we use `c[0]`.  If we want the second, we use `c[1]`.  That's a little strange, at first, but we'll get used to it. 
-
-If we want more than a single letter, we need to specify the start and end.  Let's look at some examples and see what they do:  
-```python 
-c = 'something'
-print('c[1] is', c[1])
-print('c[1:2] is', c[1:2])
-print('c[1:3] is', c[1:3])
-print('c[1:] is', c[1:])
-```
-Let's go through this line by line: 
-
-* The first print statement gives us `o`, the second letter of `something`.  We label it element 1 because we start numbering at zero.  
-* The next one does the same.  Why?  The convention is to stop one before the second number, so this goes from 1 to 1, which is the second letter.  
-* The following line gives us `om`, the second and third letters.  Why third?  Stick with us now, but here's the logic:  we go from 1 to 2 (one less than the second number), which is the second and third letters (we started counting at zero).  
-* The last line has no second number.  By convention it goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
-
-This is more than a little confusing, so let's summarize.  Take the string `c = 'something'` and write numbers below each letter:  0, 1, 2, 3, 4, 5, 6, 7, 8.  For a slice like `c[n1:n2]`, the counting conventions are:  
-
-* We start at zero, so `n1` is really `n1+1`. That means, for example, that `c[3]` is the fourth character, namely `e`.  
-* We end at `n2-1`, so `c[3:7]` includes characters 4, 5, 6, and 7, namely `ethi`.  Remember: `7` refers to the eighth item, but we end one before that.  (Yikes!) 
-* If `n1` is missing, we start with the first character.  If `n2` is missing, we end with the last item. Thus `c[3:]` gives us the fourth character to the end, namely `ething`.  And `c[:4]` gives us up to the fourth character, namely `some`.  
-
-Some practice:   
-
-**Exercise.** Set `lastname = 'Python'`. Extract the string `'thon'`. 
-
-**Exercise.** Set `numlist = [1, 7, 4, 3]`. Extract the middle two items and assign them to the variable `middle`. Extract all but the first item and assign them to the variable `allbutfirst`.  Extract all but the last item and assign them to the variable `allbutlast`.  
-
 
 
 <!--
