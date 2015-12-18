@@ -3,9 +3,9 @@
 ---
 **Overview.**   More core Python. Part 2 of 2.  
 
-**Python tools.**  Slicing, comparisons, Boolean variables, conditionals (if, else), loops (for), function definitions.  
+**Python tools.**  Boolean variables, comparisons, conditionals (if, else), slicing, loops (for), function definitions.  
 
-**Buzzwords.**  Data structures, list comprehensions, gotchas, PEP8.  
+**Buzzwords.**  Code block, data structures, list comprehension, gotcha, PEP8.  
 
 **Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_fundamentals_2.py).
 
@@ -15,12 +15,12 @@
 **UNDER CONSTRUCTION**
 -->
 
-We continue our overview of Python's core language, which lays a foundation for the rest of the course.  We go through the material quickly, since we're more interested in the general ideas than the details.  
+We continue our overview of Python's core language, which lays a foundation for the rest of the course.  We go through the material quickly, since we're more interested in the general ideas than the details.  And remember: you'll feeel like you're drinking from a fire hose, but it will sink in if you **stick with it**.  
 
 
 ## Reminders 
 
-Some things we'll use a lot:
+Some things from previous chapters that we'll use a lot:
 
 * Assignments.  We say we assign what's on the right to the thing on the left:  `x = 17.4` assigns the number `17.4` to the variable `x`.  
 
@@ -28,76 +28,15 @@ Some things we'll use a lot:
 
 * The `type()` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, strings, and lists.  
 
-* Methods and objects.  It's common in Python to work with objects using methods.  (If these words are confusing, go back to the previous chapter.)  We apply the method `justdoit` to the object `x` by typing `x.justdoit`.  
+* Methods and objects.  It's common in Python to work with objects using methods.  We apply the method `justdoit` to the object `x` by typing `x.justdoit`.  
 
-* Spyder.  An environment for writing Python programs.  The various windows include an editor, an IPython console, and the Object explorer.  If these terms are mysterious to you, return to the previous chaper.  
+* Spyder.  An environment for writing Python programs.  The various windows include an editor, an IPython console, and the Object explorer.   
 
-* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook.  That's referred to as "tab completion." 
+* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook.  We call that "tab completion." 
 
 * Help.  We can get help for a function or method `foo` by typing `foo?` into the IPython console or `foo` in the Object explorer.  Try each of them with the `type()` function to remind yourself how this works.  
 
 And while we're reviewing:   Save the code file for this chapter in your `Data_Bootcamp` directory and open it in Spyder.  
-
-
-## Slicing strings and lists 
-
-
-We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, probably because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that **Python starts numbering at zero**.  
-
-
-**Exercise.**  Take the string `a = 'some'`.  What is `a[1]`?  
-
-
-**Slicing strings.** What just happened?  Python starts numbering at zero.  If we want the first item/letter, we use `a[0]`.  If we want the second, we use `a[1]`.  And so on.  We can summarize the numbering convention by writing the word `some` on a piece of paper.  Below them, write the numbers, in order:  0, 1, 2, 3.  Label this row "counting forward."   
-
-We can also count backward, but again Python has its own numbering convention.  If we want the last letter, we use `a[-1]`.  And if we want the one before the last one, we type `a[-2]`.  In this case we get the same answer if we type `a[2]`.  Both give us `'m'`.  
-
-Let's track this "backward" numbering system in our example.  Below the "counting forward" numbers, start another row.  Below the letter `e` write -1.  As we move to the left, we type, -2, -3, -4.  Label this row "counting backward." 
-
-
-**Exercise.** Take the string `firstname = 'Monty'` and write below it the forward and backward counting conventions.  What is the third letter -- `n` -- in each system?   
-
-
-**Exercise.** Find the last letter of the string `lastname = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
-
-
-**Slicing lists.**  We count the same way we did with strings, but the objects here are items in lists rather than characters in strings.  Let's see if we can teach ourselves.  
-
-**Exercise.** Take the list `numberlist = [1, 5, -3]`.  Use slicing to set a variable `first` equal to the first item.  Set another variable `last` equal to the last item.  Set a third variable `middle` equal to the middle item.  
-
-
-## More slicing 
-
-We've seen how to "slice" (extract) an item from a string or list.  Here we'll show how to slice a range of items. For example, slice the last five characters from the string `c = 'something'`.  
-
-Recall that in Python we start counting at zero. If we want the first letter in `c`, we use `c[0]`.  If we want the second, we use `c[1]`.  
-
-If we want more than a single letter, we need to specify the start and end.  Let's look at some examples and see what they do:  
-```python 
-c = 'something'
-print('c[1] is', c[1])
-print('c[1:2] is', c[1:2])
-print('c[1:3] is', c[1:3])
-print('c[1:] is', c[1:])
-```
-Let's go through this line by line: 
-
-* The first print statement gives us `o`, the second letter of `something`.  We label it element 1 because we start numbering at zero.  
-* The next one does the same.  Why?  The convention is to stop one before the second number, so this goes from 1 to 1, which is the second letter.  
-* The following line gives us `om`, the second and third letters.  Why third?  Stick with us now, but here's the logic:  we go from 1 to 2 (one less than the second number), which is the second and third letters (we started counting at zero).  
-* The last line has no second number.  By convention it goes to the end.  So the slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
-
-This is more than a little confusing, so let's summarize.  Take the string `c = 'something'` and write numbers below each letter:  0, 1, 2, 3, 4, 5, 6, 7, 8.  For a slice like `c[n1:n2]`, the counting conventions are:  
-
-* We start at zero, so `n1` is really `n1+1`. That means, for example, that `c[3]` is the fourth character, namely `e`.  
-* We end at `n2-1`, so `c[3:7]` includes characters 4, 5, 6, and 7, namely `ethi`.  Remember: `7` refers to the eighth item, but we end one before that.  (Yikes!) 
-* If `n1` is missing, we start with the first character.  If `n2` is missing, we end with the last item. Thus `c[3:]` gives us the fourth character to the end, namely `ething`.  And `c[:4]` gives us up to the fourth character, namely `some`.  
-
-Some practice:   
-
-**Exercise.** Set `lastname = 'Python'`. Extract the string `'thon'`. 
-
-**Exercise.** Set `numlist = [1, 7, 4, 3]`. Extract the middle two items and assign them to the variable `middle`. Extract all but the first item and assign them to the variable `allbutfirst`.  Extract all but the last item and assign them to the variable `allbutlast`.  
 
 
 ## Logical expressions (comparisons)
@@ -112,24 +51,25 @@ Let's try some simple examples to see what we're dealing with.  Suppose we enter
 In[1]:  1 > 0
 Out[1]: True
 ```
-The comparison `1 > 0` is interpretted as a question:  Is 1 greater than 0?  The answer is `True`.  If, instead, we enter `1 < 0` the answer is `False`.  
+The comparison `1 > 0` is interpretted as a question:  Is 1 greater than 0?  The answer is `True`.  If we enter `1 < 0` instead,the answer is `False`.  
 
-We might wonder how Python treats such things.  What kind of object are we dealing with?  We can check with the `type()` function; for example, `type(1>0)`.  The answer in this case is `bool` (that is, Boolean), the name we give to expressions that take the values `True` and `False`.  (Actually, it says `<class 'bool'>`, but we'll say `bool` or Boolean.)
 
-Python comes with a list of "operators" we can use in comparisons.  Common ones include `==` (equals), `>` (greater than), `>=` (greater than or equals), and `!=` (not equals).  You can find the complete set in the [Python documentation](https://docs.python.org/3.4/library/stdtypes.html).  We can also reverse comparisons with the word `not`.  For example, `not 1>0` is `False`.  (Think about that for a minute. And remind youself that spaces don't matter in expressions.) 
+A comparison is a Python object, but what kind of object is it?  We can check with the `type()` function; for example, `type(1>0)`.  The answer in this case is `bool` (that is, Boolean), the name we give to expressions that take the values `True` and `False`.  (Actually, it says `<class 'bool'>`, but `bool` is enough to make the point.)
+
+Python comes with a list of "operators" we can use in comparisons.  Common ones include `==` (equals), `>` (greater than), `>=` (greater than or equals), and `!=` (not equals).  You can find the complete set in the [Python documentation](https://docs.python.org/3.4/library/stdtypes.html).  We can also reverse comparisons with the word `not`.  For example, `not 1>0` is `False`.  (Think about that for a minute. And remind yourself that spaces don't matter in Python expressions.) 
 
 
 **Exercise.**  What is `2 >= 1`?  `2 >= 2`?  `not 2 >= 1`? If you're not sure, try them in the IPython console and see what you get.  
 
 **Exercise.**  What is the value of `"Sarah" == 'Sarah'`?  Can you explain why?  
 
-We can do the same thing with variables.  Suppose we want to compare the values of variables `x` and `y`.  Which one is bigger?  To see how this works, run the code 
+We can do the same thing with variables.  Suppose we want to compare the values of variables `x` and `y`.  Which one is bigger?  To see how this works, we run the code 
 ```python
 x = 2*3
 y = 2**3 
 print('x greater than y is', x > y)
 ```
-Here `x` is 6 and `y` is 8.  The expression `x > y` (`x` greater than `y`) is therefore false.  
+Here `x = 6` and `y = 8`, so the expression `x > y` (`x` greater than `y`) is false.  
 
 
 We can also assign comparisons to variables.  Here we assign the comparison of `x` and `y` to the variable `test`:  
@@ -182,7 +122,7 @@ To repeat:  a condition here is a comparison or Boolean variable and is either t
 We use `if` to tell Python what to do if the condition is true, and `else` to do the same if the condition is false.  Picture a decision tree with two branches, one for true, one for false.  If Apple offers us a job, move to California.  If not, stay in New York.  
 
 
-**`if` statements**  tell the program what to do if the condition is true.  Here's an example with the condition `1>0`.  If the condition is true, which it obviously is, then we print "1 is greater than 0."  If the condition is false, we do nothing. The code to do this is 
+**`if` statements**  tell the program what to do if the condition is true.  Here's an example with the condition `1 > 0`.  If the condition is true, which it obviously is, then we print "1 is greater than 0."  If the condition is false, we do nothing. The code to do this is 
 ```python
 if 1 > 0:
     print('1 is greater than 0')
@@ -190,15 +130,15 @@ if 1 > 0:
 The syntax here is precise:  
 
 * The `if` statement **ends with a colon**. That's standard Python syntax, we'll see it again.  It's not optional.  
-* The "code block" that follows (here one line) is **indented exactly four spaces**.  That's standard, too, and also not optional. Spyder does it automatically.  
+* The code that follows is **indented exactly four spaces**.  We refer to it as a **code blcok**, but here it's just one line.  Indentation is standard, too, and also not optional. Spyder does it automatically.  
 
-Both of these features -- colon at the end of the first line, indent the rest four spaces -- show up in lots of Python code.  It's very compact, and the indentation makes the code easy to read.  
+Both of these features -- a colon at the end of the first line, indent the rest four spaces -- show up in lots of Python code.  It's very compact, and the indentation makes the code easy to read.  
 
 
 **Exercise.**  Change the code to 
 ```python
-if 1 > 2:
-    print('1 is greater than 2')  
+if 1 < 0:
+    print('1 is less than 0')  
 ``` 
 What do you think happens?  Try it and see.  
 
@@ -212,26 +152,26 @@ if x > 6:
 
 print('Done!')
 ``` 
-Here we've set `x = 7`, which makes the condition `x > 6` true.  The `if` statement then directs the program to print `x`.  The blank lines are optional; they make the code easier to read, which is generally a good thing.  The statement `print('Done!')` is just there to tell us that the program ran.  
+Here we've set `x = 7`, which makes the condition `x > 6` true.  The `if` statement then directs the program to print `x`.  The blank lines are optional; they make the code easier to read, which is generally a good thing.  The statement `print('Done!')` is just there to tell us that the program finished.  
 
 
-**Exercise.** What happens if we set `x=4` at the top?  How do we know?  
+**Exercise.** What happens if we set `x = 4` at the top?  How do we know?  
 
 
-**`else` statements** tell the program what to do if the condition is false.  If we want to do one thing if a condition is true, and another if it is false, we would use `if` for the first and `else` for the second.  The second part has been missing so far.  We can add it by using an `else` statement.  Here's an example:  
+**`else` statements** tell the program what to do if the condition is false.  If we want to do one thing if a condition is true, and another if it is false, we would use `if` for the first and `else` for the second.  The second part has been missing so far.  Here's an example:  
 ```python 
 x = 7
 
 condition = x > 6 
 
 if condition:
-    print('x =', x)                         # do if true 
-    print(x>6)
+    print('if branch')             # do if true 
+    print(condition)
 else:
-    print('x is not > 6 ( x =', x, ')')     # do if false 
-    print(x>6)
+    print('else branch')           # do if false 
+    print(condition)
 ```
-The `else` statement adds the second branch to the decision tree:  what to do if the condition is false.  Try this with `x=4` and `x=7`.  We've added print statements for the condition `x>6` to show what they look like.  
+The `else` statement adds the second branch to the decision tree:  what to do if the condition is false.  Try this with `x = 4` and `x = 7` to see both branches in action.   
 
 
 **Exercise.** Start with the assignments
@@ -242,9 +182,68 @@ name2 = 'Glenn'
 (The names on the right can be anything, but let's start with these.)  Write a program using `if` and `else` that prints the name that comes first in alphabetical order.  
 
 
+## Slicing strings and lists 
+
+
+We can access the elements of strings and lists by specifying the item number in square brackets. This operation is referred to as **slicing**, probably because we're slicing off pieces, like a cake.  The only tricky part of this is remembering that **Python starts numbering at zero**.  
+
+
+**Exercise.**  Take the string `a = 'some'`.  What is `a[1]`?  
+
+
+What just happened?  Python starts numbering at zero.  If we want the first item/letter, we use `a[0]`.  If we want the second, we use `a[1]`.  And so on.  We can summarize the numbering convention by writing the word `some` on a piece of paper.  Below it, write the numbers, in order:  0, 1, 2, 3.  Label this row "counting forward."   
+
+We can also count backward, but again Python has its own numbering convention.  If we want the last letter, we use `a[-1]`.  And if we want the one before the last one, we type `a[-2]`.  In this case we get the same answer if we type `a[2]`.  Both give us `'m'`.  
+
+Let's track this "backward" numbering system in our example.  Below the "counting forward" numbers, start another row.  Below the letter `e` write -1.  As we move to the left, we type, -2, -3, -4.  Label this row "counting backward." 
+
+
+**Exercise.** Take the string `firstname = 'Monty'` and write below it the forward and backward counting conventions.  What is the third letter -- `n` -- in each system?  
+
+
+**Exercise.** Find the last letter of the string `lastname = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
+
+
+We can do the same thing with lists, but the items here are the elements of a list rather than the characters in a string.  The counting works the same way.  Let's see if we can teach ourselves.  
+
+**Exercise.** Take the list `numberlist = [1, 5, -3]`.  Use slicing to set a variable `first` equal to the first item.  Set another variable `last` equal to the last item.  Set a third variable `middle` equal to the middle item.  
+
+
+## More slicing 
+
+We've seen how to "slice" (extract) an item from a string or list.  Here we'll show how to slice a range of items. For example, slice the last five characters from the string `c = 'something'`.  
+
+Recall that in Python we start counting at zero. If we want the first letter in `c`, we use `c[0]`.  If we want the second, we use `c[1]`.  
+
+If we want more than a single letter, we need to specify both the start and the end.  Let's try some examples and see what they do:  
+```python 
+c = 'something'
+print('c[1] is', c[1])
+print('c[1:2] is', c[1:2])
+print('c[1:3] is', c[1:3])
+print('c[1:] is', c[1:])
+```
+Let's go through this line by line: 
+
+* The first print statement gives us `o`, the second letter of `something`. It's element 1 because we start numbering at zero.  
+* The next one does the same.  Why not two letters?  Let's try another one and see.  
+* The following line gives us `om`, the second and third letters.  Why?  Perhaps you figured it out.  If not, this is the logic:  the second number in `1:3`, namely `3`, is **one more than the end**.  So the range `1:3` gives us the second and third letters.  Confusing, for sure, but that's how it works.   
+* The last line has no second number.  By convention it goes all the way to the end.  The slice `c[1:]` goes from the second letter (the first number 1) to the end, giving us `omething`.  
+
+
+Some practice:   
+
+**Exercise.** Set `lastname = 'Python'`. Extract the string `'thon'`. 
+
+**Exercise.** Set `numlist = [1, 7, 4, 3]`. Extract the middle two items and assign them to the variable `middle`. Extract all but the first item and assign them to the variable `allbutfirst`.  Extract all but the last item and assign them to the variable `allbutlast`.  
+
+**Exercise.**  Take the string `c = 'something'`.  What is `c[:3] + c[3:]`?  
+
+
+
 ## Loops over lists and strings (`for`)
 
-There are lots of times we want to do the same thing many times, either on one object or on many similar objects.  An example of the former is to find an answer to progressively higher degrees of accuracy.  We repeat an operation as many times as we need to get a desired degree of accuracy.  An example of the latter is to print out a list of names, one at a time.  Both situations come up a lot.
+There are lots of times we want to do the same thing many times, either on one object or on many similar objects.  An example of the latter is to print out a list of names, one at a time.  An example of the former is to find an answer to progressively higher degrees of accuracy.  We repeat an operation as many times as we need to get a desired degree of accuracy.  Both situations come up a lot.
 
 Here's an example in which we print all the items in a list, one at a time:  
 ```python
@@ -253,13 +252,21 @@ namelist = ['Chase', Dave', 'Sarah', 'Spencer']
 for item in namelist:
    print(item)
 ```
-Let's work through this piece by piece:
+The produces the output 
+```python 
+Chase
+Dave
+Sarah
+Spencer
+```
+Let's go through the code line by line:  
 
+* The first line creates the list `namelist`.  Nothing new here.  
 * The `for` statement goes through the items in the list one at a time.  As with `if` statements, it ends with a colon.  The variable name `item` is arbitrary.  
-* The code block that follows (here one line) is indented exactly four spaces.  
+* The line that follows is indented exactly four spaces.  
+* If there's code after this, we would typically leave a blank line in between.  That's convention, not neccessity.  
 
-If there's code after this, we would typically leave a blank line in between.  That's convention, not neccessity.  
-
+Note that `item` changes value as we go through the loop.  It's a variable who value actually varies.  
 
 We say here that we **iterate** over the items in the list and refer to the list as an **iterable**:  that is, something we can iterate over.  The terminology isn't important, but that's what it means if you run across it.  
 
@@ -276,7 +283,7 @@ for num in numlist:
     
 print(sum)     
 ``` 
-The answer is 7.  
+The answer (of course) is 7.  
 
 **Exercise.** Adapt the example to compute the average of the elements of `numlist`.  
 
@@ -287,7 +294,8 @@ word   = 'anything'
 for letter in word:
     print(letter) 
 ```
-(Surely we can think of something more interesting than this!)  
+(You might think we could come up with a more interesting example than this.  Sadly no.)  
+
 
 
 **Example.**  Here's one that combines a `for` loop with an `if` statement to identify and print the vowels in a word:  
@@ -309,7 +317,6 @@ for letter in word:
     if letter not in vowels:
         print(letter)
 ```
-Extra credit:  How would you change the program to replace the consonants with asterisks?
 
 
 **Exercise.**  Take the list `stuff = ['cat', 3.7, 5, 'dog']`.   This is somewhat demanding, but give it a try.  
@@ -319,49 +326,78 @@ Extra credit:  How would you change the program to replace the consonants with a
 * Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the function `type` returns the value `str`.
 
 
-?? extract vowels, string what's left together.
 
-<!-- See [reddit](http://www.reddit.com/r/Python/comments/35ubwo/newbie_for_programming_i_am_working_on_this/).  -->
+<!-- See [reddit](http://www.reddit.com/r/Python/comments/35ubwo/newbie_for_programming_i_am_working_on_this/).  
+?? also:  extract vowels, string what's left together.
+-->
 
 
-**List comprehensions.**  That's a mouthful of jargon, but the idea is that we can use implicit loops.  (This is another thing that doesn't work in Python 2, so make sure you have Python 3 installed.)  Consider, for example, the loop above that prints out the elements of the list {\tt fruit} one at a time.  A list comprehension is a more compact syntax for the same thing:  `[print(item) for item in fruit]`.  As with loops, the variable `item` is a dummy:  we can use any name we wish.  
 
+<!-- 
+**List comprehensions.**  That's a mouthful of jargon, but the idea is that we can use implicit loops.  (This is another thing that doesn't work in Python 2, so make sure you have Python 3 installed.)  Consider, for example, the loop above that prints out the elements of the list `namelist` one at a time.  A list comprehension is more compact syntax for the same thing.
+
+**Example.** Take the list `fruit = ['apple', 'banana', 'clementine']`.  Here's a list comprehension that prints the elements of `fruit`:  
+```python
+[print(item) for item in fruit]
+```
+Try it and see.  As with loops, the variable `item` is a dummy:  we can use any name we wish.  
+-->
 
 
 ## Loops over counters 
 
-What does this do?  The variable label `name` here is arbitrary, we can use anything we like.  The expression `range(n)` is new.  It's a built-in Python function that sets up a sequence of integers of length `n`.  With standard Python logic, it goes from zero to `n-1`.  The word `for` tells the program to do the commands that follow for all the values of `number` specified by `range(11)`;  that is, for integer values between zero and ten:  0, 1, 2, 3, ..., 10.  The print statement reports the result.  
+We now know how loops work.  There's one small variant that's worth explaining:  loops that do something a fixed number of times. For example, we might to sum or average the values of a variable.  Or value a bond with a fixed number of coupon payments.  Or something. 
 
 
-Here's an example:  compute and print the squares of whole numbers (integers) up to ten.  ([Paul Ford](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) adds:  "just the sort of practical, useful program that always appears in programming tutorials to address the needs of people who urgently require a list of squares.")   We can do that with a `for` loop:
+The new ingredient here is the `range()` function. `range(n)` gives us all the integers (whole numbers) from `0` to `n-1`.  (If that sounds strange, remind yourself how slicing works.)  And `range(n1, n2)` gives us all the whole numbers from `n1` to `n2-1`.  We can use it in lots of ways, but loops are a prime example.  
+
+
+Some examples illustrate how this works:  
+
+
+**Example.** This is one of the simplest uses of `range()` in a loop: 
+```python
+for number in range(5)
+    print(number)
+```
+It prints out the numbers 0, 1, 2, 3, and 4.  (Can you see why?  Why doesn't it go to 5?)  This is like our earlier loops, but `range(11)` has replaced a list or string as the "iterable."  
+
+Here's a minor variant:  
+```python
+for number in range(2,5)
+    print(number)
+```
+It prints out the numbers 2, 3, and 4.  
+
+
+**Example.** We compute and print the squares of integers up to ten.  ([Paul Ford](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) notes:  "just the sort of practical, useful program that always appears in programming tutorials to address the needs of people who urgently require a list of squares.")   We do that with a `for` loop and the `range()` function:  
 ```python 
 for number in range(11):
     square = number**2
-    print(square)
+    print('Number and its square:', number, square)
 ```
-What does this do?  The variable name `number` is arbitrary, we can use any name we like.   The expression `range(n)` is new.  It's a built-in Python function that sets up a sequence of integers of length `n`.  With standard Python logic, it goes from zero to `n-1`.  The word `for` tells the program to do the commands that follow for all the values of `number` specified by `range(11)`;  that is, for integer values between zero and ten:  0, 1, 2, 3, ..., 10.  The print statement reports the result.  
+Again we start at zero and work our way up to ten.  
 
 
-The syntax is similar to `if` statements:
-
-* The initial `for` statement ends with a colon.
-* The following statements are indented (exactly) four spaces.
-* The end is signalled by the end of the indentation. 
-* A blank line at the end makes the code easier to read.
-
-
-**Example.** Here's a loop that computes the sum of integers up to ten:  1 + 2 + 3 + ... + 10:
+**Example.** Here we compute the sum of integers from one to ten:  
 ```python
 sum = 0 
-for num in range(11):
+for num in range(1,11):
     sum = sum + num 
 
 print(sum)
 ```
-This includes the number zero in the sum, but, of course, that makes no difference in this case.  We can change that if we wish by using `range(1,11)`, which ranges from 1 to 10.  (If this sounds strange to you, remind yourself how numbering works in Python.  Or go back to the subsection on slicing in the previous chapter.)
+The answer is 55.  
+
+**Example.** Here's one that combines a loop and an an `if` statement:
+```python
+for num in range(10):
+    if num > 5:
+       print num 
+```
 
 
-**Exercise.** Write a loop that computes the sum of integers up to some arbitrary number `n`.  
+**Exercise.**  Write a loop that computes the first five powers of two.  
 
 
 **Example.**  Consider a bond that pays annual coupons for a given number of years (the maturity) and a principal of 100 at the end.  The yield-to-maturity is the rate at which these payments are discounted.  Given values for the coupon and the yield, the price of the bond is 
@@ -379,12 +415,13 @@ print('The price of the bond is', price)
 ```
 The answer is 100, which we might know because the coupon and yield are the same once we convert the latter to a percentage.  Python gives us `99.99999999999997`, which is close enough.  
 
-**Digression.**  When we wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as "invalid syntax" with a warning sign to the left of the text.  Evidently the name `yield` is reserved for something else.  As general rule, it's a good idea to pay attention to the hints Spyder gives us.  
+
+**Digression.**  When we wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as "invalid syntax" with a warning sign to the left of the text.  Evidently the name `yield` is reserved for something else.  As general rule, it's a good idea to pay attention to the hints like this.  
+
+**Exercise.** In Portugal and Greece, policymakers have suggested reducing their debt by cutting the coupon payments and extending the maturity.  How much do we reduce the value of the debt if we reduce the coupons to 2 and increase the maturity to 20?   
 
 
-**Exercise.** In Portugal and Greece, policymakers have suggested reducing the debt by cutting the coupon payments and extending the maturity.  How much do we reduce the value of the debt if we reduce the coupons to 2 and increase the maturity to 20?  
-
-
+<!-- 
 **Loop with condition.**  Sometimes we want to go through a loop until some condition is met.  This combination of a loop and a condition requires an extra level of indenting, but is otherwise just a combination of things we've seen before.  
 
 Here's an example.  Suppose we want to compute the sum of integers until the sum reaches 100.  We could use the code 
@@ -400,6 +437,7 @@ for num in range(maxnum):
 print('At num =', num, 'we had sum =', sum)
 ```
 The `if` statement starts with a colon and the statement following it (`break`) is indented four spaces more (eight in total).  `break` is a special command that ends a loop early.  
+-->
 
 <!--
 **Exercise.**  [??] 
@@ -408,68 +446,80 @@ The `if` statement starts with a colon and the statement following it (`break`) 
 
 ## Defining our own functions
 
-It's easy to create our own functions -- experienced programmers do it all the time.  A common view is that you should never copy lines of code.  If you're copying, you're repeating yourself.  What you should do instead is write a function once and use it twice.  More than that, breaking a long program into a small number of functions makes code easier for others to read, which is always a good thing.  
+It's easy to create our own functions -- experienced programmers do it all the time.  A common view is that you should never copy lines of code.  If you're copying, you're repeating yourself.  What you should do instead is **write a function once and use it twice**.  More than that, breaking a long program into a small number of functions makes code easier for others to read, which is always a good thing.  As we become more comfortable with Python, we'll use functions more and more. 
 
-A function has three components:  a name (what we call it), its input (a list of arguments), and its output (what it produces from the input).  Here's a classic example:    
+
+The simplest functions have two components:  a **name** (what we call it) and a list of **input arguments**.  Here's an example:    
 ```python 
-def hello(firstname):  
+def hello(firstname):               # define the function
     print('Hello,', firstname)    
 
-somename = 'Chase'   
-hello(somename) 
+hello('Chase')                      # use the function 
 ```    
-The initial `def` statement defines the function, names it `hello`, identifies the input as `firstname`, and ends with a colon (:). The following statements are indented by the usual four spaces and specify what the function does.  In this case, it prints `Hello,` followed by whatever `firstname` hapens to be.  Python understands that the function ends when the indentation ends.  The last two lines in our code block define the string `somename = 'Chase'` and call the function with `somename` as the input argument.  Note that the name in the function's definition and its use need not be the same. 
+Let's go through this line by line:
 
-By convention (but not necessity), Python aficionados put two blank lines before and after function definitions to make then stand out more clearly.  We used one to save space, but would typically use two.  
+* The initial `def` statement defines the function, names it `hello`, identifies the input as `firstname`, and ends with a colon (:). 
+* The following statement(s) are indented the usual four spaces and specify what the function does.  In this case, it prints `Hello,` followed by whatever `firstname` hapens to be.  Python understands that the function ends when the indentation ends.  
+* The last line "calls" the function with input `Chase`.  Note that the name in the function's definition and its use need not be the same. 
+
+By convention, Python aficionados put two blank lines before and after function definitions to make then stand out more clearly.  We use one here to save space, but would typically use two.  
 
 
-Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output.  It simply prints the input.  In other cases, we might want to send output back to the main program.  We do that with the `return` command.  Here's an example:  
+Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output.  It simply prints the input.  In other cases, we might want to send output back to the main program.  We do that with a **return**, a third component of a function definition.  Here's an example:  
 ```python 
 def combine(first, last): 
 	"""
 	Function takes strings 'first' and 'last' and returns new string 'last, first'
 	"""
 	lastfirst = last + ', ' + first 
-    return lastfirst 
+    return lastfirst                    # this is what the function sends back 
 
-first = 'Chase' 
-last = 'Coleman'
-both = combine(first, last)
+both = combine('Chase', 'Coleman')      # assign the "return" to both 
 print(both)
 ```   
-Note the comment in triple quotes. 
+This "returns" the output `'Coleman, Chase'`, which we assign to the variable `both`.  Note the comment in triple quotes. 
 
-**Exercise.**  What do you think this code does?  Run it and see.  
-
-**Exercise.**  Write a function that takes an integer as an input (say, 2010) and returns a string of the next year (say, 2011). 
-
-**Exercise (bond price).** Write a function that takes a bond's maturity, coupon, and yield as inputs and returns its price.  
+The return is an essential component of many functions.  Typically when we read the documentation for a function or method, one of the first things we look for is what it returns.   
 
 
+**Exercise.**  Create and test a function `nextyear` that takes an integer year (say 2015) and returns the following year (2016).  
+
+**Exercise.**  Create and test a function that takes an integer year (say, 2015) and returns a string of the next year (say, `'2016'`). 
+
+
+<!--
 ** ?? keyword arguments (sep section?) ?? **
+-->
 
 
 ##  More data structures
 
 This whole section is mtwn:  we recommend you skim it and not worry about the details.  We'll review it later as needed when it comes up.  
 
-The term **[data structure][5]** refers to the organization of a collection of data.  A list is a data structure, and we'll run across **dataframes** when we start working with data.  Here are  a couple more basic ones.  
+The term **[data structure][5]** refers to the organization of a collection of data.  Strings and lists are data structures, and we'll run across **dataframes** when we start working with data.  Here we look at a couple more:  dictionaries and tuples. 
 
 [5]: http://en.wikipedia.org/wiki/Data_structure
 
 
-**Tuples.** Tuples are collections of things in parentheses separated by commas.  Our primary (only?) use will be dates.  In the datatime module (more coming), the date April 1, 20012 is expressed by the tuple `date = (2012, 4, 1)` (year, month, day). 
 
-
-**Dictionaries.**   Dictionaries are (unordered) pairs of things defined by curly brackets `{}`, separated by commas, with the items in each pair separated by colon.  They come in handy when you least expect it.  For example, a list of first and last names: 
+**Dictionaries.**   Dictionaries are (unordered) pairs of things defined by curly brackets `{}`, separated by commas, with the items in each pair separated by colon.  For example, a list of first and last names: 
 ```python
 names = {'Dave': 'Backus', 'Chase': 'Coleman', 'Spencer': 'Lyon', 'Glenn': 'Okun'}
 ```
 If we try `type(names)`, the reply is `dict`, meaning dictionary.  The components of each pair are referred to as the "key" (the first part) and the "value" (the second).  
 
-We access the value from the key with syntax of the form: `dict[key]`.  In the example above, we get Glenn's last name by typing `names['Glenn']`.  
+We access the value from the key with syntax of the form: `dict[key]`.  In the example above, we get Glenn's last name by typing `names['Glenn']`.  (Try it and see.)
 
-**Exercise.** Construct a dictionary whose keys are names and values are email addresses.  (Three such pairs is enough to make the point.) How would you access your neighbor's email address?  
+
+?? better example ??
+
+
+**Exercise.** Construct a dictionary whose keys are the integers 1, 2, and 3 and whose values are the same numbers as words:  one, two, three.  How would you get the word associated with the key `2`?  
+
+
+**Tuples.** Tuples are collections of things in parentheses separated by commas.  Our primary (only?) use will be dates.  In the datatime module (more coming), the date April 1, 20012 is expressed by the tuple `date = (2012, 4, 1)` (year, month, day). 
+
+How are tuples different from lists?  First, the syntax is different:  parentheses rather than square brackets.  Second, and more importantly, they can't be changed.  We can't alter the contents of a tuple or add another component.  
 
 
 <!--
@@ -521,16 +571,18 @@ Some of us find this kind of syntax obscure and do our best to avoid it.  But si
 
 ## Assignments and copies
 
-Also mytn, but file away the idea for later.  This is what programmers call a "[gotcha][8]," an unexpected or counterintuitive feature of a language.  This one has gotten all of us at one time or other.  It shows up in the Pandas package, too.  The idea is that if we have (say) a list `x` and set `y = x`, then `y` is attached to `x`.  If we change the components of `x`, then `y` changes along with it.  A lot of other programming languages don't work that way:  the assignment `y = x` creates a new copy of `x`, and we can change `x` all we want without changing `y`.  But not in Python.  
-
+Also mytn, but file away the idea for later.  This is what programmers call a "[gotcha][8]," an unexpected or counterintuitive feature of a language.  This one has gotten all of us at one time or other.  It shows up in the Pandas package, too.  The idea is that if we have (say) a list `x` and set `y = x`, then `y` is attached to `x`.  If we change the components of `x`, then `y` changes along with it.  
 
 [8]: https://en.wikipedia.org/wiki/Gotcha_(programming)
 
 
+
+<!--
 Python's behavior is similar in this respect to a spreadsheet.  Suppose we put the number 7 in cell A1, then set A2 = A1*10.  We would hope to see the number 70 in A2.  But if we change A1 to 5, then A2 would change to 50 along with it.
+-->
 
 
-Back to Python.  We illustrate the issue with an example adapted from [Stack Overflow](http://stackoverflow.com/a/10844760/804513): 
+We illustrate the issue with an example adapted from [Stack Overflow](http://stackoverflow.com/a/10844760/804513): 
 ```python 
 x = [1,2,3]
 y = x
@@ -558,14 +610,15 @@ Here `y` hasn't changed, it's not connected to `x`.
 
 Yes, style counts.  We're not only trying to get something done, we're also communicating with others who may look at our code and possibly use it.  A clear style makes that communication more effective.  
 
-* Put import statements at the top.
+With that in mind, here aere some guidelines we've found useful:  
+
 * Lines should be no longer than 79 characters.
 * Skip two lines before and after a function definition. 
-* Adopt the style of your group.   
+* Use comment whenever something isn't immediately obvious 
 
 You can find more along these lines in the classic "[PEP8](https://www.python.org/dev/peps/pep-0008/)" and Google's [style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). 
 
-Some programmers are religious about this.  We'd say simply to make your code readable.  
+Some programmers are religious about this.  We'd say simply that we want to make our code readable by others.  
 
 <!-- 
 \url{http://www.reddit.com/r/Python/comments/3639nl/what_is_the_most_beautiful_piece_of_python_code/}
