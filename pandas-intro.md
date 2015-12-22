@@ -7,7 +7,7 @@
 
 **Buzzwords.**  Package, dataframe, series, csv file.  
 
-**Applications.**  Income by college major, Greek government debt, cell phone penetration by country. 
+**Applications.**  ??? Income by college major, Greek government debt, cell phone penetration by country. 
 
 **Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_1.py).  
 
@@ -15,20 +15,25 @@
 
 **UNDER CONSTRUCTION**
 
-We're ready now to look at some data.  We start with getting data into Python, particularly data in spreadsheets.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
+We're ready now to look at some data.  You may recall that our canonical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first, but touch on the second and produce a simple plot by finding a suitable method.  
 
-You may recall that our canonical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first, but touch on the second and produce a simple plot by finding a suitable method.  
+
+We start with getting data into Python, particularly data in spreadsheets.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
+
+
 
 ## Reminders
 
-* Data structures are organizations of data.  Examples:  strings, lists, dictionaries, and now dataframes. 
+* Methods and objects.  
 
-* Slicing strings and lists.  ..
+* Help.  
+
+* Data structures.   are organizations of data.  Examples:  strings, lists, dictionaries, and now dataframes. 
 
 
 ## Python packages
 
-Python is not just a programming language, it's an open source collection of tools that includes both basic Python and a large collection of packages written by different people.  The word "package" here refers to plug-ins or extensions that expand Python's capabilities.  The terminology varies.  What we call a package others sometimes call a "library."  The term "module" typically refers to a subset of basic Python or one of its packages.  You won't go far wrong to use the terms interchangeably.  
+Python is not just a programming language, it's an open source collection of tools that includes both basic Python and a large collection of packages written by different people.  The word "package" here refers to plug-ins or extensions that expand Python's capabilities.  Terminology varies.  What we call a package others sometimes call a "library."  The term "module" typically refers to a subset of basic Python or one of its packages.  You won't go far wrong to use the terms interchangeably.  
 
 The standard Python packages are well written, well documented, and have armies of users who spot and correct problems.  Some of the others less so.  Our suggestion is to stick to the standard packages, specifically those that come with the Anaconda distribution.  
 
@@ -41,6 +46,11 @@ Some of the leading packages for numerical ("scientific") computation are
 * **[NumPy](http://www.numpy.org/).**  Tools for numerical computing.  In Excel, where the basic unit is a cell, a single number.  In NumPy the basic unit is a vector (a column) or matrix (a table or worksheet).  We won't see much of NumPy here -- maybe a little -- but it's the foundation for Pandas, which we'll use constantly.   
 
 All of these packages come with the [Anaconda distribution](http://docs.continuum.io/anaconda/pkg-docs.html), which means we already have them installed and ready to use.  
+
+Pandas is Python's data management package and an essential part of data work in Python.  The authors [describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, compute pivot tables, and lots of other things.  And we can do all this on much larger files than Excel can handle.  
+
+We'll come back to all of these things later in the course, but our immediate focus is data input. 
+
 
 <!-- 
 Here are some others you might run across:  
@@ -71,12 +81,12 @@ Here are some examples applied to a mythical package `xyz` and mythical command 
 
 * `import xyz`.  This imports the whole thing as well, but here the command `foo` is executed with the more verbose `xyz.foo`.  
 
-* `from xyz import *`.  This imports all the commands from the package `xyz`.  The command `foo` is executed simply by typing `foo`.  We don't usually do this, because it opens up the possibility that the same command exists in more than one package, which is virtually guaranteed to give us confusing output.  If `foo` is the only command we care about, we can use `from xyz import foo` instead. 
+* `from xyz import *`.  This imports all the commands from the package `xyz`.  The command `foo` is executed simply by typing `foo`.  We don't usually do this, because it opens up the possibility that the same command exists in more than one package, which is virtually guaranteed to create confusion.  If `foo` is the only command we care about, we can use `from xyz import foo` instead. 
 
 The first version of `import` is the one we typically use.  We'll see these examples repeatedly:
 ```python 
-import pandas as pd
-import matplotlib.pyplot as plt 
+import pandas as pd                  # data package
+import matplotlib.pyplot as plt      # graphics package  
 ```
 You might also go through earlier chapters and identify the `import` statements you find.  By convention, they are placed at the top of the program.  What packages or modules have we used?  What do they do?  
 
@@ -85,7 +95,7 @@ Some fine points:
 
 * What happens if we issue an import statement twice?  Answer:  Nothing, no harm done.  
 
-* Jokes.  These are programmer jokes, which might be a contradiction in terms, but try these and see what happens:   
+* Jokes.  These are programmer jokes, which might be a contradiction in terms, but try them and see what happens:   
   ```python 
   import this
   import antigravity 
@@ -98,35 +108,34 @@ Some fine points:
   ```
   This can be helpful if we're trying to track down an error.  
 
-  (Obscure note.  The double underscore often shows up in Python for basic things like this. When we tried to track down the logic, we ran into [this explanation](http://stackoverflow.com/questions/1301346/the-meaning-of-a-single-and-a-double-underscore-before-an-object-name-in-python), which confused us thoroughly. But see also [this](http://stackoverflow.com/questions/8689964/python-why-do-some-functions-have-underscores-before-and-after-the-functio).)
+  (Obscure technical ote.  The double underscore often shows up in Python for basic things like this. When we tried to track down the logic, we ran into [this explanation](http://stackoverflow.com/questions/1301346/the-meaning-of-a-single-and-a-double-underscore-before-an-object-name-in-python), which confused us thoroughly. But see also [this one](http://stackoverflow.com/questions/8689964/python-why-do-some-functions-have-underscores-before-and-after-the-functio).)
 
 
 **Exercise.**  Import Pandas.  What version do you have?  
 
-**Exercise.**  Suppose you import Pandas twice under different names, once with `import pandas as pd` and once with `import pandas as pa`.  What do you think happens?  Can you write a short program that tests your conjecture?  (This will take a little thought, feel free to consult your neighbor.)  
+**Exercise.**  Suppose you import Pandas twice under different names, once with `import pandas as pd` and once with `import pandas as pa`.  What do you think happens?  Write a short program that tests your conjecture.  (This will take a little thought, feel free to consult your neighbor.)  
 
 
-## The Pandas package 
 
-Pandas is Python's data management package and an essential part of data work in Python.  The authors [describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, compute pivot tables, and lots of other things.  And we can do all this on much larger files than Excel can handle.  
+## Data input 1:  reading internet files 
 
-We'll come back to all of these things later in the course, but for now we'll focus on data input:  how to get data into a Python program.  
+The easiest way to get data into a Python program is to read it from a file -- a spreadsheet file, for example.  The word "read" here means take what's in the file and somehow get it into Python.  Pandas can reads lots of files:  csv, xls, xlsx, and so on.  The files can be on our computer or on the internet.  We'll start with the internet -- there's less ambiguity about the location of the file -- but the same methods work with files on your computer.  
 
+Pandas can read lots of file types, but **csv files** ("comma separated values") are a common format for serious data people.  Their simple structure (entries separated by commas) allows easy and rapid input. They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) of translating Excel files.  If we have an Excel spreadsheet, we can always save it as a "CSV (Comma delimited) (*.csv)" file.  Excel will warn us that some features are incompatible with the csv format, but we're generally happy to do it anyway.  Here's an example of a [raw csv file](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/test.csv) (pretty basic, eh?) and this is (roughly) how it's displayed in [Excel](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv).  
 
-## Data input 1:  reading internet files    
-
-The easiest way to get data into a Python program is to read it from a file -- a spreadsheet file, for example.  The word "read" here means take what's in the file and somehow get it into Python.  Pandas can reads lots of files:  csv, xls, xlsx, and so on.  The files can be on our computer or on the internet.  We'll start with the internet, because it there's less ambiguity about the location of the file.  
-
-Pandas can read lots of file types, but **csv files** ("comma separated values") are a common format.  Their simple structure (entries separated by commas) allows easy and rapid input. That's a general statement, not a statement about Python.  They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) of translating Excel files.  If we have an Excel spreadsheet, we can always save it as a "CSV (Comma delimited) (*.csv)" file.  Excel will warn us that some features are incompatible with the csv format, but we're generally happy to do it anyway.  Here's an example of a [raw csv file](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/test.csv) (pretty basic, eh?) and this is how it's displayed in [Excel](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv).  
-
-Let's read a csv file into Python.  We like to read data from internet sources, especially when the data is updated at automatically at the source for us.  This example doesn't do that, but it shows how easy it is to get data into Python.  We read the cleverly-named `test.csv` with the `read_csv` function in Pandas from our GitHub site:
+We'll start by reading a csv file -- the same one we just saw -- from our GitHub repository.  We like to read data from internet sources, especially when the data is updated at automatically at the source for us.  That's not the case here, but we'll see how easy it is to get data into Python.  We read the cleverly-named `test.csv` with the `read_csv` function in Pandas:
 ```python 
+import pandas as pd 
 url1 = 'https://raw.githubusercontent.com/DaveBackus'
 url2 = '/Data_Bootcamp/master/Code/Python/test.csv'
 url  = url1 + url2
 df = pd.read_csv(url)
 ```
-The syntax works like this:  `url` is a string that tells Python where to look for the file.  We break it in two because it's too long to fit on one line.  `read_csv` is a Pandas function that reads csv files.  The `pd.` before it tells Python it's a Pandas command; we established the `pd` abbreviation in the `import` statement.  The `df` on the left makes this an assignment:  we assign what we read to the variable `df`.  
+The syntax works like this:  
+
+* `url` is a string that tells Python where to look for the file.  We break it in two because it's too long to fit on one line.  
+* `read_csv` is a Pandas function that reads csv files.  The `pd.` before it tells Python it's a Pandas command; we established the `pd` abbreviation in the `import` statement.  
+* The `df` on the left makes this an assignment:  we assign what we read to the variable `df`.  
 
 [If the internet is down, or something else goes wrong, we can do this instead:  
 ```python 
@@ -137,36 +146,74 @@ df = pd.DataFrame([['Dave', 1, 2, 3.5],
 ```
 The details aren't important.  If you're curious, we've put the data into rows and added column names.]  
 
-So what does this give us?  We have read data into Python and assigned it to the variable `df`, which we'll now examine.  What's in `df`?  We can check its contents by adding the statement `print(df)`.  Give or take some formatting, it should look like this:  
+
+So what does our read statement give us?  What's in `df`?  We can check its contents by adding the statement `print('\n', df)`.  (The `'\n'` tells the print function to start printing on a new line.)  The result is 
 ```python
       name  x1  x2  x3
 0     Dave   1   2   3
 1    Chase   4   3   4
 2  Spencer   5   6   7
 ```
-What we have is a table, much like what we'd see in a spreadsheet.  The first column is new, added by the program, but the others come from the csv file we just read.  
+What we have is a table, much like what we'd see in a spreadsheet.  If we compare it to the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) we see that the first column is new, added somehow by the program, but the others are just as they look online.   
 
 
-**Exercise.**  Run the code block 
+
+**Exercise.**  Run the code 
 ```python 
 url1 = 'https://raw.githubusercontent.com/DaveBackus'
 url2 = '/Data_Bootcamp/master/Code/Python/test0.csv'    # note the added 0 
 url  = url1 + url2
 df = pd.read_csv(url)
 ```
-The idea is to trigger an error message (the file doesn't exist) so that we know what that looks like.  
+What do you see?  
+
+
+The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a "dataframe."  More on that shortly.  We also see a long list of "parameters," extra inputs that change how we read the file.  We use them as needed, otherwise ignore.  
+
+
+**Example.**  We can identify specific values in a csv file as missing or NA (not available).  We see in the documentation that the parameter na_values takes a list of strings as input.  To treat the number 1 as missing we change the read statement to `read_csv(url, na_values=['1'])`.  The result is 
+```python
+      name  x1  x2   x3
+0     Dave NaN   2  3.5
+1    Chase   4   3  4.3
+2  Spencer   5   6  7.8
+```
+We see that the number 1 that was formerly at the top of the `x1` column has been replaced by `NaN` -- "not a number."  
+
+
+**Exercise.** Adapt the code to treat the numbers 1 and 6 as missing.  
+
+
+We can also read Excel files (xls and xlsx) with Pandas:  use the `read_excel` function.  The code is almost identical: 
+```python 
+import pandas as pd 
+url1 = 'https://raw.githubusercontent.com/DaveBackus'
+url2 = '/Data_Bootcamp/master/Code/Python/test.xls'
+url  = url1 + url2
+dfx = pd.read_excel(url)
+```
+The files are constructed to have identical content.  
+
+
+**Exercise.** Change the extension `.xls` to `.xlsx` and run the modified code.  What do you get?  
+
 
 
 ## Properties of dataframes 
 
-Ok, so we read a file and assigned the contents to `df`.  What kind of object is `df`?  We can check with the `type()` function.  If we enter `type(df)` into the IPython console, it answers:  `pandas.core.frame.DataFrame` -- dataframe, for short.  A dataframe is a "data structure" -- a specific organization of data -- that includes three things:  the data, column labels, and row labels.  Typically the columns are specific variables and the column labels give us their names.  The rows are observations, and the row labels give us their names.  
+Ok, so we read a file and assigned the contents to `df`.  What does that leave us with?  What type of object is `df`?  We use the handy `type()` function and enter `type(df)` in the IPython console.  It responds:  `pandas.core.frame.DataFrame`.  More simply, it's a **dataframe**.  A dataframe is another example of a data structure, like lists and dictionaries, that organize data in a specific way.  A dataframe has three components:  a table of data, column labels, and row labels.  It's the last two that make it distinctive.  Typically the columns contain data for specific variables and the column labels give us their names.  The rows are then observations, and the row labels give us their names.  
 
-We can extract the column labels with the method:  `df.columns`.  That gives us the verbose output `Index(['name', 'x1', 'x2', 'x3'], dtype='object')`.  We prefer to have them as a list, which we get by typing `list(df)` in the IPython console.  That gives us the column names as a list:  `['name', 'x1', 'x2', 'x3']`.  If we check the source (go to the url), we see that the column labels were part of the file we read.  
 
-The row labels are referred to as the "index."  We can extract them with the method:  `df.index`.  That gives us the verbose output `Int64Index([0, 1, 2], dtype='int64')`.  We can convert it to a list by adding another method, `df.index.tolist()`, which gives us `[0, 1, 2]`.  In this case, the index labels were not part of the original, so Pandas inserted a counter.  As usual in Python, the counter starts at zero.  
+**Columns and indexes.**  We can see how this works with the dataframe `df` we read in earlier.  We extract column labels with the method:  `df.columns`.  That gives us the verbose output `Index(['name', 'x1', 'x2', 'x3'], dtype='object')`.  We prefer to have them as a list, which we get by typing `list(df)` in the IPython console.  That gives us the column names as a list:  `['name', 'x1', 'x2', 'x3']`.  If we check the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv), we see that the column labels are the first row of the file.  
+
+
+The row labels are referred to as the "index."  We extract them with the method:  `df.index`.  That gives us the verbose output `Int64Index([0, 1, 2], dtype='int64')`.  We can convert it to a list by adding another method, `df.index.tolist()`, which gives us `[0, 1, 2]`.  (This is cool: two methods in a row!)  In this case, the index labels are not part of the original; Pandas inserted a counter.  As usual in Python, the counter starts at zero.  
+
 
 **Exercise.** What does `df.columns.tolist()` do?  How does it compare to `list(df)`?  
 
+
+<!-- 
 **Exercise.** Run the code 
 ```python 
 url1 = 'https://raw.githubusercontent.com/DaveBackus'
@@ -175,8 +222,10 @@ url  = url1 + url2
 df0 = pd.read_csv(url, index_col=0)
 ```
 What is the index in this case?  Can you explain why?  
+-->
  
-We'll see one other feature of dataframes in the near future:  the type of each column of data.  Pandas allows every variable (that is, column) to have a different data type, but the type must be the same within a column.  With our dataframe `df`, we get the types from `df.dtypes`:  
+
+** Data types.**  We'll see one other feature of dataframes in the near future:  the type of each column of data.  Pandas allows every variable (that is, column) to have a different data type, but the type must be the same within a column.  With our dataframe `df`, we get the types with `df.dtypes`:  
 ```python
 name     object
 x1        int64
@@ -186,7 +235,32 @@ x3      float64
 Evidently `x1` and `x2` are integers and `x3` is a float.  They're no different from the types of numbers we can across in the previous chapter.  The first column, `name`, is something different.  Object is the name Pandas gives to things it can't turn into numbers -- strings, essentially.  Sometimes, as here, that makes sense:  names like `Dave` and `Spencer` are naturally strings.  But in many cases we've run across, numbers are given the dtype object because there was something in the data that didn't look like a number.  We'll see more of that later on.  
 
 
-**Exercise.** What does the method `df.mean` do?  `df.describe()`?  `df.T`?  
+
+## Dataframe methods 
+
+
+One of the great things about dataframes is that there are lots of methods set 
+
+* head and tail 
+
+* to_csv and to_excel
+
+
+**Data output.** If reading is data input, then writing must be output, right?  The functions `write_csv()` and `write_excel()`.  Or we could use methods.  
+
+
+**Clipboard methods.**  We can read from the clipboard and write to it.  
+We're not fans of this, it makes replication hard, but it's awful convenient
+and recommended by one of our former students.  `clip = pd.read_clipboard()`
+
+**Setting the index.**
+
+**Data summaries.**  
+
+* mean, std, describe
+
+**Plotting.** 
+* plot, bar, hist, box 
 
 
 ## Working with variables
@@ -273,20 +347,7 @@ Fixing mistakes -- "debugging" -- is like solving a mystery. As Sherlock Homes s
 
 
 
-
-## More dataframe methods 
-
-**Output,.** We starting by read a can do the reverse
-
-
-**Clipboard methods.**  We can read from the clipboard and write to it.  
-We're not fans of this, it makes replication hard, but it's awful convenient
-and recommended by one of our former students.  `clip = pd.read_clipboard()`
-
-**Exercise.** Input `test.csv` from the clipboard and assign it to the dataframe `df_clip`.  
-
-
-## Data input 3:  internet sources
+## Data input 3:  Internet sources
 
 
 FRED, World Bank...  etc.  They have API's, which give us better access than even a csv...  
@@ -313,15 +374,17 @@ url2 = 'https://github.com/DaveBackus/Data_Bootcamp/raw/master/Code/Python/test.
 **drop columns.** 
 df.drop(df.columns[[1, 69]], axis=1, inplace=True) 
 
-## Examples 
+
+
+## Data sources:  examples 
 
 Want operator:  graph Greek debt over time, compare to other countries.  
 
+
 **Example (Penn World Tables).**
 
+What does the data look like?  
 
-
-**Example (incomes of college graduates by major).**    Also:  **Talk about RAW files**
 
 
 **Example (WEO).** 
@@ -330,14 +393,29 @@ url = 'http://www.imf.org/external/pubs/ft/weo/2014/01/weodata/WEOApr2014all.xls
 weo = pd.read_csv(url, sep='\t')    # tab = \t
 ```
 
-**down the rabbit hole** 
+Run the WEO code and list the contents.  What does the file look like?
 
 
-**Exercise.** Run the WEO code and list the contents.  What does the file look like?
+**Example (PISA education data).**  
 
- 
+Check Susan Chen's notebook 
 
-**Example (Chipotle).** 
+
+
+**Healthcare by location.**
+http://www.nytimes.com/interactive/2015/12/18/upshot/19up-healthcosts.html
+http://www.nytimes.com/interactive/2015/12/15/upshot/the-best-places-for-better-cheaper-health-care-arent-what-experts-thought.html
+
+
+**Heart attack data.**
+```python 
+https://data.medicare.gov/api/views/c7us-v4mf/rows.csv?accessType=DOWNLOAD
+https://data.medicare.gov/developers
+"""
+import pandas as pd
+url = 'https://data.medicare.gov/api/views/c7us-v4mf/rows.csv'
+df = pd.read_csv(url) 
+```
 
 
 **Example (IMDB).** 
@@ -347,9 +425,23 @@ http://pages.stern.nyu.edu/~dbackus/csv/cast.csv
 http://pages.stern.nyu.edu/~dbackus/csv/titles.csv
 http://pages.stern.nyu.edu/~dbackus/csv/release_dates.csv 
 
-**Example (Stern teaching data).** 
+
+
+**Example (movie ratings).** 
+http://fivethirtyeight.com/features/fandango-movies-ratings/
+https://github.com/fivethirtyeight/data/blob/master/fandango/fandango_score_comparison.csv
+
+Do boxplot to compare, then histogram... 
+
+
+**Example (Airbnb).** 
+
+http://insideairbnb.com/get-the-data.html
 
 <!--
+**Example (Stern teaching data).** 
+
+
 **Example.** Chetty's income data...  
 
 **Example (Big Mac currency index).**  This is an xls file with multiple sheets.  
@@ -364,6 +456,9 @@ Papers:  https://scholar.google.com/scholar?hl=en&q=fisman+speed+dating&btnG=&as
 **Example (age distributions).**  UN data...     
 
 
+<!--
+**Example (Chipotle).** 
+
 **Example (Reinhart-Rogoff).**
 
 http://simplystatistics.org/2013/04/16/i-wish-economists-made-better-plots/ 
@@ -372,8 +467,6 @@ http://simplystatistics.org/2013/04/16/i-wish-economists-made-better-plots/
 **Example (AirBNB).**
 
 http://insideairbnb.com/get-the-data.html
-
-
 
 **Example (mortality).** Causes from CDC...  
 
@@ -386,11 +479,7 @@ http://insideairbnb.com/get-the-data.html
 **Example.** Beer ratings...   
 https://github.com/TomAugspurger/PyDataSeattle/blob/master/notebooks/3.%20Indexing.ipynb
 
-
-**Exercise.** 
-
-
-Education data (PISA)...
+--> 
 
 
 ## A taste of what's ahead 
@@ -399,18 +488,6 @@ set index
 transpose 
 
 ... 
-
-
-## More than we need (mtwn) 1:  Copying internet files 
-
-
-**Example.** 
-
-
-## More than we need (mtwn) 2:  Unzipping files 
-
-
-**Example.** 
 
 
 
@@ -446,7 +523,7 @@ Pandas plotting methods:  http://pandas.pydata.org/pandas-docs/version/0.10.1/vi
 Another intro:  http://efavdb.com/pandas-tips-and-tricks/
 
 
-## Appendix:  creating dataframes
+## Appendix A:  Creating dataframes
 
 We've generated dataframes with input commands.  Here are some examples that do it explicitly without reference to any external files.  Keep in mind the components of a dataframe:  a table of data, row labels, and column labels.  
 
@@ -455,5 +532,19 @@ We've generated dataframes with input commands.  Here are some examples that do 
 **From dictionaries.** 
 
 
-**From Numpy arrays.**  This is more than a little obscure, but it's often helpful in producing test cases to have a way to generate random numbers.  The Numpy package makes this easy.  (Take example from SS or documentation.)
+**From Numpy arrays.**  This is more than a little obscure, but it's often helpful in producing test cases to have a way to generate random numbers.  That's helpful when we want an example we can run without relying on an external data source.  Or if we want to get a sense of how randomness works.  
+
+The Numpy package makes this easy.  (Take example from Quant Econ or documentation.)
+
+
+## Appendix B:  Copying internet files 
+
+
+**Example.** 
+
+
+## Appendix C:  Unzipping files 
+
+
+**Example.** 
 

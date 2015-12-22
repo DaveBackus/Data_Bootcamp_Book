@@ -154,6 +154,7 @@ SQL intro https://www.khanacademy.org/computing/hour-of-code/hour-of-sql/v/welco
 
 https://www.reddit.com/r/Python/comments/3wa22v/120gb_csv_is_this_something_i_can_handle_in_python/ 
 
+
 SQL and Pandas:  https://www.youtube.com/watch?v=1uVWjdAbgBg 
 
 http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/ 

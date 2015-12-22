@@ -24,7 +24,8 @@ Examples:
 * Distribution of ages
 * income 
 * medical spending (MEPS)
-* Kevin Williams long-tail data...  
+* Kevin Williams long-tail data... 
+
 
 **See figs 2-4:**  http://public.econ.duke.edu/~psarcidi/aa.pdf 
 
@@ -43,6 +44,9 @@ bar charts, pdfs, kde...
 
 
 http://pandas.pydata.org/pandas-docs/stable/visualization.html#other-plots
+
+Compare two distributions of movie ratings 
+http://fivethirtyeight.com/features/fandango-movies-ratings/
 
 
 ## Scipy and Numpy

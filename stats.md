@@ -29,6 +29,8 @@ Claudia's hospital example
 http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/ 
 
 
+**Simpson's paradox**
+
 
 # References 
 
