@@ -6,7 +6,7 @@
 * [Installing Python](installing-python.md)
 * [Python fundamentals 1](py-fun1.md) 
 * [Python fundamentals 2](py-fun2.md)  
-* [Data input: Packages and Pandas](pandas-intro.md)
+* [Data input: Packages and Pandas](pandas-input.md)
 * [Python graphics: Matplotlib](graphs1.md)
 * [Shaping data:  Pandas revisited](pandas-munging.md)
 * [Updating Python: conda and pip](conda-pip.md)

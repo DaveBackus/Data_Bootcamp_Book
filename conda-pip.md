@@ -45,6 +45,12 @@ Access to lots of economic and financial data...
 A terrific interface for Matplotlib...  
 
 
+
+## tqdm
+
+Progress bar for data loads...  
+
+
 ## Pyopendata
 
 https://pypi.python.org/pypi/pyopendata/0.0.2
