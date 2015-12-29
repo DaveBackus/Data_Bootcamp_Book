@@ -1,7 +1,7 @@
 # The data mentality
 
 ---
-**Overview.** Thinking about data, ideas for projects.  Things to remember:  (i) Ideas aren't discovered, they're developed.  (ii) Ideas have friends:  when you find one, there are others nearby. 
+**Overview.** Thinking about data, ideas for projects.  Things to remember:  (1) Ideas aren't discovered, they're developed.  (2) Ideas have friends:  when you find one, there are others nearby. 
 
 **Buzzwords.** Questions, data, idea machines. 
 
@@ -15,7 +15,7 @@ Data analysis starts with a question.  Generally, we want to learn something.  I
 * What emerging market countries offer the best business opportunities? 
 * How do returns on US and European stocks compare?   
 
-The starting point is a question, something we'd like to know more about.  We provide a toolkit for effectively working with data to find answers.  Many of our examples are about economics and finance, because that's what we know.  But the same tools can be used to address any data questions we like.    
+The starting point is a question, something we'd like to know more about.  We provide a toolkit for effectively working with data to find answers.  Many of our examples are about economics and finance, because that's what we know.  But the same tools can be used to address any data we like.    
 
 
 <!--
@@ -25,6 +25,7 @@ Once we have a question, we can start looking for data that might help us come u
 * Where can we find it?  
 * What should we do with it once we have it?  
 --> 
+
 
 ## Thinking about data 
 
