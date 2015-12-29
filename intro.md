@@ -21,7 +21,7 @@ This book -- and the course we developed it for -- is about data.  It's also abo
 
 **What if my quant skills are weak or nonexistent?**  Then this is the course for you!  We do our best to make the material accessible.  We’re looking beyond quants to marketing, management, and humanities majors.  One of our design team was an English major.  
 
-**Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to communicate with people who know more and do things yourself that Excel users can only dream about.  And you will be able to work effectively with people who know more.  
+**Will this turn me into a programmer?**  You will come out of the course somewhere between Brad Pitt and Jonah Hill in “[Moneyball](http://www.imdb.com/title/tt1210166/)," with a solid foundation for dealing with whatever data comes your way.  You will not be ready for a career as a programmer, but you will be able to work effectively with people who know more and do things yourself that Excel users can only dream about.   
 
 **Will this turn me into a data scientist?**  Sadly, no. But you will have a solid foundation for pursuing the many technical topics that fall under the rubrics data science and machine learning.  See, for example, the extensive collection of courses on **business analytics** and **data science** offered by our [IOMS](http://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/academic-departments/ioms-dept/) and [CS](https://www.cs.nyu.edu/web/index.html) groups.  
 
@@ -111,7 +111,7 @@ There are answers in lots of places, but the best one is [Stack Overflow](http:/
 **Code and applications.**  We attack data applications and programming together.  After covering Python basics, we generally organize things around specific applications, covering the relevant aspects of Python along the way.  We think it helps to have a context for what we're learning, but the downside is that it's somewhat harder to use the book as a programming reference.  We still think it makes sense.  Our goal isn't to produce programmers, but people who know enough about programming to get along well with data.  
 --> 
 
-**Online book preferred.**  We sometimes print out the pdf ourselves, but the online version comes with links, color coding, and a more attractive layout. It's also easy for us to update. We think it's a superior user experience. 
+**Online book preferred.**  We sometimes print out the pdf ourselves, but the online version comes with live links.  We'll update it frequently as new ideas come to mind.  We think it's a superior user experience. 
 
 
 ## Wordplay

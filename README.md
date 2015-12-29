@@ -1,6 +1,6 @@
 ## Preface
 
-This GitBook was written by David Backus, Sarah Beckett-Hile, Chase Coleman, and Spencer Lyon for a course at [NYU](http://www.nyu.edu/)'s [Stern School of Business](http://www.stern.nyu.edu/).  We plan to give students experience with economic and financial data and introduce programming newbies to the benefits of moving beyond Excel.  It's based on the Python programming language, specifically Python's data management and graphics tools.  If that doesn't whet your appetite, we have a [more elaborate sales pitch](http://databootcamp.nyuecon.com/bootcamp_faq/).   
+This GitBook was written by David Backus, Sarah Beckett-Hile, Chase Coleman, and Spencer Lyon for a course at [NYU](http://www.nyu.edu/)'s [Stern School of Business](http://www.stern.nyu.edu/).  We plan to give students experience with economic and financial data and introduce programming newbies to the benefits of moving beyond Excel.  We use the Python programming language, specifically Python's data management and graphics tools.  If that doesn't whet your appetite, we have a [more elaborate sales pitch](http://databootcamp.nyuecon.com/bootcamp_faq/).   
 
 We designed the book to accompany a live class.  We've tried to make it self-contained, but the written word is a poor substitute for the interaction you get in a classroom.  
 
@@ -13,12 +13,12 @@ We welcome suggestions.  Send them to Dave Backus at [db3@nyu.edu](mailto:db3@ny
 
 ## Warning
 
-This is **work in progress**, target date late January 2016.  We've written five chapters so far, the rest are rough notes to ourselves -- or less.  
+This is **work in progress**, target date late January 2016.  We've written five chapters so far, the rest are rough notes to ourselves.   
 
 
 ## Acknowledgements 
 
-This project was Glenn Okun's idea.  He really should have done it himself, but we thank him for the idea and his ongoing support. Paul Backus, Hersh Iyer (MBA17), Matt McKay, Kim Ruhl, and Itamar Snir (MBA17) contributed technical support and applications.  You may also notice a family resemblance to Tom Sargent and John Stachurski's [Quantitative Economics](http://quant-econ.net/), a Python-based course in dynamic macroeconomic theory.  We thank them for their advice and encouragement. 
+This project was Glenn Okun's idea.  He really should have done it himself, but we thank him for the idea and his ongoing support. Paul Backus, Hersh Iyer (MBA17), Matt McKay, Kim Ruhl, and Itamar Snir (MBA17) contributed technical support and applications.  You may also notice a family resemblance to Tom Sargent and John Stachurski's [Quantitative Economics](http://quant-econ.net/), a Python- and Julia-based course in dynamic macroeconomic theory.  We thank them for their advice and encouragement. 
 
 ## License 
 

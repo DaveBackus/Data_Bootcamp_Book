@@ -15,36 +15,36 @@
 **UNDER CONSTRUCTION**
 -->
 
-We continue our overview of Python's core language, which lays a foundation for the rest of the course.  We go through the material quickly, since we're more interested in the general ideas than the details.  And remember: you'll feel like you're drinking from a fire hose, but it will sink in if you **stick with it**.  
+We continue our overview of Python's core language, which lays a foundation for the rest of the course.  We go through the material quickly, since we're more interested in the general ideas than the details.  You will feel like you're drinking from a fire hose, but it will sink in if you **stick with it**.  
 
 
 ## Reminders 
 
 Some things from previous chapters that we'll use a lot:
 
-* Assignments and Variables.  We say we assign what's on the right to the thing on the left:  `x = 17.4` assigns the number `17.4` to the variable `x`.  
+* Assignments and variables.  We say we assign what's on the right to the thing on the left:  `x = 17.4` assigns the number `17.4` to the variable `x`.  
 
 * Strings.  Strings are collections of characters in quotes:  `'this is a string'`.  
 
 * Lists. Lists are collections of things in square brackets:  `[1, 'help', 3.14159]`. 
 
-* Number types: integers vs. floats. Examples of integers include -1, 2, 5, 42. They cannot involve fractions. Floats allow the use of decimals (ex. 11.432).
+* Number types: integers vs. floats. Examples of integers include -1, 2, 5, 42. They cannot involve fractions. Floats use decimal points:  `11.32`.
 
-* The `print()` function. Use `print(‘something’)` to display the value of the object in parentheses.
+* The `print()` function. Use `print(‘something’, 'else')` to display the value(s) of the object(s) in parentheses.
 
 * The `type()` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, strings, and lists.  
 
-* Number vs. String conversions. Use `str()` to convert a float or integer to a string. use `float()` or `int()` to convert a string into a float or integer object.  
+* Number and string conversions. Use `str()` to convert a float or integer to a string. Use `float()` or `int()` to convert a string into a float or integer.  
 
 * Methods and objects.  It's common in Python to work with objects using methods.  We apply the method `justdoit` to the object `x` by typing `x.justdoit`.  
 
 * Spyder.  An environment for writing Python programs.  The various windows include an editor, an IPython console, and the Object explorer.   
 
-* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook.  We call that "tab completion." 
-
 * Comments. Use # to add comments to your code and explain what you’re doing.
 
-* Help.  We can get help for a function or method `foo` by typing `foo?` into the IPython console or `foo` in the Object explorer.  Try each of them with the `type()` function to remind yourself how this works.  
+* Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook.  We call that "tab completion." 
+
+* Help.  We can get help for a function or method `foo` by typing `foo?` in the IPython console or `foo` in the Object explorer.  Try each of them with the `type()` function to remind yourself how this works.  
 
 And while we're reviewing:   Save the code file for this chapter in your `Data_Bootcamp` directory and open it in Spyder.  
 
@@ -53,12 +53,12 @@ And while we're reviewing:   Save the code file for this chapter in your `Data_B
 
 Sometimes we want to do one thing if a condition is true, and another if it's false.  For example, we might want to use observations for which the date is after January 1980, the country is India, or the population is greater than 5 million -- and not otherwise.  
 
-Python lets us do this with "comparisons". We call them "comparisons" because they involve the comparison of one thing with another; for example, the date of an observation and the date January 1980.  The result of a comparison is either `True` or `False`.  We refer to true/false variables like this as **Boolean**, a name derived from the 18th century mathematician and logician [George](https://espresso.economist.com/a3e8029408056a0791626262beb1e74d) [Boole](https://en.wikipedia.org/wiki/George_Boole).  
+Python does this with **comparisons**, so called because they involve the comparison of one thing with another.  For example, the date of an observation with the date January 1980.  The result of a comparison is either `True` or `False`.  We refer to true/false variables like this as **Boolean**, a name derived from the 18th century mathematician and logician [George](https://espresso.economist.com/a3e8029408056a0791626262beb1e74d) [Boole](https://en.wikipedia.org/wiki/George_Boole).  
 
 
 Let's try some simple examples to see what we're dealing with.  Suppose we enter `1 > 0` in the IPython console.  What does this mean?  The input and output look like this:
 ```python 
-In[1]:  1 > 0
+In [1]:  1 > 0
 Out[1]: True
 ```
 The comparison `1 > 0` is interpreted as a question:  Is 1 greater than 0?  The answer is `True`.  If we enter `1 < 0` instead,the answer is `False`.  
@@ -72,24 +72,25 @@ type(1>0)
 The answer in this case is `bool` (that is, Boolean), the name we give to expressions that take the values `True` and `False`.  (Actually, it says `<class 'bool'>`, but `bool` is enough to make the point.)
 
 Python comes with a list of "operators" we can use in comparisons.  You can find the complete set in the [Python documentation](https://docs.python.org/3.4/library/stdtypes.html), but common ones include:
+
 * Equals: `==` 
 * Greater than: `>` 
 * Greater than or equals: `>=` 
 * Does not equal: `!=` (not equals).  
 
-We can also reverse comparisons with the word `not`.  For example:
+We can reverse comparisons with the word `not`.  For example:
 ```python
-In[2]: not 1>0
+In [2]: not 1>0
 Out[2]: False
-
+```
 Think about that for a minute. And remind yourself that spaces don't matter in Python expressions.
 
 
 **Exercise.**  What is `2 >= 1`?  `2 >= 2`?  `not 2 >= 1`? If you're not sure, try them in the IPython console and see what you get.  
 
-**Exercise.** Try it with math. What is  `2 + 2 == 4`? How about `1 + 3 != 4`?
+**Exercise.** What is  `2 + 2 == 4`? How about `1 + 3 != 4`?
 
-**Exercise.**  What is the value of `"Sarah" == 'Sarah'`?  Can you explain why?  
+**Exercise.**  What is `"Sarah" == 'Sarah'`?  Can you explain why?  
 
 We can do the same thing with variables.  Suppose we want to compare the values of variables `x` and `y`.  Which one is bigger?  To see how this works, we run the code 
 ```python
@@ -97,7 +98,7 @@ x = 2*3
 y = 2**3 
 print('x greater than y is', x > y)
 ```
-Here `x = 6` and `y = 8`, so the expression `x > y` (`x` greater than `y`) is false.  
+Here `x = 6` and `y = 8`, so the expression `x > y` (is `x` greater than `y`?) is false.  
 
 
 **Exercise.** What do you think this code produces?  
@@ -107,7 +108,7 @@ name2 = 'Spencer'
 check =  name1 > name2 
 print(check)
 ```
-Run it and see if you're right.  What type of variable is `check`?  What is its value?  Is Chase "greater than" Spencer?
+Run it and see if you're right.  What type of variable is `check`?  What is its value?  Is Chase greater than Spencer?
 
 <!--
 **Multiple comparisons.**  This is mtwn, but file away for later the idea that we can string together two or more comparisons with the words `and` and `or`.  We'll do something similar when we work with data, but the syntax is a little different.  
@@ -174,7 +175,7 @@ Here we've set `x = 7`, which makes the condition `x > 6` true.  The `if` statem
 **Exercise.** What happens if we set `x = 4` at the top?  How do we know?  
 
 
-**`else` statements** tell the program what to do if the condition is false.  If we want to do one thing if a condition is true, and another if it is false, we would use `if` for the first and `else` for the second.  The second part has been missing so far.  Here's an example:  
+**`else` statements** tell the program what to do if the condition is false.  If we want to do one thing if a condition is true and another if it is false, we would use `if` for the first and `else` for the second.  The second part has been missing so far.  Here's an example:  
 ```python 
 x = 7
 
@@ -276,7 +277,8 @@ Dave
 Sarah
 Spencer
 ```
-<!--Let's go through the code line by line:  
+
+<!-- Let's go through the code line by line:  
 
 * The first line creates the list `namelist`.  Nothing new here.  
 * The `for` statement goes through the items in the list one at a time.  As with `if` statements, it ends with a colon.  The variable name `item` is arbitrary.  
@@ -311,7 +313,7 @@ word   = 'anything'
 for letter in word:
     print(letter) 
 ```
-(You might think we could come up with a more interesting example than this.  Sadly no.)  
+(You might think we could come up with a more interesting example than this.  Sadly no, but we welcome suggestions.)  
 
 
 
@@ -336,7 +338,7 @@ for letter in word:
 ```
 
 
-**Exercise.**  Take the list `stuff = ['cat', 3.7, 5, 'dog']`.   This is somewhat demanding, but give it a try.  
+**Exercise.**  Take the list `stuff = ['cat', 3.7, 5, 'dog']`. This is somewhat demanding, but give it a try.  
 
 * Write a program that prints the elements of `stuff`.
 * Write a program that tells us the `type` of each element of `stuff`.  
@@ -367,18 +369,17 @@ Try it and see.  As with loops, the variable `item` is a dummy:  we can use any 
 We now know how loops work.  There's one small variant that's worth explaining:  loops that do something a fixed number of times. For example, we might want to sum or average the values of a variable.  Or value a bond with a fixed number of coupon payments.  Or something. 
 
 
-The new ingredient here is the `range()` function. `range(n)` gives us all the integers (whole numbers) from `0` to `n-1`.  (If that sounds strange, remind yourself how slicing works.)  And `range(n1, n2)` gives us all the whole numbers from `n1` to `n2-1`.  We can use it in lots of ways, but loops are a prime example.  
+The new ingredient is the `range()` function. `range(n)` gives us all the integers (whole numbers) from `0` to `n-1`.  (If that sounds strange, remind yourself how slicing works.)  And `range(n1, n2)` gives us all the whole numbers from `n1` to `n2-1`.  We can use it in lots of ways, but loops are a prime example.  
 
 
 Some examples illustrate how this works:  
 
-
 **Example.** This is one of the simplest uses of `range()` in a loop: 
 ```python
-for number in range(5):     # The word "number" can be anything. Try "apple" - same results
+for number in range(5):     # the variable "number" can be anything 
     print(number)
 ```
-It prints out the numbers 0, 1, 2, 3, and 4.  (Can you see why?  Why doesn't it go to 5?)  This is like our earlier loops, but `range(11)` has replaced a list or string as the "iterable."  
+It prints out the numbers 0, 1, 2, 3, and 4.  (Why doesn't it go to 5?)  This is like our earlier loops, but `range(5)` has replaced a list or string as the "iterable."  
 
 Here's a minor variant:  
 ```python
@@ -390,11 +391,11 @@ It prints out the numbers 2, 3, and 4.
 
 **Example.** We compute and print the squares of integers up to ten.  ([Paul Ford](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) notes:  "just the sort of practical, useful program that always appears in programming tutorials to address the needs of people who urgently require a list of squares.")   We do that with a `for` loop and the `range()` function:  
 ```python 
-for number in range(11):
+for number in range(5):
     square = number**2
     print('Number and its square:', number, square)
 ```
-Again we start at zero and work our way up to ten.  
+Again we start at zero and work our way up to four.  
 
 
 **Example.** Here we compute the sum of integers from one to ten:  
@@ -431,10 +432,10 @@ for year in range(1, maturity+1):
 price = price + 100/(1+yield)**maturity 
 print('The price of the bond is', price)
 ```
-The answer is 100, which we might know because the coupon and yield are the same once we convert the latter to a percentage.  Python gives us `99.99999999999997`, which is close enough.  
+The answer is 100, which we might know because the coupon and yield are the same once we convert the latter to a percentage.  Python gives us `99.99999999999997`, which is the computer's version of 100.    
 
 
-**Digression.**  When we wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as "invalid syntax" with a warning sign to the left of the text.  Evidently the name `yield` is reserved for something else.  As general rule, it's a good idea to pay attention to the hints like this.  
+**Digression.**  When we wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as `invalid syntax` with a warning sign to the left of the text.  Evidently the name `yield` is reserved for something else.  As general rule, it's a good idea to pay attention to the hints like this.  
 
 **Exercise.** In Portugal and Greece, policymakers have suggested reducing their debt by cutting the coupon payments and extending the maturity.  How much do we reduce the value of the debt if we reduce the coupons to 2 and increase the maturity to 20?   
 
@@ -464,7 +465,7 @@ The `if` statement starts with a colon and the statement following it (`break`) 
 
 ## Defining our own functions
 
-It's easy to create our own functions -- experienced programmers do it all the time.  A common view is that you should never copy lines of code that you've already written.  If you're copying, you're repeating yourself.  What you should do instead is **write a function once and use it twice**.  More than that, breaking a long program into a small number of functions makes code easier for others to read, which is always a good thing.  As we become more comfortable with Python, we'll use functions more and more. 
+It's easy to create our own functions -- experienced programmers do it all the time.  A common view is that you should never copy lines of your code.  If you're copying, you're repeating yourself.  What you should do instead is **write a function once and use it twice**.  More than that, breaking a long program into a small number of functions makes the code easier for others to read, which is always a good thing.  As we become more comfortable with Python we'll use functions more and more. 
 
 
 The simplest functions have two components:  a **name** (what we call it) and a list of **input arguments**.  Here's an example:    
@@ -480,12 +481,12 @@ Let's go through this line by line:
 * The following statement(s) are indented the usual four spaces and specify what the function does.  In this case, it prints `Hello,` followed by whatever `firstname` happens to be.  Python understands that the function ends when the indentation ends.  
 * The last line "calls" the function with input `Chase`.  Note that the name in the function's definition and its use need not be the same. 
 
-By convention, Python aficionados put two blank lines before and after function definitions to make them stand out more clearly.  We use one here to save space, but would typically use two.  
+By convention, Python aficionados put two blank lines before and after function definitions to make them stand out more clearly.  We use one here to save space.  
 
 
-Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set x = 2 then use x later. But here, we're printing something but have produced no output to call later. 
+Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x`later on. Here we print something but produce no other output. 
 
-In other cases, we might want to send output back to the main program.  We do that with a **return**, a third component of a function definition.  Here's an example:  
+In other cases, we might want to send output back to the main program.  We do that with a **return** statement, a third component of a function definition.  Here's an example:  
 ```python 
 def combine(first, last): 
 	"""
@@ -497,7 +498,7 @@ def combine(first, last):
 both = combine('Chase', 'Coleman')      # assign the "return" to both 
 print(both)
 ```   
-This "returns" the output `'Coleman, Chase'`, which we assign to the variable `both`.  Note the comment in triple quotes. 
+In our example, we "return" the output `'Coleman, Chase'` and assign it to the variable `both`.  Note, too, the comment in triple quotes at the top of the function. That's standard procedure, we recommend it.  
 
 The return is an essential component of many functions.  Typically when we read the documentation for a function or method, one of the first things we look for is what it returns.   
 
@@ -507,19 +508,16 @@ The return is an essential component of many functions.  Typically when we read 
 **Exercise.**  Create and test a function that takes an integer year (say, 2015) and returns a string of the next year (say, `'2016'`). 
 
 
-<!--
-** ?? keyword arguments (sep section?) ?? **
--->
+**Exercise.** Use the Object inspector to get the documentation for the built-in function `max`.  If the input is a list of two or more numbers, what does `max()` return?  
 
 
 ##  More data structures
 
-This whole section is mtwn:  we recommend you skim it and not worry about the details.  We'll review it later as needed when it comes up.  
+This whole section is **mtwn** (more than we need).  We recommend you skim it and not worry about the details.  We'll review it later as needed.  
 
 The term **[data structure][5]** refers to the organization of a collection of data.  Strings and lists are data structures, and we'll run across **dataframes** when we start working with data.  Here we look at a couple more:  dictionaries and tuples. 
 
 [5]: http://en.wikipedia.org/wiki/Data_structure
-
 
 
 **Dictionaries.**   Dictionaries are (unordered) pairs of things defined by curly brackets `{}`, separated by commas, with the items in each pair separated by colon.  For example, a list of first and last names: 
@@ -537,6 +535,91 @@ We access the value from the key with syntax of the form: `dict[key]`.  In the e
 **Tuples.** Tuples are collections of things in parentheses separated by commas.  Our primary (only?) use will be dates.  In the datetime module (more coming), the date April 1, 2012 is expressed by the tuple `date = (2012, 4, 1)` (year, month, day). 
 
 How are tuples different from lists?  First, the syntax is different:  parentheses rather than square brackets.  Second, and more importantly, they can't be changed.  We can't alter the contents of a tuple or add another component.  
+
+
+
+## Assignments and copies
+
+Also mytn, but file away the idea for later.  This is what programmers call a "[gotcha][8]," an unexpected or counterintuitive feature of a language.  This one has gotten all of us at one time or other.  It shows up in the Pandas package, too.  The idea is that if we have (say) a list `x` and set `y = x`, then `y` is attached to `x`.  If we change the components of `x`, then `y` changes along with it.  
+
+[8]: https://en.wikipedia.org/wiki/Gotcha_(programming)
+
+
+
+<!--
+Python's behavior is similar in this respect to a spreadsheet.  Suppose we put the number 7 in cell A1, then set A2 = A1*10.  We would hope to see the number 70 in A2.  But if we change A1 to 5, then A2 would change to 50 along with it.
+-->
+
+
+We illustrate the issue with an example adapted from [Stack Overflow](http://stackoverflow.com/a/10844760/804513): 
+```python 
+x = [1,2,3]
+y = x
+y[0] = 'WHOA!'
+print(x)
+```
+The output is `['WHOA!', 2, 3]`.  You see what's happened?  We changed the first value of `y`, but when we print `x` we realized it changed, too.  It works the other way, too.  If we change `y`, `x` changes with it:  
+```python 
+y[2] = 'xyzzy'
+print(x)
+```
+Here we get the output:  `['WHOA!', 2, 'xyzzy']`.  
+
+So that's how it works.  But suppose we want an independent copy of `x`, not simply a different label for it.  what do we do?  The answer is to produce a copy:   
+```python 
+x = [1,2,3]
+y = x.copy()
+x[0] = 'WHOA!'
+print(y)
+```
+Here `y` hasn't changed, it's not connected to `x`.  
+
+
+## Programming style  
+
+Yes, style counts.  We're not only trying to get something done, we're also communicating with others who may look at our code and possibly use it.  A clear style makes that communication more effective.  
+
+With that in mind, here are some guidelines we've found useful:  
+
+* Put an overall summary of your program at the top in triple quotes.  This should include both the purpose of the program and your name.  Your email address is optional.  
+* Lines should be no longer than 79 characters.
+* Skip two lines before and after a function definition. 
+* Skip lines here and there where you think it makes sense.  
+* Use comments whenever something isn't immediately obvious.   
+
+You can find more along these lines in the classic "[PEP8](https://www.python.org/dev/peps/pep-0008/)" and Google's [style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). 
+
+Some programmers are religious about this.  We'd say simply that we want to make our code readable by others.  
+
+<!-- 
+\url{http://www.reddit.com/r/Python/comments/3639nl/what_is_the_most_beautiful_piece_of_python_code/}
+\url{https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/routing.py}  
+--> 
+
+
+## Resources 
+
+See the resources in the previous chapter, especially the link to [Codecademy](https://www.codecademy.com/tracks/python).  If you work your way up to Advanced Topics, you'll be in good shape for anything that follows.  
+
+Additional resources for specific topics:
+
+* The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language" that includes comparisons, conditional statements, and loops.  
+
+<!--
+* Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of his course is also quite good.  
+
+* Ditto [Python Tips](http://book.pythontips.com/en/latest/), which starts at a level a bit above where we left off.  Lots of cool stuff if you'd like to push further into Python.  
+-->
+
+* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
+
+<!--
+* The [Python Challenge](http://www.pythonchallenge.com/) is for people who like puzzles as well as coding.  Not for the faint of heart.  
+--> 
+
+<!--
+Obscure but cool:  https://github.com/cosmologicon/pywat#python-wats 
+--> 
 
 
 <!--
@@ -583,86 +666,4 @@ The first one has the answer `newlist = [4, 5]`, the second `newlist = ['Steeler
 [?? talk about each one as an implicit loop?]
 
 Some of us find this kind of syntax obscure and do our best to avoid it.  But similar ideas show up in lots of places.  
---> 
-
-
-## Assignments and copies
-
-Also mytn, but file away the idea for later.  This is what programmers call a "[gotcha][8]," an unexpected or counterintuitive feature of a language.  This one has gotten all of us at one time or other.  It shows up in the Pandas package, too.  The idea is that if we have (say) a list `x` and set `y = x`, then `y` is attached to `x`.  If we change the components of `x`, then `y` changes along with it.  
-
-[8]: https://en.wikipedia.org/wiki/Gotcha_(programming)
-
-
-
-<!--
-Python's behavior is similar in this respect to a spreadsheet.  Suppose we put the number 7 in cell A1, then set A2 = A1*10.  We would hope to see the number 70 in A2.  But if we change A1 to 5, then A2 would change to 50 along with it.
--->
-
-
-We illustrate the issue with an example adapted from [Stack Overflow](http://stackoverflow.com/a/10844760/804513): 
-```python 
-x = [1,2,3]
-y = x
-y[0] = 'WHOA!'
-print(x)
-```
-The output is `['WHOA!', 2, 3]`.  You see what's happened?  We changed the first value of `y`, but when we print `x` we realized it changed, too.  It works the other way, too.  If we change `y`, `x` changes with it:  
-```python 
-y[2] = 'xyzzy'
-print(x)
-```
-Here we get the output:  `['WHOA!', 2, 'xyzzy']`.  
-
-So that's how it works.  But suppose we want an independent copy of `x`, not simply a different label for it.  what do we do?  The answer is to produce a copy:   
-```python 
-x = [1,2,3]
-y = x.copy()
-x[0] = 'WHOA!'
-print(y)
-```
-Here `y` hasn't changed, it's not connected to `x`.  
-
-
-## Programming style  
-
-Yes, style counts.  We're not only trying to get something done, we're also communicating with others who may look at our code and possibly use it.  A clear style makes that communication more effective.  
-
-With that in mind, here are some guidelines we've found useful:  
-
-* Lines should be no longer than 79 characters.
-* Skip two lines before and after a function definition. 
-* Use comment whenever something isn't immediately obvious 
-
-You can find more along these lines in the classic "[PEP8](https://www.python.org/dev/peps/pep-0008/)" and Google's [style guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). 
-
-Some programmers are religious about this.  We'd say simply that we want to make our code readable by others.  
-
-<!-- 
-\url{http://www.reddit.com/r/Python/comments/3639nl/what_is_the_most_beautiful_piece_of_python_code/}
-\url{https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/routing.py}  
---> 
-
-
-## Resources 
-
-See the resources in the previous chapter, especially the link to [Codecademy](https://www.codecademy.com/tracks/python).  If you work your way up to Advanced Topics, you'll be in good shape for anything that follows.  
-
-Additional resources for specific topics:
-
-* The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language" that includes comparisons, conditional statements, and loops.  
-
-<!--
-* Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of his course is also quite good.  
-
-* Ditto [Python Tips](http://book.pythontips.com/en/latest/), which starts at a level a bit above where we left off.  Lots of cool stuff if you'd like to push further into Python.  
--->
-
-* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
-
-<!--
-* The [Python Challenge](http://www.pythonchallenge.com/) is for people who like puzzles as well as coding.  Not for the faint of heart.  
---> 
-
-<!--
-Obscure but cool:  https://github.com/cosmologicon/pywat#python-wats 
 --> 
