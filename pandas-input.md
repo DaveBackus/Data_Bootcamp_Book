@@ -457,18 +457,18 @@ Note that we used forward slashes here.  We could also use double back slashes i
 
 * In Mac OS, the only difference is the format of the path:  
 
-```python 
-import os 
-
-file = 'test.csv'
-cwd  = '/Users/userid/Data_Bootcamp'
-
-os.chdir(cwd)                                 # set current working directory 
-print('Current working directory is', os.getcwd())
-print('File exists?', os.path.isfile(file))   # check to see if file is there 
-
-df = pd.read_csv(file)
-```
+  ```python 
+  import os 
+  
+  file = 'test.csv'
+  cwd  = '/Users/userid/Data_Bootcamp'
+  
+  os.chdir(cwd)                                 # set current working directory 
+  print('Current working directory is', os.getcwd())
+  print('File exists?', os.path.isfile(file))   # check to see if file is there 
+  
+  df = pd.read_csv(file)
+  ```
 
 Once we've set the path, we read the csv file as before.  `read_excel()` works the same way. 
 
