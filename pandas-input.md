@@ -439,15 +439,14 @@ Try the appropriate one on your computer to make sure it works.  Let us know if 
 
 Once we know the directory path, we can use it in Python.  
 
-* In Windows, we use  
-```python
+* In Windows, we use 
+
+```python 
 import os 
 
-# file and directory
 file = 'test.csv'
 cwd  = 'C:/Users/userid/Data_Bootcamp'
 
-# check to make sure 
 os.chdir(cwd)                                 # set current working directory 
 print('Current working directory is', os.getcwd())
 print('File exists?', os.path.isfile(file))   # check to see if file is there 
@@ -457,14 +456,12 @@ df = pd.read_csv(file)
 Note that we used forward slashes here.  We could also use double back slashes if we prefer.  
 
 * In Mac OS, the only difference is the format of the path:   
-```python
+```python 
 import os 
 
-# file and directory
 file = 'test.csv'
 cwd  = path = '/Users/userid/Data_Bootcamp'
 
-# check to make sure 
 os.chdir(cwd)                                 # set current working directory 
 print('Current working directory is', os.getcwd())
 print('File exists?', os.path.isfile(file))   # check to see if file is there 
@@ -490,7 +487,7 @@ If this doesn't work, go back to the complete path.
 --> 
 
 
-**Please report problems.**  If you have difficulty, or find that this works differently on your computer, let us know.  
+**Report problems.**  If you have difficulty, or find that this works differently on your computer, let us know.  
 
 
 ## Data input:  examples 
