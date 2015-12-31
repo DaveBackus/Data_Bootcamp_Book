@@ -5,9 +5,9 @@
 
 **Python tools.**  Import, Pandas.  
 
-**Buzzwords.**  Package, csv file, dataframe, series, index.  
+**Buzzwords.**  Package, csv file, dataframe, series, index, API.  
 
-**Applications.**  ??? 
+**Applications.**  Income and output of countries, government debt, income by college major, old people, equity returns, George Clooney's movie roles.    
 
 **Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_1.py).  
 
@@ -30,7 +30,9 @@ You may recall that our typical program consists of data input, data management,
 
 * Data structures.  That's the term we use for specific organizations of data.  Examples are strings, lists, and dictionaries. Each has a specific structure and a set of methods we can apply.  List are collections of objects between square brackets:  `numberlist = [1, -5, 2]`.  Dictionaries are pairs of items between curly brackets:  `namedict = {'Dave': 'Backus', 'Chase': 'Coleman'}`. The first item in each pair is the "key," the second is the "value."  
 
-* ?? more? 
+* Integers, floats, and strings.  Three common types of data. 
+
+* Function returns.  We refer to the output of a function as its **return**.  We would say, for example, that the function `type(x)` returns the type of the input object `x`.   
 
 
 ## Python packages
@@ -49,7 +51,7 @@ Some of the leading packages for numerical ("scientific") computation are
 
 All of these packages come with the [Anaconda distribution](http://docs.continuum.io/anaconda/pkg-docs.html), which means we already have them installed and ready to use.  
 
-Pandas is an essential part of data work in Python.  The authors [describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, construct pivot tables, and lots of other things.  And we can do all this with much larger files than Excel can handle.  
+Pandas is an essential part of data work in Python.  Its [authors describe it](http://pandas.pydata.org/) as "an open source library for high-performance, easy-to-use data structures and data analysis tools in Python."  That's a mouthful.  Suffice it to say that we can do pretty much everything in Pandas that we can do in Excel -- and more.  We can compute sums of rows and columns, generate new rows or columns, construct pivot tables, and lots of other things.  And we can do all this with much larger files than Excel can handle.  
 
 <!-- 
 Here are some others you might run across:  
@@ -76,13 +78,13 @@ In Python we need to tell our program which packages we plan to use.  We do that
 
 Here are some examples applied to a mythical package `xyz` and mythical function `foo`:    
 
-* `import xyz as x`.  This imports the package `xyz` under the abbreviation `x`.  A function `foo` in package `xyz` is then executed by typing `x.foo`.  This is the most common syntax and the one we'll use.  With Pandas, for example, the standard import statement is `import pandas as pd`.    
+* `import xyz as x`.  This imports the package `xyz` under the abbreviation `x`.  A function `foo` in package `xyz` is then executed with `x.foo`.  This is the most common syntax and the one we'll generally use.  With Pandas, for example, the standard import statement is `import pandas as pd`.    
 
 * `import xyz`.  This imports the whole thing as well, but here the function `foo` is executed with the more verbose `xyz.foo`.  
 
 * `from xyz import *`.  This imports all the functions and methods from the package `xyz`, but here the function `foo` is executed simply by typing `foo`.  We don't usually do this, because it opens up the possibility that the same function exists in more than one package, which is virtually guaranteed to create confusion.  If `foo` is the only function we care about, we can use `from xyz import foo` instead. 
 
-The first version of `import` is the one we typically use.  We'll see these examples repeatedly:
+We'll see these examples repeatedly:
 ```python 
 import pandas as pd                  # data package
 import matplotlib.pyplot as plt      # graphics package  
@@ -115,13 +117,13 @@ Some fine points:
 
 ## Data input 1:  reading internet files 
 
-The easiest way to get data into a Python program is to read it from a file -- a spreadsheet file, for example.  The word "read" here means take what's in the file and somehow get it into Python.  Pandas can reads lots of kinds of files:  csv, xls, xlsx, and so on.  The files can be on our computer or on the internet.  We'll start with the internet -- there's less ambiguity about the location of the file -- but the same methods work with files on your computer.  
+The easiest way to get data into a Python program is to read it from a file -- a spreadsheet file, for example.  The word "read" here means take what's in the file and somehow get it into Python so we can do things with it.  Pandas can reads lots of kinds of files:  csv, xls, xlsx, and so on.  The files can be on our computer or on the internet.  We'll start with the internet -- there's less ambiguity about the location of the file -- but the same approach works with files on your computer.  
 
 
-We prefer **csv files** ("comma separated values"), a common data format for serious data people.  Their simple structure (entries separated by commas) allows easy and rapid input. They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) of translating Excel files.  If we have an Excel spreadsheet, we can always save it as a "CSV (Comma delimited) (*.csv)" file.  Excel will warn us that some features are incompatible with the csv format, but we're generally happy to do it anyway.  Here's an example of a [raw csv file](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/test.csv) (pretty basic, eh?) and this is (roughly) how it's displayed in [Excel](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv).  
+We prefer **csv files** ("comma separated values"), a common data format for serious data people.  Their simple structure (entries separated by commas) allows easy and rapid input. They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) of translating Excel files.  If we have an Excel spreadsheet, we can always save it as a "CSV (Comma delimited) (*.csv)" file.  Excel will warn us that some features are incompatible with the csv format, but we're generally happy to do it anyway.  Here's an example of a [raw csv file](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/test.csv) (pretty basic, eh?) and [this is](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) (roughly) how it's displayed in Excel.  
 
 
-It's easy to read csv files with Pandas.  We'll read one from our GitHub repository to show how this works. We like to read data from internet sources like this, especially when the data is updated at automatically at the source.  That's not the case here, but we'll see how easy it is to get this kind of data into Python.  We read the cleverly-named `test.csv` with the equally clever `read_csv` function in Pandas:
+It's easy to read csv files with Pandas.  We'll read one from our GitHub repository to show how it works. We like to read data from internet sources like this, especially when the data is updated at automatically at the source.  That's not the case here, but we'll see how easy it is to get this kind of data into Python.  We read the cleverly-named `test.csv` with the equally clever `read_csv` function in Pandas:
 ```python 
 import pandas as pd 
 url1 = 'https://raw.githubusercontent.com/DaveBackus'
@@ -152,7 +154,7 @@ So what does our read statement give us?  What's in `df`?  We can check its cont
 ```
 What we have is a table, much like what we'd see in a spreadsheet.  If we compare it to the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) we see that the first column is new, added somehow by the program, but the others are just as they look online.   
 
-The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a "dataframe."  More on that shortly.  We also see a long list of optional inputs that change how we read the file.  We ignore them unless forced to do otherwise. 
+The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a "dataframe."  More on that shortly.  We also see a long list of optional inputs that change how we read the file.  We will ignore them unless forced to do otherwise. 
 
 
 **Exercise.**  Run the code 
@@ -171,7 +173,7 @@ dfalt = pd.read_csv(url, nrows=2)
 What does the argument `nrows=2` do?  
 
 
-**Example.**  We can identify specific values in a csv file as missing or NA (not available).  We see in the documentation that the parameter na_values takes a list of strings as input.  To treat the number 1 as missing we change the read statement to `read_csv(url, na_values=[1])`.  The result is 
+**Example.**  We can identify specific values in a csv file as missing or NA (not available).  We see in the documentation that the parameter `na_values` takes a list of strings as input.  To treat the number 1 as missing we change the read statement to `read_csv(url, na_values=[1])`.  The result is 
 ```python
       name  x1  x2   x3
 0     Dave NaN   2  3.5
@@ -195,14 +197,14 @@ dfx = pd.read_excel(url)
 The files are constructed to have identical content.  
 
 
-**Exercise.** Change the file extension from `.xls` to `.xlsx` and run the modified code.  What do you get?  
+**Exercise.** Change the file extension in `url2` from `.xls` to `.xlsx` and run the modified code.  What do you get?  
 
 
 ## Properties of dataframes 
 
 Ok, so we read a file and assigned its contents to `df`.  But what is `df`?  What kinds of things can we do with it?  
 
-We can start by finding its type:  Use the handy `type()` function and enter `type(df)` in the IPython console.  It responds:  `pandas.core.frame.DataFrame`.  More simply, it's a **dataframe**.  A dataframe is another example of a data structure, like a list or a dictionary, that organizes data in a specific way.  A dataframe has three components:  a table of data, column labels, and row labels.  
+We start by finding its type.  We use the handy `type()` function and enter `type(df)` in the IPython console.  It responds:  `pandas.core.frame.DataFrame`.  More simply, it's a **dataframe**.  A dataframe is another example of a data structure, like a list or a dictionary, that organizes data in a specific way.  A dataframe has three components:  a table of data, column labels, and row labels.  
 
 Typically columns are variables and the column labels give us their names.  In our example, the second column has the name `x1` and its values follow below it.  The rows are then observations, and the row labels give us their names.  This is a standard setup and we'll do our best to conform to it.  If the data come in some other form, we'll try to convert it.  
 
@@ -219,7 +221,7 @@ The row labels are referred to as the **index**.  We extract them with the `inde
 **Exercise.** What does `df.columns.tolist()` do?  How does it compare to `list(df)`?  
 
 
-**Transpose columns and rows.** If we want to rotate the dataframe, exchanging columns and rows, we use the `transpose` method:  `df.transpose` or (more succinctly) `df.T`.  Here's an example:  
+**Transpose columns and rows.** If we want to rotate the dataframe, exchanging columns and rows, we use the `transpose` method:  `df.transpose` or (more succinctly) `df.T`.  Let's do that with the dataframe `df` we read in earlier:    
 ```python
 dft = df.T
 print('\n', dft)
@@ -233,6 +235,7 @@ x2       2      3        6
 x3     3.5    4.3      7.8
 ```
 In this case it doesn't make much sense, but in others we'll find it helpful.  
+
 
 **Column data types.**  Pandas allows every column (typically a variable) to have a different data type, but the type must be the same within a column.  With our dataframe `df`, we get the types with the `dtypes` method; that is, with `df.dtypes`:
 ```python
@@ -248,11 +251,11 @@ Evidently `x1` and `x2` are integers and `x3` is a float.  They're no different 
 
 One of the great things about Pandas is that we can do things with every observation of a variable in one statement.  
 
-**Variables = series.**  If we want to refer to the variable `x1`, we write `df['x1']`.  (We can also use `df.x1`, but that runs into problems if `x1` is an existing method.  We won't do it.)  If we ask what type this is, with 
+**Variables = series.**  If we want to refer to the variable `x1`, we write `df['x1']`.  (We can also use `df.x1`, but that runs into problems if `x1` is an existing method.)  If we ask what type this is, with 
 ```python
 print(type(df['x1']))
 ```
-we find that it's a `pandas.core.series.Series` -- or "series" for short.  A series is simply a dataframe with a single variable, which simplifies the bookkeeping a bit.  
+we find that it's a `pandas.core.series.Series` -- **series** for short.  A series is simply a dataframe with a single variable, which simplifies the bookkeeping a bit.  
 
 
 **Constructing new variables from old ones.** Now that we know how to refer to a variable, we can construct others from them.  We construct two with 
@@ -275,14 +278,14 @@ The dataframe now includes both of these variables.  The statement `print('\n', 
 
 One of the great things about dataframes is that they have lots of methods ready to go.  We'll survey some of the most useful ones at high speed and come back to them when we have more interestng data.  
 
-**Data output.** If reading is data input, then writing must be output, right?  The functions `write_csv()` and `write_excel()` produce csv and Excel files, respectively.  Or we could use the methods `df.to_csv()` and `df.to_excel()` to do the same thing.  We'll hold off on them until we've addressed files on our computer.  
+**Data output.** If reading is data input, then writing must be output, right?  The functions `write_csv()` and `write_excel()` produce csv and Excel files, respectively.  Or we could use the methods `df.to_csv()` and `df.to_excel()` to do the same thing.  Both require a file name as input.  We'll hold off on them until we've addressed files on our computer.  
 
 
 **Clipboard methods.**  We can read from the clipboard and write to it.  Suppose we open a spreadsheet and copy a section of it into the clipboard.  We can paste it into a dataframe with the statement
 ```python
-df_clip = pd.read_clipboard()`
+df_clip = pd.read_clipboard()
 ```
-We're not fans of this, it makes replication hard if we need to do this again, but it's awful convenient.  We heard about it from one of our former students.  
+We're not fans of this -- it makes replication hard if we need to do this again -- but it's awful convenient.  We heard about it from one of our former students.  
 
 
 **Setting the index.**  We're not stuck with the index in our dataframe, we can make it whatever we want.  If we want to use `name` as the index, associating observations with the `name` variable, we use the `set_index()` method:  
@@ -299,7 +302,7 @@ Spencer   5   6  7.8  0.833333  13.8
 ```
 with `name` now used as the index.  
 
-We did something else here that's important:  We assigned the result back to `df`.  That keeps what we've done in the dataframe `df`.  Without this, `df` would remain unchanged with a counter as its index.  
+We did something else here that's important:  We assigned the result back to `df`.  That keeps what we've done in the dataframe `df`.  If we hadn't done this, `df` would remain unchanged with a counter as its index and our effort to set the index would be lost.  
 
 
 **Exercise.** Set `name` as the index as just described.  Use the `index` method to extract it and verify that `name` is, in fact, the index.  
@@ -321,7 +324,7 @@ The first line gives us the means, the second the standard deviations.  The thir
 **Exercise.** What kind of object does `df.mean()` produce?  
 
 
-**Plotting.**  We have a number of plot methods avaialble.  The most basic is simply `.plot()`, which plots all of the variables against the index.  Try this and see what it looks like:  
+**Plotting.**  We have a number of plot methods avaialble.  The most basic is the `plot()` method, which plots all of the variables against the index.  Try this and see what it looks like:  
 ```python
 df.plot()
 ```
@@ -332,7 +335,7 @@ You should see lines for each of the variables plotted against the index `name`.
 ```python
 df.plot(kind='bar')
 ```
-What happens if you change `bar` to `barh`?  
+What happens if we change `bar` to `barh`?  
 
 
 **Rename or delete variables.**  Suppose we want to give `x1` the more intuitive name `sales`.  We can do that with the statement 
@@ -353,7 +356,7 @@ This method will drop either observations (`index=0`) or variables (`axis=1`).
 <!-- df.drop(['Dave'], axis=0) --> 
 
 
-**The top and bottom of a dataframe.** We commonly work with much larger dataframes in which it's unwieldy, and perhaps impossible, to print the whole thing.  So we often look at either the top or bottom:  the first few few or last few observations.  The statement `df.head(n)` extracts the top `n` observations.  If we use `df.head()` it extracts 5 observations.  This creates a new dataframe, as we can see here:  
+**The top and bottom of a dataframe.** We commonly work with much larger dataframes in which it's unwieldy, and perhaps impossible, to print the whole thing.  So we often look at either the top or bottom:  the first few few or last few observations.  The statement `df.head(n)` extracts the top `n` observations and `df.head()` (with no input) extracts the top 5.  This creates a new dataframe, as we see here:  
 ```python
 h = df.head(2)
 print(type(h))
@@ -389,9 +392,6 @@ Now save the contents in your `Data_Bootcamp` directory.  Do this three times in
 Each of these options show up in Excel when we choose "Save As." 
 
 
-**HELP!!**
-
-
 **Find the file.**  Ok, now where is the file?  We know, it's in the `Data_Bootcamp` directory, but where is that?  We need the complete path so we can tell Python where to find it.   
 
 Let's introduce some terms so we can be clear what we're talking about.  The "file name" is something like `test.csv`.  The format of the "directory" or folder address depends on the operating system.  On a Windows computer, it's something like  
@@ -412,16 +412,15 @@ In Mac OS:
 ```
 Note that they use different kinds of slashes.    
 
-
 How did we find these addresses or paths?  
 
-* Windows.  In thw Windows ??
+* Windows.  ??
 * Mac OS.  We select (but not open) the file and do "command-i" to get the file's information window.  From the window, we copy the path that follows "Where:."  It looks like we're copying arrows, but they turn into slashes when we paste the path.  
 
 
 **Reading data with the complete path.**  Once we have the complete path, we simply tell Python to read the file at that location.  Again, this varies with the operating system.  
 
-* In Windows, we take the complete path and -- **this is important** -- change all the backslashes `\` to double backslashes `\\`.  Then we read the file from the path, just as we read it from a url earlier:
+* In Windows, we take the complete path and -- **this is important** -- change all the backslashes `\` to double backslashes `\\`.  (Don't ask.)  Then we read the file from the path, just as we read it from a url earlier:
 ```python
 path = 'C:\\Users\\userid\\Documents\\Data_Bootcamp\\test.csv'
 df = read_csv(path)
@@ -436,6 +435,46 @@ df = read_csv(path)
 Try the appropriate one on your computer to make sure it works.  Let us know if it doesn't.  
 
 
+**Reading from the current working directory.** An alternative is to set the current working directory (cwd), which is where Python will look for files.  We can set that with Python's [os module](https://docs.python.org/3.5/library/os.html).  What you'll need is the location of the `Data_Bootcamp` directory.  
+
+Once we know the directory path, we can use it in Python.  
+
+* In Windows, we use  
+```python
+import os 
+
+# file and directory
+file = 'test.csv'
+cwd  = 'C:/Users/userid/Data_Bootcamp'
+
+# check to make sure 
+os.chdir(cwd)                                 # set current working directory 
+print('Current working directory is', os.getcwd())
+print('File exists?', os.path.isfile(file))   # check to see if file is there 
+
+df = pd.read_csv(file)
+```
+Note that we used forward slashes here.  We could also use double back slashes if we prefer.  
+
+* In Mac OS, the only difference is the format of the path:   
+```python
+import os 
+
+# file and directory
+file = 'test.csv'
+cwd  = path = '/Users/userid/Data_Bootcamp'
+
+# check to make sure 
+os.chdir(cwd)                                 # set current working directory 
+print('Current working directory is', os.getcwd())
+print('File exists?', os.path.isfile(file))   # check to see if file is there 
+
+df = pd.read_csv(file)
+```
+
+Once we've set the path, we read the csv file as before.  `read_excel()` works the same way. 
+
+<!--
 **Reading from the current working directory.** An alternative is to set the current working directory (cwd).  How we do that depends on our environment, which is why we prefer the other approach:  It works in all environments.  In Spyder, the path of the cwd is in a textbox at the top on the right side.  (Take a look, make sure you can find it.)  If the cwd is where our data file is, skip the next part.  If not, we can reset it in two steps:  
 
 * Find the folder icon to the right of the cwd textbox.  We know we have the right one if a text bubble pops up that says "Browse a working directory".  Click on the icon and navigate to the folder/directory that contains our data file, namely `Data_Bootcamp`.  Then click on "Select Folder" to choose it.  
@@ -448,16 +487,15 @@ file = 'test.csv'
 df = read_csv(file)
 ```
 If this doesn't work, go back to the complete path.  
+--> 
 
 
-**Request for help.**  If you have difficulty, or find that this works differently on your computer, let us know.  
-
-
+**Please report problems.**  If you have difficulty, or find that this works differently on your computer, let us know.  
 
 
 ## Data input:  examples 
 
-Here are some spreadsheet datasets we've found interesting.  In each one, we descibe the data using the `shape`, `columns`, and `head` methods.  Where it makes sense, we also produce a simple plot.  
+Here are some spreadsheet datasets we find interesting.  In each one, we descibe the data using the `shape`, `columns`, and `head` methods.  Where we can, we also produce a simple plot.  
 
 
 **Penn World Table.**  The [PWT](http://www.rug.nl/research/ggdc/data/pwt/?lang=en), as we call it, is a standard database for comparing the incomes of countries.  It includes annual data for GDP, GDP per person, employment, hours worked, capital, and many other things.  The variables are measured on a comparable basis, with GDP measured in  2005 US dollars.  
@@ -471,29 +509,36 @@ pwt = pd.read_excel(url, sheetname='Data')
 So what does that give us?  
 
 * `pwt.shape` returns `(10357, 47)`:  the dataframe `pwt` contains 10,357 observations of 47 variables.  
-* `list(pwt)` gives us the variable names, which include `countrycode`, `country`, `year`, `rgdpo` (real GDP), and `population`.  
-* `pwt.head()` shows us the first 5 observations, which refer to Angola for the years 1950 to 1954.  If we look further down, we see that countries are stacked on top of each other in roughly alphabetical order.  
+* `list(pwt)` gives us the variable names, which include `countrycode`, `country`, `year`, `rgdpo` (real GDP), and `pop` (population).  
+* `pwt.head()` shows us the first 5 observations, which refer to Angola for the years 1950 to 1954.  If we look further down, we see that countries are stacked on top of each other in alphabetical order.  
 
-The data are in our standard format:  Each column is a variable, each row is an observation.  But if we were to plot one of the variables, it wouldn't make much sense.  The observations string together countries, one after the other.  What we'd like to do is compare countries, which this isn't set up to do -- yet.  
+In this dataset, each column is a variable and each row is an observation.  But if we were to plot one of the variables, it wouldn't make much sense.  The observations string together countries, one after the other.  What we'd like to do is compare countries, which this isn't set up to do -- yet.  
 
 **Exercise.** Change the input in the last line of code to `sheetname=2`.  Why does this work?  
 
-
-**Example (WEO).**  Another good source of macroeconomic data for countries is the IMF's World Economic Outlook or WEO.  It comes out twice a year and includes annual data from 1980 to roughly 5 years in the future (forecats, evidently).  It includes the usual GDP, but also government debt and deficits, interest rates, and exchange rates.  
+**Example (WEO).**  Another good source of macroeconomic data for countries is the IMF's World Economic Outlook or WEO.  It comes out twice a year and includes annual data from 1980 to roughly 5 years in the future (forecasts, evidently).  It includes the usual GDP, but also government debt and deficits, interest rates, and exchange rates.  
 
 This one gives us some idea of the challanges we face dealing with what looks like ordinary spreadsheet data.  The file extension is `xls`, which suggests it's an Excel lspreadsheet, but in fact it's a tab-delimited file.  Essentially a csv, but with tabs rather than commas separating entries.  We read it in with 
 ```python 
 import pandas as pd
 url = 'https://www.imf.org/external/pubs/ft/weo/2015/02/weodata/WEOOct2015all.xls'
-weo = pd.read_csv(url, sep='\t')    # tab = \t
+weo = pd.read_csv(url, sep='\t')    # \t = tab 
 ```
 
 **Exercise.** How big is the dataframe `weo`?  What variables does it include?  Use the statement `weo[[0, 1, 2, 3, 4]].head()` to see what the first five columns contain.  
 
-Like the PWT, this dataset doesn't come in the standard format, with columns as variables and rows as observations.  Instead, each row contains observations for all years for some variable and country combination.  If we want to work with it, we'll have to change the structure.  
+This dataset doesn't come in the standard format, with columns as variables and rows as observations.  Instead, each row contains observations for all years for some variable and country combination.  If we want to work with it, we'll have to change the structure. Which we'll do, but not now.  
+
+<!-- 
+**Historical government debt data.** The IMF also has an informal release that covers the complete [history of government debt](http://www.imf.org/external/ns/cs.aspx?id=262), or at least as much of it as we have data for.  We'll use it to plot the ratio of government debt to GDP for the UK and Greece.  
+
+We read the data
+
+Plot debt ...  
+-->
 
 
-**PISA education data.**  PISA stands for [Program for International Student Assessment](http://www.oecd.org/pisa/).  It's an international effort to collect information about educational performance that's comparable across countries.  We read about it every few years when newspapers print stories about how poorly American students are doing.  PISA collects data on student performance, teacher quality, and many other things, and post both summaries and individual data.  
+**PISA education data.**  PISA stands for [Program for International Student Assessment](http://www.oecd.org/pisa/).  It's an international effort to collect information about educational performance that's comparable across countries.  We read about it every few years when newspapers print stories about how poorly American students are doing.  PISA collects data on student performance, teacher quality, and many other things, and posts both summaries and individual test results.  
 
 We use data from a summary table in an [OECD report](http://www.oecd.org/pisa/keyfindings/pisa-2012-results-volume-I.pdf); note the data link at the bottom of Table 1.A.  This codes reads the data from the link:  
 ```python 
@@ -513,6 +558,7 @@ There are a number of new things in the read statement:
 
 * We've spread the read statement over several lines to make it easier to read.  Python understands that the line doesn't end until we reach the right paren ).  That's common Python syntax.  
 * We skip rows at the top and bottom that do not contain data.  
+* We choose specific columns to read using the `parse_cols` parameter.  Column numbering starts at zero, as we have come to expect.  
 * We set the index and column labels.  
 
 We can clean this up further if we drop blank lines and simplify the variable names:  
@@ -521,10 +567,24 @@ pisa = pisa.dropna()                    # drop blank lines
 pisa.columns = ['Math', 'Reading', 'Science']   # simplify variable names 
 pisa['Math'].plot(kind='barh')
 ```
-The plot at the bottom is virtually impossible to read, but we'll work on that later.  
+The plot we produce in the last line is virtually impossible to read, but we'll work on that later.  
+
+**UN population data.**  We tend to have pretty good demographic data.  We keep track of how many people we have, their ages, how many children they have, what they die of, and so on.  A good international source is the [United Nations' Population Division](http://esa.un.org/unpd/wpp/Download/Standard/Population/).  
+
+This code reads in estimates of population by age for many countries: 
+```python
+url1 = 'http://esa.un.org/unpd/wpp/DVD/Files/'
+url2 = '1_Indicators%20(Standard)/EXCEL_FILES/1_Population/'
+url3 = 'WPP2015_POP_F07_1_POPULATION_BY_AGE_BOTH_SEXES.XLS'
+url = url1 + url2 + url3 
+
+cols = [2, 4, 5] + list(range(6,28))
+est = pd.read_excel(url, sheetname=0, skiprows=16, parse_cols=cols)
+```
+The columns contain population number for 5-year age groups.  when we're up to it, we'll use this data to illustrate the dramatic aging of the population in most countries.  It's one of the striking facts of modern times:  people are living longer, a lot longer.    
 
 
-**Incomes by college major.** Nate Silver's outfit, the [538 blog](http://fivethirtyeight.com/), does a lot of good data journalism and often posts its data online.  This one comes from their analysis of [income by college major](http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/).  The data comes from the American Community Survey but they've done the work of organizinfg it for us.  
+**Incomes by college major.** Nate Silver's [538 blog](http://fivethirtyeight.com/) does a lot of good data journalism and often posts its data online.  This one comes from their analysis of [income by college major](http://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/).  The data comes from the American Community Survey but they've done the work of organizing it for us.  
 
 Here's the code:  
 ```python
@@ -538,15 +598,15 @@ df538 = pd.read_csv(url)
 
 **Exercise.** Set the index as `Major`.  (Ask yourself:  What method should I use?)  
 
-**Exercise.** Create a horizontal bar chart using the `plot()` method.  
+**Exercise.** Create a horizontal bar chart with the variable ?? using the `plot()` method.  
 
 
-**Internet Movie Database (IMDb).**  We love this one, a list of roles in IMDb's movie database that we got from [Brandon Rhodes](https://github.com/brandon-rhodes/pycon-pandas-tutorial).  We read it with this code:  
+**Internet Movie Database (IMDb).**  We love this one, a list of roles in IMDb's movie database we got from [Brandon Rhodes](https://github.com/brandon-rhodes/pycon-pandas-tutorial).  We read it with this code:  
 ```python
 url  = 'http://pages.stern.nyu.edu/~dbackus/csv/cast.csv'
 cast = pd.read_csv(url, encoding='utf-8')
 ```
-Don't panic if nothing happens, this takes a couple minutes.  
+Don't panic if nothing happens, this takes a minute or two.  
 
 **Exercise.** Since we're all experts by now, we'll leave this one to you:  
 
@@ -554,8 +614,8 @@ Don't panic if nothing happens, this takes a couple minutes.
 * What variables does it include?   
 * Try these statements:     
 ```python
-ah = cast[cast['title']=='Annie Hall']
-gc = cast[cast['name']=='George Clooney']
+ah = cast[cast['title'] == 'Annie Hall']
+gc = cast[cast['name'] == 'George Clooney']
 ```
 This goes beyond what we've done so far, but what do you think they do?  What do the dataframes `ah` and `gc` contain?  
 
@@ -563,7 +623,6 @@ This goes beyond what we've done so far, but what do you think they do?  What do
 **Healthcare by location.**
 http://www.nytimes.com/interactive/2015/12/18/upshot/19up-healthcosts.html
 http://www.nytimes.com/interactive/2015/12/15/upshot/the-best-places-for-better-cheaper-health-care-arent-what-experts-thought.html
-
 
 **Heart attack data.**
 ```python 
@@ -574,7 +633,6 @@ import pandas as pd
 url = 'https://data.medicare.gov/api/views/c7us-v4mf/rows.csv'
 df = pd.read_csv(url) 
 ```
-
 
 **Example (Airbnb).** Chase likes this one.  Someone posted a bunch of Airbnb data online.  
 
@@ -594,12 +652,6 @@ http://infographics.economist.com/2015/databank/BMfile2000-Jul2015.xls
 https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/27893 
 
 Papers:  https://scholar.google.com/scholar?hl=en&q=fisman+speed+dating&btnG=&as_sdt=1%2C33
---> 
-
-<!--
-**UN population projections by age**  We tend to have pretty good demographic data:  counts of people, their ages, how many children they have, what they die of, and so on.  A good international source is the [United Nations' Population Division](http://esa.un.org/unpd/wpp/Download/Standard/Population/).  
-
-This code reads in estimates of past and projections of future population by age for many countries:\
 --> 
 
 
@@ -632,30 +684,35 @@ https://github.com/TomAugspurger/PyDataSeattle/blob/master/notebooks/3.%20Indexi
 ## Data input 3:  APIs
 
 
-APIs are application program interfaces.  That's a mouthful.  A dataset with an API allows access through some method other than a spreadsheet.  The API is the set of rules for accessing the data.  The bad news is the jargon.  The good news is that people have written code to access the APIs.  And it's easy to use, which is the point.  
+APIs are "application program interfaces".  That's a mouthful.  A dataset with an API allows access through some method other than a spreadsheet.  The API is the set of rules for accessing the data.  The bad news is the jargon.  The good news is that people have written easy-to-use code to access the APIs.  We don't need to understand the API, we just use the code and say thank you.   
 
-Pandas has what they call a set of [remote data access tools](http://pandas.pydata.org/pandas-docs/stable/remote_data.html).  They break now and then, tupically when the underlying data changes, but when they work they're great.  This part of Pandas is undergoing a transition (see the link), but for now this is how it works.  
+The Pandas package has what they call a set of [Remote Data Access tools](http://pandas.pydata.org/pandas-docs/stable/remote_data.html).  They break now and then, typically when the underlying data changes, but when they work they're great.  This part of Pandas is undergoing a transition, but for now this is how it works.  
 
 
 **FRED.** The St Louis Fed has put together a large collection of time series data that they refer to as [FRED](https://research.stlouisfed.org/fred2/):  Federal Reserve Economic Data.  They started with the US, but now include data for many countries.  
 
-The Pandas [Remote Data Access docs](http://pandas.pydata.org/pandas-docs/stable/remote_data.html) describe how to access FRED with Pandas.  Here's an example that reads in quarterly data for US real GDP and real consumption and produces a simply plot: 
+The Pandas docs describe how to access FRED.  Here's an example that reads in quarterly data for US real GDP and real consumption and produces a simply plot: 
 ```python
 import pandas as pd 
 import pandas.io.data as web    # package to access FRED 
 import datetime                 # package to handle dates 
 
-start = datetime.datetime(2010, 1, 1)
+start = datetime.datetime(2010, 1, 1)  # start date 
 codes = ['GDPC1', 'PCECC96']    # real GDP, real consumption 
 fred  = web.DataReader(codes, 'fred', start) 
 fred = fred/1000                # convert billions to trillions
 
 fred.plot()
 ```
-The graph is a little clunky, but we'll show how to fix it up next week.  
+We copied most of this from the Pandas documentation.  Which is a good idea:  start with something that's supposed to work and change one thing at a time.  
+
+The date in the `start` line is a **tuple**, a data structure we won't see much of.  We recognize them by the parentheses.  Remind yourself:  square brackets are lists, curly braces are dictionaries, and parentheses are tuples.  In this case the tuple has the form (year, month, day).  
 
 
-**World Bank.** The World Bank's data covers economics and social statistics for most countries in the world.  Variables include GDP, population, education, and infrastructure.  Here's an example:  
+**Exercise.** Run the same code with a start date of 2005.  What do you see?  
+
+
+**World Bank.** The World Bank's databank [?? add link ??] covers economics and social statistics for most countries in the world.  Variables include GDP, population, education, and infrastructure.  Here's an example:  
 ```python
 import pandas as pd                 
 from pandas.io import wb            # World Bank api
@@ -671,11 +728,8 @@ wb = wb.reset_index(level='year', drop=True)
 wb.plot(kind='barh') 
 ```
 
-These are worth thinking about, but do not have clear answers:  
 
 **Exercise.** What would you like to change in this graph?  Keep a list for next time we run into this one.  
-
-**Exercise.** This data is similar to the PWT, in the sense that we have observations for dates and countries.  In the PWT, 
 
 
 **Fama-French.**  Gene Fama and Ken French post lots of data on equity returns on [Ken French’s website](http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html).  The data are zipped text files, which we can easily read into Excel.  The Pandas tool is even better.  Here's an example:  
@@ -696,15 +750,20 @@ The data is monthly, 1926 to present.  Returns are expressed as percentages; mul
 
 We use the `describe()` method to compute statistics.  Evidently `xsm` has the largest mean.  It also has the largest standard deviation.  A couple plot methods show us more about the distribution:  
 ```python 
-ff.plot()
 ff.boxplot()
+ff.plot()
+ff.plot(ff['xsm'], ff['smb'], kind='scatter')
 ```
-What do you see?  
+What do you see?  What more would you like to know?  
 
 
 ## Resources 
 
-See also our list of common [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
+We've covered a lot of ground, but if you're looking for more we suggest:  
+
+* On data:  See our list of common [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
+
+* On Pandas:  See Chris Moffit's Practical Business Python blog, which has aa good series on Pandas from the perspective of an Excel user.  
 
 
 <!-- 
@@ -726,17 +785,11 @@ http://pandas.pydata.org/pandas-docs/stable/io.html
 
 History of debt (see data link on left):  http://www.imf.org/external/ns/cs.aspx?id=262 
 
-
-http://www.alfredo.motta.name/data-manipulation-primitives-in-r-and-python/ 
-
 http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/ 
 
 Cookbook:  http://pandas.pydata.org/pandas-docs/stable/tutorials.html#pandas-cookbook 
 
 Pandas plotting methods:  http://pandas.pydata.org/pandas-docs/version/0.10.1/visualization.html#autocorrelation-plot
-
-Another intro:  http://efavdb.com/pandas-tips-and-tricks/
-
 --> 
 
 <!--
