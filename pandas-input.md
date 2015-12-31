@@ -439,22 +439,24 @@ Try the appropriate one on your computer to make sure it works.  Let us know if 
 
 Once we know the directory path, we can use it in Python.  
 
-* In Windows, we use <br>
-```python 
-import os 
+* In Windows, we use 
 
-file = 'test.csv'
-cwd  = 'C:/Users/userid/Data_Bootcamp'
-
-os.chdir(cwd)                                 # set current working directory 
-print('Current working directory is', os.getcwd())
-print('File exists?', os.path.isfile(file))   # check to see if file is there 
-
-df = pd.read_csv(file)
-```
+  ```python 
+  import os 
+  
+  file = 'test.csv'
+  cwd  = 'C:/Users/userid/Data_Bootcamp'
+  
+  os.chdir(cwd)                                 # set current working directory 
+  print('Current working directory is', os.getcwd())
+  print('File exists?', os.path.isfile(file))   # check to see if file is there 
+  
+  df = pd.read_csv(file)
+  ```
 Note that we used forward slashes here.  We could also use double back slashes if we prefer.  
 
-* In Mac OS, the only difference is the format of the path:  <br>
+* In Mac OS, the only difference is the format of the path:  
+
 ```python 
 import os 
 
