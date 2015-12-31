@@ -420,7 +420,7 @@ How did we find these addresses or paths?
 
 **Reading data with the complete path.**  Once we have the complete path, we simply tell Python to read the file at that location.  Again, this varies with the operating system.  
 
-* In Windows, we take the complete path and -- **this is important** -- change all the backslashes `\` to double backslashes `\\`.  (Don't ask.)  Then we read the file from the path, just as we read it from a url earlier:
+* In Windows, we take the complete path and -- **this is important** -- change all the backslashes `\` to either double backslashes `\\` or forward slashes `/`.  (Don't ask.)  Then we read the file from the path, just as we read it from a url earlier:
 ```python
 path = 'C:\\Users\\userid\\Documents\\Data_Bootcamp\\test.csv'
 df = read_csv(path)
@@ -440,7 +440,6 @@ Try the appropriate one on your computer to make sure it works.  Let us know if 
 Once we know the directory path, we can use it in Python.  
 
 * In Windows, we use 
-
 ```python 
 import os 
 
@@ -456,7 +455,6 @@ df = pd.read_csv(file)
 Note that we used forward slashes here.  We could also use double back slashes if we prefer.  
 
 * In Mac OS, the only difference is the format of the path:  
-
 ```python 
 import os 
 
