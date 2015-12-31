@@ -761,7 +761,7 @@ We've covered a lot of ground, but if you're looking for more we suggest:
 
 * On data:  See our list of common [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
 
-* On Pandas:  See Chris Moffit's Practical Business Python blog, which has aa good series on Pandas from the perspective of an Excel user.  
+* On Pandas:  Chris Moffitt's [Practical Business Python blog](http://pbpython.com/archives.html) has a good series on Pandas from the perspective of an Excel user.  
 
 
 <!-- 
