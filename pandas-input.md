@@ -455,12 +455,13 @@ df = pd.read_csv(file)
 ```
 Note that we used forward slashes here.  We could also use double back slashes if we prefer.  
 
-* In Mac OS, the only difference is the format of the path:   
+* In Mac OS, the only difference is the format of the path:  
+
 ```python 
 import os 
 
 file = 'test.csv'
-cwd  = path = '/Users/userid/Data_Bootcamp'
+cwd  = '/Users/userid/Data_Bootcamp'
 
 os.chdir(cwd)                                 # set current working directory 
 print('Current working directory is', os.getcwd())
