@@ -439,7 +439,7 @@ Try the appropriate one on your computer to make sure it works.  Let us know if 
 
 Once we know the directory path, we can use it in Python.  
 
-* In Windows, we use 
+* In Windows, we use <br>
 ```python 
 import os 
 
@@ -454,7 +454,7 @@ df = pd.read_csv(file)
 ```
 Note that we used forward slashes here.  We could also use double back slashes if we prefer.  
 
-* In Mac OS, the only difference is the format of the path:  
+* In Mac OS, the only difference is the format of the path:  <br>
 ```python 
 import os 
 
