@@ -514,16 +514,29 @@ In this dataset, each column is a variable and each row is an observation.  But 
 
 **Exercise.** Change the input in the last line of code to `sheetname=2`.  Why does this work?  
 
-**Example (WEO).**  Another good source of macroeconomic data for countries is the IMF's World Economic Outlook or WEO.  It comes out twice a year and includes annual data from 1980 to roughly 5 years in the future (forecasts, evidently).  It includes the usual GDP, but also government debt and deficits, interest rates, and exchange rates.  
+**World Economic Outlook.**  Another good source of macroeconomic data for countries is the IMF's World Economic Outlook or WEO.  It comes out twice a year and includes annual data from 1980 to roughly 5 years in the future (forecasts, evidently).  It includes the usual GDP, but also government debt and deficits, interest rates, and exchange rates.  
 
 This one gives us some idea of the challanges we face dealing with what looks like ordinary spreadsheet data.  The file extension is `xls`, which suggests it's an Excel lspreadsheet, but in fact it's a tab-delimited file.  Essentially a csv, but with tabs rather than commas separating entries.  We read it in with 
 ```python 
 import pandas as pd
-url = 'https://www.imf.org/external/pubs/ft/weo/2015/02/weodata/WEOOct2015all.xls'
-weo = pd.read_csv(url, sep='\t')    # \t = tab 
+url1 = 'https://www.imf.org/external/pubs/ft/weo/'
+url2 = '2015/02/weodata/WEOOct2015all.xls'
+weo = pd.read_csv(url1+url2, 
+                  sep='\t',                 # \t = tab 
+                  thousands=',',            # kill commas 
+                  na_values=['n/a', '--'])  # missing values 
 ```
+This has several features we need to deal with:  
+
+* We identify tabs as the separator between entries.
+* We eliminate commas from numbers.  (But why did they put them in?)
+* We identify missing values.  
+
+This works, but keep in mind that it took us an hour or two to figure this out.  
+
 
 **Exercise.** How big is the dataframe `weo`?  What variables does it include?  Use the statement `weo[[0, 1, 2, 3, 4]].head()` to see what the first five columns contain.  
+
 
 This dataset doesn't come in the standard format, with columns as variables and rows as observations.  Instead, each row contains observations for all years for some variable and country combination.  If we want to work with it, we'll have to change the structure. Which we'll do, but not now.  
 
@@ -759,9 +772,9 @@ What do you see?  What more would you like to know?
 
 We've covered a lot of ground, but if you're looking for more we suggest:  
 
-* On data:  See our list of common [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
-
 * On Pandas:  Chris Moffitt's [Practical Business Python blog](http://pbpython.com/archives.html) has a good series on Pandas from the perspective of an Excel user.  
+
+* On data:  See our list of common [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
 
 
 <!-- 
