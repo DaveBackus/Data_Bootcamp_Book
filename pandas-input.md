@@ -17,7 +17,7 @@
 **UNDER CONSTRUCTION**
 -->
 
-We're ready now to look at some data.  Lots of data.  
+We're ready now to look at some data.  Lots of data.  You will need an **internet connection** for much of it.  
 
 You may recall that our typical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first -- data input -- but touch briefly on the second and third.  More concretely, we explain how to get spreadsheet data into Python.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
 
@@ -272,6 +272,9 @@ The dataframe now includes both of these variables.  The statement `print('\n', 
 1    Chase   4   3  4.3  1.333333   7.3
 2  Spencer   5   6  7.8  0.833333  13.8
 ```
+
+Let's think about what we've done here.  One line of code computes all the observations of a new variable `y1`.  In Excel, we would compute the first observation of `y1`, then copy the formula to the other observations.  Here they all happen at once.  Underlying this must be a loop of some sort, but we don't have to worry about that, it's all built into Pandas.  
+
 
 ## Dataframe methods 
 
@@ -528,12 +531,15 @@ weo = pd.read_csv(url1+url2,
 ```
 This has several features we need to deal with:  
 
-* We identify tabs as the separator between entries.
-* We eliminate commas from numbers.  (But why did they put them in?)
-* We identify missing values.  
+* Identify tabs as the separator between entries.
+* Eliminate commas from numbers-- things like `12,345.6`, which Python will treat as a string.  (But why did they put them in?)
+* Identify missing values.  
 
-This works, but keep in mind that it took us an hour or two to figure this out.  
+Keep in mind that it took us an hour or two to figure all this out.  Sometimes we find that others have done this for us.  
 
+**Exercise.**  Why were we able to spread the `read_csv` statement over several lines? 
+
+**Exercise.**  Google "python pandas weo" to see if someone else has figured out how to read this file.  
 
 **Exercise.** How big is the dataframe `weo`?  What variables does it include?  Use the statement `weo[[0, 1, 2, 3, 4]].head()` to see what the first five columns contain.  
 
@@ -719,11 +725,16 @@ We copied most of this from the Pandas documentation.  Which is a good idea:  st
 
 The date in the `start` line is a **tuple**, a data structure we won't see much of.  We recognize them by the parentheses.  Remind yourself:  square brackets are lists, curly braces are dictionaries, and parentheses are tuples.  In this case the tuple has the form (year, month, day).  
 
+The variable "codes"  -- not to be confused with "code" -- come from FRED.  Go to [FRED](https://research.stlouisfed.org/fred2/), use the search box to find the series you want, and look for the variable code at the end of the url in your browser.  
+
+<!--
+click on the "Cite" tab below the figure, and look for the code in square brackets.  
+--> 
 
 **Exercise.** Run the same code with a start date of 2005.  What do you see?  
 
 
-**World Bank.** The World Bank's databank [?? add link ??] covers economics and social statistics for most countries in the world.  Variables include GDP, population, education, and infrastructure.  Here's an example:  
+**World Bank.** The World Bank's [databank](http://data.worldbank.org/) covers economic and social statistics for most countries in the world.  Variables include GDP, population, education, and infrastructure.  Here's an example:  
 ```python
 import pandas as pd                 
 from pandas.io import wb            # World Bank api
@@ -739,8 +750,10 @@ wb = wb.reset_index(level='year', drop=True)
 wb.plot(kind='barh') 
 ```
 
+We use codes here for countries and variables.  We find country codes in [this list](http://www.countryareacode.net/) -- or just Google "country codes".  Pandas accepts both 2- and 3-letter versions.  We find variable codes with the search tool in the Remote Data Access module or by looking through the World Bank's [data portal](http://databank.worldbank.org/data/home.aspx).  We prefer the latter.  Click on a variable of interest and read the code from the end of the url.  
 
-**Exercise.** What would you like to change in this graph?  Keep a list for next time we run into this one.  
+
+**Exercise.** What would you like to change in this graph?  Keep a list for next time we run into this one.    
 
 
 **Fama-French.**  Gene Fama and Ken French post lots of data on equity returns on [Ken French’s website](http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html).  The data are zipped text files, which we can easily read into Excel.  The Pandas tool is even better.  Here's an example:  

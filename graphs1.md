@@ -1,4 +1,4 @@
-# Python graphics: Matplotlib   
+# Python graphics: Matplotlib fundamentals 
 
 ---
 **Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  
@@ -13,27 +13,58 @@
 
 ---
 
-**UNDER CONSTRUCTION**
-
 
 Computer graphics are one of the great advances of the modern world.  Graphs have always been helpful in describing data or concepts, but they're a lot easier to produce now than they were a few years ago. In fact, we've gotten so good at drawing pictures that we invented a new term for it:  **visualization**.  
 
-<!--
-?? Have you ever done a graph in Excel, and then spent an hour or two fixing it up?? 
--->
+That's the good news.  The bad news, or at least the reigning fact of life, is that graphics are inherently complicated.  Programs like Excel do their best to hide this fact, but if you ever try to customize a chart it quickly rears its ugly head.  Have you ever spent a couple hours trying to fine-tune an Excel graph?  More?  The problem is that even simple graphs have lots of moving parts:  the type (line, bar, etc); the color and thickness of lines, bars, or markers; title and axis labels; their location, fonts, and font sizes; tick marks (location, size); background color; grid lines (on or off); and so on.  So there's a lot of stuff to keep track of.  
 
-That's the good news.  The bad news, or at least the reigning fact of life, is that graphics are inherently complicated.  Programs like Excel do their best to hide this fact, but if you ever try to customize a chart it quickly rears its ugly head.  Have you ever spent a couple hours trying to fine-tune an Excel graph?  More?  The problem is that even simple graphs have lots of moving parts:  the type (line, bar, etc); the color and thickness of lines, bars, or markers; title and axis labels; their location, fonts, and font sizes; tick marks (location, size); background color; grid lines (on or off); and so on.  So there's lots of stuff to keep track of.  
-
-We introduce graphics with **Matplotlib**, the leading collection of graphics tools in Python, 
-show how to put it to work, and make a start on producing attractive visualizations.  
+We introduce graphics with **Matplotlib**, Python's leading graphics package.  We show how to put it to work and make a start on producing effective -- and attractive -- visualizations.  
 
 
 ## Reminders 
 
+* Packages.  Collections of tools that extend Python's capabalities. We add them with `import` statements.  
 
-Data structures:  strings, lists, dataframes  
+* Pandas.  Python's data management package.  We typically add it to our programs with 
+```python
+import pandas as pd 
+```
 
-functions and methods... 
+* Dataframe.  A data structure like a spreadsheet that includes a table of data plus row and column labels.  Typically columns are variables and rows are observations.  Common dataframe methods include `columns` (column labels), `index` (row labels), and `plot` (graph the columns).  
+
+* Series.  A single variable.  A variable `x` in a dataframe `df` can be expressed as the series `df['x']`.  
+
+* Reading spreadsheets.  We can "read" data into Python using the `read_csv` and `read_excel` functions in Pandas. 
+
+* API.  Or we can use the APIs for FRED, the World Bank, Fama-French, nd other data sources.  
+
+* Jupyter.  A Python environment in which we create IPython notebooks.  These notebooks ombine Python code with text and output, including graphics. 
+
+
+## IPython notebooks in Jupyter
+
+We're going to change environments here to Jupyter and work with IPython notebooks.  
+
+
+## Jupyter basics 
+
+What it looks like...  
+
+Markdown.  
+
+* hashes for headings..
+
+* **bold** 
+
+Code...  
+
+
+Magics.. 
+
+* maplotlib inline 
+
+
+
 
 
 ## Three approaches to graphs 
