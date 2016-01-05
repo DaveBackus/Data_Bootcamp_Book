@@ -594,6 +594,8 @@ Some programmers are religious about this.  We'd say simply that we want to make
 <!-- 
 \url{http://www.reddit.com/r/Python/comments/3639nl/what_is_the_most_beautiful_piece_of_python_code/}
 \url{https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/routing.py}  
+
+https://github.com/amontalenti/elements-of-python-style
 --> 
 
 

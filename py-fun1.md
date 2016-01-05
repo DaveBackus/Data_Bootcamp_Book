@@ -596,6 +596,9 @@ If you'd like another source for comparison, here are some good introductions to
 
 * Mark Lutz's [Learning Python](http://www.amazon.com/Learning-Python-5th-Mark-Lutz/dp/1449355730/) is a 1600-page monster that covers lots of things we won't use.  But it's clear and thorough, and comes with the elusive Glenn Okun stamp of approval.  He tells us the Kindle version comes with free updates. 
 
+<!--
+Python for humanities, solid intro:  http://fbkarsdorp.github.io/python-course/
+-->
 
 <!-- 
 * Sebastian Raschka has more than you'll ever need  about the [differences between Python 2 and 3](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html).   

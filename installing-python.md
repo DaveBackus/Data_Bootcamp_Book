@@ -58,7 +58,7 @@ You now have Python installed and ready to run.  Congratulations!
 
 Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and Juypyter/IPython.  
 
-We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  It should look (roughly) like [this picture](http://continuum.io/blog/new-launcher).  You will see a list of applications:  
+We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  It should look (roughly) like [this picture](http://docs.continuum.io/anaconda-launcher/index).  You will see a list of applications:  
 
 * glueviz 
 * ipython-notebook 
