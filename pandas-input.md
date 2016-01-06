@@ -9,7 +9,7 @@
 
 **Applications.**  Income and output of countries, government debt, income by college major, old people, equity returns, George Clooney's movie roles.    
 
-**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_1.py).  
+**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_1.py).  Click on Raw button to download file.  
 
 ---
 
@@ -24,7 +24,7 @@ You may recall that our typical program consists of data input, data management,
 
 ## Reminders
 
-* Methods and objects.  Recall that we apply the method `justdoit` to the object `x` with `x.justdoit`.  A common example is the `plot()` method, which works for a wide range of data objects.   
+* Objects and methods.  Recall that we apply the method `justdoit` to the object `x` with `x.justdoit`.  A common example is the `plot()` method, which works for a wide range of data objects.   
 
 * Help.  We get help in Spyder from both the IPython console and the Object inspector.  For the hypothetical `x.plot()`, we would type `x.plot?` in the IPython console or `x.plot` in the Object inspector.  
 
@@ -94,7 +94,7 @@ You might also go through earlier chapters and identify the `import` statements 
 
 Some fine points:  
 
-* What happens if we issue an import statement twice?  Answer:  Nothing, no harm done.  
+* Redundancy.  What happens if we issue an import statement twice?  Answer:  Nothing, no harm done.  
 
 * Jokes.  These are programmer jokes, which might be a contradiction in terms, but try them and see what happens:   
   ```python 
@@ -102,7 +102,7 @@ Some fine points:
   import antigravity 
   ```
 
-* We can check the version number of a package with the `__version__` method.  To check the version of Pandas, try 
+* Versions.  We can check the version number of a package with the `__version__` method.  To check the version of Pandas, try 
   ```python 
   import pandas as pd 
   print('Pandas version ', pd.__version__)   	# these are double underscores 
@@ -123,7 +123,7 @@ The easiest way to get data into a Python program is to read it from a file -- a
 We prefer **csv files** ("comma separated values"), a common data format for serious data people.  Their simple structure (entries separated by commas) allows easy and rapid input. They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) of translating Excel files.  If we have an Excel spreadsheet, we can always save it as a "CSV (Comma delimited) (*.csv)" file.  Excel will warn us that some features are incompatible with the csv format, but we're generally happy to do it anyway.  Here's an example of a [raw csv file](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/test.csv) (pretty basic, eh?) and [this is](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) (roughly) how it's displayed in Excel.  
 
 
-It's easy to read csv files with Pandas.  We'll read one from our GitHub repository to show how it works. We like to read data from internet sources like this, especially when the data is updated at automatically at the source.  That's not the case here, but we'll see how easy it is to get this kind of data into Python.  We read the cleverly-named `test.csv` with the equally clever `read_csv` function in Pandas:
+**Reading csv files.** It's easy to read csv files with Pandas.  We'll read one from our GitHub repository to show how it works. We like to read data from internet sources like this, especially when the data is updated at automatically at the source.  That's not the case here, but we'll see how easy it is to get this kind of data into Python.  We read the cleverly-named `test.csv` with the equally clever `read_csv` function in Pandas:
 ```python 
 import pandas as pd 
 url1 = 'https://raw.githubusercontent.com/DaveBackus'
@@ -135,14 +135,15 @@ The syntax works like this:
 
 * `url` is a string that tells Python where to look for the file.  We break it in two because it's too long to fit on one line.  
 * `read_csv` is a Pandas function that reads csv files.  The `pd.` before it tells Python it's a Pandas function; we established the `pd` abbreviation in the `import` statement.  
-* The `df` on the left makes this an assignment:  we assign what we read to the variable `df`.  
+* The `df` on the left makes this an assignment:  we assign what we read to the variable `df`. 
 
-[If the internet is down, or something else goes wrong, we can create the same dataframe from a dictionary:  
+
+**Digression.** We won't do this often, but if the internet is down, or we want a simple example to experiment with, we can create data like this from a dictionary.  Each pair in the dictionary consists of a variable name (the "key") and a list containing data (the "value").  This code reproduces the output of the `read_csv` function above:   
 ```python 
 df = pd.DataFrame({'name': ['Dave', 'Chase', 'Spencer'], 
                    'x1': [1, 4, 5], 'x2': [2, 3, 6], 'x3': [3.5, 4.3, 7.8]}) 
 ```
-The details aren't important, we'll do this only when we have to.] 
+The details aren't important, we'll do this only when we have to.  **End digression.**  
 
 
 So what does our read statement give us?  What's in `df`?  We can check its contents by adding the statement `print('\n', df)`.  (The `'\n'` tells the print function to start printing on a new line, which makes the output look better.)  The result is 
@@ -152,9 +153,9 @@ So what does our read statement give us?  What's in `df`?  We can check its cont
 1    Chase   4   3   4
 2  Spencer   5   6   7
 ```
-What we have is a table, much like what we'd see in a spreadsheet.  If we compare it to the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) we see that the first column is new, added somehow by the program, but the others are just as they look online.   
+What we have is a table, much like what we'd see in a spreadsheet.  If we compare it to the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) we see that the first column is new, added somehow by the program, but the others are just as they look in the source.   
 
-The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a "dataframe."  More on that shortly.  We also see a long list of optional inputs that change how we read the file.  We will ignore them unless forced to do otherwise. 
+The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a **dataframe**.  More on that shortly.  We also see a long list of optional inputs that change how we read the file.  We will ignore them unless forced to do otherwise. 
 
 
 **Exercise.**  Run the code 
@@ -164,11 +165,13 @@ url2 = '/Data_Bootcamp/master/Code/Python/test0.csv'    # note the added 0
 url  = url1 + url2
 df = pd.read_csv(url)
 ```
-What do you see?  
+What happens?  
+
 
 **Exercise.** Change the last line of the earlier code to 
 ```python
 dfalt = pd.read_csv(url, nrows=2)
+print('\n', dfalt) 
 ```
 What does the argument `nrows=2` do?  
 
@@ -186,18 +189,19 @@ We see that the number 1 that was formerly at the top of the `x1` column has bee
 **Exercise.** Adapt the code to treat the numbers 1 and 6 as missing.  
 
 
-We can also read Excel files (xls and xlsx) with Pandas:  use the `read_excel` function.  The code is almost identical: 
+**Reading Excel files.** We can also read Excel files (xls and xlsx) with Pandas:  use the `read_excel` function.  The syntax is almost identical: 
 ```python 
 import pandas as pd 
 url1 = 'https://raw.githubusercontent.com/DaveBackus'
 url2 = '/Data_Bootcamp/master/Code/Python/test.xls'
 url  = url1 + url2
 dfx = pd.read_excel(url)
+print('\n', dfx) 
 ```
-The files are constructed to have identical content.  
+If all goes well, the modified code produces a dataframe `dfx` that's identical to `df`.   
 
 
-**Exercise.** Change the file extension in `url2` from `.xls` to `.xlsx` and run the modified code.  What do you get?  
+**Exercise.** Change the file extension at the end of `url2` from `.xls` to `.xlsx`.  What does the new code produce?  
 
 
 ## Properties of dataframes 
@@ -568,8 +572,6 @@ pisa = pd.read_excel(url,
                      index_col=0,       # set the index as the first column
                      header=[0,1]       # set the variable names 
                      )
-pisa = pisa.dropna()                    # drop blank lines 
-pisa.columns = ['Math', 'Reading', 'Science']   # simplify variable names 
 ```
 There are a number of new things in the read statement:  
 
@@ -580,7 +582,7 @@ There are a number of new things in the read statement:
 
 We can clean this up further if we drop blank lines and simplify the variable names:  
 ```python 
-pisa = pisa.dropna()                    # drop blank lines 
+pisa = pisa.dropna()                            # drop blank lines 
 pisa.columns = ['Math', 'Reading', 'Science']   # simplify variable names 
 pisa['Math'].plot(kind='barh')
 ```

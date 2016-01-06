@@ -14,22 +14,14 @@
 
 ---
 
-**UNDER CONSTRUCTION**
 
-Shift to IPython notebooks in Jupyter.
+heatmaps 
+
+animations
 
 
-## IPython notebooks 
+OLD FOLLOWS 
 
-basics...
-
-markdown...  
-
-matplotlib flag 
-
-Getting help:  command? for guide, command? for code.  
-
-css files ??
 
 http://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/
 
