@@ -585,14 +585,14 @@ ax.set_ylabel('')
 Now recreate the same graph with this statement at the top:
 ```python
 plt.style.use('fivethirtyeight')
-``
+```
 (And note that once we execute this statement, it stays executed.)  Or try any of these styles:  `ggplot`, `bmh`, `dark_background`, and `grayscale`.  
 
 
 Which styles do you like?  Why? 
 
 
-When you're done, reset the style with these two lines:
+When you're done, reset the style with these two lines in an IPython cell:
 ```python
 mpl.rcParams.update(mpl.rcParamsDefault)
 %matplotlib inline
