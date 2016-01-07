@@ -50,11 +50,14 @@ http://savvastjortjoglou.com/nba-shot-sharts.html
 http://www.gregreda.com/tag/scraping.html 
 
 
+http://blog.webhose.io/2015/08/16/dead-simple-for-devs-python-crawler-script-for-extracting-structured-data-from-any-almost-website-into-csv/ 
+
 
 ## Bokeh 
 
 http://rowanv.com/portfolio/oecd_unemployment/ 
 https://github.com/rowanv/giraffe_viz/blob/master/oecd_unemployment.py 
+
 
 ## Dashboards
 
