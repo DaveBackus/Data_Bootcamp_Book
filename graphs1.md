@@ -3,11 +3,11 @@
 ---
 **Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  
 
-**Python tools.**  Graphing with Matplotlib: dataframe `plot()` methods, `plot(x,y)`, and figure/axis objects.
+**Python tools.**  Graphing with Matplotlib: dataframe methods, the `plot(x,y)` function, and figure/axis objects.  
 
 **Buzzwords.** Data visualization.  
 
-**Applications.**  US GDP, GDP per capita in selected countries, 
+**Applications.**  US GDP, GDP per capita and life expectancy, Fama-French asset returns, PISA math scores.  
 
 **Code.** [Link](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_graphics_1.ipynb).
 
