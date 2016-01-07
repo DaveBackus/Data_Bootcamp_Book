@@ -32,11 +32,12 @@ One more thing before we start:  **Save the IPython notebook** at the Code link 
 import pandas as pd 
 ```
 
-* Dataframe.  A data structure like a spreadsheet that includes a table of data plus row and column labels.  Typically columns are variables and rows are observations.  Common dataframe methods include `columns` (column labels), `index` (row labels), and `plot` (graph the columns).  
+* Objects and methods.  Recall -- again! -- that we apply the method `justdoit` to the object `x` with `x.justdoit`.  
+
+* Dataframe.  A data structure like a spreadsheet that includes a table of data plus row and column labels.  Typically columns are variables and rows are observations.  Common dataframe methods include `columns` (column labels), `index` (row labels), and `plot()` (graph the columns).  
 
 * Series.  A single variable `x` in a dataframe `df` can be expressed as the series `df['x']`.  
 
-* Objects and methods.  Recall -- again! -- that we apply the method `justdoit` to the object `x` with `x.justdoit`.  An example we'll see repeatedly is the `plot()` method applied to the dataframe `df` with `df.plot()`.  
 
 <!-- 
 
@@ -50,7 +51,7 @@ import pandas as pd
 
 ## IPython notebooks in Jupyter
 
-We're going to change environments from Spyder to Jupyter and work with IPython notebooks. We had a brief introduction with Jupyter when we installed Anaconda, but we'll go through it again to make sure it sticks.  
+We're going to change programming environments from Spyder to Jupyter and work with IPython notebooks. We had a brief introduction with Jupyter when we installed Anaconda, but we'll go through it again to make sure we're all on the same page.  
 
 **Creating an IPython notebook.** We can open a new IPython notebook by tracing the steps we took in the first class:   
 
@@ -66,7 +67,7 @@ We now have a new empty Python notebook we can use to play around with.
 
 Let's put some of these tools to work:  
 
-* Change the notebook name.  Click on the name (`Untitled` if we just created a new notebook) to the right of the word Jupyter at the top. A textbox should open up.  Use it to change the name to "[your name]'s sandbox".
+* Change the notebook name.  Click on the name (`Untitled` if we just created a new notebook) to the right of the word Jupyter at the top. A textbox should open up.  Use it to change the name to `bootcamp_sandbox`.
 
 * Toobar buttons.  Run your mouse over one of them to see what it does.  
 
@@ -118,6 +119,10 @@ Markdown is ubiquitous.  This book, for example, is written in Markdown.  Go [he
 
 We need to do a few things before we're ready to produce graphs.  
 
+
+**Open the graphics notebook.** If you followed instructions -- and we're confident you did -- you saved the notebook for this chapter in your `Data_Bootcamp` directory.  Return to the Jupyter tab in your browser that points to that directory.  Look for the file named `bootcamp_graphics_1.ipynb`.  Click to open it.  That will open the notebook in a new tab. The notebook will say at the top:  "Python graphics: Matplotlib fundamentals" in large bold letters.  
+
+
 **Import packages.** We need to tell our Python program what packages we plan to use.  The following code also checks their versions and prints the date:  
 ```python 
 import sys                             # system module 
@@ -161,7 +166,7 @@ gdppc   = [53.1, 36.9, 36.3, 11.9, 5.4, 15.0, 16.5]
 wbdf = pd.DataFrame({'gdppc': gdppc, 'country': country}, index=code)
 wbdf
 ```
-In IPython, the last line -- the dataframe name `wb` on its own -- results in the display of `wb`.  That works as long as it's the last statement in the cell.  
+In IPython, the last line -- the dataframe name `wbdf` on its own -- results in the display of `wbdf`.  That works as long as it's the last statement in the cell.  
 
 
 *Fama-French returns.* Our third dataframe reads annual returns from Fama and French:
@@ -175,16 +180,16 @@ ff.head(5)
 This gives us a dataframe with two variables:  `rm` is the return on the equity market overall and `rf` is the riskfree return.  
 
 
-**Exercise.** What kind of object is `wb`?  How would you access its column and row labels?  What are they?  
+**Exercise.** What kind of object is `wbdf`?  How can you tell? How would you access its column and row labels?  What are they?  
 
 
 ## Three approaches to graphics in Matplotlib
 
 Back to  graphics.  Python's leading graphics package is **Matplotlib**.  Matplotlib can be used in a number of different ways:  
 
-* Approach #1:  Plot methods.  Apply a plot-like method to a dataframe.   
-* Approach #2:  `plot(x,y)`.  Basic function for plotting y against x.  
-* Approach #3:  Figure objects.  Create figure objects, apply methods to them.  
+* Approach #1:  Apply plot methods to dataframes.   
+* Approach #2:  Use the `plot(x,y)` function to plot `y` against `x`.  
+* Approach #3:  Create figure objects and apply methods to them.  
 
 All three call on the same functionality, but they use different syntax. We use all three at times but favor #1 and #3.  
 
@@ -200,7 +205,7 @@ Before charging ahead, let's review how we would create what Excel calls a "char
 This might be followed by a long list of fine-tuning:  what the lines look like, how the axes are labeled, and so on.  We'll see the same in Matplotlib.  
 
 
-##  Approach #1:  Apply plot method to data 
+##  Approach #1:  Apply plot methods to dataframes 
 
 The simplest way to produce graphics from a dataframe is to apply a method to it.  We like simple, and do this a lot.  
 
@@ -213,20 +218,22 @@ If we compare this to Excel, we will see that a number of things are preset for 
 We can change all of these things, just as we can in Excel, but that's the starting point.  
 
 
-**Example (line plot).**  Enter the statement `us.plot()` into an IPython cell and run it.  This plots every column of the dataframe `us` as a line against the index, the year of the observation.  The lines have different colors; we didn't ask for this, it's built in.  A legend associates each variable name with a line color.  This is also built in.  
+**Example (line plot).**  Enter the statement `us.plot()` into an IPython cell and run it.  This plots every column of the dataframe `us` as a line against the index, the year of the observation.  The lines have different colors.  We didn't ask for this, it's built in.  A legend associates each variable name with a line color.  This is also built in.  
+
+**Example (single line plot).**  We just plotted all the variables -- all two of them -- in the dataframe `us`.  To plot one line, we apply the same method to a single variable.  The statement `us['gdp'].plot()` plots GDP alone.  The first part -- `us['gdp']` -- is the single variable GDP.  The second part -- `.plot()` -- plots it. 
 
 
 **Example (bar chart).**  The statement `us.plot(kind='bar')` produces a bar chart of the same data. 
 
 
-**Exercise.** Show that the statement `us.plot.bar()` produces the same output.  
+**Exercise.** Show that the statement `us.plot.bar()` produces the same bar chart.  
 
 
 **Example (scatter plot).** In a scatter plot we need to be explicit about `x` and `y`.  We'll use `gdp` as `x` and `pce` (consumption) as `y`.  The general syntax for a dataframe `df` is `df.plot.scatter(x,y)`.  In this case we use 
 ```python
 us.plot.scatter('gdp', 'pce')
 ```
-The scatter here is not far from a straight line: consumption and GDP go up and down together.  
+The scatter here is not far from a straight line; evidently consumption and GDP go up and down together.  
 
 
 **Exercise.** We have lots of choices for dressing this up.  Use the IPython help by typing `us.plot?` in an empty cell and running it. What arguments/parameters look interesting to you?  
@@ -240,6 +247,7 @@ The scatter here is not far from a straight line: consumption and GDP go up and 
 * `figsize=(3,6)`
 * `xlim=(0,16000)`
 
+<br>  
 
 We can do the same things with the Fama-French dataframe `ff`.  The basic plot statement is 
 ```python 
@@ -251,11 +259,11 @@ This has one series (the equity market return `rm`) that varies a lot and one (t
 **Exercise.**  Let's see if we can dress this one up a little.  Try adding, one at a time, the arguments `title='Fama-French returns'`, `grid=True`, and `legend=False`.  What does the documentation say about them?  What do they do?  
 
 
-Let's think about the returns a little.  What does the data tell us about them?  That's an easier question to answer if we use a different plot.  One that we like is a histogram, which we produce with 
+Let's think about the returns a little.  What does the data tell us about them?  That's an easier question to answer if we use a different plot.  We like histograms because they describe all the outcomes in a convenient form.  Try this code:  
 ```python 
 ff.plot(kind='hist', bins=20, subplots=True)
 ```
-This plots separate histograms of the two variables with 20 "bins" in each.  
+It produces separate histograms of the two variables with 20 "bins" in each.  
 
 
 **Exercise.**  What do the histograms tell us about the two returns?  How do they differ?  
@@ -267,15 +275,17 @@ This plots separate histograms of the two variables with 20 "bins" in each.
 
 ## Approach #2:  `plot(x,y)`
 
-Next up:  the popular `plot(x,y)` function from the pyplot module of Matplotlib.  We import the module with  
+Next up:  the popular `plot(x,y)` function from the pyplot module of Matplotlib.  We used pyplot a lot when we started out, and suspect you will, too.  
+
+We import the module with  
 ```python
 import matplotlib.pyplot as plt
 ```
-This is a more explicit version of Matplotlib graphics in which we specify the `x` and `y` variables directly, as we did earlier with a scatter plot.  A typical statement has the form
+This is a more explicit version of Matplotlib graphics in which we specify the `x` and `y` variables directly, much as we did earlier with a scatter plot.  A typical statement has the form
 ```python
 plt.plot(x, y)
 ```
-We used pyplot a lot when we started out, and suspect you will, too.  We'll see the same figures as before, but we get there with different syntax.  
+The `plt.` identifies `plot()` as a pyplot function.   This produces the same kinds of figures we saw earlier, but we get there by a different route.  
 
 
 **Basic plots.** Compare these plots to our earlier ones.  We start with GDP on its own:  
@@ -289,7 +299,9 @@ If we want two variables in the same graph, we simply add another line:
 plt.plot(us.index, us['gdp'])
 plt.plot(us.index, us['pce'])
 ```
-(In IPython, both of these statements must be in the same cell.)  If we want a bar chart we use 
+(In IPython, both of these statements must be in the same cell for the lines to show up in the same figure.) 
+
+If we want a bar chart we use 
 ```python 
 plt.bar(us.index, us['gdp'])
 ```
@@ -310,7 +322,6 @@ Describe what each of these arguments/parameters does.
 **Adding things to graphs.** We just added things to our graph with arguments. We can do more with additional lines of code.  Consider these:
 ```python
 plt.plot(us.index, us['gdp']) 
-plt.plot(us.index, us['pce']) 
 
 plt.title('US GDP', fontsize=14, loc='left') # add title
 plt.ylabel('Billions of 2009 USD')           # y axis label 
@@ -318,10 +329,10 @@ plt.xlim(2002.5, 2013.5)                     # shrink x axis limits
 plt.tick_params(labelcolor='red')            # change tick labels to red
 plt.legend(['GDP', 'Consumption'])           # more descriptive variable names
 ```
-In this way we add a title (14 point type, left justified), add a label to the y axis, change the limits of the x axis, make the tick labels red, and use more descriptive names in the legend.  
+In this way we add a title (14-point type, left justified), add a label to the y axis, change the limits of the x axis, make the tick labels red, and use more descriptive names in the legend.  
 
 
-**Exercise.** Add a `plt.ylim` statement starts the `y` axis at zero.  *Hint:*  Use `plt.ylim?` to get the documentation.  *Bonus points:*  Change the color of the line to magenta and the linewidth to 2.  *Hint:*  Use `plt.plot?` to get the documentation.  
+**Exercise.** Add a `plt.ylim()` statement that starts the `y` axis at zero.  *Hint:*  Use `plt.ylim?` to get the documentation.  *Bonus points:*  Change the color of the line to magenta and the linewidth to 2.  *Hint:*  Use `plt.plot?` to get the documentation.  
 
 
 **Exercise.** Create a line plot for the Fama-French dataframe `ff` that includes both returns.  *Bonus points:* Add a title.  
@@ -357,12 +368,12 @@ ax.set_ylabel('Billions of USD')
 ```
 The first line creates a line plot with the usual `plot(x,y)` syntax.  The next two lines add a title and y-axis label.  We have access to the usual set of methods for refining figures.  We can get a list using tab completion:  type `ax.[tab]` in an IPython code cell.  
 
-We don't use fugure methods much, but here's one:  
+We don't use figure methods much, but here's one:  
 ```python 
 # a figure method: save figure as a pdf 
 fig.savefig('us_gdp.pdf')
 ```
-This saves the figure as a pdf file.  
+This saves the figure as a pdf file that we can use in a report or slide.  
 
 
 **Exercise.** Create a bar chart of variable `rm` in the `ff` dataframe.  *Bonus points:* Make the bars red.  
@@ -390,22 +401,22 @@ ax[1].plot(us.index, us['pce'], color='red')     # second plot
 
 **Approach #1 revisited.** In approach #1, we applied plot methods to dataframes.  We also used arguments to fix up the graph, but that got complicated pretty quickly.   
 
-Here we combine Approaches #1 and #3.  If we look at the document of `df.plot()`, we see that it "returns" an axis object.  (Do it and see.)  Once we have an axis object, we can apply methods to it that do just about anything.  
+Here we combine Approaches #1 and #3.  If we look at the documentation for `df.plot()`, we see that it "returns" an axis object.  (Do it and see.)  Once we have an axis object, we can apply methods to it that do just about anything.  
 
 The first step is to grab the axis object.  We change the dataframe-based plot statement `us.plot()` to 
 ```python
 ax = us.plot()
 ```
-Now that we have `ax`, we create a dressed-up graph with methods:
+Now that we have `ax`, we dress up the graph by applying methods to it:  
 ```python
 ax = us.plot()  
 ax.set_title('US GDP and Consumption', fontsize=14, loc='left')
 ax.set_ylabel('Billions of 2013 USD')
 ax.legend(loc='center right')
 ```
-(Note again that we need to create and use the axis object in the same cell.)  We can add as many of these as we like.  
+(Note again that we need to create and use the axis object in the same IPython cell.)  We can add as many of these as we like.  
 
-And if we want the figure object, we apply a method to the axis object `ax`:
+If we want the figure object, we apply a method to the axis object `ax`:
 ```python
 fig = ax.get_figure()
 ```
@@ -419,9 +430,9 @@ Take a deep breath.  We've covered a lot of ground, it's time to review.
 
 We looked at three ways to use Matplotlib:  
 
-* Approach #1:  apply plot method to dataframe
-* Approach #2:  use `plot(x,y)` function 
-* Approach #3:  create `fig, ax` objects, apply plot methods to them
+* Approach #1:  Apply plot methods to dataframes.
+* Approach #2:  Use the `plot(x,y)` function. 
+* Approach #3:  Create `fig, ax` objects and apply plot methods to them. 
 
 This is what their syntax looks like applied to US GDP: 
 
@@ -437,7 +448,7 @@ Each one produces the same graph.
 
 Which one should we use?  We prefer Approach #1, with the additions just mentioned for creating and using axis objects.  You're welcome to use whichever you prefer, but we recommend you choose and stick to one until you have more experience.  This is a case where having more choice can be a bad thing.  
 
-We also suggest you not commit any of this to memory.  If you use end up using it a lot, you'll remember it.  And if you don't, it's not worth remembering.  We typically start with examples anyway rather than creating new graphs from scratch.  
+We also suggest you not commit any of this to memory.  If you use end up using it a lot, you'll remember it.  If you don't, it's not worth remembering.  We typically start with examples anyway rather than creating new graphs from scratch.  
 
 
 ## Examples
@@ -464,15 +475,15 @@ pisa['Math'].plot(kind='barh')        # create bar chart
 
 **Comment.** Yikes!  That's horrible!  What can we do about it?  Any suggestions?  
 
-The problem seems to be that the bars and labels are squeezed together, so perhaps we should make the figure taller.  We set the figsize with the argument `figsize=(width, height)`.  The sizes are measured in inches, which are shrunk a bit when we display them in IPython.  Here's a version with a much larger `height`, discovered by experimenting:  
+The problem seems to be that the bars and labels are squeezed together, so perhaps we should make the figure taller.  We set the figure's dimensions with the argument `figsize=(width, height)`.  The sizes are measured in inches, which get shrunk a bit when we display them in IPython.  Here's a version with a much larger `height` that we discovered by experimenting:  
 ```python
 ax = pisa['Math'].plot(kind='barh', figsize=(4,13))  
 ax.set_title('PISA Math Score', loc='left')
 ```
-This creates a figure that is 13 inches tall and 4 inches wide.  We added a title, too, to be clear about what we have.  
+This creates a figure that is 4 inches wide and 13 inches tall.  We added a title, too, to be clear about what we have.  
 
 
-Here's a more advanced version in which we made the US bar red.  This is ridiculously complicated, but we used our Google fu and found [a solution](http://stackoverflow.com/questions/18973404/setting-different-bar-color-in-matplotlib-python).  (Remember: The solution to many problems is Google fu + patience.)  The code is 
+Here's a more advanced version in which we made the US bar red.  This is ridiculously complicated, but we used our Google fu and found [a solution](http://stackoverflow.com/questions/18973404/setting-different-bar-color-in-matplotlib-python).  (Remember: The solution to many programming problems is a combination of Google fu and patience.)  The code is 
 ```python
 ax = pisa['Math'].plot(kind='barh', figsize=(4,13))
 ax.set_title('PISA Math Score', loc='left')
@@ -552,7 +563,7 @@ ax.spines['top'].set_visible(False)
 ax.yaxis.set_ticks_position('left')
 ax.xaxis.set_ticks_position('bottom')
 ```
-This gives us axes on the left and bottom only, separated slightly from the bars.  It's another examples of the benefits of Google fu.  If you want to do something like this yourself, prepare to sink some time into it. 
+This gives us axes on the left and bottom only, separated slightly from the bars.  It's another illustration of the benefits of Google fu.  If you want to do something like this yourself, prepare to sink some time into it. 
 
 We finish off with a bubbble plot:  a scatter plot in which the size of the dots ("bubbles") varies with a third variable.  (Count them:  we have `x` on the horizontal axis, `y` on the vertical axis, and a third variable represented by the size of the bubble.)  From a technical perspective, this is simply another argument in a scatter plot.  Here's an example in which `x` is GDP per capita, `y` is llife expectancy, and the third variable is population:
 ```python
@@ -603,8 +614,8 @@ mpl.rcParams.update(mpl.rcParamsDefault)
 
 We haven't found many non-technical resources we like.  
 
-* One of the best is Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html).  This is a great starting point for learning new things.  Find an example you like, download the code, and adapt it to your needs.  
-* [Chris Moffitt](http://pbpython.com/simple-graphing-pandas.html) does his usual nice job looking at (mostly) dataframe methods.  He also has a [nice overview](http://pbpython.com/visualization-tools-1.html) has a nice overview of other Python graphics packages.  
+* One of the best is Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html).  It's a great starting point for learning new things.  Find an example you like, download the code, and adapt it to your needs.  
+* [Chris Moffitt](http://pbpython.com/simple-graphing-pandas.html) does his usual nice job looking at (mostly) dataframe methods.  He also has a [nice overview](http://pbpython.com/visualization-tools-1.html) of other Python graphics packages.  
 
 If you find other resources you like, let us know.  
 
