@@ -46,10 +46,14 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 **Pro tip.**  Put a shortcut to Launcher in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 
 
 Once Launcher is running -- be patient, it can take 60 seconds or more -- this is what you should see:
+
+![Spyder environment](figs/anaconda_launcher.png "Launcher")
+
+<!--
  * Top left: A teardrop with a snake (an anaconda?) followed by the word Launcher.
  * Top middle: "Python 3.5.x." -- **NOT Python 2.7!!!**
  * Main window:  a list of apps, which are programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for writing and running Python programs.  
-
+-->
 
 You now have Python installed and ready to run.  Congratulations!  
 
@@ -58,19 +62,16 @@ You now have Python installed and ready to run.  Congratulations!
 
 Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and Juypyter/IPython.  
 
-We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  It should look (roughly) like [this picture](http://docs.continuum.io/anaconda-launcher/index).  You will see a list of applications:  
-
-* glueviz 
-* ipython-notebook 
-* ipython-qtconsole 
-* spyder-app 
-
-From here, we can launch our two favorite Python evironments. 
+We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  You will see a list of applications.  The list changes from time to time, but we're concerned with only two of them:  **Spyder** (labelled "spyder-app") and **Jupyter** (labeled "ipython-notebook").  See the picture above.  
 
 
 **Spyder.**  Spyder is a graphical environment with an editor for writing programs, a console for trying out one line at a time, and access to help.  It’s our preferred Python environment. Experts often use other editors, but unless you’re one of them this is where you should start.  
 
-To start Spyder from Launcher, click on the Launch button to the right of spyder-app. We find it a little slow, but it should start up eventually.  You'll see that Spyder has a number of different windows. The most important are:   
+To start Spyder from Launcher, click on the Launch button to the right of spyder-app. We find it a little slow, but it should start up eventually.  You should see something that looks like this:
+
+![Spyder environment](figs/spyder_plain.png "Spyder")
+
+You can see here that Spyder has a number of different windows. The most important are:   
 
 * **Editor.**  This is on the left.  We can write and edit programs here and save them to our hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this later on.    
 * **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  This is where output shows up.  We can also write and test single lines of code, get help, and many other things.    
@@ -84,7 +85,10 @@ We can move these windows around by dragging and dropping.  If we mess up -- it 
 To create or run an IPython notebook from Launcher, click on the Launch button to the right of the ipython-notebook icon.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see at the top the word "Jupyter." (It used to say IPython, but now the same environment handles code in Julia, R, and other languages, which called for a [name change](http://ipython.org/#jupyter-and-the-future-of-ipython).)  Just below the word Jupyter you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.  
 
 
-**Pro tip.**  Create a directory (folder) on your computer with the name "Data_Bootcamp" and store your programs there.  It will make it easier to find them later.  By way of example, we have set up a Code directory in our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp) with separate Python and IPython subdirectories.  This is **mtwn** (more than we need), but since we'll be using the repository repeatedly it's worth taking a quick look now. 
+![Spyder environment](figs/jupyter_plain.png "Jupyter")
+
+
+**Pro tip.**  Create a directory (folder) on your computer with the name "Data_Bootcamp" and store your programs there.  (And note well:  **this is an underscore between "Data" and "Bootcamp", not a blank space.)  It will make it easier to find them later.  By way of example, we have set up a Code directory in our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp) with separate Python and IPython subdirectories.  This is **mtwn** (more than we need), but since we'll be using the repository repeatedly it's worth taking a quick look now. 
 
 Let's repeat that last part:  We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  
 
