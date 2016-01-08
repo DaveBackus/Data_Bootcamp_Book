@@ -8,10 +8,13 @@
 * [Python fundamentals 2](py-fun2.md)  
 * [Data input: Packages and Pandas](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
+* [Image practice](image_practice.md)
+
+<!--
+
 * [Shaping data:  Pandas revisited](pandas-munging.md)
 * [Updating Python: conda and pip](conda-pip.md)
 
-<!--
 * [Emerging market indicators](emerging.md)
 * [Business cycle indicators](indicators.md)
 * [Describing data 1:  Distributions of things](random.md)

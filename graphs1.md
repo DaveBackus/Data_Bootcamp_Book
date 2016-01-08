@@ -18,7 +18,7 @@ Computer graphics are one of the great advances of the modern world.  Graphs hav
 
 That's the good news.  The bad news is that graphics are inherently complicated.  Programs like Excel do their best to hide this fact, but if you ever try to customize a chart it quickly rears its ugly head.  Have you ever spent a couple hours trying to fine-tune an Excel graph?  More?  The problem is that even simple graphs have lots of moving parts:  the type (line, bar, scatter, etc); the color and thickness of lines, bars, or markers; title and axis labels; their location, fonts, and font sizes; tick marks (location, size); background color; grid lines (on or off); and so on.  That's not an Excel problem, it's a problem with graphics in general.  
 
-Our goal here is to learn to produce graphs  with **Matplotlib**, Python's leading graphics package. Matplotlib can be used in several ways.  We show how they work and produce a few visualizations that we hope bring data to life.  There's a lot here, but don't panic, it gets easier with experience.  
+Our goal here is to produce graphs  with **Matplotlib**, Python's leading graphics package. Matplotlib can be used in several ways.  We show how they work and produce a few visualizations that we hope bring data to life.  There's a lot here, but don't panic, it gets easier with experience.  
 
 One more thing before we start:  **Save the IPython notebook** at the Code link above in your `Data_Bootcamp` directory/folder.  The link goes to a display of the notebook, but you need to click on the Raw button to get the real file.  
 

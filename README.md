@@ -13,7 +13,7 @@ We welcome suggestions.  Send them to Dave Backus at [db3@nyu.edu](mailto:db3@ny
 
 ## Warning
 
-This is **work in progress**, target date late January 2016.  We've written five chapters so far, the rest are rough notes to ourselves.   
+This is **work in progress**, target date late January 2016.  We've written seven chapters so far, the rest are rough notes to ourselves.   
 
 
 ## Acknowledgements 
