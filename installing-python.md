@@ -145,7 +145,7 @@ The output appears in the IPython console in the lower right corner.  If you get
 
 To run the same code in an IPython notebook, start up the IPython/Jupyter app in Launcher.  (If you're not sure how to do that, go back to the previous section.) Once you have it up and running:  
 
-* Choose the directory. You should see the directory structure of your computer in Jupyter.  Navigate to the "Data_Bootcamp" directory (folder) we hope you created earlier.  
+* Choose the directory. You should see the directory structure of your computer in Jupyter.  Navigate to the `Data_Bootcamp` directory (folder) we hope you created earlier.  
 
 * Create a new notebook.  Click on the "New" dropdown menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.  
 
@@ -157,9 +157,19 @@ To run the same code in an IPython notebook, start up the IPython/Jupyter app in
 
 Output will appear in the same cell below your code.  If it says "Congratulations etc." you're all set.  
 
+
+**Exercise.** We have seen two examples of environments for creating Python code files.  Fill in the blanks in this table:
+
+Environment | File 
+--- | --- 
+MS Word  | Word document
+MS Excel | Excel file 
+Spyder   | 
+        | IPython notebook 
+
 ## Let's go! 
 
-We're now ready to write and run Python programs in two environments.  That's more than enough for one day.  Take a bow.  
+We're now ready to write and run Python programs in two environments. Take a bow.  
 
 
 ## Resources 
