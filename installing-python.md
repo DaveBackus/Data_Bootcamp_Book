@@ -19,8 +19,9 @@ Another kind of component is a user-interface or **environment** for writing cod
 
 We'll use two Python environments in this class: 
  * **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  
- * **Jupyter** is a web-based interface for running **IPython notebooks**, combinations of code, output, and documentation.  Think to yourself:  An IPython notebook is to Jupyter as a Word document is to Microsoft Word. 
+ * **Jupyter** is a web-based interface for running **IPython notebooks**, combinations of code, output, and documentation.  
 
+ We will write and execute Python programs in both environments.  Think to yourself:  The environments are analogous to Microsoft Word and the Python program is analogous to a Word document.  
 
 This is a lot of jargon to swallow at one time.  Don't panic, it will become familiar ewith use.  And anything we don't use you can safely ignore.  
 
@@ -38,16 +39,16 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 **Step 2. Run the installer.**  Click on the Anaconda installer you just downloaded to install the Anaconda distribution of Python.  Do what it says.  
 
 **Step 3. Find and run Launcher.**  Look or search wherever programs are on your computer.    
- * Windows 7: Click on your "Start" button >>  All Programs >> Anaconda >> Launcher 
- * Windows 8: Type “Launcher” into your search box.  
+ * Windows 7 and 8:  Type “Launcher” in your search box.  
  * Macs: Finder, Spotlight Search, and Launchpad all work -- whatever you prefer.    
 
-
+<!--
 **Pro tip.**  Put a shortcut to Launcher in a convenient place so you can find it easily next time.  In Windows, that would be the launchpad or the desktop. 
+--> 
 
-Once Launcher is running -- be patient, it can take 60 seconds or more -- this is what you should see:
+Once Launcher is running -- be patient, it can take 60 seconds or more -- you should see something like this:
 
-![Spyder environment](figs/anaconda_launcher.png "Launcher")
+![Launcher](figs/anaconda_launcher.png "Launcher")
 
 <!--
  * Top left: A teardrop with a snake (an anaconda?) followed by the word Launcher.
@@ -55,26 +56,32 @@ Once Launcher is running -- be patient, it can take 60 seconds or more -- this i
  * Main window:  a list of apps, which are programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for writing and running Python programs.  
 -->
 
-You now have Python installed and ready to run.  Congratulations!  
+
+If so, you now have Python installed and ready to run.  Congratulations!  
 
 
 ## Coding environments 
 
-Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  Spyder and Juypyter/IPython.  
+Coding environments are pieces of software we use to write and run code.  The best ones make coding easy, even pleasurable, strange as that might sound.  We'll use two:  **Spyder**  and **Jupyter**.  We access both through Launcher, where Spyder is labelled "spyder-app" and Jupyter is labelled "ipython-notebook".  (Don't ask, it's not worth it.)
 
-We access both through Launcher.  If Launcher is open, great.  If not, please start it up (Step 3 above).  You will see a list of applications.  The list changes from time to time, but we're concerned with only two of them:  **Spyder** (labelled "spyder-app") and **Jupyter** (labeled "ipython-notebook").  See the picture above.  
-
+If Launcher is open, great.  If not, please start it up (Step 3 above).  
 
 **Spyder.**  Spyder is a graphical environment with an editor for writing programs, a console for trying out one line at a time, and access to help.  It’s our preferred Python environment. Experts often use other editors, but unless you’re one of them this is where you should start.  
 
-To start Spyder from Launcher, click on the Launch button to the right of spyder-app. We find it a little slow, but it should start up eventually.  You should see something that looks like this:
+To start Spyder from Launcher, **click on the blue Launch button** to the right of spyder-app. We find it a little slow, but it should start up eventually.  You should then see something that looks like this:
 
 ![Spyder environment](figs/spyder_plain.png "Spyder")
 
-You can see here that Spyder has a number of different windows. The most important are:   
+You see here that Spyder has a number of different components.  It's overwhelming at first, but give it some time.  The most important components are:  
 
-* **Editor.**  This is on the left.  We can write and edit programs here and save them to our hard drive.  At the top, you'll see green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this later on.    
-* **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  This is where output shows up.  We can also write and test single lines of code, get help, and many other things.    
+* **Editor.**  This is on the left.  We can write and edit programs here and save them to our hard drive.  
+* **Toolbar.** Above the editor, you'll see a row of buttons that we refer to as the toolbar.  Among them are some green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this later.  Here's a picture:  
+![Spyder toolber](figs/spyder_toolbar.png "Spyder's toolbar")
+* **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  This is where output from our programs will show up.  On startup you should see something like "Python 3.5.0 |Anaconda 2.4.0 (64-bit)" etc etc, concluding with the line:
+```python
+in [1]: 
+```
+We can use the console to write and test single lines of code, get help, and many other things.    
 * **Object inspector.**  This is on the right at the top.  We can get Python documentation here, which is really useful.  
 
 We can move these windows around by dragging and dropping.  If we mess up -- it happens to the best of us -- look for "View" at the top and click on "Reset window layout." 
@@ -82,15 +89,22 @@ We can move these windows around by dragging and dropping.  If we mess up -- it 
 
 **Jupyter.**  Jupyter is another graphical environment, which we use to create and run **IPython notebooks**. These notebooks combine code, output, words, and graphics.  It's a convenient format for presenting our work to others and can be used as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).  
 
-To create or run an IPython notebook from Launcher, click on the Launch button to the right of the ipython-notebook icon.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see at the top the word "Jupyter." (It used to say IPython, but now the same environment handles code in Julia, R, and other languages, which called for a [name change](http://ipython.org/#jupyter-and-the-future-of-ipython).)  Just below the word Jupyter you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.  
-
+To create or run an IPython notebook from Launcher, **click on the blue Launch button** to the right of the ipython-notebook icon.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see something like this:  
 
 ![Spyder environment](figs/jupyter_plain.png "Jupyter")
 
+<!--
+at the top the word "Jupyter." (It used to say IPython, but now the same environment handles code in Julia, R, and other languages, which called for a [name change](http://ipython.org/#jupyter-and-the-future-of-ipython).)  Just below the word Jupyter you'll see the words "File, "Edit," "View," etc.  Below that you'll see the directory (folder) structure of your computer.  
+-->  
 
-**Pro tip.**  Create a directory (folder) on your computer with the name "Data_Bootcamp" and store your programs there.  (And note well:  **this is an underscore between "Data" and "Bootcamp", not a blank space.)  It will make it easier to find them later.  By way of example, we have set up a Code directory in our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp) with separate Python and IPython subdirectories.  This is **mtwn** (more than we need), but since we'll be using the repository repeatedly it's worth taking a quick look now. 
+
+**Pro tip.**  Create a directory (folder) on your computer with the name "Data_Bootcamp" and store your programs there.  (And note well:  **There is an underscore "_" between "Data" and "Bootcamp", not a blank space.)  
+
+<!--
+By way of example, we have set up a Code directory in our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp) with separate Python and IPython subdirectories.  This is **mtwn** (more than we need), but since we'll be using the repository repeatedly it's worth taking a quick look now. 
 
 Let's repeat that last part:  We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  
+--> 
 
 
 ## Run test programs 
@@ -116,7 +130,10 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
   ```
   [If you're feeling lazy, you can make do with the first two lines on their own, but you won't get the messages we describe below.]   
 
-* Comments (mtwn):  (i) Anything following a hash (#) is a comment.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
+
+   **Comment (mtwn).** We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  
+
+   **More comments.** All of these are mtwn, but we thought they would make the code less mysterious -- and give us a head start in understanding the structure of Python programs.  (i) Anything following a hash (#) is a comment and has no effect on what the program does.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
 
 * Save your code.  Click on File at the top left, then Save As, and save in the `Data_Bootcamp` directory under the name `bootcamp_test.py` (Python programs always have the extension py).  
 
