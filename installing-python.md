@@ -113,7 +113,7 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 
 **Spyder**.  Start up Spyder.  (If you're not sure how to do that, go back to the previous section.) Once you have Spyder up and running:  
 
-* Create a new file.  Click on "File" (upper left), then "New file."  That should give you a new mostly empty file with some junk at the top that you can ignore or delete. 
+* Create a Python code file.  Click on "File" (upper left), then "New file."  That should give you a new mostly empty file with some junk at the top that you can ignore or delete. 
 
 * Add code to file.  Enter the following lines of code at the bottom of your file:  
 
@@ -147,7 +147,7 @@ To run the same code in an IPython notebook, start up the IPython/Jupyter app in
 
 * Choose the directory. You should see the directory structure of your computer in Jupyter.  Navigate to the `Data_Bootcamp` directory (folder) we hope you created earlier.  
 
-* Create a new notebook.  Click on the "New" dropdown menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.  
+* Create an IPython notebook.  Click on the "New" dropdown menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.  
 
 * Set the file name.  To the right of the word Jupyter, you'll see "Untitled".  Change it to `bootcamp_test`.  
 
@@ -158,14 +158,15 @@ To run the same code in an IPython notebook, start up the IPython/Jupyter app in
 Output will appear in the same cell below your code.  If it says "Congratulations etc." you're all set.  
 
 
-**Exercise.** We have seen two examples of environments for creating Python code files.  Fill in the blanks in this table:
+**Exercise.** We have seen both **code files** and **environments** for working with them.  With this in mind, fill in the blanks in the table below and explain your answers to your neighbor.
 
 Environment | File 
 --- | --- 
 MS Word  | Word document
 MS Excel | Excel file 
 Spyder   | 
-        | IPython notebook 
+         | IPython notebook 
+         
 
 ## Let's go! 
 
@@ -176,10 +177,10 @@ We're now ready to write and run Python programs in two environments. Take a bow
 
 More on the Anaconda distribution and its contents:
 
-* Anaconda [download](http://continuum.io/downloads) and [package list](http://docs.continuum.io/anaconda/pkg-docs).  
+* Anaconda [download page](http://continuum.io/downloads) and [package list](http://docs.continuum.io/anaconda/pkg-docs).  
 * Spyder [documentation](https://pythonhosted.org/spyder/).  
-* IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  You can also get help in Jupyter:  click on "Help" ar the top and choose "User Interface Tour."
-* [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/) to documentation and support.  More than you'll ever want or need. 
+* IPython [documentation](http://ipython.org/notebook.html).  Look for the [Pybonacci demo](https://youtu.be/H6dLGQw9yFQ), it covers the basics in 5 minutes.  You can also get help in Jupyter:  click on "Help" at the top and choose "User Interface Tour."
+* [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/) to other documentation and support.  More than you'll ever want or need. 
 
 
 <!--
