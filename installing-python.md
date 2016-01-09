@@ -98,7 +98,7 @@ at the top the word "Jupyter." (It used to say IPython, but now the same environ
 -->  
 
 
-**Pro tip.**  Create a directory (folder) on your computer with the name "Data_Bootcamp" and store your programs there.  (And note well:  **There is an underscore "_" between "Data" and "Bootcamp", not a blank space.)  
+**Pro tip.**  Create a directory (folder) on your computer with the name `Data_Bootcamp` and store your programs there.  (And note well:  There is an **underscore** `"_"` between "Data" and "Bootcamp", not a blank space.)  
 
 <!--
 By way of example, we have set up a Code directory in our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp) with separate Python and IPython subdirectories.  This is **mtwn** (more than we need), but since we'll be using the repository repeatedly it's worth taking a quick look now. 
@@ -131,9 +131,9 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
   [If you're feeling lazy, you can make do with the first two lines on their own, but you won't get the messages we describe below.]   
 
 
-   **Comment (mtwn).** We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  
+     **Comment (mtwn).** We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  
 
-   **More comments.** All of these are mtwn, but we thought they would make the code less mysterious -- and give us a head start in understanding the structure of Python programs.  (i) Anything following a hash (#) is a comment and has no effect on what the program does.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
+     **More comments.** All of these are mtwn, but we thought they would make the code less mysterious -- and give us a head start in understanding the structure of Python programs.  (i) Anything following a hash (#) is a comment and has no effect on what the program does.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
 
 * Save your code.  Click on File at the top left, then Save As, and save in the `Data_Bootcamp` directory under the name `bootcamp_test.py` (Python programs always have the extension py).  
 
