@@ -130,22 +130,22 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
   ```
   [If you're feeling lazy, you can make do with the first two lines on their own, but you won't get the messages we describe below.]   
 
-  **Comment (mtwn).** We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  
-
-  **More comments.** All of these are mtwn, but we thought they would make the code we just entered less mysterious -- and give us a head start with Python programming.  (i) Anything following a hash (#) is a comment and has no effect on what the program does.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
-
 * Save your code.  Click on File at the top left, then Save As, and save in the `Data_Bootcamp` directory under the name `bootcamp_test.py` (Python programs always have the extension py).  
 
 * Run it.  Click on the green triangle above the editor and run your program.  
 
 The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but it's better to know that now than run into problems later. Have a cold drink anyway and catch your breath.  
 
+**Comment (mtwn).** We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  
+
+**More comments.** All of these are mtwn, but we thought they would make the code we just entered less mysterious -- and give us a head start with Python programming.  (i) Anything following a hash (#) is a comment and has no effect on what the program does.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
+
 
 **IPython**.  We prefer to write code in an editor and will stick with Spyder for the first few weeks of the course.  But IPython notebooks are good for talks and reports.  We can read through them more easily than naked code.  Here are [three](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition/blob/master/ipynb/Chapter%201%20-%20Mining%20Twitter.ipynb) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point. 
 
 To run the same code in an IPython notebook, start up the IPython/Jupyter app in Launcher.  (If you're not sure how to do that, go back to the previous section.) Once you have it up and running:  
 
-* Choose the directory. You should see the directory structure of your computer in Jupyter.  Navigate to the "Data_Bootcamp" directory (folder), whch we hope you created earlier.  
+* Choose the directory. You should see the directory structure of your computer in Jupyter.  Navigate to the "Data_Bootcamp" directory (folder) we hope you created earlier.  
 
 * Create a new notebook.  Click on the "New" dropdown menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.  
 
