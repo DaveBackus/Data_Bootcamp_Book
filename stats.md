@@ -28,6 +28,8 @@ Claudia's hospital example
 
 http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/ 
 
+Pokemon:  https://pixelastic.github.io/pokemonorbigdata/
+
 
 **Simpson's paradox**
 

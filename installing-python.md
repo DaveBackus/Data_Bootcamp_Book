@@ -12,7 +12,6 @@
 
 ---  
 
-
 Python is a programming language, but (like other languages) it comes with an ecosystem of related components.  One kind of component is a **package** that extends Python's capabilities.  A good analogy is an operating system, like Windows or Mac OS  You can't do much with either one until you install software "packages" like Word or Excel. Similarly, we will use packages in Python to manage data, create graphs, and compute statistics.  We're going to use a **distribution** called Anaconda, which bundles Python and a bunch of useful packages together in a single download.  
 
 Another kind of component is a user-interface or **environment** for writing code and executing it.  We'll use another analogy here: Word and Google docs are "environments" to produce text documents.  Both work.  We use the one we find more convenient.  The same is true of Python environments.    
@@ -75,11 +74,14 @@ To start Spyder from Launcher, **click on the blue Launch button** to the right 
 You see here that Spyder has a number of different components.  It's overwhelming at first, but give it some time.  The most important components are:  
 
 * **Editor.**  This is on the left.  We can write and edit programs here and save them to our hard drive.  
-* **Toolbar.** Above the editor, you'll see a row of buttons that we refer to as the toolbar.  Among them are some green triangles.  The big one runs the whole program (whatever we have in the editor).  The smaller ones run sections of code.  More on this later.  Here's a picture:  
+* **Toolbar.** Above the editor, you'll see a row of buttons that we refer to as the toolbar.  See the picture below. Among them are some green triangles.  The big one (marked by the red arrow) runs the whole program -- whatever we have in the editor.  The smaller ones run sections of code.  More on this later.  
 ![Spyder toolber](figs/spyder_toolbar.png "Spyder's toolbar")
-* **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  This is where output from our programs will show up.  On startup you should see something like "Python 3.5.0 |Anaconda 2.4.0 (64-bit)" etc etc, concluding with the line:
+* **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  This is where output from our programs will show up.  On startup you should see something like 
 ```python
-in [1]: 
+Python 3.5.0 |Anaconda 2.4.0 (64-bit)
+etc etc 
+
+In [1]: 
 ```
 We can use the console to write and test single lines of code, get help, and many other things.    
 * **Object inspector.**  This is on the right at the top.  We can get Python documentation here, which is really useful.  

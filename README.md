@@ -18,7 +18,7 @@ This is **work in progress**, target date late January 2016.  We've written seve
 
 ## Acknowledgements 
 
-This project was Glenn Okun's idea.  He really should have done it himself, but we thank him for the idea and his ongoing support. Paul Backus, Hersh Iyer (MBA17), Matt McKay, Kim Ruhl, and Itamar Snir (MBA17) contributed technical support and applications.  You may also notice a family resemblance to Tom Sargent and John Stachurski's [Quantitative Economics](http://quant-econ.net/), a Python- and Julia-based course in dynamic macroeconomic theory.  We thank them for their advice and encouragement. 
+This project was Glenn Okun's idea.  He really should have done it himself, but we thank him for the idea and his ongoing support. Paul Backus, Hersh Iyer (MBA17), Matt McKay, Kim Ruhl, and Itamar Snir (MBA17) contributed technical support and applications.  Ian Stewart provided his usual expert advice on pedagogy.  You may also notice a family resemblance to Tom Sargent and John Stachurski's [Quantitative Economics](http://quant-econ.net/), a Python- and Julia-based course in dynamic macroeconomic theory.  We thank them for their advice and encouragement.   
 
 ## License 
 

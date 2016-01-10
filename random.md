@@ -77,5 +77,10 @@ What's a black swan?  How big was the drop in the Chinese market?
 * Age distribution 
 
 
+## Pareto etc 
+
+https://terrytao.wordpress.com/2009/07/03/benfords-law-zipfs-law-and-the-pareto-distribution/
+
+
 # References 
 
