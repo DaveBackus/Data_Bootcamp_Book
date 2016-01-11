@@ -84,6 +84,7 @@ You see here that Spyder has a number of different components.  It's overwhelmin
   
   In [1]: 
   ```
+  
   We can use the console to write and test single lines of code, get help, and many other things.    
 * **Object inspector.**  This is on the right at the top.  We can get Python documentation here, which is really useful.  
 
