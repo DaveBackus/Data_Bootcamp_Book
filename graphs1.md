@@ -1,7 +1,7 @@
 # Python graphics: Matplotlib fundamentals 
 
 ---
-**Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  
+**Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  We do this Jupyter, using an IPython notebook.  
 
 **Python tools.**  Graphing with Matplotlib: dataframe methods, the `plot(x,y)` function, and figure/axis objects.  
 
@@ -20,7 +20,7 @@ That's the good news.  The bad news is that graphics are inherently complicated.
 
 Our goal here is to produce graphs  with **Matplotlib**, Python's leading graphics package. Matplotlib can be used in several ways.  We show how they work and produce a few visualizations that we hope bring data to life.  There's a lot here, but don't panic, it gets easier with experience.  
 
-One more thing before we start:  **Save the IPython notebook** at the Code link above in your `Data_Bootcamp` directory/folder.  The link goes to a display of the notebook, but you need to click on the Raw button to get the real file.  
+One more thing before we start:  **Save the IPython notebook** at the Code link above in your `Data_Bootcamp` directory/folder.  The link goes to a display of the notebook; you need to click on the Raw button to get the real file.  
 
 
 ## Reminders 
@@ -592,12 +592,25 @@ ax.set_title('GDP', loc='left', fontsize=14)
 ax.set_xlabel('Trillions of US Dollars')
 ax.set_ylabel('')
 ```
-
 Now recreate the same graph with this statement at the top:
 ```python
 plt.style.use('fivethirtyeight')
 ```
-(And note that once we execute this statement, it stays executed.)  Or try any of these styles:  `ggplot`, `bmh`, `dark_background`, and `grayscale`.  
+(And note that once we execute this statement, it stays executed.)  
+
+
+**Exercise.** Try one of these styles:  `ggplot`, `bmh`, `dark_background`, and `grayscale`.  
+
+
+Here's another one, for fans of the popular [xkcd webcomic](http://xkcd.com/1235/):
+```python
+plt.xkcd()
+ax = df['gdp'].plot(kind='barh', alpha=0.5)
+ax.set_title('GDP', loc='left', fontsize=14)
+ax.set_xlabel('Trillions of US Dollars')
+ax.set_ylabel('')
+```
+Note the wiggly lines, perfect for a suggesting hand-drawn graph.  
 
 
 Which styles do you like?  Why? 

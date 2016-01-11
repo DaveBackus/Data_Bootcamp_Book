@@ -1,7 +1,7 @@
 # Python fundamentals 1
 
 ---
-**Overview.**  Time to start programming!  We work our way through some of the essentials of Python's core language.  Part 1 of 2.  
+**Overview.**  Time to start programming!  We work our way through some of the essentials of Python's core language.  We do this in the Spyder coding environment.  Part 1 of 2.  
 
 **Python tools.**  Syntax, Spyder, calculations, assignments, strings, lists, built-in functions, objects, methods, tab completion, object inspector.  
 
