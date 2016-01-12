@@ -74,6 +74,7 @@ To start Spyder from Launcher, **click on the blue Launch button** to the right 
 You see here that Spyder has a number of different components.  It's overwhelming at first, but give it some time.  The most important components are:  
 
 * **Editor.**  This is on the left.  We can write and edit programs here and save them to our hard drive.  
+
 * **Toolbar.** Above the editor, you'll see a row of buttons that we refer to as the toolbar.  See the picture below. Among them are some green triangles.  The big one (marked by the red arrow) runs the whole program -- whatever we have in the editor.  The smaller ones run sections of code.  More on this later.  
 ![Spyder toolber](figs/spyder_toolbar.png "Spyder's toolbar")
 * **IPython console.**  This is on the right at the bottom -- look for the tab with this label.  This is where output from our programs will show up.  On startup you should see something like 
@@ -84,8 +85,8 @@ You see here that Spyder has a number of different components.  It's overwhelmin
   
   In [1]: 
   ```
-  
-  We can use the console to write and test single lines of code, get help, and many other things.    
+
+  We can use the console to write and test single lines of code, get help, and many other things. 
 * **Object inspector.**  This is on the right at the top.  We can get Python documentation here, which is really useful.  
 
 We can move these windows around by dragging and dropping.  If we mess up -- it happens to the best of us -- look for "View" at the top and click on "Reset window layout." 
@@ -93,7 +94,7 @@ We can move these windows around by dragging and dropping.  If we mess up -- it 
 
 **Jupyter.**  Jupyter is another graphical environment, which we use to create and run **IPython notebooks**. These notebooks combine code, output, words, and graphics.  It's a convenient format for presenting our work to others and can be used as a project report.  We'll use IPython notebooks in class in a few weeks.  In the meantime, here are [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [examples](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).  
 
-To create or run an IPython notebook from Launcher, **click on the blue Launch button** to the right of the ipython-notebook icon.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see something like this:  
+To create or run an IPython notebook from Launcher, **click the blue Launch button** to the right of the ipython-notebook icon.  It will open a tab in your default browser.  (If you're not sure what that is, you'll soon find out.)  In the browser tab, you'll see something like this:  
 
 ![Spyder environment](figs/jupyter_plain.png "Jupyter")
 
