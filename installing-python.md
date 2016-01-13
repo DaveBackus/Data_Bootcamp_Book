@@ -183,7 +183,7 @@ We're now ready to write and run Python programs in two environments. Take a bow
 **Exercise.** We have seen both **code files** and **environments** for working with them.  With this in mind, fill in the blanks in the table below and explain your answers to your neighbor.
 
 Environment | File 
-:---: | --- 
+:---: | :---: 
 MS Word  | Word document | 
 MS Excel | Excel file 
 Spyder   | 

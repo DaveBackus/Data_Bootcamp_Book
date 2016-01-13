@@ -29,22 +29,16 @@ Once it's running,  we'll work our way through the fundamentals of Python, the c
 
 ## Reminders
 
-<!-- 
-Use Launcher to start Spyder.  If you're not sure what that means, review the previous chapter.  Once you have it running
---> 
-
-
 * Spyder. An environment for writing and running Python programs.   Its components include an editor, an IPython console, and the Object explorer.  
-
-
-  **Exercise.** Start Spyder.  If you're not sure how, return to the prevous chapter.  
-
-  **Exercise.** Point to each component in the figure or on your computer. 
 
 * `Data_Bootcamp` directory.  The place in your computer where you store files for this course.  
 
-  **Exercise.** Download the code file for this chapter and save it in your `Data_Bootcamp` directory.  
 
+**Exercise.** Start Spyder.  If you're not sure how, return to the prevous chapter.  
+
+**Exercise.** In Spyder, point to the editor, IPython console, and Object inspector.  
+
+**Exercise.** Download the code file for this chapter and save it in your `Data_Bootcamp` directory.  
 
 
 ## The logic of Python programs
@@ -300,11 +294,13 @@ The blank line comes from the empty space to the right of the first triple quote
 **Exercise.** Try the exact same code as above, but replace the triple quotes with single quotes. What happens? Why do you think that happened?
 
 **Exercise.** Type in the following. Figure out what's going wrong. Fix it. 
+
 ```python
 bad_string = 'Sarah's code'
 ```
 
 **Exercise.** Which of these are strings? Which aren't? 
+
 ```python
 apple
 "orange"
@@ -321,18 +317,21 @@ apple
 One of the rules of good code is that **we explain what we've done -- in the code**.  In this class, we might think about writing code that one of our classmates can understand without help.  These explanations are referred to as comments.  
 
 
-Add a comment with the hash character (#).  Anything in a line after a hash is a comment, meaning it's ignored by Python.  Here are some examples: 
+Add a comment with the hash character (#).  Anything in a line after a hash is a comment, meaning it's ignored by Python.  Here are some examples:  
+
 ```python
 # everything that appears after this symbol is a comment!
-# comments help PEOPLE understand the code, but Python ignores them!
-# we're going to add 4 and 5
+# comments help PEOPLE understand the code, but PYTHON ignores them!
+# we're going to add 4 and 5 
 4 + 5           # here we're doing it 
 print(4+5)      # here we're printing it 
 ```
+
 We often put comments like this in our code.  Usually not quite this basic, but close.  
 
 
 If we have a long comment, there's another method (one of our favorites):  use triple quotes.  Officially triple quotes define strings just as single and double quotes do.  Unofficially they're often used for longer comments.  Here's an example from the start of our test program: 
+
 ```python 
 """
 Data Bootcamp test program checks to see that we're running Python 3.  
@@ -340,6 +339,7 @@ Written by Dave Backus, March 2015
 Created with Python 3.4 
 """
 ```
+
 We recommend putting something like this at the top of every program you write.  You'll thank us later, when you go back and try to figure out what it is you did a few weeks ago.  
 
 **Exercise moving forward.** Practice writing comments **all the time**. Whenever you learn something new, write a comment explaining it in your code. It feels tedious, but the best coders always explain their work. It's a good habit to develop.
@@ -350,13 +350,15 @@ We recommend putting something like this at the top of every program you write. 
 If we're writing longer programs, it's generally easier to type them into an editor where we can correct any mistakes we make, just as we do in a word processing program.   
 
 
-Let's give it a try.  Type or copy these commands into a new file in the Spyder editor:  
+Let's give it a try.  Type or copy these commands into a new file in the Spyder editor: 
+
 ```python 
 a = 'some'
 b = 'thing' 
 c = a + b 
 print('c =', c)
 ```
+
 (Hint:  Click on File at the top, then New file.) 
 
 
@@ -375,6 +377,7 @@ Once we've saved the file, we can run it in Spyder by clicking on the green arro
 Spyder has another cool feature we use a lot:  we can carve out blocks of code ("cells") and run them separately.  That way we can try out small pieces of code one at a time.  
 
 The idea is to put the separator `#%%` (hash, percent, percent) between blocks of code, called **cells**, so that we can run them separately.  Consider the code:  
+
 ```python 
 x = 2
 y = 3
@@ -386,6 +389,7 @@ b = 'thing'
 c = a + b 
 print('c =', c)
 ```
+
 The separator `#%%` in the middle divides the file into two cells that we can run one at a time.  That allows us to run and test blocks of code without running the whole program.  It doesn't make much difference with code this simple, but in longer programs it can be a real time saver.   
 
 
@@ -408,20 +412,25 @@ Lists are one of the fundamental Python **data structures**, a term that means a
 A Python list is what it sounds like:  an ordered collection of items.  The items can be lots of things:  numbers, strings, variables, or even other lists.  
 
 **Creating lists.** We create lists by putting **square brackets around a collection of items** separated by commas.  Here are some examples. Type each line of code into Spyder's IPython console and run them.   
+
 ```python 
 numberlist = [1, 5, -3]
 stringlist = ['hi', 'hello', 'hey']		
 ```
+
 These are, of course, assignments:  the lists on the right are assigned to the variables on the left.  
 
 We can also make lists of variables:
+
 ```python 
 a = 'some'
 b = 'thing'
 c = a + b 
 variablelist = [a, b, c]		
 ```
+
 Or we can combine variables, numbers, and strings:  
+
 ```python 
 randomlist = [1, "hello", a]		
 ```
@@ -438,10 +447,12 @@ In contrast, the statement `biglist2 = [numberlist, stringlist]` produces a new 
 
 
 **Exercise.** Run the statements 
+
 ```python 
 mixedlist = [a, b, c, numberlist]
 print(mixedlist)
 ```
+
 What is the output?  How would you explain it to a classmates?  
 
 
@@ -455,6 +466,7 @@ We now have several kinds of **objects** to work with:  numbers, strings, and li
 Python has a lot of basic "built-in" functions.  We've already seen the `print()` function.  Here are some others we've found useful.    
 
 **The `type()` function.**  This tells us what kind of object we have.  To see how it works, type the following into the IPython console **one line at a time**:   
+
 ```python 
 type(2)
 type(2.5)
@@ -464,6 +476,7 @@ stringlist = ['a', 'b', c]
 type(stringlist)
 type('12')
 ```
+
 Think about this on your own for a minute. What do you think you'll get?  How does it compare to the real output?  
 
 Not to kill the suspense, but here's what we should see:    
@@ -478,6 +491,7 @@ Not to kill the suspense, but here's what we should see:
 The type function is more helpful than you might guess.  A lot of what we do in programming is deal with objects of different types and, when necessary, convert one type to another.  The first step is to identify the type of the object of interest.  
 
 **Exercise.** Try each of these, one at a time, in the IPython console and explain the output:
+
 ```python
 type('a')
 type('a1')
@@ -508,20 +522,25 @@ len('4')
 ```
 
 **Converting strings to numbers.** Suppose we have an object of one type (the string `'11.32'`) and want to use it as another (the number `11.32`).  We need to convert it from one type to another, from a string to a floating point number. We can use the function `float()`, then use `type()` to check:
+
 ```python 
 f = float('11.32')
 type(f)
 ```
+
 The result `f` is the floating point number `11.32`.  
 
 The function `int()` lets us do the same for integers. Convert the string `'11'` to an integer, then check with `type()` again:
+
 ```python 
 i = int('11')
 type(i)
 ```
+
 The result `i` is the integer 11.  
 
 **Converting numbers to strings.** Similarly, we can convert a number back to a string with `str()`:
+
 ```python 
 s = str(11)
 print('s has type', type(s))
@@ -534,7 +553,6 @@ print('t has type', type(f))
 **Exercise.** What happens if we apply the function `float` to the string `'some'`?  
 
 **Exercise.**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2013'`.  How would we construct a string for the following year?  Hint:  Start by converting year to an integer.  
-
 
 
 ## Objects and methods
@@ -558,6 +576,7 @@ numberlist.[tab]    # here you hit the tab key, don't type in the word "tab"
 ```
 
 This wonderful piece of technology is referred to as **tab completion**.  The ingredients here are the object (here `numberlist`), the period or dot, and the tab key.  When you hit tab, a window will pop up with a list of methods in alphabetical order.  In our example, the list starts like this:  
+
 ```python
 numberlist.append
 numberlist.clear
@@ -566,12 +585,15 @@ numberlist.count
 ```
 
 If we want more information about a method, we can type `object.method?` in the IPython console or `object.method` in the object inspector.  For the method `numberlist.append`, we get the description
+
 ```python 
 Definition:  append(object)
 Type:  Function of None module 
 L.append(object) -> None -- append object to end.
 ```
+
 Well, that's pretty opaque, maybe we oversold this approach.  What `append` does is add an item to the end of a list.  Try using `append()`, then use `print()` to see the results:
+
 ```python
 numberlist.append(7)
 print(numberlist)
@@ -590,17 +612,36 @@ That's another way to get information about a method: try it and see what happen
 
 
 **Exercise.**  Run the code 
+
 ```python 
 firstname = 'John'
 lastname  = 'Lennon'
 firstlast = firstname + ' ' + lastname 
 ```
+
 Find a method to replace the n's in `firstlast` with asterisks.  
 
 
 ## Python 2 and 3
 
 There's a lot of code around written in earlier versions of Python, most commonly Python 2.7.  It's there because the people who wrote it started before Python 3 was up and running.  Since we're starting from scratch, we are planting ourselves firmly in Python 3 territory.  Still, you're likely to run across examples of Python 2 on the internet. The easiest way to tell the difference is the print command:  `print(x)` in Python 3 was `print x` (no parentheses) in Python 2.  There are lots of other differences, which is why it's essential we all use Python 3.  
+
+
+## Review 
+
+
+**Exercise.** * What should you do if you don't follow what we're doing in class?  
+
+**Exercise.** Set `first = 'Hersh'` and `last = 'Iyer'`.  Construct a string `bothnames` that consists of the first name, a space, and the last name.  *Bonus points:* Do this with the last name in upper-case (capital) letters.  
+
+**Exercise.** Create a variable `xyz` that takes the value `12.34`.  What "type" is this variable?  How would you find out?  
+
+**Exercise.** Create a list that contains the first names of three friends. 
+
+**Exercise.** Consider the assignments `x = 'this'` and `y = "this"`.  How do `x` and `y` compare?
+
+**Exercise (challenging).** Suppose we have a variable `z = '12,345.6'`.  What is its type?  Can we convert it to a floating point number?  *Hint:*  Use tab completion to find a method to get rid of the comma.  
+
 
 
 ## Resources  
