@@ -30,7 +30,7 @@ Some things from previous chapters that we'll use a lot:
 
 * Number types: integers vs. floats. Examples of integers include -1, 2, 5, 42. They cannot involve fractions. Floats use decimal points:  `11.32`.
 
-* The `print()` function. Use `print(‘something’, 'else')` to display the value(s) of the object(s) in parentheses.
+* The `print()` function. Use `print(‘something’, x)` to display the value(s) of the object(s) in parentheses.
 
 * The `type()` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, strings, and lists.  
 
@@ -40,7 +40,7 @@ Some things from previous chapters that we'll use a lot:
 
 * Spyder.  An environment for writing Python programs.  The various windows include an editor, an IPython console, and the Object explorer.   
 
-* Comments. Use # to add comments to your code and explain what you’re doing.
+* Comments. Use the hash symbol `#` to add comments to your code and explain what you’re doing.
 
 * Tab completion.  To find the list of methods available for a hypothetical object `x`, type `x.[tab]` in Spyder's IPython console -- or in an IPython notebook.  We call that "tab completion." 
 
@@ -537,7 +537,7 @@ We access the value from the key with syntax of the form: `dict[key]`.  In the e
 How are tuples different from lists?  First, the syntax is different:  parentheses rather than square brackets.  Second, and more importantly, they can't be changed.  We can't alter the contents of a tuple or add another component.  
 
 
-
+<!--
 ## Assignments and copies
 
 Also mytn, but file away the idea for later.  This is what programmers call a "[gotcha][8]," an unexpected or counterintuitive feature of a language.  This one has gotten all of us at one time or other.  It shows up in the Pandas package, too.  The idea is that if we have (say) a list `x` and set `y = x`, then `y` is attached to `x`.  If we change the components of `x`, then `y` changes along with it.  
@@ -545,10 +545,7 @@ Also mytn, but file away the idea for later.  This is what programmers call a "[
 [8]: https://en.wikipedia.org/wiki/Gotcha_(programming)
 
 
-
-<!--
 Python's behavior is similar in this respect to a spreadsheet.  Suppose we put the number 7 in cell A1, then set A2 = A1*10.  We would hope to see the number 70 in A2.  But if we change A1 to 5, then A2 would change to 50 along with it.
--->
 
 
 We illustrate the issue with an example adapted from [Stack Overflow](http://stackoverflow.com/a/10844760/804513): 
@@ -573,6 +570,7 @@ x[0] = 'WHOA!'
 print(y)
 ```
 Here `y` hasn't changed, it's not connected to `x`.  
+--> 
 
 
 ## Programming style  
@@ -599,6 +597,25 @@ https://github.com/amontalenti/elements-of-python-style
 --> 
 
 
+## Review 
+
+**Exercise.** Which of the following are `True` and which are `False`?  
+
+* `2 >= 1`
+* `2 >= 2` 
+* `'this' == "this"`
+* `'Chase' < 'Spencer'`
+
+
+**Exercise.** Extract the third letter from the string `name`.  Use `name = 'Glenn'` as your test case.  
+
+
+**Exercise.** Write a short program that prints the last letter of each item in the list `names = ['Chase', Dave', 'Sarah', 'Spencer']`.  **Bonus:** Print the third letter only if it's a vowel.  
+
+
+**Exercise (challenging).** Explain what `output = list(range(3))` does.  
+
+
 ## Resources 
 
 See the resources in the previous chapter, especially the link to [Codecademy](https://www.codecademy.com/tracks/python).  If you work your way up to Advanced Topics, you'll be in good shape for anything that follows.  
@@ -606,6 +623,8 @@ See the resources in the previous chapter, especially the link to [Codecademy](h
 Additional resources for specific topics:
 
 * The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language" that includes comparisons, conditional statements, and loops.  
+* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
+
 
 <!--
 * Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of his course is also quite good.  
@@ -613,7 +632,6 @@ Additional resources for specific topics:
 * Ditto [Python Tips](http://book.pythontips.com/en/latest/), which starts at a level a bit above where we left off.  Lots of cool stuff if you'd like to push further into Python.  
 -->
 
-* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
 
 <!--
 * The [Python Challenge](http://www.pythonchallenge.com/) is for people who like puzzles as well as coding.  Not for the faint of heart.  

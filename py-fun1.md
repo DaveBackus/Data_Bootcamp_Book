@@ -29,16 +29,18 @@ Once it's running,  we'll work our way through the fundamentals of Python, the c
 
 ## Reminders
 
+Remind youself about the following:  
+
 * Spyder. An environment for writing and running Python programs.   Its components include an editor, an IPython console, and the Object explorer.  
 
 * `Data_Bootcamp` directory.  The place in your computer where you store files for this course.  
 
 
-**Exercise.** Start Spyder.  If you're not sure how, return to the prevous chapter.  
+**Exercises.**  
 
-**Exercise.** In Spyder, point to the editor, IPython console, and Object inspector.  
-
-**Exercise.** Download the code file for this chapter and save it in your `Data_Bootcamp` directory.  
+* Start Spyder.  If you're not sure how, return to the prevous chapter.  
+* In Spyder, point to the editor, IPython console, and Object inspector.  
+* Download the code file for this chapter and save it in your `Data_Bootcamp` directory.  
 
 
 ## The logic of Python programs
@@ -629,19 +631,23 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 ## Review 
 
+Work with your neighbor on these review exercises:  
 
-**Exercise.** * What should you do if you don't follow what we're doing in class?  
+**Exercise.** What should you do if you don't follow what we're doing in class?  
 
-**Exercise.** Set `first = 'Hersh'` and `last = 'Iyer'`.  Construct a string `bothnames` that consists of the first name, a space, and the last name.  *Bonus points:* Do this with the last name in upper-case (capital) letters.  
-
-**Exercise.** Create a variable `xyz` that takes the value `12.34`.  What "type" is this variable?  How would you find out?  
+**Exercise.** Assign the value `12.34` to the variable `xyz`.  What "type" is this variable?  How would you find out?  
 
 **Exercise.** Create a list that contains the first names of three friends. 
 
+<!--
 **Exercise.** Consider the assignments `x = 'this'` and `y = "this"`.  How do `x` and `y` compare?
 
-**Exercise (challenging).** Suppose we have a variable `z = '12,345.6'`.  What is its type?  Can we convert it to a floating point number?  *Hint:*  Use tab completion to find a method to get rid of the comma.  
+**Exercise.** Set `first = 'Hersh'` and `last = 'Iyer'`.  Construct a string `bothnames` that consists of the first name, a space, and the last name.  *Bonus:* Do this with the last name in upper-case (capital) letters.  
+--> 
 
+**Exercise.** Set `name = 'Jones'` and use (a) tab completion to find a method that coverts `name` to upper case (capital) letters and (b) the Object inspector to find out how to use that method.  *Bonus points:* How else can you get help in Spyder for methods and functions?  
+
+**Exercise (challenging).** Use tab completion and the Object inspector to find and apply a method to the string `name` that counts the number of appearances of the letter s.  Use `name = 'Ulysses'` as a test case.  
 
 
 ## Resources  
@@ -650,11 +656,8 @@ There's a lot of code around written in earlier versions of Python, most commonl
 If you'd like another source for comparison, here are some good introductions to basic Python and related topics:   
 
 * Codecademy has an excellent [Introduction to Python](http://www.codecademy.com/en/tracks/python).  You run Python in their online environment, which is really helpful when you're starting out. It uses Python 2, so the print statement has the form `print x` rather than `print(x)`.  If we were to recommend one outside resource, this would be it.  You should think seriously of working your way through it in parallel with this course.  If you do, you can stop (as far as this course in concerned) when you get to Advanced Topics.    
-
 * Here's a [list of free tutorials](http://noeticforce.com/best-free-tutorials-to-learn-python-pdfs-ebooks-online-interactive), but we think you can stop with the first one, Codecademy. 
-
 * The official [Python tutorial](\href{https://docs.python.org/3.4/tutorial/introduction.html) is very good.  It's also a good idea to get used to reading official documentation like this.  There are times when it's unavoidable.  
-
 * Mark Lutz's [Learning Python](http://www.amazon.com/Learning-Python-5th-Mark-Lutz/dp/1449355730/) is a 1600-page monster that covers lots of things we won't use.  But it's clear and thorough, and comes with the elusive Glenn Okun stamp of approval.  He tells us the Kindle version comes with free updates. 
 
 <!--

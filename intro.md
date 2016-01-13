@@ -8,7 +8,7 @@
 
 ---
 
-This book -- and the course we developed it for -- is about data.  It's also about tools for working with data, which in this case means **[Python][10]** and its data-related tools.  Our focus is economic and financial data, which is what we know best, but the same tools can be applied to any data. By the end of the course, you will have a better idea where to find data that's useful to you.  You will also have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
+This book -- and the course we developed it for -- is about **data**.  It's also about **tools** for working with data, which in this case means **[Python][10]** and its data-related tools.  Our focus is economic and financial data, which is what we know best, but the same tools can be applied to any data. By the end of the course, you will have a better idea where to find data that's useful to you, and you will have command over tools you can use to do something interesting with it.  We think your life will be more interesting, too, but maybe that's just us.  
 
 
 ## Answers to common questions 
@@ -125,6 +125,7 @@ The resources section at the end of each chapter is a collection of (mostly) lin
 
 Here we'll say simply that all of the materials for this book and the associated course are posted online: 
 
+* Website.  Everything is posted on our [class website](http://databootcamp.nyuecon.com/).
 * Book.  It's hosted by [GitBook](https://www.gitbook.com/book/davebackus/test/details).  
 * Code.  We give links to the relevant code at the start of each chapter, but if you want them all, look in the [Code directory](https://github.com/DaveBackus/Data_Bootcamp/tree/master/Code) of the GitHub repo.  If you save them, **remember to click on the Raw button** in the upper right.  (This is an oddity of GitHub, which distinguishes between a display of the file and the file iself.)
 * Other materials.  Pretty much everything else is available on our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp). 

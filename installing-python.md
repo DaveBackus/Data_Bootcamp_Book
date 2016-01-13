@@ -23,6 +23,7 @@ One kind of component is a user-interface or **environment** for writing code an
 We'll use two Python environments in this class: 
 
  * **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  
+ 
  * **Jupyter** is a web-based interface for running **IPython notebooks**, which combine code, output, and documentation.  
 
  We will write and run Python programs in both environments.  
