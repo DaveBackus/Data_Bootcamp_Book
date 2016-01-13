@@ -19,9 +19,8 @@ We're now ready to explore the rudiments of Python.  We're going to **jump right
 This is Python, of course, but similar concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
 --> 
 
-The challenge and beauty of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  
+The challenge and beauty of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  
 
-We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  Your first job is to **start Spyder**.  If you don't know what that means, return to the previous chapter. 
 
 <!-- 
 Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "packages," "libraries," or "modules" that allow Python to do more advanced things -- data management and graphics, for example.  Think of them as plug-ins or extensions that we can call on when needed. We'll deal with them later.  
@@ -29,7 +28,7 @@ Once it's running,  we'll work our way through the fundamentals of Python, the c
 
 ## Reminders
 
-Remind youself about the following:  
+Remind yourself about the following:  
 
 * Spyder. An environment for writing and running Python programs.   Its components include an editor, an IPython console, and the Object explorer.  
 
@@ -645,7 +644,7 @@ Work with your neighbor on these review exercises:
 **Exercise.** Set `first = 'Hersh'` and `last = 'Iyer'`.  Construct a string `bothnames` that consists of the first name, a space, and the last name.  *Bonus:* Do this with the last name in upper-case (capital) letters.  
 --> 
 
-**Exercise.** Set `name = 'Jones'` and use (a) tab completion to find a method that coverts `name` to upper case (capital) letters and (b) the Object inspector to find out how to use that method.  *Bonus points:* How else can you get help in Spyder for methods and functions?  
+**Exercise.** Set `name = 'Jones'`.  Use (a) tab completion to find a method that coverts `name` to upper case (capital) letters and (b) the Object inspector to find out how to use that method.  *Bonus:* How else can you get help in Spyder for methods and functions?  
 
 **Exercise (challenging).** Use tab completion and the Object inspector to find and apply a method to the string `name` that counts the number of appearances of the letter s.  Use `name = 'Ulysses'` as a test case.  
 

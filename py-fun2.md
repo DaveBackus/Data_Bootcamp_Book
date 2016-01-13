@@ -613,7 +613,10 @@ https://github.com/amontalenti/elements-of-python-style
 **Exercise.** Write a short program that prints the last letter of each item in the list `names = ['Chase', Dave', 'Sarah', 'Spencer']`.  **Bonus:** Print the third letter only if it's a vowel.  
 
 
-**Exercise (challenging).** Explain what `output = list(range(3))` does.  
+**Exercise.** Run the statement `output = list(range(3))` and describe the output.  What does it do?  
+
+**Exercise.** Write a function that takes a string as input and returns the last element.  For example, if the input string is `Dave`, the function returns `e`.  
+
 
 
 ## Resources 

@@ -26,7 +26,7 @@ We'll use two Python environments in this class:
  
  * **Jupyter** is a web-based interface for running **IPython notebooks**, which combine code, output, and documentation.  
 
- We will write and run Python programs in both environments.  
+We will write and run Python programs in both environments.  
 
 This is a lot of jargon to swallow at one time.  Don't panic, it will become familiar with use.  And anything we don't use you can safely ignore.  
 
@@ -95,9 +95,7 @@ You see here that Spyder has a number of different components.  It's overwhelmin
   In [1]: 
   ```
 
-  We can use the console to write and test single lines of code, get help, and many other things. 
-
-* **Object inspector.**  This is on the right at the top.  We can get Python documentation here, which is really useful.  
+* **Object inspector.**  This is on the right at the top.  We get Python documentation here, which is really useful.  
 
 We can move these windows around by dragging and dropping.  If we mess up -- it happens to the best of us -- look for "View" at the top and click on "Reset window layout." 
 
@@ -185,7 +183,7 @@ We're now ready to write and run Python programs in two environments. Take a bow
 
 Environment | File 
 :---: | :---: 
-MS Word  | Word document | 
+MS Word  | Word document 
 MS Excel | Excel file 
 Spyder   | 
          | IPython notebook 
@@ -193,7 +191,7 @@ Spyder   |
 
 **Exercise.** What version of Python are we using?  
 
-**Exercise.** Identify the editor, the IPython console, and the Object inspector in the picture of Spyder above.  
+**Exercise.** Identify the editor, the IPython console, and the Object inspector in the Spyder picture above -- or your computer.  
 
 
 ## Resources 
@@ -206,13 +204,3 @@ More on the Anaconda distribution and its contents:
 * [Links](https://www.reddit.com/r/Python/comments/2trvyy/resource_or_tutorials_for_anacondaconda/) to other documentation and support.  More than you'll ever want or need. 
 
 
-<!--
-## Appendix:  Directory structures 
-
-Complete paths look like this:  
-* Windows: `C:\Users\userid\Data_Bootcamp` 
-* Mac:  `/Users/userid/Data_Bootcamp`
-
-How to get them?
-
---> 
