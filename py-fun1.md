@@ -13,17 +13,38 @@
 
 ---
 
-We're now ready to explore the rudiments of Python.  We're going to **jump right in** to the deep end of the pool.  For a couple weeks, you may feel like you've been dropped in a foreign country where you don't speak the language.  You'll run across terms like "strings," "objects," "methods," and "tab completion."  Don't panic, it's just jargon.  Stick with it for a few weeks and you'll be fine.  Ask questions.  Really. **Ask lots of questions.**
+We're now ready to explore the rudiments of Python.  We're going to **jump right in** to the deep end of the pool.  For a couple weeks, you may feel like you've been dropped in a foreign country where you don't speak the language.  You'll hear terms like "strings", "floats", "objects", "methods", and "tab completion".  Don't panic, it's just jargon.  If you put some effort into this over the next 2-4 weeks, you'll be fine.  And ask questions.  Really. **Ask lots of questions.**
 
 <!-- 
 This is Python, of course, but similar concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
 --> 
 
-The jargon comes with a purpose.  The challenge and beauty of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  
+The challenge and beauty of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  
+
+We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  Your first job is to **start Spyder**.  If you don't know what that means, return to the previous chapter. 
 
 <!-- 
-We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  Your first job is to **start Spyder**.  If you don't know what that means, return to the previous chapter. Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "packages," "libraries," or "modules" that allow Python to do more advanced things -- data management and graphics, for example.  Think of them as plug-ins or extensions that we can call on when needed. We'll deal with them later.  
+Once it's running,  we'll work our way through the fundamentals of Python, the core of the language.  The distinction here is with "packages," "libraries," or "modules" that allow Python to do more advanced things -- data management and graphics, for example.  Think of them as plug-ins or extensions that we can call on when needed. We'll deal with them later.  
 -->
+
+## Reminders
+
+<!-- 
+Use Launcher to start Spyder.  If you're not sure what that means, review the previous chapter.  Once you have it running
+--> 
+
+
+* Spyder. An environment for writing and running Python programs.   Its components include an editor, an IPython console, and the Object explorer.  
+
+
+  **Exercise.** Start Spyder.  If you're not sure how, return to the prevous chapter.  
+
+  **Exercise.** Point to each component in the figure or on your computer. 
+
+* `Data_Bootcamp` directory.  The place in your computer where you store files for this course.  
+
+  **Exercise.** Download the code file for this chapter and save it in your `Data_Bootcamp` directory.  
+
 
 
 ## The logic of Python programs
@@ -48,8 +69,6 @@ Reminders:  Spyder, IPython...
 ## Calculations in Spyder's IPython console 
 
 We'll do lots of numerical calculations.  That's mostly what managing data is about: adding things up, dividing one thing by another, and so on. We'll do this initially in Spyder's **IPython console**, typically located in the lower right corner (look for a tab with this label).
-
-So start Spyder.  If you're not sure what this means, revisit the previous chapter. 
 
 To see how calculations work in Python, type these expressions in Spyder's IPython console **one at a time**:
 ```python 
@@ -346,8 +365,9 @@ To run this code, we need to save it in a file.  In Spyder's editor, click on "F
 Once we've saved the file, we can run it in Spyder by clicking on the green arrow at the top of the editor window.  The first three lines produce no output.  The last one produces the output `c = something` in the IPython console.  
 
 
-**Spyder's toolbar.** The red arrow points to the run button, which runs the whole file.  
-![alt text](http://i.imgur.com/ncMvuul.png "Spyder's toolbar")
+**Spyder's toolbar.** The red arrow below points to the run button, which runs the whole file.  
+
+![Spyder toolbar](figs/spyder_toolbar.png "Spyder's toolbar")
 
 
 ## Code cells in Spyder 

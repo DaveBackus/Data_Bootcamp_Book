@@ -536,7 +536,7 @@ So what does that give us?
 In this dataset, each column is a variable and each row is an observation.  But if we were to plot one of the variables, it wouldn't make much sense.  The observations string together countries, one after the other.  What we'd like to do is compare countries, which this isn't set up to do -- yet.  
 
 
-**Exercise.** Download the spreadsheet and open it in Excel.  What does it look like?  (You can use your Google fu here:  Google `penn world table 8.1`, go to the first link, and look for the Excel link.)
+**Exercise.** Download the spreadsheet and open it in Excel.  What does it look like?  (You can use your Google fu here:  Google "penn world table 8.1", go to the first link, and look for the Excel link.)
 
 **Exercise.** Change the input in the last line of code to `sheetname=2`.  Why does this work?  
 
@@ -561,7 +561,7 @@ This has several features we need to deal with:
 
 Keep in mind that it took us an hour or two to figure all this out.  Sometimes we find that others have done this for us.  
 
-**Exercise.** Download the WEO file.  What happens when you open it in Excel?  (You can use the link in the code.  Or Google `IMF WEO`, look for the most recent link, and choose Entire Dataset.) 
+**Exercise.** Download the WEO file.  What happens when you open it in Excel?  (You can use the link in the code.  Or Google "IMF WEO", look for the most recent link, and choose Entire Dataset.) 
 
 **Exercise.**  Why were we able to spread the `read_csv` statement over several lines? 
 
