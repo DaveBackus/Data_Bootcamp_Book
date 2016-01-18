@@ -13,10 +13,6 @@
 
 ---
 
-<!--
-**UNDER CONSTRUCTION**
--->
-
 We're ready now to look at some data.  Lots of data.  You will need an **internet connection** for much of it.  
 
 You may recall that our typical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first -- data input -- but touch briefly on the second and third.  More concretely, we explain how to get spreadsheet data into Python.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
@@ -151,7 +147,7 @@ df = pd.DataFrame({'name': ['Dave', 'Chase', 'Spencer'],
                    'x1': [1, 4, 5], 'x2': [2, 3, 6], 'x3': [3.5, 4.3, 7.8]}) 
 ```
 
-The details aren't important, we'll do this only when we have to.  **End digression.**  
+This constructs a dataframe from a dictionary.  In the dictionary, each "key" is a variable name expressed as a string and each "value" is a list that produces a column of data.  **End digression.**  
 
 
 So what does our read statement give us?  What's in `df`?  We can check its contents by adding the statement `print('\n', df)`.  (The `'\n'` tells the print function to start printing on a new line, which makes the output look better.)  The result is 
@@ -291,6 +287,22 @@ print(type(df['x1']))
 we find that it's a `pandas.core.series.Series` -- **series** for short.  A series is essentially a dataframe with a single variable or column, which simplifies the bookkeeping a bit.  
 
 
+**Extracting a list of variables.**  We just saw that `df['x1']` "extracts" the variable/series `x1` from the dataframe `df`.  In other cases, we may want to extract a set of variables and create a smaller dataframe.  This happens a lot when the data we read has more variables than we need.  
+
+We can extract variables by name or number.  If by number, we count (as usual) starting with zero.  This code gives us two ways to extract `x1` and `x3` from `df`:  
+
+```python
+namelist = ['x1', 'x3']
+numlist  = [0, 2]
+df_v1 = df[namelist]
+df_v2 = df[numlist]
+```
+
+**Exercise.** Run this code and verify that the two dataframes are the same.  Verify that the statement `df_v3 = df[[0,2]]` does the same.  
+
+**Exercise.** How would you extract the first two variables, `x1` and `x2`?
+
+
 **Constructing new variables from old ones.** Now that we know how to refer to a variable, we can construct others from them.  We construct two with 
 
 ```python 
@@ -309,13 +321,41 @@ The dataframe now includes both of these variables.  The statement `print('\n', 
 2  Spencer   5   6  7.8  0.833333  13.8
 ```
 
-Let's think about what we've done here.  One line of code computes all the observations of a new variable `y1`.  In Excel, we would compute the first observation of `y1`, then copy the formula to the other observations.  Here they all happen at once.  
+Let's think about what we've done here.  In Excel, we would compute the first observation of `y1`, then copy the formula to the other observations.  Here one line of code computes all the observations of a new variable `y1`.  
+
+
+**Exercise.**  Create a variable `z` equal to the sum of `x1`, `x2`, and `x3`.  
+
+
+**Rename variables.**  Suppose we want to give `x1` the more intuitive name `sales`.  We can do that with the statement 
+
+```python 
+df.rename(columns={'x1': 'sales'})
+```
+
+Note the use of a dictionary that associates the "key" `x1` with the "value" `sales`.  
+
+<!--
+If we want to delete `x1` instead, we use the `drop` method:  
+
+```python
+df.drop(['x1'], axis=1)
+```
+
+This method will drop either observations (`index=0`) or variables (`axis=1`).  
+
+
+**Exercise.** Drop the initial observation from `df`, the one with the index `'Dave'`.    
+-->  
+
+<!-- df.drop(['Dave'], axis=0) --> 
+
 
 
 ## Dataframe methods 
 
-
 One of the great things about dataframes is that they have lots of methods ready to go.  We'll survey some of the most useful ones at high speed and come back to them when we have more interesting data.  
+
 
 **Data output.** To save a dataframe to a local file on our computer we use the `df.to_*` family of methods. For example, the methods `df.to_csv()` and `df.to_excel()` produce csv and Excel files, respectively.  Both require a file name as input.  We'll hold off on them until we've addressed files on our computer.  
 
@@ -370,30 +410,6 @@ We did something else here that's important:  We assigned the result back to `df
 **Exercise.** Set `name` as the index as just described.  Use the `index` method to extract it and verify that `name` is, in fact, the index.  
 
 **Exercise.**  Apply the `reset_index()` method to our new dataframe.  What does it do?  What is the index of the new dataframe?  
-
-**Rename variables.**  Suppose we want to give `x1` the more intuitive name `sales`.  We can do that with the statement 
-
-```python 
-df.rename(columns={'x1': 'sales'})
-```
-
-Note the use of a dictionary that associates the "key" `x1` with the "value" `sales`.  
-
-<!--
-If we want to delete `x1` instead, we use the `drop` method:  
-
-```python
-df.drop(['x1'], axis=1)
-```
-
-This method will drop either observations (`index=0`) or variables (`axis=1`).  
-
-
-**Exercise.** Drop the initial observation from `df`, the one with the index `'Dave'`.    
--->  
-
-<!-- df.drop(['Dave'], axis=0) --> 
-
 
 
 **Statistics.**  We can compute the mean, the standard deviation, and other statistics for all the variables at once with 
@@ -609,7 +625,7 @@ In this dataset, each column is a variable and each row is an observation.  But 
 
 **World Economic Outlook.**  Another good source of macroeconomic data for countries is the IMF's [World Economic Outlook](https://www.imf.org/external/ns/cs.aspx?id=28) or WEO.  It comes out twice a year and includes annual data from 1980 to roughly 5 years in the future (forecasts, evidently).  It includes the usual GDP, but also government debt and deficits, interest rates, and exchange rates.  
 
-This one gives us some idea of the challenges we face dealing with what looks like ordinary spreadsheet data.  The file extension is `xls`, which suggests it's an Excel spreadsheet, but in fact it's a tab-delimited file.  Essentially a csv, but with tabs rather than commas separating entries.  We read it in with
+This one gives us some idea of the challenges we face dealing with what looks like ordinary spreadsheet data.  The file extension is `xls`, which suggests it's an Excel spreadsheet, but that's a lie.  In fact it's a "tab-delimited" file:  essentially a csv, but with tabs rather than commas separating entries.  We read it with
 
 ```python 
 import pandas as pd
@@ -623,15 +639,16 @@ weo = pd.read_csv(url1+url2,
 
 This has several features we need to deal with:  
 
-* Identify tabs as the separator between entries.  That's why we use `read_csv()` rather than `read_excel`:  it's not an Excel file.  
-* Eliminate commas from numbers-- things like `12,345.6`, which Python will treat as a string.  (But why did they put them in?)
+* Use `read_csv()` rather than `read_excel()`:  it's not an Excel file.  
+* Identify tabs as the separator between entries with the argument `sep='\t'`. 
+* Eliminate commas from numbers -- things like `12,345.6`, which Python will treat as strings.  (What were they thinking of?)
 * Identify missing values.  
 
 Keep in mind that it took us an hour or two to figure all this out.  Sometimes we find that others have done this for us.  
 
 **Exercise.** Download the WEO file.  What happens when you open it in Excel?  (You can use the link in the code.  Or Google "IMF WEO", look for the most recent link, and choose Entire Dataset.) 
 
-**Exercise.**  Why were we able to spread the `read_csv` statement over several lines? 
+**Exercise.**  Why were we able to spread the `read_csv()` statement over several lines? 
 
 **Exercise.**  Google "python pandas weo" to see if someone else has figured out how to read this file.  
 
@@ -901,7 +918,29 @@ What do you see?  What more would you like to know?
 
 ## Review 
 
-Coming... 
+Run this code to create a dataframe of technology indicators from the World Bank for four African countries:  
+
+```python
+import pandas as pd 
+data = {'EG.ELC.ACCS.ZS': [53.2, 47.3, 85.4, 22.1],    # access to elec (%) 
+        'IT.CEL.SETS.P2': [153.8, 95.0, 130.6, 74.8],  # cell contracts per 100 
+        'IT.NET.USER.P2': [11.5, 12.9, 41.0, 13.5],    # internet access (%) 
+        'Country': ['Botswana', 'Namibia', 'South Africa', 'Zambia']} 
+wb = pd.DataFrame(data)
+```
+
+(You can cut and paste this from the bottom of this chapter's code file.)
+
+**Exercise.** What type of object is `wb`?  What are its dimensions?  
+
+**Exercise.** What are the variable names?
+
+**Exercise.** What is the index?  *Bonus points:* Change the index to the country names.  
+
+**Exercise.** Create a horizontal bar chart with this dataframe.  What does it tell us?  Which country has the most access to electricity?  Cell phones?  
+
+**Exercise (challenging).** Change the variable names to something more informative. 
+
 
 
 ## Resources 

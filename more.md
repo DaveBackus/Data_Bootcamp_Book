@@ -74,6 +74,8 @@ https://github.com/rowanv/giraffe_dash
 
 Processing text...  
 
+http://nbviewer.jupyter.org/url/norvig.com/ipython/How%20to%20Do%20Things%20with%20Words.ipynb 
+
 http://gaussiangeek.blogspot.com/2015/06/ever-since-i-heard-abbey-road-i.html
 
 Other resources from our politics group:

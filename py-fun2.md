@@ -11,9 +11,6 @@
 
 ---
 
-<!--
-**UNDER CONSTRUCTION**
--->
 
 We continue our overview of Python's core language, which lays a foundation for the rest of the course.  We go through the material quickly, since we're more interested in the general ideas than the details.  You will feel like you're drinking from a fire hose, but it will sink in if you **stick with it**.  
 
@@ -532,9 +529,13 @@ We access the value from the key with syntax of the form: `dict[key]`.  In the e
 **Exercise.** Construct a dictionary whose keys are the integers 1, 2, and 3 and whose values are the same numbers as words:  one, two, three.  How would you get the word associated with the key `2`?  
 
 
-**Tuples.** Tuples are collections of things in parentheses separated by commas.  Our primary (only?) use will be dates.  In the datetime module (more coming), the date April 1, 2012 is expressed by the tuple `date = (2012, 4, 1)` (year, month, day). 
+**Tuples.** Tuples are collections of things in parentheses separated by commas.  They're like lists but the syntax is different (parentheses rather than square brackets) and **they can't be changed**.  (Experts would say they're immutable.)  
 
-How are tuples different from lists?  First, the syntax is different:  parentheses rather than square brackets.  Second, and more importantly, they can't be changed.  We can't alter the contents of a tuple or add another component.  
+
+Our primary (only?) use will be dates.  In the datetime module (more coming), the date April 1, 2012 is expressed by the tuple `date = (2012, 4, 1)` (year, month, day). 
+
+
+**Exercise** Suppose the date is expressed as `(2015, 12, 13)`.  What date does that represent?  How would you extract the month?   
 
 
 <!--

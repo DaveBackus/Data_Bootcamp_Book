@@ -11,7 +11,7 @@
 
 <!--
 
-* [Image practice](image_practice.md)
+* [Practice](image_practice.md)
 * [Shaping data:  Pandas revisited](pandas-munging.md)
 * [Updating Python: conda and pip](conda-pip.md)
 

@@ -312,7 +312,7 @@ The `plt.` identifies `plot()` as a pyplot function.   This produces the same ki
 saw earlier, but we get there by a different route.  
 
 
-**Warning.** We're doing this in an IPython notebook, where it will work fine.  But if we use the same code in Spyder, we need to add the statement `plt.show()` to display the graph.  In IPython/Jupyter, this happens automatically when the cell ends.  
+**Digression.** We're doing this in an IPython notebook, where it will work fine.  But if we use the same code in Spyder, we need to add the statement `plt.show()` to display the graph.  In IPython/Jupyter, this happens automatically when the cell ends.  **End of digression.** 
 
 
 **Basic plots.** Compare these plots to our earlier ones.  We start with GDP on its own:  

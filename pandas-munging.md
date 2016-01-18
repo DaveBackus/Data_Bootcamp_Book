@@ -29,16 +29,30 @@ DataFrames:  index, columns
 ## Test cases 
 
 
-WEO 
-
-Teaching data 
-
-
-IMDb data from Rhodes...  
+Chipotle 
+Teaching? CAS?
+ATUS 
+MEPS 
+Class poll 
+Movie titles 
 
 
 ## Setting the index 
 
+
+## Selecting variables 
+
+
+## Selecting observations and/or slicing 
+
+Index, Boolean 
+
+## String methods 
+
+
+## Grouping data 
+
+Groupby, value counts 
 
 
 ## Multi-indexes 

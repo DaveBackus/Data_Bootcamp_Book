@@ -556,6 +556,17 @@ print('t has type', type(f))
 **Exercise.**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2013'`.  How would we construct a string for the following year?  Hint:  Start by converting year to an integer.  
 
 
+**Converting strings to lists.** One more type conversion:  We can convert a string to a list of its characters.  For example, we convert the string `x = abc'` to the list `['a', 'b', 'c']` with `list(x)`.  Run this code to see how it works:
+
+```python
+x = 'abc'
+y = list(x)
+print(y)
+```
+
+**Exercise.**  What is the result of the statement `list('123')`?    
+
+
 ## Objects and methods
 
 As we noted, lots of things in Python are **objects**.  **Methods** are ready-to-go things we can do with these objects.  The available methods depend on the object.  A lot of Python is "object-oriented," which means we apply methods to objects to accomplish what you might think you need a function for.  Trust us, the jargon is harder than just doing it.  
