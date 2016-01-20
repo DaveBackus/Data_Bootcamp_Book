@@ -2,10 +2,10 @@
 
 * [Preface](README.md)
 * [Where are we headed?](intro.md)
-* [The data mentality](data-mentality.md) 
+* [The data mentality](data-mentality.md)
 * [Installing Python](installing-python.md)
-* [Python fundamentals 1](py-fun1.md) 
-* [Python fundamentals 2](py-fun2.md)  
+* [Python fundamentals 1](py-fun1.md)
+* [Python fundamentals 2](py-fun2.md)
 * [Data input: Packages and Pandas](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
 
@@ -19,6 +19,6 @@
 * [Business cycle indicators](indicators.md)
 * [Describing data 1:  Distributions of things](random.md)
 * [Other cool stuff](other.md)
---> 
+-->
 
 * [Glossary](glossary.md)

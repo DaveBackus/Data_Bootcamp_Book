@@ -3,11 +3,11 @@
 ---
 **Overview.**
 
-**Python tools.**  
+**Python tools.**
 
 **Applications.**
 
-**Code.** 
+**Code.**
 
 ---
 
@@ -16,17 +16,17 @@ Describing multivariate data:  scatterplots, multivariate regression
 
 ## Data science
 
-Two paths, stats and cs.  ...  
+Two paths, stats and cs.  ...
 
 * Stats.  Start with a model, use data to estimate its parameters (numbers)...
 
-* CS.  Start with data, look for patterns.  
+* CS.  Start with data, look for patterns.
 
-Complementary...  
+Complementary...
 
 Claudia's hospital example
 
-http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/ 
+http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/
 
 Pokemon:  https://pixelastic.github.io/pokemonorbigdata/
 
@@ -34,6 +34,6 @@ Pokemon:  https://pixelastic.github.io/pokemonorbigdata/
 **Simpson's paradox**
 
 
-# References 
+# References
 
 http://sebastianraschka.com/faq/index.html

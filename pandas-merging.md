@@ -1,15 +1,15 @@
-# More Pandas:  Combining dataframes 
+# More Pandas:  Combining dataframes
 
 ---
-**Overview.** 
+**Overview.**
 
-**Python tools.**  
+**Python tools.**
 
-**Buzzwords.**  
+**Buzzwords.**
 
-**Applications.** 
+**Applications.**
 
-**Code.** Link.  
+**Code.** Link.
 
 ---
 
@@ -18,7 +18,7 @@
 
 ## Reminders
 
-DataFrames:  index, columns 
+DataFrames:  index, columns
 
 
 
