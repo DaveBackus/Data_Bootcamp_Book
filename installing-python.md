@@ -12,7 +12,7 @@
 
 ---  
 
-Python is a programming language.  Like other computer languages, it comes with an ecosystem of related components. We refer to collections of components as **distributions.** We're going to use a specific **distribution** called Anaconda, which gives us lots of things in one user-firnedly download. 
+Python is a programming language.  Like other computer languages, it comes with an ecosystem of related components. We refer to collections of components as **distributions.** We're going to use a specific **distribution** called Anaconda, which gives us lots of things in one user-friendly download. 
 
 <!--
 One kind of component is a **package** that extends Python's capabilities.  A good analogy is an operating system, like Windows or Mac OS  You can't do much with either one until you install software "packages" like Word or Excel. Similarly, we will use packages in Python to manage data, create graphs, and compute statistics.  We're going to use a **distribution** called Anaconda, which bundles Python and a bunch of useful packages together in a single download.  
