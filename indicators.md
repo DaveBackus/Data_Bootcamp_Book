@@ -8,15 +8,15 @@
 
 **Applications.**
 
-**Code.** 
+**Code.**
 
 ---
 
 
 [Refer to Global Economy chapter or reproduce it?]
 
-Heatmap of indicators 
+Heatmap of indicators
 
-Radar chart 
+Radar chart
 
 

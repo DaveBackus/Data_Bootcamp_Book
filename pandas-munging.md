@@ -1,66 +1,66 @@
-# More Pandas:  ?? revisited 
+# More Pandas:  ?? revisited
 
 ---
-**Overview.** We often get data in one form and want to change it to another.  Pandas has an exceptional collection of tools for doing this, but it takes us out of our Excel mindset.  
+**Overview.** We often get data in one form and want to change it to another.  Pandas has an exceptional collection of tools for doing this, but it takes us out of our Excel mindset.
 
-**Python tools.**  Pandas, data frames, index, columns, transpose...  
+**Python tools.**  Pandas, data frames, index, columns, transpose...
 
-**Buzzwords.**  Want operator, selection (filtering), 
+**Buzzwords.**  Want operator, selection (filtering),
 
-**Applications.** 
+**Applications.**
 
-**Code.** Link.  
+**Code.** Link.
 
 ---
 
 **UNDER CONSTRUCTION**
 
-The idea is to get going, cover details later. 
+The idea is to get going, cover details later.
 
-The idea is to start with what we want the end product to be:  to apply, in the words of a colleague, the **want operator**.   
+The idea is to start with what we want the end product to be:  to apply, in the words of a colleague, the **want operator**.
 
 
 ## Reminders
 
-DataFrames:  index, columns 
+DataFrames:  index, columns
 
 
 
-## Test cases 
+## Test cases
 
 
-Chipotle 
+Chipotle
 Teaching? CAS?
-ATUS 
-MEPS 
-Class poll 
-Movie titles 
+ATUS
+MEPS
+Class poll
+Movie titles
 
 
-## Setting the index 
+## Setting the index
 
 
-## Selecting variables 
+## Selecting variables
 
 
-## Selecting observations and/or slicing 
+## Selecting observations and/or slicing
 
-Index, Boolean 
+Index, Boolean
 
-## String methods 
-
-
-## Grouping data 
-
-Groupby, value counts 
+## String methods
 
 
-## Multi-indexes 
+## Grouping data
 
-WEO 
+Groupby, value counts
 
 
-## Renaming variables 
+## Multi-indexes
+
+WEO
+
+
+## Renaming variables
 
 
 ## Selecting variables (columns)
@@ -71,25 +71,25 @@ WEO
 http://stackoverflow.com/questions/31593201/pandas-iloc-vs-ix-vs-loc-explanation
 
 
-## Grouping data 
+## Grouping data
 
 
 
-## Combining dataframes 
+## Combining dataframes
 
 
 
-## SQL commands	
+## SQL commands
 
 
-A lot of this reproduces the functionality of a SQL database.  Pandas has added some commands that make this explicit.  
+A lot of this reproduces the functionality of a SQL database.  Pandas has added some commands that make this explicit.
 
 
 
-<!-- 
+<!--
 We'll talk more about packages later, but for now just put these lines above...
 
-```python 
+```python
 import pandas as pd
 ```
 
@@ -100,81 +100,81 @@ Methods to cover
 
 describe
 value_counts
-set_index  --- and  .sort_index() to speed up selection 
+set_index  --- and  .sort_index() to speed up selection
 also multiindexes:  df.set_index(['var1', 'var2'])
-reset_index -- puts index into varlist 
+reset_index -- puts index into varlist
 
 df.loc['var1'].loc['var2']
 df.loc['var1', entry]
 
-groupby -- sorts automatically 
-size, sum, mean, max, min 
+groupby -- sorts automatically
+size, sum, mean, max, min
 
 data types for variables (info?)
 
-## Missing values 
+## Missing values
 
 
-## Stack and unstack...  
+## Stack and unstack...
 
 
-unstack... (Rhodes 1:34) 
+unstack... (Rhodes 1:34)
 
-unstack:  Brandon Rhodes at 2:00 
- 
+unstack:  Brandon Rhodes at 2:00
 
-## Pivot tables 
 
-https://en.wikipedia.org/wiki/Pivot_table 
+## Pivot tables
+
+https://en.wikipedia.org/wiki/Pivot_table
 
 Rhodes:  You can all of it and more with set_index, sort_index, and unstack.  2:10m
 
 
 
-## Merging dataframes 
+## Merging dataframes
 
-merge:  Brandon Rhodes at 2:10 
+merge:  Brandon Rhodes at 2:10
 
-Evidently Pandas is smart... 
+Evidently Pandas is smart...
 
 
-## Examples 
+## Examples
 
 Auto safety:  http://www.nhtsa.gov/NCSA
 
---> 
+-->
 
 
-## References 
+## References
 
-Brandon Rhodes.  This is great.  
+Brandon Rhodes.  This is great.
 https://youtu.be/5JnMutdy6Fw
 https://github.com/brandon-rhodes/pycon-pandas-tutorial/
 
 https://en.wikipedia.org/wiki/Pivot_table
 
-Other 
+Other
 
 * Groupby:  http://pandas.pydata.org/pandas-docs/stable/groupby.html
 * stack and unstack:  http://pandas.pydata.org/pandas-docs/stable/reshaping.html
 
-Kaggle example:  http://blog.kaggle.com/2013/01/17/getting-started-with-pandas-predicting-sat-scores-for-new-york-city-schools/ 
+Kaggle example:  http://blog.kaggle.com/2013/01/17/getting-started-with-pandas-predicting-sat-scores-for-new-york-city-schools/
 
-Lots of examples:  
+Lots of examples:
 http://tomaugspurger.github.io/
 http://nbviewer.ipython.org/github/TomAugspurger/PyDataSeattle/tree/master/notebooks/
 
-SQL intro https://www.khanacademy.org/computing/hour-of-code/hour-of-sql/v/welcome-to-sql 
+SQL intro https://www.khanacademy.org/computing/hour-of-code/hour-of-sql/v/welcome-to-sql
 
-https://www.reddit.com/r/Python/comments/3wa22v/120gb_csv_is_this_something_i_can_handle_in_python/ 
+https://www.reddit.com/r/Python/comments/3wa22v/120gb_csv_is_this_something_i_can_handle_in_python/
 
 
-SQL and Pandas:  https://www.youtube.com/watch?v=1uVWjdAbgBg 
+SQL and Pandas:  https://www.youtube.com/watch?v=1uVWjdAbgBg
 
-http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/ 
+http://www.gregreda.com/2013/10/26/intro-to-pandas-data-structures/
 http://www.gregreda.com/2013/10/26/working-with-pandas-dataframes/
 
-http://manishamde.github.io/blog/2013/03/07/pandas-and-python-top-10/ 
+http://manishamde.github.io/blog/2013/03/07/pandas-and-python-top-10/
 
 http://markthegraph.blogspot.com/2014/01/pandas-dataframe-cheat-sheet-and-python.html
 
