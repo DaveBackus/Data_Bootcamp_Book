@@ -2,16 +2,15 @@
 
 * [Preface](README.md)
 * [Where are we headed?](intro.md)
-* [The data mentality](data-mentality.md) 
 * [Installing Python](installing-python.md)
+* [The data mentality](data-mentality.md) 
 * [Python fundamentals 1](py-fun1.md) 
 * [Python fundamentals 2](py-fun2.md)  
 * [Data input: Packages and Pandas](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
 
-<!--
-
-* [Practice](image_practice.md)
+<!-- 
+* [Practice](practice.md)
 * [Shaping data:  Pandas revisited](pandas-munging.md)
 * [Updating Python: conda and pip](conda-pip.md)
 

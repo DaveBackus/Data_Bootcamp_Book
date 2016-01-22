@@ -3,7 +3,7 @@
 ---
 **Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  We do this Jupyter, using an IPython notebook.  
 
-**Python tools.**  Graphing with Matplotlib: dataframe methods, the `plot(x,y)` function, and figure/axis objects.  
+**Python tools.**  Graphing with Matplotlib: dataframe methods, the `plot(x,y)` function, figure/axis objects.  
 
 **Buzzwords.** Data visualization.  
 

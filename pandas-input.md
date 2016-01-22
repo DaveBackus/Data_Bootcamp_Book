@@ -3,9 +3,9 @@
 ---
 **Overview.**  We introduce "packages" -- collections of tools that extend Python's capabilities -- and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
 
-**Python tools.**  Import, Pandas.  
+**Python tools.**  Import, Pandas, reading spreadsheet files, dataframes, series, columns, index.   
 
-**Buzzwords.**  Package, csv file, dataframe, series, index, API.  
+**Buzzwords.**  Package, csv file, API.  
 
 **Applications.**  Income and output of countries, government debt, income by college major, old people, equity returns, George Clooney's movie roles.    
 
@@ -644,7 +644,7 @@ This has several features we need to deal with:
 * Eliminate commas from numbers -- things like `12,345.6`, which Python will treat as strings.  (What were they thinking of?)
 * Identify missing values.  
 
-Keep in mind that it took us an hour or two to figure all this out.  Sometimes we find that others have done this for us.  
+Keep in mind that it took us an hour or two to figure all this out.  It helped to Google "python weo".   
 
 **Exercise.** Download the WEO file.  What happens when you open it in Excel?  (You can use the link in the code.  Or Google "IMF WEO", look for the most recent link, and choose Entire Dataset.) 
 
@@ -948,7 +948,7 @@ wb = pd.DataFrame(data)
 We've covered a lot of ground, but if you're looking for more we suggest:  
 
 * On Pandas:  Chris Moffitt's [Practical Business Python blog](http://pbpython.com/archives.html) has a good series on Pandas from the perspective of an Excel user.  
-* On data:  See our list of common [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
+* On data:  See our list of [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
 
 
 <!-- 

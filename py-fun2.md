@@ -528,8 +528,17 @@ We access the value from the key with syntax of the form: `dict[key]`.  In the e
 
 **Exercise.** Construct a dictionary whose keys are the integers 1, 2, and 3 and whose values are the same numbers as words:  one, two, three.  How would you get the word associated with the key `2`?  
 
+**Exercise.** Consider the dictionary 
 
-**Tuples.** Tuples are collections of things in parentheses separated by commas.  They're like lists but the syntax is different (parentheses rather than square brackets) and **they can't be changed**.  (Experts would say they're immutable.)  
+```python
+example = {'Year': [1990, 2000, 2010], 
+           'GDP':  [8.95, 12.56, 14.78]}
+```
+
+What are the keys here?  The values?  What do you think this dictionary represents?  
+
+
+**Tuples.** Tuples are collections of things in parentheses separated by commas.  They're like lists but the syntax is different (parentheses rather than square brackets) and **they can't be changed**.  (Experts would say they're "immutable".)  
 
 
 Our primary (only?) use will be dates.  In the datetime module (more coming), the date April 1, 2012 is expressed by the tuple `date = (2012, 4, 1)` (year, month, day). 

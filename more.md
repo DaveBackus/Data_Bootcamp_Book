@@ -114,6 +114,9 @@ http://fivethirtyeight.com/features/how-data-made-me-a-believer-in-new-york-city
 Pokemon or Big Data?  https://pixelastic.github.io/pokemonorbigdata/
 
 
+SQL + Python:  
+http://toddwschneider.com/posts/analyzing-1-1-billion-nyc-taxi-and-uber-trips-with-a-vengeance/
+
 ## Plot.ly 
 
 ## Google App Engine 
