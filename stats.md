@@ -30,6 +30,8 @@ http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-sci
 
 Pokemon:  https://pixelastic.github.io/pokemonorbigdata/
 
+http://statweb.stanford.edu/~tibs/stat315a/glossary.pdf 
+
 
 **Simpson's paradox**
 
@@ -37,3 +39,6 @@ Pokemon:  https://pixelastic.github.io/pokemonorbigdata/
 # References 
 
 http://sebastianraschka.com/faq/index.html
+
+Strang's linear algebra course at MIT:  
+http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/

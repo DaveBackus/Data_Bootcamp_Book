@@ -155,6 +155,7 @@ http://www.r-bloggers.com/learning-r-index-of-online-r-courses-october-2015/
 
 http://data.princeton.edu/R/
 
+
 **Learn R.** If you want to learn how to program in R, there's lots of good stuff online -- too much, really.  We like these: 
 
 * [Try R](http://tryr.codeschool.com/) is like Codecademy, you run code online.  
@@ -162,6 +163,7 @@ http://data.princeton.edu/R/
 * List http://www.r-bloggers.com/learning-r-index-of-online-r-courses-october-2015/
 * Kelly Black has a [tutorial](http://www.cyclismo.org/tutorial/R/) that covers more advanced topics, including introductory statistics.  
 * [Introduction to Statistical Learning](http://www-bcf.usc.edu/~gareth/ISL/) combines R programming with an introduction to modern statistics and machine learning.  
+* NYU https://github.com/pablobarbera/data-science-workshop
 
 We also like the blog aggregator **[R-bloggers](http://www.r-bloggers.com/)**, which is filled with applications, including code.  
 

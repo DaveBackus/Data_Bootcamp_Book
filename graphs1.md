@@ -709,7 +709,7 @@ Coming...
 
 We haven't found many non-technical resources we like.  
 
-* One of the best is Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html).  It's a great starting point for learning new things.  Find an example you like, download the code, and adapt it to your needs.  
+* One of the best is Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html).  It's a great starting point for learning new things. Find an example you like, download the code, and adapt it to your needs. We also like the Pandas summary of [dataframe methods](http://pandas.pydata.org/pandas-docs/stable/visualization.html).
 * [Chris Moffitt](http://pbpython.com/simple-graphing-pandas.html) does his usual nice job looking at (mostly) dataframe methods.  He also has a [nice overview](http://pbpython.com/visualization-tools-1.html) of other Python graphics packages.  
 
 If you find other resources you like, let us know.  

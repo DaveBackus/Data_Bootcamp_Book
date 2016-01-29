@@ -1,4 +1,4 @@
-# Describing data 1:  Distributions of things
+# Describing data 1:  Distributions of things 
 
 
 ---
@@ -26,6 +26,7 @@ Examples:
 * medical spending (MEPS)
 * Kevin Williams long-tail data... 
 * BDS firm size and age distributions:  http://www.census.gov/ces/dataproducts/bds/ 
+* Fandango movie ratings from 538 
 
 
 **See figs 2-4:**  http://public.econ.duke.edu/~psarcidi/aa.pdf 
@@ -80,6 +81,12 @@ What's a black swan?  How big was the drop in the Chinese market?
 ## Pareto etc 
 
 https://terrytao.wordpress.com/2009/07/03/benfords-law-zipfs-law-and-the-pareto-distribution/
+
+
+## Scatterplots 
+
+Scatterplot matrix:  http://pandas.pydata.org/pandas-docs/stable/visualization.html#scatter-matrix-plot 
+
 
 
 # References 
