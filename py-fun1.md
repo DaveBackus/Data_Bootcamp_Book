@@ -667,9 +667,10 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 Work with your neighbor on these review exercises:  
 
-**Exercise.** What should you do if you don't follow what we're doing in class?  
+**Exercise.** Takes turns with your neighbor explaining these terms:
+integer, float, string, list, tuple, function, method, tab completion.  
 
-**Exercise.** What types are these expressions:  
+**Exercise.** What types are these expressions?  What lengths?   
 
 ```python
 a = 1234 
@@ -702,12 +703,6 @@ str(len(3.1416))
 **Exercise (challenging).** Use tab completion and the Object inspector to find and apply a method to the string `name` that counts the number of appearances of the letter s.  Use `name = 'Ulysses'` as a test case.  
 
 **Exercise (challenging).** Describe the result of `list('abcd','efgh')`.   
-
-<!--
-**Exercise.** Consider the assignments `x = 'this'` and `y = "this"`.  How do `x` and `y` compare?
-
-**Exercise.** Set `first = 'Hersh'` and `last = 'Iyer'`.  Construct a string `bothnames` that consists of the first name, a space, and the last name.  *Bonus:* Do this with the last name in upper-case (capital) letters.  
---> 
 
 
 ## Resources  
