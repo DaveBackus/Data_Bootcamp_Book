@@ -25,13 +25,13 @@ Some things from previous chapters that we'll use a lot:
 
 * Lists. Lists are collections of things in square brackets:  `[1, 'help', 3.14159]`. 
 
-* Number types: integers vs. floats. Examples of integers include -1, 2, 5, 42. They cannot involve fractions. Floats use decimal points:  `11.32`.
+* Number types: integers vs. floats. Examples of integers include -1, 2, 5, 42. They cannot involve fractions. Floats use decimal points:  `12.34`.  Thus `2` is an integer and `2.0` is a float.  
 
 * The `print()` function. Use `print(‘something’, x)` to display the value(s) of the object(s) in parentheses.
 
 * The `type()` function.  The command `type(x)` tells us what kind of object `x` is.  Past examples include integers, floating point numbers, strings, and lists.  
 
-* Number and string conversions. Use `str()` to convert a float or integer to a string. Use `float()` or `int()` to convert a string into a float or integer.  
+* Type conversions. Use `str()` to convert a float or integer to a string. Use `float()` or `int()` to convert a string into a float or integer.  Use `list()` to convert a string to a list of its characters. 
 
 * Methods and objects.  It's common in Python to work with objects using methods.  We apply the method `justdoit` to the object `x` by typing `x.justdoit`.  
 
@@ -43,7 +43,42 @@ Some things from previous chapters that we'll use a lot:
 
 * Help.  We can get help for a function or method `foo` by typing `foo?` in the IPython console or `foo` in the Object explorer.  Try each of them with the `type()` function to remind yourself how this works.  
 
-And while we're reviewing:   Save the code file for this chapter in your `Data_Bootcamp` directory and open it in Spyder.  
+And while we're reviewing:   Start Spyder, open a new file, and save as `bootcamp_class_pyfun2.py` in your `Data_Bootcamp` directory/folder.    
+
+
+##  Dictionaries 
+
+The term **[data structure][5]** refers to the organization of a collection of data.  Strings and lists are examples.  Here we look another one:  dictionaries. We won't use them a lot, but when we do they're close to indispensible.  
+
+[5]: http://en.wikipedia.org/wiki/Data_structure
+
+
+**Dictionaries** are (unordered) pairs of things defined by curly brackets `{}`, separated by commas, with the items in each pair separated by colon.  For example, a list of first and last names: 
+
+```python
+names = {'Dave': 'Backus', 'Chase': 'Coleman', 'Spencer': 'Lyon', 'Glenn': 'Okun'}
+```
+
+If we try `type(names)`, the reply is `dict`, meaning dictionary.  The components of each pair are referred to as the **key** (the first part) and the **value** (the second).  In a real dictionary, the word is the key and the definition is the value.  
+
+We access the value from the key with syntax of the form: `dict[key]`.  In the example above, we get Glenn's last name by typing `names['Glenn']`.  (Try it and see.) 
+
+We teach ourselves the rest:  
+
+**Exercise.** Print `names`.  Does it come out in the same order we typed it?  
+
+**Exercise.** Construct a dictionary whose keys are the integers 1, 2, and 3 and whose values are the same numbers as words:  one, two, three.  How would you get the word associated with the key `2`?  
+
+**Exercise.** Consider the dictionary 
+
+```python
+data = {'Year': [1990, 2000, 2010], 'GDP':  [8.95, 12.56, 14.78]}
+```
+
+What are the keys here?  The values?  What do you think this dictionary represents?  
+
+
+**Exercise.** What happens if we try to slice a dictionary the way we slice lists and strings?  For example, try `x = states[0]`.  What happens?  Why?  
 
 
 ## Logical expressions (comparisons)
@@ -282,7 +317,7 @@ Spencer
 * The line that follows is indented exactly four spaces.  
 * If there's code after this, we would typically leave a blank line in between.  That's convention, not necessity. --> 
 
-Note that `item` changes value as we go through the loop.  It's a variable who value actually varies.  
+Note that `item` changes value as we go through the loop.  It's a variable whose value actually varies.  
 
 We say here that we **iterate** over the items in the list and refer to the list as an **iterable**:  that is, something we can iterate over.  The terminology isn't important, but that's what it means if you run across it.  
 
@@ -350,20 +385,9 @@ for letter in word:
 
 
 
-<!-- 
-**List comprehensions.**  That's a mouthful of jargon, but the idea is that we can use implicit loops.  (This is another thing that doesn't work in Python 2, so make sure you have Python 3 installed.)  Consider, for example, the loop above that prints out the elements of the list `namelist` one at a time.  A list comprehension is more compact syntax for the same thing.
+## Loops over counters (`range()`)
 
-**Example.** Take the list `fruit = ['apple', 'banana', 'clementine']`.  Here's a list comprehension that prints the elements of `fruit`:  
-```python
-[print(item) for item in fruit]
-```
-Try it and see.  As with loops, the variable `item` is a dummy:  we can use any name we wish.  
--->
-
-
-## Loops over counters 
-
-We now know how loops work.  There's one small variant that's worth explaining:  loops that do something a fixed number of times. For example, we might want to sum or average the values of a variable.  Or value a bond with a fixed number of coupon payments.  Or something. 
+We now know how loops work.  Here's another version in which we loop over something a fixed number of times. For example, we might want to sum or average the values of a variable.  Or value a bond with a fixed number of coupon payments.  Or something. 
 
 
 The new ingredient is the `range()` function. `range(n)` gives us all the integers (whole numbers) from `0` to `n-1`.  (If that sounds strange, remind yourself how slicing works.)  And `range(n1, n2)` gives us all the whole numbers from `n1` to `n2-1`.  We can use it in lots of ways, but loops are a prime example.  
@@ -376,7 +400,8 @@ Some examples illustrate how this works:
 for number in range(5):     # the variable "number" can be anything 
     print(number)
 ```
-It prints out the numbers 0, 1, 2, 3, and 4.  (Why doesn't it go to 5?)  This is like our earlier loops, but `range(5)` has replaced a list or string as the "iterable."  
+It prints out the numbers 0, 1, 2, 3, and 4.  (Ask yourself:  Why doesn't it go to 5?)  This is like our earlier loops, but `range(5)` has replaced a list or string as the "iterable."  
+
 
 Here's a minor variant:  
 ```python
@@ -386,12 +411,14 @@ for number in range(2,5):
 It prints out the numbers 2, 3, and 4.  
 
 
-**Example.** We compute and print the squares of integers up to ten.  ([Paul Ford](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) notes:  "just the sort of practical, useful program that always appears in programming tutorials to address the needs of people who urgently require a list of squares.")   We do that with a `for` loop and the `range()` function:  
+**Example.** We compute and print the squares of integers up to ten.  ([Paul Ford](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/) comments:  "Just the sort of practical, useful program that always appears in programming tutorials to address the needs of people who urgently require a list of squares.")   We do that with a `for` loop and the `range()` function:  
+
 ```python 
 for number in range(5):
     square = number**2
     print('Number and its square:', number, square)
 ```
+
 Again we start at zero and work our way up to four.  
 
 
@@ -437,10 +464,10 @@ The answer is 100, which we might know because the coupon and yield are the same
 **Exercise.** In Portugal and Greece, policymakers have suggested reducing their debt by cutting the coupon payments and extending the maturity.  How much do we reduce the value of the debt if we reduce the coupons to 2 and increase the maturity to 20?   
 
 
-<!-- 
-**Loop with condition.**  Sometimes we want to go through a loop until some condition is met.  This combination of a loop and a condition requires an extra level of indenting, but is otherwise just a combination of things we've seen before.  
+**Loop with condition.**  Sometimes we want to go through a loop until some condition is met.  This combination of a loop and a condition requires an extra level of indenting.  It also introduces a new ingredient:  the `break` statement, which tells Python to exit the loop.   
 
-Here's an example.  Suppose we want to compute the sum of integers until the sum reaches 100.  We could use the code 
+**Example.** Suppose we want to compute the sum of integers until the sum reaches 100.  We could use the code 
+
 ```python 
 maxnum = 20 			# guess of number above our limit 
 
@@ -452,12 +479,37 @@ for num in range(maxnum):
 
 print('At num =', num, 'we had sum =', sum)
 ```
-The `if` statement starts with a colon and the statement following it (`break`) is indented four spaces more (eight in total).  `break` is a special command that ends a loop early.  
--->
 
-<!--
-**Exercise.**  [??] 
--->
+The `if` statement starts with a colon and the statement following it (`break`) is indented four spaces more (eight in total).  `break` is a special command that ends a loop early.  
+
+**Exercise.**  Consider the list `namelist = ['Chase', 'Dave', 'Sarah', 'Spencer']`.  Write a loop that goes through the list until it reaches a name than begins with the letter `S`.  At that point it prints the names and exits the loop.  
+
+
+## List comprehensions
+
+That's a mouthful of jargon, but the idea is that we can create list using implicit loops.  This is incredibly useful and shows up a lot in Python code.  It's another thing that doesn't work in Python 2, so make sure you have Python 3 installed.  
+
+Consider, for example, the loop above that prints out the elements of the list `namelist` one at a time.  A list comprehension is more compact syntax for the same thing.
+
+**Example.** Take the list `fruit = ['apple', 'banana', 'clementine']`.  Here's a list comprehension that creates a new list of capitalized fruits:  
+
+```python
+FRUIT = [item.upper() for item in fruit]
+```
+
+Try it and see.  As with loops, the variable `item` is a dummy:  we can use any name we wish.  Replace `item` with your first name to see for yourself.  
+
+
+**Example.** We can do the same with a condition.  This one takes the list `fruit` and creates a new list that contains only those names with six letters or less:  
+
+```python
+fruit6 = [item for item in fruit if len(item)<=6]
+```
+
+**Exercise.** Take the list `fruit` and create a new list with the first letter capitalized.  *Hint:* What method would you use to capitalize a string?  
+
+
+**Exercise.** Take the list of growth rates `g = [0.02, 0.07, 0.07]`.  Write a list comprehension that multiplies each element by 100 to make it a percentage.  
 
 
 ## Defining our own functions
@@ -506,45 +558,6 @@ The return is an essential component of many functions.  Typically when we read 
 
 
 **Exercise.** Use the Object inspector to get the documentation for the built-in function `max`.  If the input is a list of two or more numbers, what does `max()` return?  
-
-
-##  More data structures
-
-This whole section is **mtwn** (more than we need).  We recommend you skim it and not worry about the details.  We'll review it later as needed.  
-
-The term **[data structure][5]** refers to the organization of a collection of data.  Strings and lists are data structures, and we'll run across **dataframes** when we start working with data.  Here we look at a couple more:  dictionaries and tuples. 
-
-[5]: http://en.wikipedia.org/wiki/Data_structure
-
-
-**Dictionaries.**   Dictionaries are (unordered) pairs of things defined by curly brackets `{}`, separated by commas, with the items in each pair separated by colon.  For example, a list of first and last names: 
-```python
-names = {'Dave': 'Backus', 'Chase': 'Coleman', 'Spencer': 'Lyon', 'Glenn': 'Okun'}
-```
-If we try `type(names)`, the reply is `dict`, meaning dictionary.  The components of each pair are referred to as the "key" (the first part) and the "value" (the second).  
-
-We access the value from the key with syntax of the form: `dict[key]`.  In the example above, we get Glenn's last name by typing `names['Glenn']`.  (Try it and see.)
-
-
-**Exercise.** Construct a dictionary whose keys are the integers 1, 2, and 3 and whose values are the same numbers as words:  one, two, three.  How would you get the word associated with the key `2`?  
-
-**Exercise.** Consider the dictionary 
-
-```python
-example = {'Year': [1990, 2000, 2010], 
-           'GDP':  [8.95, 12.56, 14.78]}
-```
-
-What are the keys here?  The values?  What do you think this dictionary represents?  
-
-
-**Tuples.** Tuples are collections of things in parentheses separated by commas.  They're like lists but the syntax is different (parentheses rather than square brackets) and **they can't be changed**.  (Experts would say they're "immutable".)  
-
-
-Our primary (only?) use will be dates.  In the datetime module (more coming), the date April 1, 2012 is expressed by the tuple `date = (2012, 4, 1)` (year, month, day). 
-
-
-**Exercise** Suppose the date is expressed as `(2015, 12, 13)`.  What date does that represent?  How would you extract the month?   
 
 
 <!--
@@ -599,6 +612,8 @@ You can find more along these lines in the classic "[PEP8](https://www.python.or
 
 Some programmers are religious about this.  We'd say simply that we want to make our code readable by others.  
 
+There's one other thing we often do.  If we find documentation online -- at Stack Overflow, for example -- we put  a link to it in the code for future reference.  
+
 <!-- 
 \url{http://www.reddit.com/r/Python/comments/3639nl/what_is_the_most_beautiful_piece_of_python_code/}
 \url{https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/routing.py}  
@@ -609,24 +624,52 @@ https://github.com/amontalenti/elements-of-python-style
 
 ## Review 
 
+**Exercise.** What type is each of these expressions?  What length?  
+
+* `'abcd'`
+* `[1, 3, 5, 7]`
+* `{1: 'one', 2: 'two'}`
+* `123`
+* `123.0`
+* `list('abcd')`
+* `range(3)`
+* `list(range(3))`
+
 **Exercise.** Which of the following are `True` and which are `False`?  
 
 * `2 >= 1`
 * `2 >= 2` 
+* `2 != 2`
 * `'this' == "this"`
-* `'Chase' < 'Spencer'`
+* `'Chase' < 'Dave'`
+* `'Chase' < 'Dave' or 'Spencer' < 'Glenn'`
+* `'Chase' < 'Dave' and 'Spencer' < 'Glenn'`
 
 
-**Exercise.** Extract the third letter from the string `name`.  Use `name = 'Glenn'` as your test case.  
+**Exercise.** Take the object `numbers = {1: 'one', 2: 'two'}`.  What type is it?  Extract the keys as a list.  Extract the values as a list.  
 
 
-**Exercise.** Write a short program that prints the last letter of each item in the list `names = ['Chase', Dave', 'Sarah', 'Spencer']`.  **Bonus:** Print the third letter only if it's a vowel.  
+**Exercise.** Write a program that prints the last letter of each item in the list `names = ['Chase', Dave', 'Sarah', 'Spencer']`.  **Bonus (optional):** Print the last letter only if it's a vowel.  
 
+
+**Exercise.** Write a function `thirdletter` that extracts the third letter from a string.  Use `'Glenn'` as your test case.  
 
 **Exercise.** Run the statement `output = list(range(3))` and describe the output.  What does it do?  
 
-**Exercise.** Write a function that takes a string as input and returns the last element.  For example, if the input string is `Dave`, the function returns `e`.  
+**Exercise (challenging).** Take the list of bond yields `y = [0.01, 0.02, 0.03]` for maturities of one, two, and three years.  
 
+* What happens if you try to multiply all of them by 100 with `100*y`?
+* How would you accomplish the same task (multiply all the elements of `y` by 100) with a loop?   
+* How would you accomplish the same task (multiply all the elements of `y` by 100) with a list comprehension?    
+
+
+**Exercise (challenging).** Start with the lists `l1 = [1, 2, 3]` and `l2 = ['one', 'two', 'three']`.  
+
+* What does `list(zip(l1,l2))` do?  
+* What does `dict(list(zip(l1,l2)))` do?
+* Create a list that contains only the number names in `l2` that have three letters.  
+* Write a list comprehesion that constructs the list of tuples `[(1, 1), (2, 4), (3, 9)]`. 
+* Convert the list of tuples into a dictionary.  
 
 
 ## Resources 
@@ -636,8 +679,7 @@ See the resources in the previous chapter, especially the link to [Codecademy](h
 Additional resources for specific topics:
 
 * The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language" that includes comparisons, conditional statements, and loops.  
-* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Runs online.  
-
+* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  More demanding than ours.  Runs online.  
 
 <!--
 * Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of his course is also quite good.  

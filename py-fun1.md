@@ -35,11 +35,11 @@ Remind yourself about the following:
 * `Data_Bootcamp` directory.  The place in your computer where you store files for this course.  
 
 
-**Exercises.**  
+**Exercise.**  
 
 * Start Spyder.  If you're not sure how, return to the prevous chapter.  
 * In Spyder, point to the editor, IPython console, and Object inspector.  
-* Open a new (empty) code file in Spyder and save it in your `Data_Bootcamp` directory under the name `bootcamp_topic2.py`.  This file will serve as your notes from the class.  
+* Open a new (empty) code file in Spyder and save it as  `bootcamp_class_pyfun1.py` in your `Data_Bootcamp` directory/folder.  This file will serve as your notes for this class.  
 
 
 ## The logic of Python programs
@@ -243,7 +243,7 @@ Here are some other examples, which we assign to variable names for later use. T
 a = 'some'
 b = 'thing' 
 c = a + b 
-d = '11.32'
+d = '12.34'
 ```
 What do you see?  The first two are probably obvious:  we assign the characters in single quotes on the right to the variables on the left.  
 
@@ -542,7 +542,7 @@ type(['data', 'bootcamp'])
 
 If we have an object of one type, we can sometimes change it to another type. (Sometimes it doens't make sense.) The string `'12'` can be converted to the integer `12`, for example.  
 
-**Converting strings to numbers.** Suppose we have an object of one type (the string `'11.32'`) and want to use it as another (the number `11.32`).  We can use the function `float()`, then use `type()` to check:
+**Converting strings to numbers.** Suppose we have an object of one type (the string `'12.34'`) and want to use it as another (the number `12.34`).  We can use the function `float()`, then use `type()` to check:
 
 ```python 
 f = float('12.34')
@@ -565,17 +565,17 @@ The result `i` is the integer 12.
 ```python 
 s = str(12)
 print('s has type', type(s))
-t = str(f)    					# recall that f = float('12.34')
+t = str(12.34)    					
 print('t has type', type(f))
 ```
 
 **Exercise.**  What is the length of the string `'12.34'`? 
 
-**Exercise.**  What is the floating point number `12.34`? 
+**Exercise.**  What is the length of the floating point number `12.34`? 
 
 **Exercise.** What happens if we apply the function `float` to the string `'some'`?  
 
-**Exercise.**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2013'`.  How would we construct a string for the following year?  *Hint:*  Start by converting year to an integer.  
+**Exercise (challenging).**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2013'`.  How would we construct a string for the following year?  *Hint:*  Start by converting year to an integer.  
 
 
 **Converting strings to lists.** One more type conversion:  We can convert a string to a list of its characters.  For example, we convert the string `x = abc'` to the list `['a', 'b', 'c']` with `list(x)`.  Run this code to see how it works:
@@ -586,9 +586,9 @@ y = list(x)
 print(y)
 ```
 
-**Exercise.**  What is the result of the statement `list('123')`?    
+**Exercise.**  What is the result of the statement `list('1234')`?    
 
-**Exercise.** What is the result of `float(int(float(str('12.34'))))`.  Why?  *Hint:* Break it down into its components and explain them one by one.  
+**Exercise.** What is the result of `list(int(float('12.34')))`?  Why?  *Hint:* Break it down into its components and explain them one by one.  
 
 
 ## Objects and methods
@@ -667,7 +667,7 @@ There's a lot of code around written in earlier versions of Python, most commonl
 
 Work with your neighbor on these review exercises:  
 
-**Exercise.** Takes turns with your neighbor explaining these terms:
+**Exercise.** Take turns with your neighbor explaining these terms:
 integer, float, string, list, tuple, function, method, tab completion.  
 
 **Exercise.** What types are these expressions?  What lengths?   
@@ -702,7 +702,7 @@ str(len(3.1416))
 
 **Exercise (challenging).** Use tab completion and the Object inspector to find and apply a method to the string `name` that counts the number of appearances of the letter s.  Use `name = 'Ulysses'` as a test case.  
 
-**Exercise (challenging).** Describe the result of `list('abcd','efgh')`.   
+**Exercise (challenging).** Describe the result of `list(zip('1234','abcd'))`.   
 
 
 ## Resources  

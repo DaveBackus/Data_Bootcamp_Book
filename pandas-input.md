@@ -335,6 +335,11 @@ df.rename(columns={'x1': 'sales'})
 
 Note the use of a dictionary that associates the "key" `x1` with the "value" `sales`.  
 
+
+*** rename all:  assign new list to columns***
+
+**Example.** List comp:  make the name upper case...  
+
 <!--
 If we want to delete `x1` instead, we use the `drop` method:  
 
