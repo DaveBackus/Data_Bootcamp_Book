@@ -35,9 +35,9 @@ Remind yourself about the following:
 * `Data_Bootcamp` directory.  The place in your computer where you store files for this course.  
 
 
-**Exercise.**  
+**Exercise.**  Ask questions if you find any of these steps mysterious:  
 
-* Start Spyder.  If you're not sure how, return to the prevous chapter.  
+* Start Spyder.  
 * In Spyder, point to the editor, IPython console, and Object inspector.  
 * Open a new (empty) code file in Spyder and save it as  `bootcamp_class_pyfun1.py` in your `Data_Bootcamp` directory/folder.  This file will serve as your notes for this class.  
 
@@ -212,7 +212,9 @@ We'll talk more about getting help shortly, but in the meantime you might type `
 -->  
 
 
-**Getting help in Spyder.**  If you want to know more about the print function, here are two good ways to do it in Spyder:  
+## Getting help in Spyder 
+
+If you want to know more about a function, there are two good ways to do it in Spyder.  This works for any function, but using print as our examples we can:
 
 * Type `print?` in the IPython console.  
 * Type `print` in the Object inspector.  
@@ -391,7 +393,7 @@ Created with Python 3.4
 **Exercise.** Explain and fix this code:   
 
 ```python
-bad_string = 'Sarah's code'
+bad_string = 'Sarah's code' 
 ```
 
 **Exercise.** Which of these are strings? Which are not? 
@@ -440,15 +442,14 @@ Or we can combine variables, numbers, and strings:
 randomlist = [1, "hello", a]		
 ```
 
-**Exercise.** Add `print(numberlist)` and `print(variablelist)` to your code in Spyder and hit the run button.  Note the format of the output.  What do the square brackets tell us?  The single quotes around some entries?
-
-
 **Combining lists.** We can combine lists (literally) by adding them.  The statement `biglist = numberlist + stringlist` produces a list containing all the elements of `numberlist` plus all the elements of `stringlist`, giving us six items altogether.  Type `print(biglist)` to make sure that's the case.  
 
 In contrast, the statement `biglist2 = [numberlist, stringlist]` produces a new list with two items:  the lists `numberlist` and `stringlist`.  It's what we might call a "list of lists."  That's not something we're likely to do, to be honest.  (We did it once, but that was an accident.)  The point is simply that lists are flexible objects. 
 
 
 **Exercise.** How would you explain a list to a classmate?   
+
+**Exercise.** Add `print(numberlist)` and `print(variablelist)` to your code and note the format of the output.  What do the square brackets tell us?  The single quotes around some entries?
 
 
 **Exercise.** Run the statements 
@@ -540,21 +541,23 @@ type(['data', 'bootcamp'])
 
 ## Changing types 
 
-If we have an object of one type, we can sometimes change it to another type. (Sometimes it doens't make sense.) The string `'12'` can be converted to the integer `12`, for example.  
+If we have an object of one type, we can sometimes change it to another type. (Sometimes it doesn't make sense and Python tells us so.) The string `'12'` can be converted to the integer `12`, for example.  
 
 **Converting strings to numbers.** Suppose we have an object of one type (the string `'12.34'`) and want to use it as another (the number `12.34`).  We can use the function `float()`, then use `type()` to check:
 
 ```python 
-f = float('12.34')
+s = '12.34'
+f = float(s) 
 type(f)
 ```
 
-The result `f` is the floating point number `12.34`.  
+Here `s` is a string but `f` is the floating point number `12.34`.  
 
 The function `int()` lets us do the same for integers. Convert the string `'12'` to an integer, then check with `type()` again:
 
 ```python 
-i = int('12')
+s = '12'
+i = int(s)
 type(i)
 ```
 
@@ -569,14 +572,6 @@ t = str(12.34)
 print('t has type', type(f))
 ```
 
-**Exercise.**  What is the length of the string `'12.34'`? 
-
-**Exercise.**  What is the length of the floating point number `12.34`? 
-
-**Exercise.** What happens if we apply the function `float` to the string `'some'`?  
-
-**Exercise (challenging).**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2013'`.  How would we construct a string for the following year?  *Hint:*  Start by converting year to an integer.  
-
 
 **Converting strings to lists.** One more type conversion:  We can convert a string to a list of its characters.  For example, we convert the string `x = abc'` to the list `['a', 'b', 'c']` with `list(x)`.  Run this code to see how it works:
 
@@ -586,6 +581,13 @@ y = list(x)
 print(y)
 ```
 
+**Exercise.**  What is the length of the string `'12.34'`? 
+
+**Exercise.**  What is the length of the floating point number `12.34`? 
+
+**Exercise.** What happens if we apply the function `float` to the string `'some'`?  
+
+**Exercise (challenging).**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2013'`.  How would we construct a string for the following year?  *Hint:*  Start by converting year to an integer.  
 **Exercise.**  What is the result of the statement `list('1234')`?    
 
 **Exercise.** What is the result of `list(int(float('12.34')))`?  Why?  *Hint:* Break it down into its components and explain them one by one.  
