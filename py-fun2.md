@@ -652,9 +652,11 @@ https://github.com/amontalenti/elements-of-python-style
 **Exercise.** Write a program that prints the last letter of each item in the list `names = ['Chase', Dave', 'Sarah', 'Spencer']`.  **Bonus (optional):** Print the last letter only if it's a vowel.  
 
 
-**Exercise.** Write a function `thirdletter` that extracts the third letter from a string.  Use `'Glenn'` as your test case.  
+**Exercise.** Write a function `lastletter` that extracts the last letter from a string.  Use `'Gianluca'` as your test case.  
 
+<!--
 **Exercise.** Run the statement `output = list(range(3))` and describe the output.  What does it do?  
+-->
 
 **Exercise (challenging).** Take the list of bond yields `y = [0.01, 0.02, 0.03]` for maturities of one, two, and three years.  
 
