@@ -264,7 +264,7 @@ Here we've taken the components of the previous print statement and expressed th
 
 **Exercise.** This one's a little harder.  Assign your first name as a string to the variable `firstname` and your last name to the variable `lastname`.  Use them to construct a new variable equal to your first name, a space, then your last name.  *Hint:*  Think about how you would express a space as a string.  
 
-**Exercise.** Set `s = 'string'`.  What is ``x + x`?  `2*x`?  `x*2`?  What is the logic here?  
+**Exercise.** Set `s = 'string'`.  What is `s + s`?  `2*s`?  `s*2`?  What is the logic here?  
 
 
 ## Running programs in Spyder 
