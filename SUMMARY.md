@@ -13,11 +13,11 @@
 * [Practice](practice.md)
 * [Shaping data:  Pandas revisited](pandas-munging.md)
 * [Updating Python: conda and pip](conda-pip.md)
-
 * [Emerging market indicators](emerging.md)
 * [Business cycle indicators](indicators.md)
 * [Describing data 1:  Distributions of things](random.md)
 * [Other cool stuff](other.md)
+* [Glossary](glossary.md)
 --> 
 
-* [Glossary](glossary.md)
+

@@ -350,14 +350,12 @@ We often put comments like this in our code.  Not quite this basic, but close.
 
 We typically define strings by putting characters between single quotes, as in `a = 'some'`.  That will be our standard practice, but **Python treats single and double quotes the same**.  We could have typed `a = "some"` (that is, with double quotes) with the same effect.  The main reason for using single quotes is laziness: we don't have to hit the shift key.  We're not ones to disparage laziness, but the point is that there's no difference between the two.  
 
-<!--
 There are, however, some special cases where double quotes come in handy.  On occasion, we use double quotes if the string includes a single quote: 
 ```python
 f = "I don't believe it"
 print(f)
 ```
 The output of the print statement is `I don't believe it`, which includes a single quote as an apostrophe. This doesn't come up very often, in our experience, but there it is just in case.  
--->
 
 
 Triple quotes are similar, but they can be used to define strings that go over several lines: 
@@ -390,7 +388,8 @@ Created with Python 3.4
 
 **Exercise.** In the `Four score etc` code, replace the triple double quotes with triple single quotes. What happens? 
 
-**Exercise.** Explain and fix this code:   
+
+**Exercise.** Fix this code:   
 
 ```python
 bad_string = 'Sarah's code' 
