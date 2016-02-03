@@ -21,6 +21,11 @@ Heatmap of indicators
 
 Radar chart 
 
+
+**Data revisions:** get FRED's data updates...  
+
+
+
 ## Country indicators 
 
 http://blogs.worldbank.org/opendata/visualizing-world-business-regulations

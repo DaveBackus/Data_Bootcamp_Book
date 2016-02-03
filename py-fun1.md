@@ -160,9 +160,9 @@ What's going on here?  We take `x` (which now has a value of 2) and divide it by
 
 **Exercise.** Real GDP in the US (the total value of things produced) was 15.58 trillion in 2013 and 15.96 trillion in 2014.  What was the growth rate?  Express it as an annual percentage. 
 
-**Exercise.**  Suppose we have two variables, `x` and `y`.  How would you switch their values, so that `x` takes on `y`'s value and `y` takes on `x`'s?  
+**Exercise (challenging).**  Suppose we have two variables, `x` and `y`.  How would you switch their values, so that `x` takes on `y`'s value and `y` takes on `x`'s?  
 
-**Exercise.**  This one will take a little thought.  Type `x = 6` in the IPython console.  We've reassigned `x` so that its value is now 6, not 2. If we type and submit `z`, we see 
+**Exercise (challenging).**  Type `x = 6` in the IPython console.  We've reassigned `x` so that its value is now 6, not 2. If we type and submit `z`, we see 
 ```python 
 In [10]: z
 Out[10]: .6666666666

@@ -8,7 +8,7 @@
 
 **Buzzwords.**  Package, distribution, environment, mtwn. 
 
-**Code.** [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_test.py).   
+**Code.** [Python](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_test.py) | [IPython notebook](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb).   
 
 ---  
 
@@ -93,6 +93,8 @@ You see here that Spyder has a number of different components.  It's overwhelmin
   
   In [1]: 
   ```
+
+*Digression.* Some Mac users report they have no IPython console.  The solution: On the toolbar, go to View, then Panes, and make sure IPython console is checked.  If that doesn't work, let us know.  
 
 * **Object inspector.**  This is on the right at the top.  We get Python documentation here, which is really useful.  
 

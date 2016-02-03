@@ -87,6 +87,7 @@ https://terrytao.wordpress.com/2009/07/03/benfords-law-zipfs-law-and-the-pareto-
 
 Scatterplot matrix:  http://pandas.pydata.org/pandas-docs/stable/visualization.html#scatter-matrix-plot 
 
+Guess the correlation...  
 
 
 # References 
