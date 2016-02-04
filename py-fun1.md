@@ -266,6 +266,12 @@ Here we've taken the components of the previous print statement and expressed th
 
 **Exercise.** Set `s = 'string'`.  What is `s + s`?  `2*s`?  `s*2`?  What is the logic here?  
 
+<!--
+u and r in string literals
+https://stackoverflow.com/questions/2081640/what-exactly-do-u-and-r-string-flags-do-in-python-and-what-are-raw-string-l 
+https://en.wikipedia.org/wiki/String_literal
+-->
+
 
 ## Running programs in Spyder 
 
@@ -580,16 +586,13 @@ y = list(x)
 print(y)
 ```
 
-**Exercise.**  What is the length of the string `'12.34'`? 
-
-**Exercise.**  What is the length of the floating point number `12.34`? 
-
 **Exercise.** What happens if we apply the function `float` to the string `'some'`?  
 
-**Exercise (challenging).**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2013'`.  How would we construct a string for the following year?  *Hint:*  Start by converting year to an integer.  
-**Exercise.**  What is the result of the statement `list('1234')`?    
+**Exercise.**  How would you convert the integer `i = 1234` to the list `l = ['1', '2', '3', '4']`?  
 
-**Exercise.** What is the result of `list(int(float('12.34')))`?  Why?  *Hint:* Break it down into its components and explain them one by one.  
+**Exercise.** What is the result of `list(str(int(float('12.34')))`?  Why?  *Hint:* Start in the middle (the string `'12.34'`) and work your way out, one step at a time.  
+
+**Exercise (challenging).**  This one is tricky, but it came up in some work we were doing.  Suppose `year` is a string containing the year of a particular piece of data; for example, `year = '2015'`.  How would we construct a string for the following year?  *Hint:*  Start by converting year to an integer.  
 
 
 ## Objects and methods

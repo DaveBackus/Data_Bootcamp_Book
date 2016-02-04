@@ -247,7 +247,7 @@ We can also count backward, but again Python has its own numbering convention.  
 Let's track this "backward" numbering system in our example.  Below the "counting forward" numbers, start another row.  Below the letter `e` write -1.  As we move to the left, we type, -2, -3, -4.  Label this row "counting backward." 
 
 
-**Exercise.** Take the string `firstname = 'Monty'` and write below it the forward and backward counting conventions.  What is the third letter -- `n` -- in each system?  
+**Exercise.** Take the string `firstname = 'Monty'` and write below it the forward and backward counting conventions.  What is the third letter (`n`) in each system?  
 
 
 **Exercise.** Find the last letter of the string `lastname = 'Python'`.  Find the second to last letter using both the forward and backward counting conventions.  
@@ -375,9 +375,11 @@ for letter in word:
 * Write a program that prints the elements of `stuff`.
 * Write a program that tells us the `type` of each element of `stuff`.  
 * Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the function `type` returns the value `str`.
+
+
+<!-- 
 * Create another list `more_stuff = ['Sarah', 75, 42.5]`. Remember `append()`? Write a program to add the items from stuff to list `more_stuff` using `append()`.
-
-
+--> 
 
 <!-- See [reddit](http://www.reddit.com/r/Python/comments/35ubwo/newbie_for_programming_i_am_working_on_this/).  
 ?? also:  extract vowels, string what's left together.
@@ -461,8 +463,6 @@ The answer is 100, which we might know because the coupon and yield are the same
 
 **Digression.**  When we wrote this code, we used the variable name `yield` instead of `ytm`.  Spyder marked this as `invalid syntax` with a warning sign to the left of the text.  Evidently the name `yield` is reserved for something else.  As general rule, it's a good idea to pay attention to the hints like this.  
 
-**Exercise.** In Portugal and Greece, policymakers have suggested reducing their debt by cutting the coupon payments and extending the maturity.  How much do we reduce the value of the debt if we reduce the coupons to 2 and increase the maturity to 20?   
-
 
 **Loop with condition.**  Sometimes we want to go through a loop until some condition is met.  This combination of a loop and a condition requires an extra level of indenting.  It also introduces a new ingredient:  the `break` statement, which tells Python to exit the loop.   
 
@@ -482,14 +482,32 @@ print('At num =', num, 'we had sum =', sum)
 
 The `if` statement starts with a colon and the statement following it (`break`) is indented four spaces more (eight in total).  `break` is a special command that ends a loop early.  
 
+Let's review:  
+
+**Exercise.** In Portugal and Greece, policymakers have suggested reducing their debt by cutting the coupon payments and extending the maturity.  How much do we reduce the value of the debt if we reduce the coupons to 2 and increase the maturity to 20?   
+
 **Exercise.**  Consider the list `namelist = ['Chase', 'Dave', 'Sarah', 'Spencer']`.  Write a loop that goes through the list until it reaches a name than begins with the letter `S`.  At that point it prints the names and exits the loop.  
 
 
 ## List comprehensions
 
-That's a mouthful of jargon, but the idea is that we can create list using implicit loops.  This is incredibly useful and shows up a lot in Python code.  It's another thing that doesn't work in Python 2, so make sure you have Python 3 installed.  
+That's a mouthful of jargon, but the idea is that we can create lists (and do related things) using implicit loops that we refer to as **list comprehensions**.  This is incredibly useful and shows up a lot in Python code.  It's another thing that doesn't work in Python 2, so make sure you have Python 3 installed.  
 
-Consider, for example, the loop above that prints out the elements of the list `namelist` one at a time.  A list comprehension is more compact syntax for the same thing.
+**Example.** Consider the loop above that prints out the elements of the list `namelist` one at a time:
+
+```python 
+namelist = ['Chase', Dave', 'Sarah', 'Spencer']
+for item in namelist:
+    print(item)
+```
+
+A list comprehension gives us more compact syntax for the same thing: 
+
+```python 
+[print(item) for item in namelist]
+```
+
+As with loops, the variable `item` is a dummy:  we can use any name we wish.  Replace `item` with your pet's name to see for yourself.  
 
 **Example.** Take the list `fruit = ['apple', 'banana', 'clementine']`.  Here's a list comprehension that creates a new list of capitalized fruits:  
 
@@ -497,8 +515,7 @@ Consider, for example, the loop above that prints out the elements of the list `
 FRUIT = [item.upper() for item in fruit]
 ```
 
-Try it and see.  As with loops, the variable `item` is a dummy:  we can use any name we wish.  Replace `item` with your first name to see for yourself.  
-
+Try it and see.  And think about the loop version a minute to see what we've avoided.  
 
 **Example.** We can do the same with a condition.  This one takes the list `fruit` and creates a new list that contains only those names with six letters or less:  
 
@@ -509,21 +526,23 @@ fruit6 = [item for item in fruit if len(item)<=6]
 **Exercise.** Take the list `fruit` and create a new list with the first letter capitalized.  *Hint:* What method would you use to capitalize a string?  
 
 
-**Exercise.** Take the list of growth rates `g = [0.02, 0.07, 0.07]`.  Write a list comprehension that multiplies each element by 100 to make it a percentage.  
+**Exercise.** Take the list of growth rates `g = [0.02, 0.07, 0.07]`.  Write a list comprehension that multiplies each element by 100 to turn it into a percentage.  
 
 
 ## Defining our own functions
 
-It's easy to create our own functions -- experienced programmers do it all the time.  A common view is that you should never copy lines of your code.  If you're copying, you're repeating yourself.  What you should do instead is **write a function once and use it twice**.  More than that, breaking a long program into a small number of functions makes the code easier for others to read, which is always a good thing.  As we become more comfortable with Python we'll use functions more and more. 
+It's easy to create our own functions -- experienced programmers do it all the time.  A common view is that we should never copy lines of code.  If we're copying, we're repeating ourselves.  What we should do instead is **write a function once and use it twice**.  More than that, breaking a long program into a small number of functions makes the code easier for others to read, which is always a good thing.  As we become more comfortable with Python we'll use functions more and more. 
 
 
-The simplest functions have two components:  a **name** (what we call it) and a list of **input arguments**.  Here's an example:    
+**Defining functions.** The simplest functions have two components:  a **name** (what we call it) and a list of **input arguments**.  Here's an example:    
+
 ```python 
 def hello(firstname):               # define the function
     print('Hello,', firstname)    
 
 hello('Chase')                      # use the function 
 ```    
+
 Let's go through this line by line:
 
 * The initial `def` statement defines the function, names it `hello`, identifies the input as `firstname`, and ends with a colon (:). 
@@ -533,7 +552,7 @@ Let's go through this line by line:
 By convention, Python aficionados put two blank lines before and after function definitions to make them stand out more clearly.  We use one here to save space.  
 
 
-Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x`later on. Here we print something but produce no other output. 
+**Function returns.** Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x`later on. Here we print something but produce no other output. 
 
 In other cases, we might want to send output back to the main program.  We do that with a **return** statement, a third component of a function definition.  Here's an example:  
 ```python 
