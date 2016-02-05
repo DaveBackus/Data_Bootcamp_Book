@@ -15,7 +15,9 @@
 
 We're ready now to look at some data.  Lots of data.  You will need an **internet connection** for much of it.  
 
-You may recall that our typical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first -- data input -- but touch briefly on the second and third.  More concretely, we explain how to get spreadsheet data into Python.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things.  
+You may recall that our typical program consists of data input, data management, and graphics.  We'll spend most of our time here on the first -- data input -- but touch briefly on the second and third.  More concretely, we explain how to get spreadsheet data into Python.  Along the way we describe how Python uses collections of tools or plug-ins (**packages**) to address a wide range of applications:  data management (**Pandas**), graphics (Matplotlib), and many other things. 
+
+The Pandas package is (even) more **[high-level](https://en.wikipedia.org/wiki/High-level_programming_language)** than core Python in the sense of putting a lot of the programming details out the way.  That makes it both easier to use -- lots of things are automated -- but in some cases also a bit more mysterious.  All together, though, it's an incredibly powerful collection of data tools.  
 
 
 ## Reminders
@@ -24,7 +26,7 @@ You may recall that our typical program consists of data input, data management,
 
 * Help.  We get help in Spyder from both the IPython console and the Object inspector.  For the hypothetical `x.justdoit`, we would type `x.justdoit?` in the IPython console or `x.justdoit` in the Object inspector.  
 
-* Data structures.  That's the term we use for specific organizations of data.  Examples are strings, lists, and dictionaries. Each has a specific structure and a set of methods we can apply.  List are collections of objects between square brackets:  `numberlist = [1, -5, 2]`.  Dictionaries are pairs of items between curly brackets:  `namedict = {'Dave': 'Backus', 'Chase': 'Coleman'}`. The first item in each pair is the "key," the second is the "value.""  
+* Data structures.  That's the term we use for specific organizations of data.  Examples are lists, tuples, and dictionaries. Each has a specific structure and a set of methods we can apply.  List are (ordered) collections of objects between square brackets:  `numberlist = [1, -5, 2]`.  Dictionaries are (unordered) pairs of items between curly brackets:  `namedict = {'Dave': 'Backus', 'Chase': 'Coleman'}`. The first item in each pair is the "key," the second is the "value.""  
 
 * Integers, floats, and strings.  Three common types of data. 
 
@@ -33,7 +35,7 @@ You may recall that our typical program consists of data input, data management,
 
 ## Python packages
 
-Python is not just a programming language, it's an open source collection of tools that includes both core Python and a large collection of packages written by different people.  The word "package" here refers to plug-ins or extensions that expand Python's capabilities.  Terminology varies.  What we call a package others sometimes call a "library."  The term "module" typically refers to a subset of core Python or one of its packages.  You won't go far wrong to use the terms interchangeably.  
+Python is not just a programming language, it's an open source collection of tools that includes both core Python and a large collection of packages written by different people.  The word **package** here refers to plug-ins or extensions that expand Python's capabilities.  Terminology varies.  What we call a package others sometimes call a "library."  The term "module" typically refers to a subset of core Python or one of its packages.  You won't go far wrong to use the terms interchangeably.  
 
 The standard Python packages are well written, well documented, and well supported.  They have armies of users who spot and correct problems.  Some of the others less so.  We try to stick to the standard packages, specifically those that come with the Anaconda distribution.  
 
@@ -101,7 +103,7 @@ Some fine points:
   import antigravity 
   ```
 
-* Versions.  We can check the version number of a package with  `package_name.__version__`.  To check the version of Pandas, try
+* Versions.  We can check the version number of a package with  `package.__version__`.  To check the version of Pandas you have installed, try
 
   ```python
   import pandas as pd
@@ -159,31 +161,20 @@ So what does our read statement give us?  What's in `df`?  We can check its cont
 2  Spencer   5   6   7
 ```
 
-What we have is a table, much like what we'd see in a spreadsheet.  If we compare it to the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) we see that the first column is new, added somehow by the program, but the others are just as they look in the source.   
+What we have is a table, much like what we'd see in a spreadsheet.  If we compare it to the [source](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) we see that the first column is new, added somehow by the program, but the others are just as they look in the source.  
 
-The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a **dataframe**.  More on that shortly.  We also see a long list of optional inputs that change how we read the file.  We will ignore them unless forced to do otherwise. 
+Note that the table of data has labels for both the columns and rows.  We'll do more with both of them shortly.  
 
+The documentation for `read_csv` in the Object inspector gives us an overwhelming amount of information.  Starting at the bottom, we see that it returns a **dataframe**.  More on that shortly.  We also see a long list of optional inputs that change how we read the file.  Here are some examples we've found useful:   
 
-**Exercise.**  Run the code 
-
-```python 
-url1 = 'https://raw.githubusercontent.com/DaveBackus'
-url2 = '/Data_Bootcamp/master/Code/Python/test0.csv'    # note the added 0 
-url  = url1 + url2
-df = pd.read_csv(url)
-```
-
-What happens?  
-
-
-**Exercise.** Change the last line of the earlier code to 
+**Example.**  Change the last line of the earlier code to 
 
 ```python
 dfalt = pd.read_csv(url, nrows=2)
 print('\n', dfalt) 
 ```
 
-What does the argument `nrows=2` do?  
+The argument `nrows=2` tells the `read_csv` statement to read only the first 2 rows of the file at `url`.  
 
 
 **Example.**  We can identify specific values in a csv file as missing or NA (not available).  We see in the documentation that the parameter `na_values` takes a list of strings as input.  To treat the number 1 as missing we change the read statement to `read_csv(url, na_values=[1])`.  The result is 
@@ -201,10 +192,21 @@ We see that the number 1 that was formerly at the top of the `x1` column has bee
 <!-- TODO: We should add notes here that explain why this is meaningful. Giving examples of what markers are often used to mark missing data would help ?? -->
 
 
-**Exercise.** Adapt the code to treat the numbers 1 and 6 as missing.  
+<!-- trigger error 
+**Exercise.**  Run the code 
+
+```python 
+url1 = 'https://raw.githubusercontent.com/DaveBackus'
+url2 = '/Data_Bootcamp/master/Code/Python/test0.csv'    # note the added 0 
+url  = url1 + url2
+df = pd.read_csv(url)
+```
+
+What happens?  
+--> 
 
 
-**Reading Excel files.** We can also read Excel files (xls and xlsx) with Pandas:  use the `read_excel` function.  The syntax is almost identical: 
+**Reading Excel files.** We can also read Excel files (xls and xlsx) with Pandas using the `read_excel()` function.  The syntax is almost identical: 
 
 ```python 
 import pandas as pd 
@@ -218,7 +220,11 @@ print('\n', dfx)
 If all goes well, the modified code produces a dataframe `dfx` that's identical to `df`.   
 
 
-**Exercise.** Change the file extension at the end of `url2` from `.xls` to `.xlsx`.  What does the new code produce?  
+**Exercise.** Adapt the `read_csv` code to treat the numbers 1 and 6 as missing.  
+
+**Exercise.** In the `read_excel` code, change the file extension at the end of `url2` from `.xls` to `.xlsx`.  What does the new code produce?  
+
+**Exercise.** Add the argument `index_col=0` to the `read_csv` statement.  How does `df` change?   
 
 
 ## Properties of dataframes 
@@ -237,9 +243,6 @@ Typically columns are variables and the column labels give us their names.  In o
 
 
 The row labels are referred to as the **index**.  We extract them with the `index` method:  `df.index`.  That gives us the verbose output `Int64Index([0, 1, 2], dtype='int64')`.  We can convert it to a list by adding another method, `df.index.tolist()`, which gives us `[0, 1, 2]`.  (Cool! Two methods strung together!)  In this case, the index is not part of the original file; Pandas inserted a counter.  As usual in Python, the counter starts at zero.  
-
-
-**Exercise.** What does `df.columns.tolist()` do?  How does it compare to `list(df)`?  
 
 
 **Column data types.**  Pandas allows every column (typically a variable) to have a different data type, but the type must be the same within a column.  With our dataframe `df`, we get the types with the `dtypes` method; that is, with `df.dtypes`:
@@ -272,6 +275,27 @@ x3     3.5    4.3      7.8
 
 In this case it doesn't make much sense, but in others we'll find it helpful.  
 
+Let's see what we have learned:
+
+
+**Exercise.** What does `df.columns.tolist()` do?  How does it compare to `list(df)`?  *Bonus (optional).* What is `list(pwt)[0]`? Why? What type is it?  
+
+
+**Exercise.** Consider the dataframe `pwt` produced by 
+
+```python
+data = {'countrycode': ['CHN', 'CHN', 'CHN', 'FRA', 'FRA', 'FRA'],
+        'pop': [1124.8, 1246.8, 1318.2, 58.2, 60.8, 64.7],
+        'rgdpe': [2.611, 4.951, 11.106, 1.294, 1.753, 2.032],
+        'year': [1990, 2000, 2010, 1990, 2000, 2010]}
+pwt = pd.DataFrame(data)
+```
+
+* What kind of object is `data`? 
+* What dtypes are the variables?  
+* What are the dimensions of `pwt`?  
+* *Challenging.* What would you say is the natural index?  How would you set it?
+
 
 ## Working with variables
 
@@ -287,23 +311,7 @@ print(type(df['x1']))
 we find that it's a `pandas.core.series.Series` -- **series** for short.  A series is essentially a dataframe with a single variable or column, which simplifies the bookkeeping a bit.  
 
 
-**Extracting a list of variables.**  We just saw that `df['x1']` "extracts" the variable/series `x1` from the dataframe `df`.  In other cases, we may want to extract a set of variables and create a smaller dataframe.  This happens a lot when the data we read has more variables than we need.  
-
-We can extract variables by name or number.  If by number, we count (as usual) starting with zero.  This code gives us two ways to extract `x1` and `x3` from `df`:  
-
-```python
-namelist = ['x1', 'x3']
-numlist  = [0, 2]
-df_v1 = df[namelist]
-df_v2 = df[numlist]
-```
-
-**Exercise.** Run this code and verify that the two dataframes are the same.  Verify that the statement `df_v3 = df[[0,2]]` does the same.  
-
-**Exercise.** How would you extract the first two variables, `x1` and `x2`?
-
-
-**Constructing new variables from old ones.** Now that we know how to refer to a variable, we can construct others from them.  We construct two with 
+**Construct new variables from old ones.** Now that we know how to refer to a variable, we can construct others from them.  We construct two with 
 
 ```python 
 df['y1'] = df['x1']/df['x2']
@@ -324,21 +332,54 @@ The dataframe now includes both of these variables.  The statement `print('\n', 
 Let's think about what we've done here.  In Excel, we would compute the first observation of `y1`, then copy the formula to the other observations.  Here one line of code computes all the observations of a new variable `y1`.  
 
 
-**Exercise.**  Create a variable `z` equal to the sum of `x1`, `x2`, and `x3`.  
+**Rename variables.**  If we want to change *all the names*, we can assign a list of new names to the dataframe's column labels:
+
+```python
+df.columns = ['NAME', 'X1', 'X2', 'X3']
+```
+
+Here we've simply changed the column names to upper case.  There's a clever way to do this with a list comprehension: 
+
+```python
+df.columns = [var.upper() for var in df.columns]
+```
+
+Thie flexibility of string methods and list combinations opens up a lot of possibilities.  
 
 
-**Rename variables.**  Suppose we want to give `x1` the more intuitive name `sales`.  We can do that with the statement 
+We can also assign new names individually.  Suppose we want to give `x1` the more intuitive name `sales`.  We can do that with the statement 
 
 ```python 
 df.rename(columns={'x1': 'sales'})
 ```
 
-Note the use of a dictionary that associates the "key" `x1` with the "value" `sales`.  
+Note the use of a dictionary that associates the old name (the "key" `x1`) with the new name (the "value" `sales`).  If we want to change more than one variable name, we simply add more items to the dictionary.   
 
 
-*** rename all:  assign new list to columns***
+**Extract a list of variables.**  We just saw that `df['x1']` "extracts" the variable/series `x1` from the dataframe `df`.  In other cases, we may want to extract a set of variables and create a smaller dataframe.  This happens a lot when our data has way more variables than we need.  
 
-**Example.** List comp:  make the name upper case...  
+We can extract variables by name or number.  If by name, we simply put the variable names in a list.  If by number, we count (as usual) starting with zero.  This code gives us two ways to extract `x1` and `x3` from `df`:  
+
+```python
+namelist = ['x1', 'x3']
+numlist  = [0, 2]
+df_v1 = df[namelist]
+df_v2 = df[numlist]
+```
+
+You might verify that the two new dataframes are identical.  
+
+<!--
+Closely related is the `drop` method.  If we want to drop the variable `x2`, we would use the code
+-->  
+
+
+**Exercise.**  For the dataframe `df`, create a variable `z` equal to the sum of `x1`, `x2`, and `x3`.  Verify that `z` is now in `df`. 
+
+
+**Exercise.** How would you extract the variables `x1` and `x2`?
+
+**Exercise (challenging).** Use a list comprehension to change the variable names from `['x1', 'x2', 'x3']` to `['x1', 'x2', 'x3']`.  
 
 <!--
 If we want to delete `x1` instead, we use the `drop` method:  
@@ -373,8 +414,6 @@ df_clip = pd.read_clipboard()
 
 Going the other way, we can copy the dataframe `df` to the clipboard with `df.to_clipboard()`.  From the clipboard, we can paste it into Excel or other applications.  We're not fans of this -- it makes replication hard if we need to do this again -- but it's awful convenient.  We heard about it from one of our former students.  
 
-
-**Exercise.** Copy the dataframe `df` into an empty spreadsheet on your computer using the `to_clipboard()` method.  
 
 
 **The top and bottom of a dataframe.** We commonly work with much larger dataframes in which it's unwieldy, and perhaps impossible, to print the whole thing.  So we often look at either the top or bottom:  the first few few or last few observations.  The statement `df.head(n)` extracts the top `n` observations and `df.head()` (with no input) extracts the top 5.  This creates a new dataframe, as we see here:  
@@ -412,11 +451,6 @@ with `name` now used as the index.
 We did something else here that's important:  We assigned the result back to `df`.  That keeps what we've done in the dataframe `df`.  If we hadn't done this, `df` would remain unchanged with a counter as its index and our effort to set the index would be lost.  
 
 
-**Exercise.** Set `name` as the index as just described.  Use the `index` method to extract it and verify that `name` is, in fact, the index.  
-
-**Exercise.**  Apply the `reset_index()` method to our new dataframe.  What does it do?  What is the index of the new dataframe?  
-
-
 **Statistics.**  We can compute the mean, the standard deviation, and other statistics for all the variables at once with 
 
 ```python
@@ -430,11 +464,6 @@ The first line gives us the means, the second the standard deviations.  The thir
 Note that we've done them all at once.  `df.mean()`, for example, computes the means of all the variables in one line.  Ditto the others.  
 
 
-**Exercise.** The statement `print(df.mean())` gives us the means of each variable in a column.  How would we produce the same output as a row? 
-
-
-**Exercise.** What kind of object does `df.mean()` produce?  
-
 
 **Plotting.**  We have a number of methods available that plot dataframes.  The most basic is the `plot()` method, which plots all of the variables against the index.  Try this and see what it looks like:  
 
@@ -445,19 +474,38 @@ df.plot()
 You should see lines for each of the variables plotted against the index `name`.  
 
 
-**Exercise.**  Produce a bar chart of the same data with the statement 
+Let's put what we've learned to work:
+
+
+<!--
+**Exercise (optional).** Copy the dataframe `df` into an empty spreadsheet on your computer using the `to_clipboard()` method.  
+--> 
+
+
+**Exercise.** Set `name` as the index and assign the result to the dataframe `dfi`.  Use the `index` method to extract it and verify that `name` is, in fact, the index.  
+
+**Exercise.**  Apply the `reset_index()` method to our new dataframe `dfi`.  What does it do?  What is the index of the new dataframe?  
+
+**Exercise.** What kind of object is `df.mean()`?  
+
+<!-- 
+**Exercise.** The statement `print(df.mean())` gives us the means of each variable in a column.  How would we produce the same output as a row? 
+-->
+
+**Exercise.**  Produce a bar chart of `df` with the statement 
 
 ```python
 df.plot(kind='bar')
 ```
 
-What happens if we change `df` to `df['x1']`?  Change `bar` to `barh`?  
+What happens if we change `bar` to `barh`?  Change `df` to `df['x1']`?  
 
 
 ## Data input 2:  Reading files from your computer 
 
 
 Next up:  reading files in Python from your computer's hard drive.  This is really useful, but there's a catch:  we need to tell Python where to find the file.  
+
 
 <!-- 
 That's a small thing in principle, but a tricky one in practice.  It's not a Python problem, really, but it's one we need to address.
@@ -467,10 +515,10 @@ That's a small thing in principle, but a tricky one in practice.  It's not a Pyt
 **Prepare test data.**  We start with the easy part.  Open a blank spreadsheet in Excel and enter the data:  
 
 ```python
-name    x1  x2  x3
-Dave     1   2   3
-Chase    4   3   4
-Spencer  5   6   7
+name    x1  x2   x3
+Dave     1   2  3.5
+Chase    4   3  4.3
+Spencer  5   6  7.8
 ```
 
 That is:  four rows with four entries in each one.  
@@ -485,6 +533,10 @@ Each of these options shows up in Excel when we choose "Save As."
 
 
 **Find the file.**  Ok, now where is the file?  We know, it's in the `Data_Bootcamp` directory, but where is that?  We need the complete path so we can tell Python where to find it.   
+
+
+**Exercise (potentially challenging).** We can save some time if you already know this.  (It's not required, we're just giving it a shot.)  Find the path to `test.csv` on your computer.  If you find it, tell us what you did.  If you're not sure what this means, or how to do it, raise your hand.  
+
 
 Let's introduce some terms so we can be clear what we're talking about.  The "file name" is something like `test.csv`.  The format of the "directory" or folder address depends on the operating system.  On a Windows computer, it's something like  
 
@@ -517,9 +569,7 @@ How did we find these addresses or paths?
 * Windows.  Type the name of the file in the Windows search box or use Windows Explorer.  
 * Mac OS.  We select (but not open) the file and do "command-i" to get the file's information window.  From the window, we copy the path that follows "Where:."  It looks like we're copying arrows, but they turn into slashes when we paste the path.  
 
-
-**Exercise.** Look for the complete path to `test.csv` on your computer.  Let us know if you can't find it.  If you did, let us know what method you used.  Did we miss any?  
-
+[Comments welcome on how to make this clearer.]
 
 **Reading data with the complete path.**  Once we have the complete path, we simply tell Python to read the file at that location.  Again, this varies with the operating system.  
 
@@ -539,7 +589,8 @@ df = read_csv(path)
 
 * In both:  Open the file in Excel, click on File, and read the path from the Info tab.  
 
-**Exercise.** Try the appropriate one on your computer to make sure it works.  Let us know if it doesn't.  
+
+**Exercise.** Read `test.csv` using the path and the method described above.  Let us know if you have trouble.  
 
 
 **Reading from the current working directory.** An alternative is to set the current working directory (cwd), which is where Python will look for files.  We can set that with Python's [os module](https://docs.python.org/3.5/library/os.html).  What you'll need is the location of the `Data_Bootcamp` directory.  
@@ -561,7 +612,9 @@ Once we know the directory path, we can use it in Python.
   df = pd.read_csv(file)
   ```
 
-  Note that we used forward slashes here.  We could also use double back slashes if we prefer.  
+<!-- 
+http://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/
+-->
 
 * In Mac OS, the only difference is the format of the path:  
 
@@ -646,12 +699,12 @@ This has several features we need to deal with:
 
 * Use `read_csv()` rather than `read_excel()`:  it's not an Excel file.  
 * Identify tabs as the separator between entries with the argument `sep='\t'`. 
-* Eliminate commas from numbers -- things like `12,345.6`, which Python will treat as strings.  (What were they thinking of?)
-* Identify missing values.  
+* Use the `thousands` argument to eliminate commas from numbers -- things like `12,345.6`, which Python will treat as strings.  (What were they thinking of?)
+* Identify missing values with the `na_values` argument.  
 
 Keep in mind that it took us an hour or two to figure all this out.  It helped to Google "python weo".   
 
-**Exercise.** Download the WEO file.  What happens when you open it in Excel?  (You can use the link in the code.  Or Google "IMF WEO", look for the most recent link, and choose Entire Dataset.) 
+**Exercise.** Download the WEO file.  What happens when you open it in Excel?  (You can use the link in the code.  Or Google "imf weo data", look for the most recent link, and choose Entire Dataset.) 
 
 **Exercise.**  Why were we able to spread the `read_csv()` statement over several lines? 
 
@@ -673,7 +726,7 @@ Plot debt ...
 
 **PISA education data.**  PISA stands for [Program for International Student Assessment](http://www.oecd.org/pisa/).  It's an international effort to collect information about educational performance that's comparable across countries.  We read about it every few years when newspapers print stories about how poorly American students are doing.  PISA collects data on student performance, teacher quality, and many other things, and posts both summaries and individual test results.  
 
-We use data from a summary table in an [OECD report](http://www.oecd.org/pisa/keyfindings/pisa-2012-results-volume-I.pdf); note the data link at the bottom of Table 1.A.  This codes reads the data from the link:  
+We use data from a summary table in an [OECD report](http://www.oecd.org/pisa/keyfindings/pisa-2012-results-volume-I.pdf); note the data link at the bottom of Table 1.A.  This code reads the data from the link:  
 
 ```python 
 import pandas as pd
@@ -689,7 +742,7 @@ pisa = pd.read_excel(url,
 
 There are a number of new things in the read statement:  
 
-* We've spread the read statement over several lines to make it easier to read.  Python understands that the line doesn't end until we reach the right paren `)`.  That's common Python syntax.  
+* We spread the read statement over several lines to make it easier to read.  Python understands that the line doesn't end until we reach the right paren `)`.  That's common Python syntax.  
 * We skip rows at the top and bottom that do not contain data.  
 * We choose specific columns to read using the `parse_cols` parameter.  Column numbering starts at zero, as we have come to expect.  
 * We set the index and column labels.  
@@ -745,11 +798,11 @@ df538 = pd.read_csv(url)
 **Internet Movie Database (IMDb).**  We love this one, a list of roles in IMDb's movie database we got from [Brandon Rhodes](https://github.com/brandon-rhodes/pycon-pandas-tutorial).  We read it with this code:  
 
 ```python
-url  = 'http://pages.stern.nyu.edu/~dbackus/csv/cast.csv'
+url  = 'http://pages.stern.nyu.edu/~dbackus/Data/cast.csv'
 cast = pd.read_csv(url, encoding='utf-8')
 ```
 
-Don't panic if nothing happens.  It's a big file, and takes a minute or two to read.  
+Don't panic if nothing happens.  It's a big file and takes a minute or two to read.  
 
 **Exercise.** Since we're all experts by now, we'll leave this one to you:  
 
@@ -836,7 +889,7 @@ The Pandas package has what they call a set of [Remote Data Access tools](http:/
 
 **FRED.** The St Louis Fed has put together a large collection of time series data that they refer to as [FRED](https://research.stlouisfed.org/fred2/):  Federal Reserve Economic Data.  They started with the US, but now include data for many countries.  
 
-The Pandas docs describe how to access FRED.  Here's an example that reads in quarterly data for US real GDP and real consumption and produces a simply plot: 
+The Pandas docs describe how to access FRED.  Here's an example that reads in quarterly data for US real GDP and real consumption and produces a simple plot: 
 
 ```python
 import pandas as pd 
@@ -855,7 +908,7 @@ We copied most of this from the Pandas documentation.  Which is a good idea:  St
 
 The variable `start` contains a date in (year, month, day) format. Pandas knows a lot about how to work with dates, especially when we construct them using `datetime.datetime` as we did above.
 
-The variable `codes`  -- not to be confused with "code" -- comes from FRED.  Go to [FRED](https://research.stlouisfed.org/fred2/), use the search box to find the series you want, and look for the variable code at the end of the url in your browser.  
+The variable `codes`  -- not to be confused with "code" -- consists of FRED variable codes.  Go to [FRED](https://research.stlouisfed.org/fred2/), use the search box to find the series you want, and look for the variable code at the end of the url in your browser.  
 
 <!--
 click on the "Cite" tab below the figure, and look for the code in square brackets.  
@@ -886,10 +939,10 @@ wb.plot(kind='barh')
 (Trust us on the `drop=True`.  We'll come back to it in a couple weeks.)
 
 
-We use codes here for countries and variables.  We find country codes in [this list](http://www.countryareacode.net/) -- or just Google "country codes".  Pandas accepts both 2- and 3-letter versions.  We find variable codes with the search tool in the Remote Data Access module or by looking through the World Bank's [data portal](http://databank.worldbank.org/data/home.aspx).  We prefer the latter.  Click on a variable of interest and read the code from the end of the url.  
+We use codes here for countries and variables.  We can find country codes in [this list](http://www.countryareacode.net/) -- or just Google "country codes".  Pandas accepts both 2- and 3-letter versions.  We find variable codes with the search tool in the Remote Data Access module or by looking through the World Bank's [data portal](http://databank.worldbank.org/data/home.aspx).  We prefer the latter.  Click on a variable of interest and read the code from the end of the url.  
 
 
-**Exercise.** What would you like to change in this graph?  Keep a list for next time we run into this one.    
+**Exercise.** What would you like to change in this graph?  Keep a list for the next time we run into this one.    
 
 
 **Fama-French.**  Gene Fama and Ken French post lots of data on equity returns on [Ken French’s website](http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html).  The data are zipped text files, which we can easily read into Excel.  The Pandas tool is even better.  Here's an example:  
@@ -903,7 +956,7 @@ ff.columns = ['xsm', 'smb', 'hml', 'rf']      # rename variables
 ff.describe()
 ```
 
-The data is monthly, 1926 to present.  Returns are expressed as percentages; multiply by 12 to get a rough approximation of an annual return.  The returns refer to
+The data is monthly, 1926 to present.  Returns are expressed as percentages; multiply by 12 to get annualized returns.  The variable names refer to
 
 * `xsm`:  the return on the market minus the riskfree return
 * `smb`:  the return on small firms minus the return on big firms
@@ -931,21 +984,18 @@ data = {'EG.ELC.ACCS.ZS': [53.2, 47.3, 85.4, 22.1],    # access to elec (%)
         'IT.CEL.SETS.P2': [153.8, 95.0, 130.6, 74.8],  # cell contracts per 100 
         'IT.NET.USER.P2': [11.5, 12.9, 41.0, 13.5],    # internet access (%) 
         'Country': ['Botswana', 'Namibia', 'South Africa', 'Zambia']} 
-wb = pd.DataFrame(data)
+af = pd.DataFrame(data)
 ```
 
 (You can cut and paste this from the bottom of this chapter's code file.)
 
-**Exercise.** What type of object is `wb`?  What are its dimensions?  
+**Exercise.** What type of object is `af`?  What are its dimensions?  
 
-**Exercise.** What are the variable names?
+**Exercise.** What is the index?  Change it to country names.  
 
-**Exercise.** What is the index?  *Bonus points:* Change the index to the country names.  
+**Exercise.** What are the variable names?  Change them to something more informative.  
 
 **Exercise.** Create a horizontal bar chart with this dataframe.  What does it tell us?  Which country has the most access to electricity?  Cell phones?  
-
-**Exercise (challenging).** Change the variable names to something more informative. 
-
 
 
 ## Resources 
@@ -953,7 +1003,7 @@ wb = pd.DataFrame(data)
 We've covered a lot of ground, but if you're looking for more we suggest:  
 
 * On Pandas:  Chris Moffitt's [Practical Business Python blog](http://pbpython.com/archives.html) has a good series on Pandas from the perspective of an Excel user.  
-* On data:  See our list of [data sources](http://databootcamp.nyuecon.com/bootcamp_data/).
+* On data:  See the list of [data sources](http://databootcamp.nyuecon.com/bootcamp_data/) on the [course website](http://databootcamp.nyuecon.com/).
 
 
 <!-- 
