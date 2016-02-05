@@ -8,6 +8,10 @@ The book comes in multiple formats.  You can access it on the internet.  Or you 
 
 https://www.gitbook.com/book/davebackus/test/details
 
+Related course materials are available at 
+
+http://databootcamp.nyuecon.com/
+
 We welcome suggestions.  Send them to Dave Backus at [db3@nyu.edu](mailto:db3@nyu.edu).  Or, even better, post an issue on our [GitHub repository](https://github.com/DaveBackus/Data_Bootcamp_Book/issues).  
 
 
