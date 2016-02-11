@@ -69,6 +69,14 @@ We teach ourselves the rest:
 
 **Exercise.** Construct a dictionary whose keys are the integers 1, 2, and 3 and whose values are the same numbers as words:  one, two, three.  How would you get the word associated with the key `2`?  
 
+
+**Exercise.** Describe -- and explain if possible -- the output of these statements: 
+
+* `list(names)`?
+* `names.keys()`? 
+* `list(names.keys())`?
+* `names.values()`?  
+
 **Exercise.** Consider the dictionary 
 
 ```python
@@ -77,8 +85,9 @@ data = {'Year': [1990, 2000, 2010], 'GDP':  [8.95, 12.56, 14.78]}
 
 What are the keys here?  The values?  What do you think this dictionary represents?  
 
-
+<!--
 **Exercise.** What happens if we try to slice a dictionary the way we slice lists and strings?  For example, try `x = states[0]`.  What happens?  Why?  
+-->
 
 
 ## Logical expressions (comparisons)
@@ -118,12 +127,6 @@ Out[2]: False
 Think about that for a minute. And remind yourself that spaces don't matter in Python expressions.
 
 
-**Exercise.**  What is `2 >= 1`?  `2 >= 2`?  `not 2 >= 1`? If you're not sure, try them in the IPython console and see what you get.  
-
-**Exercise.** What is  `2 + 2 == 4`? How about `1 + 3 != 4`?
-
-**Exercise.**  What is `"Sarah" == 'Sarah'`?  Can you explain why?  
-
 We can do the same thing with variables.  Suppose we want to compare the values of variables `x` and `y`.  Which one is bigger?  To see how this works, we run the code 
 ```python
 x = 2*3
@@ -132,6 +135,12 @@ print('x greater than y is', x > y)
 ```
 Here `x = 6` and `y = 8`, so the expression `x > y` (is `x` greater than `y`?) is false.  
 
+
+**Exercise.**  What is `2 >= 1`?  `2 >= 2`?  `not 2 >= 1`? If you're not sure, try them in the IPython console and see what you get.  
+
+**Exercise.** What is  `2 + 2 == 4`? How about `1 + 3 != 4`?
+
+**Exercise.**  What is `"Sarah" == 'Sarah'`?  Can you explain why?  
 
 **Exercise.** What do you think this code produces?  
 ```python
@@ -328,11 +337,11 @@ We say here that we **iterate** over the items in the list and refer to the list
 **Example.**  We use a loop to compute the sum of the elements of a list of numbers:
 ```python
 numlist = [4, -2, 5] 
-sum = 0
+total = 0
 for num in numlist:
-    sum = sum + num 
+    total = total + num 
     
-print(sum)     
+print(total)     
 ``` 
 The answer (of course) is 7.  
 
@@ -368,7 +377,6 @@ for letter in word:
     if letter not in vowels:
         print(letter)
 ```
-
 
 **Exercise.**  Take the list `stuff = ['cat', 3.7, 5, 'dog']`. This is somewhat demanding, but give it a try.  
 
@@ -426,11 +434,11 @@ Again we start at zero and work our way up to four.
 
 **Example.** Here we compute the sum of integers from one to ten:  
 ```python
-sum = 0 
+total = 0 
 for num in range(1,11):
-    sum = sum + num 
+    total = total+ num 
 
-print(sum)
+print(total)
 ```
 The answer is 55.  
 
@@ -453,9 +461,9 @@ ytm = 0.05 				# yield to maturity
 
 price = 0 
 for year in range(1, maturity+1):
-    price = price + coupon/(1+yield)**year
+    price = price + coupon/(1+ytm)**year
 
-price = price + 100/(1+yield)**maturity 
+price = price + 100/(1+ytm)**maturity 
 print('The price of the bond is', price)
 ```
 The answer is 100, which we might know because the coupon and yield are the same once we convert the latter to a percentage.  Python gives us `99.99999999999997`, which is the computer's version of 100.    
@@ -471,13 +479,13 @@ The answer is 100, which we might know because the coupon and yield are the same
 ```python 
 maxnum = 20 			# guess of number above our limit 
 
-sum = 0 
+total = 0 
 for num in range(maxnum):
-    sum = sum + num 
-    if sum > 100:
+    total = total + num 
+    if total > 100:
         break  			# exit loop 
 
-print('At num =', num, 'we had sum =', sum)
+print('At num =', num, 'we had total =', total)
 ```
 
 The `if` statement starts with a colon and the statement following it (`break`) is indented four spaces more (eight in total).  `break` is a special command that ends a loop early.  
@@ -566,7 +574,8 @@ def combine(first, last):
 both = combine('Chase', 'Coleman')      # assign the "return" to both 
 print(both)
 ```   
-In our example, we "return" the output `'Coleman, Chase'` and assign it to the variable `both`.  Note, too, the comment in triple quotes at the top of the function. That's standard procedure, we recommend it.  
+
+In our example, we **return** the output `'Coleman, Chase'` and assign it to the variable `both`.  Note, too, the comment in triple quotes at the top of the function. That's standard procedure, we recommend it.  
 
 The return is an essential component of many functions.  Typically when we read the documentation for a function or method, one of the first things we look for is what it returns.   
 

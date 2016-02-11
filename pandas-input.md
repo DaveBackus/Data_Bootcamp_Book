@@ -1,4 +1,4 @@
-# Data input: Packages and Pandas 
+# Data input: Pandas 1 
 
 ---
 **Overview.**  We introduce "packages" -- collections of tools that extend Python's capabilities -- and explore one of them:  Pandas, the Python package devoted to data management.  We use Pandas to read spreadsheet data into Python and describe the "dataframe" this produces.  
@@ -219,12 +219,11 @@ print('\n', dfx)
 
 If all goes well, the modified code produces a dataframe `dfx` that's identical to `df`.   
 
-
-**Exercise.** Adapt the `read_csv` code to treat the numbers 1 and 6 as missing.  
+**Exercise.** Add the argument `index_col=0` to the `read_csv` statement.  How does `df` change?   
 
 **Exercise.** In the `read_excel` code, change the file extension at the end of `url2` from `.xls` to `.xlsx`.  What does the new code produce?  
 
-**Exercise.** Add the argument `index_col=0` to the `read_csv` statement.  How does `df` change?   
+**Exercise.** Adapt the `read_csv` code to treat the numbers 1 and 6 as missing.  
 
 
 ## Properties of dataframes 
@@ -292,8 +291,8 @@ pwt = pd.DataFrame(data)
 ```
 
 * What kind of object is `data`? 
-* What dtypes are the variables?  
 * What are the dimensions of `pwt`?  
+* What dtypes are the variables?  
 * *Challenging.* What would you say is the natural index?  How would you set it?
 
 
@@ -344,7 +343,7 @@ Here we've simply changed the column names to upper case.  There's a clever way 
 df.columns = [var.upper() for var in df.columns]
 ```
 
-Thie flexibility of string methods and list combinations opens up a lot of possibilities.  
+Thie flexibility of string methods and list comprehensions opens up a lot of possibilities.  
 
 
 We can also assign new names individually.  Suppose we want to give `x1` the more intuitive name `sales`.  We can do that with the statement 
@@ -356,7 +355,7 @@ df.rename(columns={'x1': 'sales'})
 Note the use of a dictionary that associates the old name (the "key" `x1`) with the new name (the "value" `sales`).  If we want to change more than one variable name, we simply add more items to the dictionary.   
 
 
-**Extract a list of variables.**  We just saw that `df['x1']` "extracts" the variable/series `x1` from the dataframe `df`.  In other cases, we may want to extract a set of variables and create a smaller dataframe.  This happens a lot when our data has way more variables than we need.  
+**Extract variables.**  We just saw that `df['x1']` "extracts" the variable/series `x1` from the dataframe `df`.  In other cases, we may want to extract a set of variables and create a smaller dataframe.  This happens a lot when our data has way more variables than we need.  
 
 We can extract variables by name or number.  If by name, we simply put the variable names in a list.  If by number, we count (as usual) starting with zero.  This code gives us two ways to extract `x1` and `x3` from `df`:  
 
@@ -369,9 +368,14 @@ df_v2 = df[numlist]
 
 You might verify that the two new dataframes are identical.  
 
-<!--
-Closely related is the `drop` method.  If we want to drop the variable `x2`, we would use the code
--->  
+
+Closely related is the `drop` method.  If we want to drop the variable `x2`, we would use
+
+```python
+df.drop(['x2'], axis=1)
+```
+
+Here `axis=1` refers to columns; `axis=0` refers to rows.  
 
 
 **Exercise.**  For the dataframe `df`, create a variable `z` equal to the sum of `x1`, `x2`, and `x3`.  Verify that `z` is now in `df`. 
@@ -379,7 +383,10 @@ Closely related is the `drop` method.  If we want to drop the variable `x2`, we 
 
 **Exercise.** How would you extract the variables `x1` and `x2`?
 
-**Exercise (challenging).** Use a list comprehension to change the variable names from `['x1', 'x2', 'x3']` to `['x1', 'x2', 'x3']`.  
+**Exercise.** How would you drop the variable `z`?
+
+
+**Exercise (challenging).** Use a list comprehension to change the variable names from `['x1', 'x2', 'x3']` to `['X1', 'X2', 'X3']`.  
 
 <!--
 If we want to delete `x1` instead, we use the `drop` method:  
@@ -416,7 +423,7 @@ Going the other way, we can copy the dataframe `df` to the clipboard with `df.to
 
 
 
-**The top and bottom of a dataframe.** We commonly work with much larger dataframes in which it's unwieldy, and perhaps impossible, to print the whole thing.  So we often look at either the top or bottom:  the first few few or last few observations.  The statement `df.head(n)` extracts the top `n` observations and `df.head()` (with no input) extracts the top 5.  This creates a new dataframe, as we see here:  
+**The top and bottom of a dataframe.** We commonly work with much larger dataframes in which it's unwieldy, and perhaps impossible, to print the whole thing.  So we often look at either the top or bottom:  the first few few or last few observations.  The statement `df.head(n)` extracts the top `n` observations and `df.tail()` (with no input) extracts the bottom 5.  This creates a new dataframe, as we see here:  
 
 ```python
 h = df.head(2)
@@ -654,7 +661,7 @@ If this doesn't work, go back to the complete path.
 
 ## Data input:  Examples 
 
-Here are some spreadsheet datasets we find interesting.  In each one, we describe the data using the `shape`, `columns`, and `head` methods.  Where we can, we also produce a simple plot.  
+Here are some spreadsheet datasets we find interesting.  In each one, we describe the data using the `shape`, `columns`, and `head()` methods.  Where we can, we also produce a simple plot.  
 
 
 **Penn World Table.**  The [PWT](http://www.rug.nl/research/ggdc/data/pwt/?lang=en), as we call it, is a standard database for comparing the incomes of countries.  It includes annual data for GDP, GDP per person, employment, hours worked, capital, and many other things.  The variables are measured on a comparable basis, with GDP measured in  2005 US dollars.  
@@ -1002,7 +1009,7 @@ af = pd.DataFrame(data)
 
 We've covered a lot of ground, but if you're looking for more we suggest:  
 
-* On Pandas:  Chris Moffitt's [Practical Business Python blog](http://pbpython.com/archives.html) has a good series on Pandas from the perspective of an Excel user.  
+* On Pandas:  Chris Moffitt's [Practical Business Python blog](http://pbpython.com/archives.html) has a good series on Pandas from the perspective of an Excel user.  For a more concise summary, try [Quandl's cheatsheet](https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+Pandas%2C+SciPy%2C+NumPy+Cheat+Sheet.pdf).  
 * On data:  See the list of [data sources](http://databootcamp.nyuecon.com/bootcamp_data/) on the [course website](http://databootcamp.nyuecon.com/).
 
 
@@ -1033,6 +1040,7 @@ Pandas plotting methods:  http://pandas.pydata.org/pandas-docs/version/0.10.1/vi
 --> 
 
 <!--
+====================================================================================
 ## Appendix A:  Creating dataframes
 
 We've generated dataframes with input statements.  Here are some examples that do it explicitly without reference to any external files.  Keep in mind the components of a dataframe:  a table of data, row labels, and column labels.  

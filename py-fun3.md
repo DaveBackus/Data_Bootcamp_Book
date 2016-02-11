@@ -8,6 +8,7 @@
 
 ---
 
+* map/reduce/lambda 
 
 ??  Add another chapter on classes, iterators, generators, ... 
 
