@@ -12,18 +12,18 @@
 
 ---  
 
-Python is a programming language.  Like other computer languages, it comes with an ecosystem of related components. We refer to collections of components as **distributions.** We're going to use a specific **distribution** called Anaconda, which gives us lots of things in one user-friendly download. 
+Python is a programming language.  Like other computer languages, it comes with an ecosystem of related components. We refer to collections of components as **distributions.** We're going to use a specific distribution -- **Anaconda** -- that comes with lots of components in one user-friendly download. 
 <!--
 One kind of component is a **package** that extends Python's capabilities.  A good analogy is an operating system, like Windows or Mac OS  You can't do much with either one until you install software "packages" like Word or Excel. Similarly, we will use packages in Python to manage data, create graphs, and compute statistics.  We're going to use a **distribution** called Anaconda, which bundles Python and a bunch of useful packages together in a single download.  
 -->
 
-One kind of component is a user-interface or **environment** for writing code and executing it.  Here's an analogy: Word and Google docs are "environments" to produce text documents.  Both work.  We use the one we find more convenient.  The same is true of Python environments.  Think to yourself:  An environment is analogous to Microsoft Word and a Python program is analogous to a Word document.  
+One kind of component is a user-interface or **environment** for writing and executing code.  Here's an analogy: Word and Google docs are "environments" to produce text documents.  Both work.  We can use either one.  The same is true of Python environments; we use the one we find most convenient.  Think to yourself:  An environment is analogous to Microsoft Word and a Python program is analogous to a Word document.  
 
 We'll use two Python environments in this class: 
 
  * **Spyder** is a graphical interface that includes an editor, a button to run code, and windows for experimenting and checking documentation.  
  
- * **Jupyter** is a web-based interface for running **IPython notebooks**, which combine code, output, and documentation.  
+ * **Jupyter** is a browser-based interface for running **IPython notebooks**, which combine code, output, and documentation.  
 
 We will write and run Python programs in both environments.  
 
@@ -37,7 +37,7 @@ Follow these instructions.  By which we mean: **follow these instructions exactl
 **Step 1. Download the Anaconda installer.** 
 
 * Click **[HERE](http://continuum.io/downloads)** or Google "Anaconda downloads."  
-* Scroll to find "Anaconda for Windows" or further down for Macs "Anaconda for OS X."
+* Scroll to find "Anaconda for Windows" or further down for "Anaconda for OS X."
 * Find the option for **Python 3.5.** **NOT** Python 2.7!  If you get 2.7, you'll have to start over.  
 * Click the **64-bit Graphical Installer** to start the download. 
 
@@ -62,8 +62,7 @@ Once Launcher is running -- be patient, it can take 60 seconds or more -- you sh
  * Main window:  a list of apps, which are programs Launcher can run.  The most important are **ipython-notebook** and **spyder-app**, which are environments for writing and running Python programs.  
 -->
 
-
-If so, you now have Python installed and ready to run.  Congratulations!  
+If so, you now have Anaconda installed and ready to run.  Congratulations!  
 
 
 ## Coding environments 
@@ -94,7 +93,7 @@ You see here that Spyder has a number of different components.  It's overwhelmin
   In [1]: 
   ```
 
-*Digression.* Some Mac users report they have no IPython console.  The solution: On the toolbar, go to View, then Panes, and make sure IPython console is checked.  If that doesn't work, let us know.  
+   *Digression.* Some Mac users report they have no IPython console.  The solution: On the toolbar, go to View, then Panes, and make sure IPython console is checked.  If that doesn't work, let us know.  
 
 * **Object inspector.**  This is on the right at the top.  We get Python documentation here, which is really useful.  
 
@@ -151,12 +150,12 @@ Let's run a test program -- the same one -- in Spyder and IPython/Jupyter and ma
 
 The output appears in the IPython console in the lower right corner.  If you get the message "Congratulations etc," you're all set. Pat yourself on the back and buy yourself a cold drink, you've earned it. If you get the message "Program halted, old version of Python, etc," you need to go back and install Anaconda again, this time **following the instructions exactly**! Yes, we know that's discouraging, but it's better to know that now than run into problems later. Have a cold drink anyway and catch your breath.  
 
-**Comment (mtwn).** We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  
+**Comment (mtwn).** We use the acronym **mtwn** to indicate material that is "more than we need," meaning it's safe to ignore.  One of the challenges of learning to code is the overwhelming quantity of information.  If you think you've exceeded your bandwidth, skip anything labeled mtwn.  
 
 **More comments.** All of these are mtwn, but we thought they would make the code we just entered less mysterious -- and give us a head start with Python programming.  (i) Anything following a hash (#) is a comment and has no effect on what the program does.  (ii) Blank lines are optional, but they make the code easier to read.  (iii) The rest of the code checks the Python version (`sys.version_info`).  If the version is less than 3.0, it prints an error message (`raise Exception`).  Otherwise it prints the message "Congratulations, etc."  (iv) The statements that begin with `raise` and `print` are indented exactly four spaces.  That's a standard feature of Python.  Anything else generates an error.  
 
 
-**IPython**.  We prefer to write code in an editor and will stick with Spyder for a few weeks. IPython notebooks are good for talks and reports, because they contain text and output, specifically graphical output.  We can generally read through them more easily than naked code.  Here are [three](http://savvastjortjoglou.com/nba-shot-sharts.html) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point. 
+**IPython**.  We prefer to write code in an editor and will stick with Spyder for a few weeks. IPython notebooks serve a different purpose:  since they combine code with text and graphical output, they're well-suited for talks and reports.  We can generally read through them more easily than naked code.  Here are [three](http://savvastjortjoglou.com/nba-shot-sharts.html) [more](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb) [examples](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/SQL/SQL_Intro.ipynb) to make the point. 
 
 To run the same code in an IPython notebook, start the IPython/Jupyter app in Launcher, the one labelled "ipython-notebook".  (If you're not sure what this means, go back to the previous section.) Once you have it up and running:  
 
@@ -164,7 +163,7 @@ To run the same code in an IPython notebook, start the IPython/Jupyter app in La
 
 * Create an IPython notebook.  Click on the "New" dropdown menu in the upper right corner and choose Python 3.  This will create a blank notebook and an empty cell, where you can enter words or code.  
 
-* Set the file name.  To the right of the word Jupyter, you'll see "Untitled".  Change it to `bootcamp_test`.  
+* Set the file name.  To the right of the word Jupyter at the top, you'll see "Untitled".  Change it to `bootcamp_test`.  
 
 * Enter code.  Click on the dropdown menu below the word "Help" and choose Code.  Then enter the code listed above in the empty cell.  
 

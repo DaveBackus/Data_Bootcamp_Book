@@ -60,6 +60,29 @@ Groupby, value counts
 WEO 
 
 
+## Panel data 
+
+Diff structure for multi-index...  
+
+Basic structure:  
+
+* .shape 
+* .describe (lists axis labels)
+
+Methods:
+
+* .axes
+* .major_axis
+* .minor_axis
+* .reindex
+* .reindex_axis
+* .set_index 
+* .sort_index
+* .swapaxes
+* .swaplevel
+* .to_frame
+* .xs (slicing)
+
 ## Renaming variables 
 
 

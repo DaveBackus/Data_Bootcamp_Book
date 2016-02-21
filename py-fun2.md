@@ -90,11 +90,11 @@ What are the keys here?  The values?  What do you think this dictionary represen
 -->
 
 
-## Logical expressions (comparisons)
+## Comparisons 
 
 Sometimes we want to do one thing if a condition is true, and another if it's false.  For example, we might want to use observations for which the date is after January 1980, the country is India, or the population is greater than 5 million -- and not otherwise.  
 
-Python does this with **comparisons**, so called because they involve the comparison of one thing with another.  For example, the date of an observation with the date January 1980.  The result of a comparison is either `True` or `False`.  We refer to true/false variables like this as **Boolean**, a name derived from the 18th century mathematician and logician [George](https://espresso.economist.com/a3e8029408056a0791626262beb1e74d) [Boole](https://en.wikipedia.org/wiki/George_Boole).  
+Python does this with **comparisons**, so called because they involve the comparison of one thing with another.  For example, the date of an observation with the date January 1980.  The result of a comparison is either `True` or `False`.  If we assign a comparison to a variable, we refer to it as a **Boolean**, a name derived from the 18th century mathematician and logician [George](https://espresso.economist.com/a3e8029408056a0791626262beb1e74d) [Boole](https://en.wikipedia.org/wiki/George_Boole). This gives us another type to add our collection:  float, integer, string, and now Boolean.  
 
 
 Let's try some simple examples to see what we're dealing with.  Suppose we enter `1 > 0` in the IPython console.  What does this mean?  The input and output look like this:
@@ -560,9 +560,10 @@ Let's go through this line by line:
 By convention, Python aficionados put two blank lines before and after function definitions to make them stand out more clearly.  We use one here to save space.  
 
 
-**Function returns.** Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x`later on. Here we print something but produce no other output. 
+**Function returns.** Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x` later on. Here we print something but produce no other output. 
 
 In other cases, we might want to send output back to the main program.  We do that with a **return** statement, a third component of a function definition.  Here's an example:  
+
 ```python 
 def combine(first, last): 
 	"""
@@ -706,10 +707,15 @@ https://github.com/amontalenti/elements-of-python-style
 
 See the resources in the previous chapter, especially the link to [Codecademy](https://www.codecademy.com/tracks/python).  If you work your way up to Advanced Topics, you'll be in good shape for anything that follows.  
 
-Additional resources for specific topics:
+Additional resources:
 
 * The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language" that includes comparisons, conditional statements, and loops.  
-* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  More demanding than ours.  Runs online.  
+* [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Significantly more demanding than ours.  Runs online.  
+* Udacity has a free [Introduction to Computer Science](https://www.udacity.com/courses/cs101) course that covers Python from a more technical perspective.  Recommended for people who want to understand the structure and logic of the language.  
+
+<!-- 
+Udacity:  https://www.udacity.com/courses/cs101 
+--> 
 
 <!--
 * Bernd Klein's [Python Course](http://www.python-course.eu/lambda.php) covers lambda functions, map, reduce, and filter.  The rest of his course is also quite good.  
@@ -734,9 +740,11 @@ Obscure but cool:  https://github.com/cosmologicon/pywat#python-wats
 This is all mtyn and we don't plan to use any of it.  We include it because we got carried away.  
 
 We can define one-line **lambda functions.** in a streamlined way.  To compute the ever-popular square of a number, we can define the function 
+
 ```python
 square = lambda x:  x**2
 ```
+
 We can now compute the square of 8 with `square(8)`.  
 
 There are three functions that do implicit loops of different kinds:
@@ -771,4 +779,9 @@ The first one has the answer `newlist = [4, 5]`, the second `newlist = ['Steeler
 [?? talk about each one as an implicit loop?]
 
 Some of us find this kind of syntax obscure and do our best to avoid it.  But similar ideas show up in lots of places.  
+
+See also <br>
+http://people.duke.edu/~ccc14/sta-663/FunctionsSolutions.html#higher-order-functions <br>
+http://people.duke.edu/~ccc14/sta-663/FunctionsSolutions.html#anonymous-functions 
+
 --> 

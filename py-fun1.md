@@ -19,7 +19,9 @@ We're now ready to explore the rudiments of Python.  We're going to **jump right
 This is Python, of course, but similar concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
 --> 
 
-The challenge and beauty of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  
+The challenge and beauty of writing computer programs is that we need to be precise.  If we mistype anything, the program won't work.  Or it might seem to work, but the output won't be what we expect.  In formal terms, the **syntax** -- the set of rules governing the language -- is less flexible than natural language (English, for example).  
+
+We mix Python concepts with an introduction to **Spyder**, the Python coding environment we described earlier.  There we can not only run code, we can access help.  
 
 
 <!-- 

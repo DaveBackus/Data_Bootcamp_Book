@@ -61,7 +61,7 @@ That's our opinion anyway, but the larger point is that learning a programming l
 
 ## Everyone likes Python 
 
-Python isn't just a useful language, it's one people like.  We're talking about programmers here, for the most part, but even us novices find that its casual simplicity makes coding fun. See, for example, this classic [xkcd cartoon](https://xkcd.com/353/). 
+Python isn't just a useful language, it's one people like.  We're talking about programmers here, for the most part, but even us novices find that its casual simplicity [makes coding fun](https://xkcd.com/353/). 
 
 Writer and programmer Paul Ford [puts it this way](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/):  
 
@@ -76,9 +76,9 @@ There are no shortcuts in learning how to code.  You simply need to spend hours 
 
 As you work your way up the learning curve, keep this advice in mind:  
 
-**Don't panic.**  Learning a new language takes some time, it won't happen in a week. 
+**Don't panic.**  Learning a new language takes time, it won't happen in a week. 
 
-**Stick with it.** The secret is to keep working.  Trust us, things will start to make sense in a couple weeks.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  (How can you not love someone who writes: "How I learned to stop worrying and love the code"?) 
+**Stick with it.** The secret is to keep working.  Trust us, things will start to make sense in a couple weeks.  Here's a [great example](https://medium.com/@meandvan/how-i-learned-to-stop-worrying-and-love-the-code-af1a809457c7).  How can you not love someone who writes: "How I learned to stop worrying and love the code"? 
 
 <!--
 **Practice, practice, practice.**  Any time you have something to do with data, try it out in Python. Play around, try new things, have fun.  As you gain experience, you'll find that Python becomes easier.  
@@ -88,7 +88,7 @@ As you work your way up the learning curve, keep this advice in mind:
 
 **Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
 
-**Work on your [Google fu](http://english.stackexchange.com/questions/19967/what-does-google-fu-mean).**  With a little help from Google, you will find that many of your questions have been asked before.  Even better, they have been answered.  One way to find them:  Google something like "python [problem]."  
+**Work on your [Google fu](http://english.stackexchange.com/questions/19967/what-does-google-fu-mean).**  With a little help from Google, you will find that many of your questions have been asked before.  Even better, they have been answered.  One way to find them:  Google something like "python [problem]." Don't forget the problem; without it, you get pages and pages of snakes.   
 
 <!-- 
 There are answers in lots of places, but the best one is [Stack Overflow](http://stackoverflow.com/questions/tagged/python).  
@@ -101,7 +101,11 @@ There are answers in lots of places, but the best one is [Stack Overflow](http:/
 
 ## Our approach  
 
+<!--
 **Leap in.** We start quickly, which will seem like being dumped in a foreign country where you don't understand the language.  We do that so we can get to the things that interest us:  applications to data analysis.  That means **the work load is heaviest at the start**.  Don't panic, the pace will slow down after the first 4-6 chapters -- and you'll learn a lot in the meantime.  
+-->
+
+**One step at a time.** You can't do this in a day.  It pays to work on the fundamentals before moving on to advanced data tools.  
 
 **Stress the basics, ignore the rest.**  We think once you understand the basics, you'll be in a good position to work out special cases on your own.  That allows us to strip out a bunch of confusing detail, which we think is good for everyone.  
 

@@ -92,3 +92,6 @@ https://www.youtube.com/watch?v=h2Uhla6nLDU
 https://github.com/Max00355/FlappyBird/blob/master/flappybird.py
 --> 
 
+## Resources 
+
+http://people.duke.edu/~ccc14/sta-663/IntroductionToPythonSolutions.html#keeping-the-anaconda-distribution-up-to-date 

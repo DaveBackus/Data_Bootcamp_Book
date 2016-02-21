@@ -298,7 +298,6 @@ pwt = pd.DataFrame(data)
 
 ## Working with variables
 
-
 So we have a dataframe `df` whose columns are variables.  One of the great things about Pandas is that we can do things with every observation of a variable in one statement.  
 
 **Variables = series.**  If we want to refer to the variable `x1`, we write `df['x1']`.  If we ask what type this is, with 
@@ -309,6 +308,7 @@ print(type(df['x1']))
 
 we find that it's a `pandas.core.series.Series` -- **series** for short.  A series is essentially a dataframe with a single variable or column, which simplifies the bookkeeping a bit.  
 
+**Digression.** This syntax -- refer to a variable using its string name `'x1'` -- is common in our work, but we use a string only because the variable name is, in fact, a string. If the variable name is, say, an integer, we would use that.  For example, if a variable has the integer name `2011` we would refer to it as `df[2011]` -- no quotes called for.  If we're not sure, print `df.index` to see what dtype it is.  
 
 **Construct new variables from old ones.** Now that we know how to refer to a variable, we can construct others from them.  We construct two with 
 
@@ -882,7 +882,6 @@ http://insideairbnb.com/get-the-data.html
 
 **Example.** Beer ratings...   
 https://github.com/TomAugspurger/PyDataSeattle/blob/master/notebooks/3.%20Indexing.ipynb
-
 --> 
 
 
@@ -1011,6 +1010,7 @@ We've covered a lot of ground, but if you're looking for more we suggest:
 
 * On Pandas:  Chris Moffitt's [Practical Business Python blog](http://pbpython.com/archives.html) has a good series on Pandas from the perspective of an Excel user.  For a more concise summary, try [Quandl's cheatsheet](https://s3.amazonaws.com/quandl-static-content/Documents/Quandl+-+Pandas%2C+SciPy%2C+NumPy+Cheat+Sheet.pdf).  
 * On data:  See the list of [data sources](http://databootcamp.nyuecon.com/bootcamp_data/) on the [course website](http://databootcamp.nyuecon.com/).
+* On backslashes (and other obscure characters in code):  [xkcd](http://xkcd.com/1638/).  
 
 
 <!-- 
@@ -1039,30 +1039,4 @@ Cookbook:  http://pandas.pydata.org/pandas-docs/stable/tutorials.html#pandas-coo
 Pandas plotting methods:  http://pandas.pydata.org/pandas-docs/version/0.10.1/visualization.html#autocorrelation-plot
 --> 
 
-<!--
-====================================================================================
-## Appendix A:  Creating dataframes
 
-We've generated dataframes with input statements.  Here are some examples that do it explicitly without reference to any external files.  Keep in mind the components of a dataframe:  a table of data, row labels, and column labels.  
-
-**From lists.**  See above.  
-
-**From dictionaries.** 
-
-
-**From Numpy arrays.**  This is more than a little obscure, but it's often helpful in producing test cases to have a way to generate random numbers.  That's helpful when we want an example we can run without relying on an external data source.  Or if we want to get a sense of how randomness works.  
-
-The Numpy package makes this easy.  (Take example from Quant Econ or documentation.)
-
-
-## Appendix B:  Copying internet files 
-
-
-**Example.** 
-
-
-## Appendix C:  Unzipping files 
-
-
-**Example.** 
--->
