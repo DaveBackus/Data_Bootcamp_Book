@@ -376,26 +376,10 @@ Here `axis=1` refers to columns; `axis=0` refers to rows.
 
 **Exercise.** How would you extract the variables `x1` and `x2`?
 
-**Exercise.** How would you drop the variable `z`?
 
+**Exercise.** How would you drop the variable `z`?  
 
-**Exercise (challenging).** Use a list comprehension to change the variable names from `['x1', 'x2', 'x3']` to `['y1', 'y2', 'y3']`.  
-
-<!--
-If we want to delete `x1` instead, we use the `drop` method:  
-
-```python
-df.drop(['x1'], axis=1)
-```
-
-This method will drop either observations (`index=0`) or variables (`axis=1`).  
-
-
-**Exercise.** Drop the initial observation from `df`, the one with the index `'Dave'`.    
--->  
-
-<!-- df.drop(['Dave'], axis=0) --> 
-
+**Exercise (challenging).** Use a list comprehension to change the variable names from `['x1', 'x2', 'x3']` to `['y1', 'y2', 'y3']`.  *Hint:*  What does the method `.title()` do to a string?  
 
 
 ## Dataframe methods 
@@ -413,7 +397,6 @@ df_clip = pd.read_clipboard()
 ```
 
 Going the other way, we can copy the dataframe `df` to the clipboard with `df.to_clipboard()`.  From the clipboard, we can paste it into Excel or other applications.  We're not fans of this -- it makes replication hard if we need to do this again -- but it's awful convenient.  We heard about it from one of our former students.  
-
 
 
 **The top and bottom of a dataframe.** We commonly work with much larger dataframes in which it's unwieldy, and perhaps impossible, to print the whole thing.  So we often look at either the top or bottom:  the first few few or last few observations.  The statement `df.head(n)` extracts the top `n` observations and `df.tail()` (with no input) extracts the bottom 5.  This creates a new dataframe, as we see here:  

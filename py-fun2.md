@@ -636,7 +636,7 @@ both = combine('Chase', 'Coleman')      # assign the "return" to both
 print(both)
 ```
 
-In our example, we **return** the output `'Coleman, Chase'` and assign it to the variable `both`.  Note, too, the comment in triple quotes at the top of the function. That's standard procedure, we recommend it.  
+Here we return the string `'Coleman, Chase'` and assign it to the variable `both`.  Note, too, the comment in triple quotes at the top of the function. That's standard procedure, we recommend it.  
 
 The return is an essential component of many functions.  Typically when we read the documentation for a function or method, one of the first things we look for is what it returns.   
 
@@ -759,7 +759,6 @@ https://github.com/amontalenti/elements-of-python-style
 * What happens if you try to multiply all of them by 100 with `100*y`?
 * How would you accomplish the same task (multiply all the elements of `y` by 100) with a loop?   
 * How would you accomplish the same task (multiply all the elements of `y` by 100) with a list comprehension?    
-
 
 **Exercise (challenging).** Start with the lists `l1 = [1, 2, 3]` and `l2 = ['one', 'two', 'three']`.  
 

@@ -49,6 +49,8 @@ http://pbpython.com/web-scraping-mn-budget.html
 http://savvastjortjoglou.com/nba-shot-sharts.html
 http://www.gregreda.com/tag/scraping.html 
 
+https://blog.scrapinghub.com/2016/02/24/scrapy-tips-from-the-pros-february-2016-edition/
+
 
 http://blog.webhose.io/2015/08/16/dead-simple-for-devs-python-crawler-script-for-extracting-structured-data-from-any-almost-website-into-csv/ 
 
