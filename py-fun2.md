@@ -59,7 +59,7 @@ The term **[data structure][5]** refers to the organization of a collection of d
 names = {'Dave': 'Backus', 'Chase': 'Coleman', 'Spencer': 'Lyon', 'Glenn': 'Okun'}
 ```
 
-If we try `type(names)`, the reply is `dict`, meaning dictionary.  The components of each pair are referred to as the **key** (the first part) and the **value** (the second).  In a real dictionary, the word is the key and the definition is the value.  
+If we try `type(names)`, the reply is `dict`, meaning dictionary.  The components of each pair are referred to as the **key** (the first part) and the **value** (the second).  In a real dictionary, the word is the key and the definition is the value.  The keys must be unique, but the values need not be.  
 
 We access the value from the key with syntax of the form: `dict[key]`.  In the example above, we get Glenn's last name by typing `names['Glenn']`.  (Try it and see.) 
 
@@ -69,6 +69,14 @@ We teach ourselves the rest:
 
 **Exercise.** Construct a dictionary whose keys are the integers 1, 2, and 3 and whose values are the same numbers as words:  one, two, three.  How would you get the word associated with the key `2`?  
 
+**Exercise.** Enter the code 
+
+```python
+d = {'Donald': 'Duck', 'Mickey': 'Mouse', 'Donald': 'Trump'}
+print(d)
+```
+
+What do you see?  Why do you think this happened?
 
 **Exercise.** Describe -- and explain if possible -- the output of these statements: 
 
@@ -98,14 +106,17 @@ Python does this with **comparisons**, so called because they involve the compar
 
 
 Let's try some simple examples to see what we're dealing with.  Suppose we enter `1 > 0` in the IPython console.  What does this mean?  The input and output look like this:
+
 ```python 
 In [1]:  1 > 0
 Out[1]: True
 ```
+
 The comparison `1 > 0` is interpreted as a question:  Is 1 greater than 0?  The answer is `True`.  If we enter `1 < 0` instead,the answer is `False`.  
 
 
 A comparison is a Python object, but what kind of object is it?  We can check with the `type()` function:
+
 ```python
 type(1>0)
 ```
@@ -166,6 +177,7 @@ Run it and see if you're right.  What type of variable is `check`?  What is its 
 **Multiple comparisons.**  This is mtwn, but file away for later the idea that we can string together two or more comparisons with the words `and` and `or`.  We'll do something similar when we work with data, but the syntax is a little different.  
 
 Consider the code 
+
 ```python 
 x = 2/3 
 conditiona = x >= 0 
@@ -173,6 +185,7 @@ conditionb = x <= 5
 test1 = conditiona and conditionb
 test2 = conditiona or conditionb 
 ```
+
 What are the values of `test1` and `test2`?  The expression `conditiona and conditionb` is true if both conditions are true, false otherwise.  The expression `conditiona or conditionb` is true if either one of the conditions is true. -->
 
 
@@ -192,10 +205,12 @@ To repeat:  a condition here is a comparison or Boolean variable and is either t
 
 
 **`if` statements**  tell the program what to do if the condition is true:
+
 ```python
 if 1 > 0:    # read this like "if 1>0 IS TRUE, then do the thing on the next line"
     print('1 is greater than 0')
-``` 
+```
+
 The syntax here is precise:  
 
 * The `if` statement **ends with a colon**. That's standard Python syntax, we'll see it again.  It's not optional.  
@@ -205,14 +220,17 @@ Both of these features -- a colon at the end of the first line, indent the rest 
 
 
 **Exercise.**  Change the code to 
+
 ```python
 if 1 < 0:
     print('1 is less than 0')  
-``` 
+```
+
 What do you think happens?  Try it and see.  
 
 
 Here's another example.  Again, we do something if the condition is true, nothing if the condition is false.  In this example, the condition is `x > 6`.  If it's true, we print the number.  If it's false, we do nothing.  The code is 
+
 ```python
 x = 7       		# we can change this later and see what happens
 
@@ -220,7 +238,8 @@ if x > 6:
     print('x =', x)
 
 print('Done!')
-``` 
+```
+
 Here we've set `x = 7`, which makes the condition `x > 6` true.  The `if` statement then directs the program to print `x`.  The blank lines are optional; they make the code easier to read, which is generally a good thing.  The statement `print('Done!')` is just there to tell us that the program finished.  
 
 
@@ -228,6 +247,7 @@ Here we've set `x = 7`, which makes the condition `x > 6` true.  The `if` statem
 
 
 **`else` statements** tell the program what to do if the condition is false.  If we want to do one thing if a condition is true and another if it is false, we would use `if` for the first and `else` for the second.  The second part has been missing so far.  Here's an example:  
+
 ```python 
 x = 7
 
@@ -240,15 +260,11 @@ else:
     print('else branch')           # do if false 
     print(condition)
 ```
+
 The `else` statement adds the second branch to the decision tree:  what to do if the condition is false.  Try this with `x = 4` and `x = 7` to see both branches in action.   
 
 
-**Exercise.** Start with the assignments
-```python 
-name1 = 'Dave'
-name2 = 'Glenn'
-```
-(The names on the right can be anything, but let's start with these.)  Write a program using `if` and `else` that prints the name that comes first in alphabetical order.  
+**Exercise.** Take the names `name1` and `name2`, boht of them string.  Write a program using `if` and `else` that prints the name that comes first in alphabetical order.  Test your program with `name1 = 'Dave'` and `name2 = 'Glenn'`.  
 
 
 ## Slicing strings and lists 
@@ -285,6 +301,7 @@ We've seen how to "slice" (extract) an item from a string or list.  Here we'll s
 Recall that in Python we start counting at zero. If we want the first letter in `c`, we use `c[0]`.  If we want the second, we use `c[1]`.  
 
 If we want more than a single letter, we need to specify both the start and the end.  Let's try some examples and see what they do:  
+
 ```python 
 c = 'something'
 print('c[1] is', c[1])
@@ -292,6 +309,7 @@ print('c[1:2] is', c[1:2])
 print('c[1:3] is', c[1:3])
 print('c[1:] is', c[1:])
 ```
+
 Let's go through this line by line: 
 
 * The first print statement gives us `o`, the second letter of `something`. It's element 1 because we start numbering at zero.  
@@ -315,6 +333,7 @@ Some practice:
 There are lots of times we want to do the same thing many times, either on one object or on many similar objects.  An example of the latter is to print out a list of names, one at a time.  An example of the former is to find an answer to progressively higher degrees of accuracy.  We repeat an operation as many times as we need to get a desired degree of accuracy.  Both situations come up a lot.
 
 Here's an example in which we print all the items in a list, one at a time:  
+
 ```python
 namelist = ['Chase', 'Dave', 'Sarah', 'Spencer']    # creates the list "namelist"
 # below, the word "item" is arbitrary. End the line with a colon.
@@ -322,7 +341,9 @@ for item in namelist:    # goes through the items in the list one at a time
    print(item)    # indent this line exactly 4 spaces
 # if there is code after this, we'd typically leave a blank line in-between 
 ```
+
 This produces the output 
+
 ```python 
 Chase
 Dave
@@ -330,12 +351,14 @@ Sarah
 Spencer
 ```
 
-<!-- Let's go through the code line by line:  
+<!-- 
+Let's go through the code line by line:  
 
 * The first line creates the list `namelist`.  Nothing new here.  
 * The `for` statement goes through the items in the list one at a time.  As with `if` statements, it ends with a colon.  The variable name `item` is arbitrary.  
 * The line that follows is indented exactly four spaces.  
-* If there's code after this, we would typically leave a blank line in between.  That's convention, not necessity. --> 
+* If there's code after this, we would typically leave a blank line in between.  That's convention, not necessity. 
+--> 
 
 Note that `item` changes value as we go through the loop.  It's a variable whose value actually varies.  
 
@@ -360,16 +383,19 @@ The answer (of course) is 7.
 
 
 We can also run loops over the characters in a string.  This one prints the letters in a word on separate lines:  
+
 ```python 
 word   = 'anything'
 for letter in word:
     print(letter) 
 ```
+
 (You might think we could come up with a more interesting example than this.  Sadly no, but we welcome suggestions.)  
 
 
 
 **Example.**  Here's one that combines a `for` loop with an `if` statement to identify and print the vowels in a word:  
+
 ```python 
 vowels = 'aeiouy'
 word   = 'anything'
@@ -377,10 +403,12 @@ for letter in word:
     if letter in vowels:
         print(letter)
 ```
+
 (Adapted from [SciPy lecture 1.2](https://scipy-lectures.github.io/intro/language/control_flow.html#advanced-iteration).)  Describe what each line does as well as the overall result.  
 
 
 **Example.** What about the consonants?  Note the word `not` below:
+
 ```python 
 vowels = 'aeiouy'
 word   = 'anything'
@@ -389,11 +417,11 @@ for letter in word:
         print(letter)
 ```
 
-**Exercise.**  Take the list `stuff = ['cat', 3.7, 5, 'dog']`. This is somewhat demanding, but give it a try.  
+**Exercise.**  Take the list `stuff = ['cat', 3.7, 5, 'dog']`.   
 
-* Write a program that prints the elements of `stuff`.
+* Write a program that prints the elements of `stuff`.  
 * Write a program that tells us the `type` of each element of `stuff`.  
-* Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the function `type` returns the value `str`.
+* *Challlenging.* Write a program that goes through the elements of `stuff` and prints only the elements that are strings; that is, the function `type` returns the value `str`.
 
 
 <!-- 
@@ -403,7 +431,6 @@ for letter in word:
 <!-- See [reddit](http://www.reddit.com/r/Python/comments/35ubwo/newbie_for_programming_i_am_working_on_this/).  
 ?? also:  extract vowels, string what's left together.
 -->
-
 
 
 ## Loops over counters (`range()`)
@@ -417,18 +444,22 @@ The new ingredient is the `range()` function. `range(n)` gives us all the intege
 Some examples illustrate how this works:  
 
 **Example.** This is one of the simplest uses of `range()` in a loop: 
+
 ```python
 for number in range(5):     # the variable "number" can be anything 
     print(number)
 ```
+
 It prints out the numbers 0, 1, 2, 3, and 4.  (Ask yourself:  Why doesn't it go to 5?)  This is like our earlier loops, but `range(5)` has replaced a list or string as the "iterable."  
 
 
 Here's a minor variant:  
+
 ```python
 for number in range(2,5):
     print(number)
 ```
+
 It prints out the numbers 2, 3, and 4.  
 
 
@@ -444,6 +475,7 @@ Again we start at zero and work our way up to four.
 
 
 **Example.** Here we compute the sum of integers from one to ten:  
+
 ```python
 total = 0 
 for num in range(1,11):
@@ -451,9 +483,11 @@ for num in range(1,11):
 
 print(total)
 ```
+
 The answer is 55.  
 
 **Example.** Here's one that combines a loop and an `if` statement:
+
 ```python
 for num in range(10):
     if num > 5:
@@ -465,6 +499,7 @@ for num in range(10):
 
 
 **Example.**  Consider a bond that pays annual coupons for a given number of years (the maturity) and a principal of 100 at the end.  The yield-to-maturity is the rate at which these payments are discounted.  Given values for the coupon and the yield, the price of the bond is 
+
 ```python
 maturity = 10 			
 coupon = 5 			 
@@ -477,6 +512,7 @@ for year in range(1, maturity+1):
 price = price + 100/(1+ytm)**maturity 
 print('The price of the bond is', price)
 ```
+
 The answer is 100, which we might know because the coupon and yield are the same once we convert the latter to a percentage.  Python gives us `99.99999999999997`, which is the computer's version of 100.    
 
 
@@ -573,8 +609,20 @@ By convention, Python aficionados put two blank lines before and after function 
 
 **Function returns.** Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x` later on. Here we print something but produce no other output. 
 
-
 In other cases, we might want to send output back to the main program.  We do that with a **return** statement, a third component of a function definition.  Here's an example   
+
+```python 
+def squareme(number): 
+    """
+    Function takes numerical input and returns its square 
+    """
+    return number**2        # this is what the function sends back 
+
+square = squareme(7)        # assign the "return" to variable on left
+print('The square is', square)
+```
+
+And here's another one: 
 
 ```python 
 def combine(first, last): 
@@ -592,6 +640,8 @@ In our example, we **return** the output `'Coleman, Chase'` and assign it to the
 
 The return is an essential component of many functions.  Typically when we read the documentation for a function or method, one of the first things we look for is what it returns.   
 
+
+**Exercise.** Create and test a function that returns an arbitrary power of 2:  the input `n` (an integer) returns the output `2**n`.  Use `n=2` and `n=5` as test cases.  
 
 **Exercise.**  Create and test a function `nextyear` that takes an integer year (say 2015) and returns the following year (2016).  
 
@@ -612,26 +662,32 @@ Python's behavior is similar in this respect to a spreadsheet.  Suppose we put t
 
 
 We illustrate the issue with an example adapted from [Stack Overflow](http://stackoverflow.com/a/10844760/804513): 
+
 ```python 
 x = [1,2,3]
 y = x
 y[0] = 'WHOA!'
 print(x)
 ```
+
 The output is `['WHOA!', 2, 3]`.  You see what's happened?  We changed the first value of `y`, but when we print `x` we realized it changed, too.  It works the other way, too.  If we change `y`, `x` changes with it:  
+
 ```python 
 y[2] = 'xyzzy'
 print(x)
 ```
+
 Here we get the output:  `['WHOA!', 2, 'xyzzy']`.  
 
 So that's how it works.  But suppose we want an independent copy of `x`, not simply a different label for it.  what do we do?  The answer is to produce a copy:   
+
 ```python 
 x = [1,2,3]
 y = x.copy()
 x[0] = 'WHOA!'
 print(y)
 ```
+
 Here `y` hasn't changed, it's not connected to `x`.  
 --> 
 
