@@ -142,14 +142,25 @@ Here `x = 6` and `y = 8`, so the expression `x > y` (is `x` greater than `y`?) i
 
 **Exercise.**  What is `"Sarah" == 'Sarah'`?  Can you explain why?  
 
-**Exercise.** What do you think this code produces?  
+**Exercise.**  What do these comparisons do?  Are they true or false?  Why?  
+
+```python
+type('Sarah') == str 
+type('Sarah') == int  
+len('Sarah') >= 3 
+```
+
+**Exercise (challenging).** What do you think this code produces?  
+
 ```python
 name1 = 'Chase' 
 name2 = 'Spencer' 
 check =  name1 > name2 
 print(check)
 ```
+
 Run it and see if you're right.  What type of variable is `check`?  What is its value?  Is Chase greater than Spencer?
+
 
 <!--
 **Multiple comparisons.**  This is mtwn, but file away for later the idea that we can string together two or more comparisons with the words `and` and `or`.  We'll do something similar when we work with data, but the syntax is a little different.  
@@ -504,7 +515,7 @@ That's a mouthful of jargon, but the idea is that we can create lists (and do re
 **Example.** Consider the loop above that prints out the elements of the list `namelist` one at a time:
 
 ```python 
-namelist = ['Chase', Dave', 'Sarah', 'Spencer']
+namelist = ['Chase', 'Dave', 'Sarah', 'Spencer']    
 for item in namelist:
     print(item)
 ```
@@ -549,9 +560,9 @@ def hello(firstname):               # define the function
     print('Hello,', firstname)    
 
 hello('Chase')                      # use the function 
-```    
+```
 
-Let's go through this line by line:
+Let's go through this line by line:  
 
 * The initial `def` statement defines the function, names it `hello`, identifies the input as `firstname`, and ends with a colon (:). 
 * The following statement(s) are indented the usual four spaces and specify what the function does.  In this case, it prints `Hello,` followed by whatever `firstname` happens to be.  Python understands that the function ends when the indentation ends.  
@@ -562,7 +573,8 @@ By convention, Python aficionados put two blank lines before and after function 
 
 **Function returns.** Our function `hello` has a name (`hello`) and an input argument (`firstname`), but returns no output. Output would create a new value that Python could call later in the code, like when you set `x = 2` then used `x` later on. Here we print something but produce no other output. 
 
-In other cases, we might want to send output back to the main program.  We do that with a **return** statement, a third component of a function definition.  Here's an example:  
+
+In other cases, we might want to send output back to the main program.  We do that with a **return** statement, a third component of a function definition.  Here's an example   
 
 ```python 
 def combine(first, last): 
@@ -574,7 +586,7 @@ def combine(first, last):
 
 both = combine('Chase', 'Coleman')      # assign the "return" to both 
 print(both)
-```   
+```
 
 In our example, we **return** the output `'Coleman, Chase'` and assign it to the variable `both`.  Note, too, the comment in triple quotes at the top of the function. That's standard procedure, we recommend it.  
 
@@ -583,10 +595,9 @@ The return is an essential component of many functions.  Typically when we read 
 
 **Exercise.**  Create and test a function `nextyear` that takes an integer year (say 2015) and returns the following year (2016).  
 
-**Exercise.**  Create and test a function that takes an integer year (say, 2015) and returns a string of the next year (say, `'2016'`). 
-
-
 **Exercise.** Use the Object inspector to get the documentation for the built-in function `max`.  If the input is a list of two or more numbers, what does `max()` return?  
+
+**Exercise (challenging).**  Create and test a function that takes a string year (say, `'2015'`) and returns a string of the next year (say, `'2016'`). 
 
 
 <!--
@@ -705,7 +716,7 @@ https://github.com/amontalenti/elements-of-python-style
 
 ## Resources 
 
-See the resources in the previous chapter, especially the link to [Codecademy](https://www.codecademy.com/tracks/python).  If you work your way up to Advanced Topics, you'll be in good shape for anything that follows.  
+See the resources in the previous chapter, especially [Codecademy](https://www.codecademy.com/tracks/python).  If you work your way up to Advanced Topics, you'll be in good shape for anything that follows.  
 
 Additional resources:
 

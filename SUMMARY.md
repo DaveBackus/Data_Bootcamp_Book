@@ -6,12 +6,14 @@
 * [The data mentality](data-mentality.md) 
 * [Python fundamentals 1](py-fun1.md) 
 * [Python fundamentals 2](py-fun2.md)  
-* [Data input: Pandas 1](pandas-input.md)
+* [Pandas 1:  Data input](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
 
 <!-- 
 * [Practice](practice.md)
-* [Shaping data:  Pandas revisited](pandas-munging.md)
+* [Pandas 2:  Cleaning data](pandas-clean.md)
+* [Pandas 3:  Shaping data](pandas-shape.md)
+* [Pandas 3:  Grouping data](pandas-group.md)
 * [Updating Python: conda and pip](conda-pip.md)
 * [Emerging market indicators](emerging.md)
 * [Business cycle indicators](indicators.md)

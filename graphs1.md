@@ -1,9 +1,9 @@
 # Python graphics: Matplotlib fundamentals
 
 ---
-**Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  We do this Jupyter, using an IPython notebook.  
+**Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  We do this in Jupyter using an IPython notebook.  
 
-**Python tools.**  Graphing with Matplotlib: dataframe methods, the `plot(x,y)` function, figure/axis objects.  
+**Python tools.**  Graphing with Matplotlib: dataframe methods, the `plot(x,y)` function, figure and axis objects. 
 
 **Buzzwords.** Data visualization.  
 
@@ -29,18 +29,17 @@ One more thing before we start:  **Save the IPython notebook** at the Code link 
 
 * Pandas.  Python's data management package.  We typically add it to our programs with
 
-```python
-import pandas as pd
-```
+   ```python
+   import pandas as pd
+   ```
 
-* Objects and methods.  Recall -- again! -- that we apply the method `justdoit` to the object `x` with `x.justdoit`.  
+* Objects and methods.  Recall -- again! -- that we apply the method `justdoit()` to the object `x` with `x.justdoit()`.  
 
-* Dataframe.  A data structure like a spreadsheet that includes a table of data plus row and column labels.  Typically columns are variables and rows are observations.  Common dataframe methods include `columns` (column labels), `index` (row labels), and `plot()` (graph the columns).  
+* Dataframe.  A data structure like a spreadsheet that includes a table of data plus row and column labels.  Typically columns are variables and rows are observations.  We get column labels for a dataframe `df` with `df.columns` and row labels with `df.index`.  
+
 * Series.  A single variable `x` in a dataframe `df` can be expressed as the series `df['x']`.  
 
-* Reading spreadsheets.  We "read" spreadsheet data into Python using the `read_csv` and `read_excel` functions in Pandas.
-
-* API.  Or we can use the APIs for FRED, the World Bank, Fama-French, and other data sources.  
+* Reading spreadsheets.  We "read" spreadsheet data into Python using the `read_csv()` and `read_excel()` functions in Pandas.
 
 * Jupyter.  A Python environment in which we create IPython notebooks.  These notebooks combine Python code with text and output, including graphics. It's the ideal medium for this topic.  
 
@@ -56,10 +55,14 @@ We're going to change programming environments from Spyder to Jupyter and work w
 * In the browser tab, navigate to your `Data_Bootcamp` directory/folder.  
 * Click on the New button in the upper right and choose Python 3.  
 
-We now have a new empty Python notebook we can use to play around with.  
+We now have an empty IPython notebook we play with.  
 
 
-**Jupyter essentials.**  In your browser, you should have an empty notebook with the word Jupyter at the top.  Below it is a **menubar** with the words File, Edit, View, Cell, Kernel, and Help.  Below that is a **toolbar** with various buttons.  If you have a few minutes, click on help in the menubar at the top and choose User Interface Tour.  
+**Jupyter essentials.**  In your browser, you should have an empty notebook with the word Jupyter at the top.  Below it is a **menubar** with the words File, Edit, View, Cell, Kernel, and Help.  Below that is a **toolbar** with various buttons.  You should see all of these components here:  
+
+![Jupyter environment](figs/jupyter_notebook.png "Jupyter")
+
+If you have a few minutes, click on help in the menubar and choose User Interface Tour.  
 
 Let's put some of these tools to work:  
 
@@ -69,27 +72,27 @@ Let's put some of these tools to work:
 
 * Add a cell.  Click on the `+` in the toolbar to create a new cell.  Choose Code in the toolbar's dropdown menu.  Type this code in the cell:  
 
-```python
-import datetime
-print('Welcome to Data Bootcamp!')
-print('Today is: ', datetime.date.today())
-```
+  ```python
+  import datetime as dt
+  print('Welcome to Data Bootcamp!')
+  print('Today is: ', dt.date.today())
+  ```
 
-Now click on Cell in the menubar and choose Run cell.  What do you see?  
+  Now click on Cell in the menubar and choose Run cell.  What do you see?  
 
 * Add another cell.  Click on the `+` to create another cell and choose Markdown in the toolbar's dropdown menu. Markdown is text; more on it shortly.  Type this in the cell:  
 
-```
-Your name
-Data Bootcamp sandbox for playing around with IPython notebooks
-```
+  ```
+  Your name
+  Data Bootcamp sandbox for playing around with IPython notebooks
+  ```
 
-Run this cell as well.  
+  Run this cell as well.  
 
 You get the idea.  To get a sense of what's possible, take a look at these [two](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/IPython/bootcamp_test.ipynb) [notebooks](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb).  
 
 
-**Markdown essentials.**  Markdown is a simplified version of html ("hypertext markup language"), the language used to construct basic websites.  html was a great thing in 1990, but now that the excitement has warn off we find it painful.  Markdown, however, has a zen-like simplicity.  Here are some things we can do with it:  
+**Markdown essentials.**  Markdown is a simplified version of html ("hypertext markup language"), the language used to construct basic websites.  html was a great thing in 1990, but now that the excitement has warn off we find it painful.  Markdown, however, has a zen-like simplicity and beauty.  Here are some things we can do with it:  
 
 * Headings.  Large bold headings are marked by hashes (`#`).  One hash for first level (very large), two for second level (a little smaller), three for third level (smaller still), four for fourth (the smallest).  Try these in a Markdown cell to see how they look:  
 
@@ -101,9 +104,16 @@ You get the idea.  To get a sense of what's possible, take a look at these [two]
 
   Be sure to run the cell when you're done (`shift enter`).  
 
-* Bold and italics.  If we put a word or phrase between double asterisks, it's displayed in bold.  Thus `**bold**` is displayed as **bold**.  If we use single asterisks, we get italics:  `*italics*` displays as *italics*.  
+* Bold and italics.  If we put a word or phrase between double asterisks, it's displayed in bold.  Thus `**bold**` displays as **bold**.  If we use single asterisks, we get italics:  `*italics*` displays as *italics*.  
 
-* Bullet lists.  If we want a list of items marked by bullets, we start with a blank line and mark each item with an asterisk on a new line.  
+* Bullet lists.  If we want a list of items marked by bullets, we start with a blank line and mark each item with an asterisk on a new line:
+
+  ```markdown
+  * something 
+  * something else
+  ```
+
+  Try it and see.  
 
 * Links.   We construct a link with the text in square brackets and the url in parentheses immediately afterwards.  Try this one:  
 
@@ -111,15 +121,17 @@ You get the idea.  To get a sense of what's possible, take a look at these [two]
   [Data Bootcamp course](http://databootcamp.nyuecon.com/)
   ```
 
- You can find more information about Markdown under Help.  Or use your Google fu.  
+We can find more information about Markdown under Help.  Or use your Google fu.  We like the Daring Fireball description.  
 
 
-Markdown is ubiquitous.  This book, for example, is written in Markdown.  Go [here](https://github.com/DaveBackus/Data_Bootcamp_Book/blob/master/data-mentality.md) for a list of chapter files.  Click on one to see how it displays.  Click on the Raw button at the top to see the Markdown file that produced it.  
-
-**Exercise.** Create a description cell in Markdown near the top of your notebook.  It should include your name and a description of what you're doing in the notebook.  For example: "Joan Watson's notes on the Data Bootcamp Matplotlib notebook" and a date.  *Bonus points:*  Add a link.  
-
+Markdown is ubiquitous.  This book, for example, is written in Markdown.  Look [here](https://github.com/DaveBackus/Data_Bootcamp_Book) for a list of chapter files.  Click on one to see how it displays.  Click on the Raw button at the top to see the Markdown file that produced it.  
 
 **IPython help.** We can access documentation just as we did in Spyder's IPython console:  Type a function or method and add a question mark.  For example:  `print?` or `df.plot?`.  
+
+**Exercise.** Create a description cell in Markdown at the top of your notebook.  It should include your name and a description of what you're doing in the notebook.  For example: "Joan Watson's notes on the Data Bootcamp Matplotlib notebook" and a date.  *Bonus points:*  Add a link.  
+
+**Exercise.**  Click on the + to add two new cells.  In the first one, add the statement `import pandas as pd`, labelled as code.  Run it.  Use the second cell to find documentation for `pd.read_csv`.  
+
 
 
 ## Getting ready
@@ -130,7 +142,7 @@ We need to do a few things before we're ready to produce graphs.
 **Open the graphics notebook.** If you followed instructions -- and we're confident you did -- you saved the notebook for this chapter in your `Data_Bootcamp` directory.  Return to the Jupyter tab in your browser that points to that directory.  Look for the file named `bootcamp_graphics_1.ipynb`.  Click to open it.  That will open the notebook in a new tab. The notebook will say at the top:  "Python graphics: Matplotlib fundamentals" in large bold letters.  
 
 
-**Import packages.** We need to tell our Python program what packages we plan to use.  The following code also checks their versions and prints the date:  
+**Import packages.** We need to tell our program what packages we plan to use.  The following code also checks their versions and prints the date:  
 
 ```python
 import sys                             # system module
@@ -146,10 +158,10 @@ print('Matplotlib version: ', mpl.__version__)
 print('Today: ', dt.date.today())
 ```
 
-All of these statements generally go at the top of our program.
+All of these statements generally go at the top of our program -- right after the description we wrote earlier.
 
 
-**Process data.** We use three dataframes to illustrate Matplotlib graphics.  
+**Process data.** We will use three dataframes to illustrate Matplotlib graphics.  
 
 *US GDP.* The first one is several years of US GDP and Consumption.  We got the numbers from FRED, but have written them out here for simplicity.  The code is
 
@@ -164,7 +176,7 @@ us = pd.DataFrame({'gdp': gdp, 'pce': pce}, index=year)
 print(us)
 ```
 
-Note that we created a dataframe from a dictionary.  That's convenient here, but in most real applications we'll read in spreadsheets or access APIs.  
+Note that we created a dataframe from a dictionary.  That's convenient here, but in most real applications we'll read in spreadsheets or access the data online through an "API" (more on this later).
 
 
 *World Bank.* Our second dataframe contains 2013 data for GDP per capita (basically income per person) for several countries:  
@@ -222,7 +234,7 @@ This might be followed by a long list of fine-tuning:  what the lines look like,
 
 ##  Approach #1:  Apply plot methods to dataframes
 
-The simplest way to produce graphics from a dataframe is to apply a method to it.  We like simple, and do this a lot.  
+The simplest way to produce graphics from a dataframe is to apply a method to it.  We do this a lot.  
 
 If we compare this to Excel, we will see that a number of things are preset for us:
 
@@ -235,7 +247,7 @@ We can change all of these things, just as we can in Excel, but that's the start
 
 **Example (line plot).**  Enter the statement `us.plot()` into an IPython cell and run it.  This plots every column of the dataframe `us` as a line against the index, the year of the observation.  The lines have different colors.  We didn't ask for this, it's built in.  A legend associates each variable name with a line color.  This is also built in.  
 
-**Example (single line plot).**  We just plotted all the variables -- all two of them -- in the dataframe `us`.  To plot one line, we apply the same method to a single variable.  The statement `us['gdp'].plot()` plots GDP alone.  The first part -- `us['gdp']` -- is the single variable GDP.  The second part -- `.plot()` -- plots it.
+**Example (single line plot).**  We just plotted all the variables -- all two of them -- in the dataframe `us`.  To plot one line, we apply the same method to a single variable -- a series.  The statement `us['gdp'].plot()` plots GDP alone.  The first part -- `us['gdp']` -- is the single variable GDP.  The second part -- `.plot()` -- plots it.
 
 
 **Example (bar chart).**  The statement `us.plot(kind='bar')` produces a bar chart of the same data.
@@ -256,7 +268,7 @@ The scatter here is not far from a straight line; evidently consumption and GDP 
 **Exercise.** We have lots of choices for dressing this up.  Use the IPython help by typing `us.plot?` in an empty cell and running it. What arguments/parameters look interesting to you?  
 
 
-**Exercise.**  Add each of these arguments to `us.plot()` in the code cell below and describe what they do:  
+**Exercise.**  Add each of these arguments, one at a time, to `us.plot()`:  
 
 * `kind='area'`
 * `subplots=True`
@@ -264,9 +276,10 @@ The scatter here is not far from a straight line; evidently consumption and GDP 
 * `figsize=(3,6)`
 * `xlim=(0,16000)`
 
-<br>  
+What do they do?
 
-We can do the same things with the Fama-French dataframe `ff`.  The basic plot statement is
+
+We can do similar things with the Fama-French dataframe `ff`.  The basic plot statement is
 ```python
 ff.plot()
 ```
@@ -294,7 +307,7 @@ It produces separate histograms of the two variables with 20 "bins" in each.
 
 ## Approach #2:  `plot(x,y)`
 
-Next up:  the popular `plot(x,y)` function from the pyplot module of Matplotlib.  We used pyplot a lot when we started out, and suspect you will, too.  
+Next up:  the popular `plot(x,y)` function from the pyplot module of Matplotlib.  We used pyplot a lot when we started out, but very little since then.  
 
 We import the module with  
 
@@ -338,20 +351,7 @@ If we want a bar chart we use
 plt.bar(us.index, us['gdp'])
 ```
 
-The bars here are off center, so we often include the argument `align='center'`.
-
-
-**Exercise.** Experiment with
-
-```python
-plt.bar(us.index, us['gdp'],
-		align='center',
-		alpha=0.65,
-		color='red',
-		edgecolor='green')
-```
-
-Describe what each of these arguments/parameters does.
+The bars here are off center, so we typically include the argument `align='center'`.
 
 
 **Adding things to graphs.** We just added things to our graph with arguments. We can do more with additional lines of code.  Consider these:
@@ -369,6 +369,18 @@ plt.legend(['GDP', 'Consumption'])           # more descriptive variable names
 In this way we add a title (14-point type, left justified), add a label to the y axis, change the limits of the x axis, make the tick labels red, and use more descriptive names in the legend.  
 
 
+**Exercise.** Experiment with
+
+```python
+plt.bar(us.index, us['gdp'],
+    align='center',
+    alpha=0.65,
+    color='red',
+    edgecolor='green')
+```
+
+Describe what each of these arguments/parameters does.
+
 **Exercise.** Add a `plt.ylim()` statement that starts the `y` axis at zero.  *Hint:*  Use `plt.ylim?` to get the documentation.  *Bonus points:*  Change the color of the line to magenta and the linewidth to 2.  *Hint:*  Use `plt.plot?` to get the documentation.  
 
 
@@ -377,7 +389,7 @@ In this way we add a title (14-point type, left justified), add a label to the y
 
 ## Approach #3:  Create figure objects and apply methods
 
-This approach is the most foreign to beginners, but now that we're used to it we like it a lot.  We either use it on its own, or adapt its functionality to the dataframe plot methods we saw in Approach #1.  The idea is to generate an object -- two objects, in fact -- and apply methods to them to produce the various elements of a graph:  the data, their axes, their labels, and so on.  
+This approach is the most foreign to beginners, but now that we're used to it we like it a lot.  It's now our go-to approach.  We either use it on its own, or adapt its functionality to the dataframe plot methods we saw in Approach #1.  The idea is to generate an object -- two objects, in fact -- and apply methods to them to produce the various elements of a graph:  the data, their axes, their labels, and so on.  
 
 
 **Create objects.** This is how we do it:
@@ -480,7 +492,7 @@ We don't see ourselves doing this much, but it ties up a loose end.
 
 ## Let's review
 
-Take a deep breath.  We've covered a lot of ground, it's time to review.   
+Take a deep breath.  We've covered a lot of ground, it's time to recapitulate.     
 
 We looked at three ways to use Matplotlib:  
 
