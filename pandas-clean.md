@@ -1,54 +1,205 @@
 # Pandas 2: Cleaning data  
 
 ---
-**Overview.**   
+**Overview.**  The dirty secret of data work is that data almost never comes in the form we want.  Here we run through a variety of methods for taking messy data and turning it into clean, nicely formatted data.  
 
-**Python tools.** Selecting variables and observations, changing variable names, changing variable values.
+**Python tools.** Choosing variables and observations, changing variable names, changing variable values, dates. 
 
-**Buzzwords.**  
+**Buzzwords.**  Selection, filtering, string methods, missing values.  
 
-**Applications.** 
+**Applications.** Entry poll, Chipotle, World Economic Outlook.
 
 **Code.** Link.  
 
 ---
 
+**UNDER CONSTRUCTION**
+
+
+bla bla 
+
+
 
 ## Reminders 
 
-* Dataframes.
+* Pandas.  Python's data package.  
 
-* Indexes and columns.  
+* Dataframes.  A dataframe `df` is a data structure that includes a table of data, like a spreadsheet, plus row labels (`df.index`) and column labels (`df.columns`).  Typically columns are variables and rows are observations.  
 
-* Dataframe methods:  head and tail.
+* Dataframe methods.  Some of our favs are `shape`, `head` and `tail`, `dtypes`, `rename`, `drop`, `set_index`, `T` (transpose), and `plot`.  Remind yourself what they do -- or look them up.  
 
-* Referring to variables:  ??
+* List comprehensions.  A clever feature of Python that lets us do implicit loops over lists.  It's particularly useful for refining variable names.  Example:  If the list of variable names is `names = ['variable1', 'variable2']`, we can capitalize them with the list comprehension
+
+```python
+[name.title() for name in names]
+```  
+
+(The `title` method takes a string and capitalizes the first letter -- what's called "title case.")
 
 
+**Exercise.** Consider the dataframe defined by 
 
-## Applying the "want operator"
+```python 
+import pandas as pd 
+data = {'EG.ELC.ACCS.ZS': [53.2, 47.3, 85.4, 22.1],    # access to elec (%) 
+        'IT.CEL.SETS.P2': [153.8, 95.0, 130.6, 74.8],  # cell contracts per 100 
+        'IT.NET.USER.P2': [11.5, 12.9, 41.0, 13.5],    # internet access (%) 
+        'Country': ['Botswana', 'Namibia', 'South Africa', 'Zambia']} 
+af = pd.DataFrame(data)
+```
 
-The idea is to start with what we want the end product to be:  to apply, in the words of a colleague, the **want operator**.   
+* What are its dimensions?
+* What are its dtypes?  What does this mean?  
+* Set the index to `'Country'`.  
+* Change the name of the first variable to `'elect'`.  
+* Use the `plot` method to produce a bar chart of the whole dafaframe.  What does it use as the x axis? 
 
 
-* WEO:  too many variables and countries, commas in numbers 
-* Chipotle:   
-* Class poll:   
-* OECD healthcare docs 
+<!--
+```python
+data = {'countrycode': ['CHN', 'CHN', 'CHN', 'FRA', 'FRA', 'FRA'],
+        'pop': [1124.8, 1246.8, 1318.2, 58.2, 60.8, 64.7],
+        'rgdpe': [2.611, 4.951, 11.106, 1.294, 1.753, 2.032],
+        'year': [1990, 2000, 2010, 1990, 2000, 2010]}
+pwt = pd.DataFrame(data)
+```
+--> 
 
+One more reminder:  Download the code file for this chapter and save it in your `Data_Bootcamp` directory.  
+
+
+## The "want operator"
+
+When we're writing code, it's essential that we keep our goals -- our "wants" -- in mind.  In the words of a colleague, we apply the **want operator**.  By which we mean:  Start with what we want, then figure out how to get there.  
+
+Here are some examples of data that comes in a form that's not as useful as it might be.  
+
+**Entry poll.**  We collected your responses to a short poll at the start of the term.  Google records the answers in a spreadsheet.  Each column is a question and each row is a responder (anonymous).  So far so good.  But the column labels consist of the whole question, so they're a bit unwieldy.  And the responses consist of the whole response, which is also a bit unwieldy.  
+
+What, then, are our wants?  We want to trim both the column labels and the responses.  
+
+Here we see it in action:  
+
+```python
+import pandas as pd
+url1 = 'http://pages.stern.nyu.edu/~dbackus/Data/'
+url2 = 'Data-Bootcamp-entry-poll_s16.csv'
+url = url1 + url2 
+ep = pd.read_csv(url, header=0) 
+print('Dimensions:', ep.shape)
+print('\nData types:\n', ep.dtypes, sep='')
+```
+
+
+**Chipotle.**  The [New York Times](http://www.nytimes.com/interactive/2015/02/17/upshot/what-do-people-actually-order-at-chipotle.html) wrote an article about the number of calories in a typical Chipotle order.  Even better, they posted their data on the web.   In their data, every row describes the purchase of a specific item:  the item, the quantity, the price, and so on.  Orders typically consists of multiple items.  
+
+Let's say our goal is to compute the price of a typical order. [Daniel Forsyth](http://www.danielforsyth.me/pandas-burritos-analyzing-chipotle-order-data-2/) noted that the prices of individual items are entered with dollar signs, which means Python reads them as strings and assigns the price variable the dtype object.  
+
+(Take a breath and remind yourself what this means.  Ok, ready?)
+
+Here's some code to illustrate the point:  
+
+```python
+url = 'https://raw.githubusercontent.com/TheUpshot/chipotle/master/orders.tsv'
+chp = pd.read_csv(url, sep='\t')   # tab (\t) delimited 
+print('Variable dtypes:\n', chp.dtypes, sep='')
+print(chp.head())
+```
+
+The first print statement gives us 
+
+```python 
+Variable dtypes:
+order_id               int64
+quantity               int64
+item_name             object
+choice_description    object
+item_price            object
+dtype: object
+```
+
+This tells us, among other things, that the variable `item_price` has dtype object.  That means, specifically, that it's not a number.  The second print statement lists the first five entries, where we see the culprit:  the dollar signs ($).  Our want is to eliminate the dollar sign and convert the variable to a float, which we can then use to calculate the price of an order.  
+
+
+**OECD healthcare stats.** The goal here is to produce a bar chart for a recent year of the number of doctors (per thousand population) for a selection of countries.  We read in the data with 
+
+```python
+url1 = 'http://www.oecd.org/health/health-systems/'
+url2 = 'OECD-Health-Statistics-2015-Frequently-Requested-Data.xls'
+docs = pd.read_excel(url1+url2, 
+                     skiprows=3, 
+                     sheetname='Physicians', 
+                     index_col=0,
+                     skip_footer=21) 
+print('Dimensions:', docs.shape)
+print('Variable dtypes:\n', docs.dtypes, sep='')
+print(docs.head())                   
+```
+
+Here we have a number of problems that we want to correct:
+
+* The data consists of numbers (number of doctors per thousand people) but the dtype is mostly object.  We can't plot that.   
+* We want to choose data for a specific recent date (2013?) and a subset of countries (Canada, France, Germany, Japan, the UK, and the US).  
+* The index (country name) includes an integer that comes from a footnote in the file.  The plot method will use the index to label the graph and we'd prefer not to have footnotes messing it up.  
+
+
+**World Economic Outlook.**  This is the IMF's semiannual international dataset of macroeconomic variables.  Our goal here is to plot government debt (expressed as a percentage of GDP) over time for a selection of countries (Argentina, Germany, Greece, and the United States).  This code reads in the data:   
+
+```python
+url1 = 'http://www.imf.org/external/pubs/ft/weo/2015/01/weodata/'
+url2 = 'WEOApr2015all.xls'
+url = url1 + url2 
+weo = pd.read_csv(url, sep='\t') #, thousands=',', na_values=['n/a', '--']) 
+```
+
+There's a lot here, so we carve out some pieces and print them: 
+
+```python
+small = weo[list(weo[list(range(12))])]     # grab first 12 variables 
+print('Variable dtypes:\n', small.dtypes, sep='')
+print('\nFirst 9 variables:\n', small[list(range(9))].head(), sep='')
+print('\nNext 3 variables (data):\n', small[list(range(9,12))].head(), sep='')
+```
+
+We see that the first nine variables are descriptions:  country, country code, variable, variable code, variable description, units, and so on.  The next three are the start of the data, which continues to 2015 and beyond.  A close examination reveals some problems: 
+
+* Missing values need to be identified.  
+* Large numbers have commas in them that lead Python to label variables as objects.  (This is true, but it takes some effort to find examples.)  
+
+Both can be handled in the read statement by deleting the hash, so that's what we'll do.  But there's another one that's not so easy:  
+
+* Variables run across rows, rather than down columns.  We see this in the column labels:  '1980', '1981', etc.  (And yes, dates are treated as strings here.  Try `weo['1980']`.) The plot method assumes observations run down columns, so we'll have to switch the rows and columns.  
+
+
+**Bond yields.**  Convert to quarterly so we can graph with GDP growth.  Get from FRED.  
+
+
+## ??
 
 Selection = slicing = filtering...  
 
 
 ## Choosing variables
 
+Boolean
+
+isin 
 
 
 ## Choosing observations 
 
 
 
-## Renaming variables 
+## Switching rows and columns 
+
+
+
+
+## Renaming indexes 
+
+Apply list comprehension to OECD doc data...  
+
+
 
 
 

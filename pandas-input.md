@@ -312,7 +312,7 @@ df['y2'] = df['x2'] + df['x3']
 
 The first line computes the new variable `y1` as the ratio of `x1` to `x2`.  The second computes `y2` as the sum of `x2` and `x3`.  
 
-The dataframe now includes both of these variables.  The statement `print('\n', df)` gives us 
+These statements do two things:  they perform the calculation on the right, and they assign it to the variable on the left.  The second step adds the new variables to the dataframe.  The statement `print('\n', df)` now gives us 
 
 ```python 
        name  x1  x2   x3        y1    y2
@@ -321,7 +321,7 @@ The dataframe now includes both of these variables.  The statement `print('\n', 
 2  Spencer   5   6  7.8  0.833333  13.8
 ```
 
-Let's think about what we've done here.  In Excel, we would compute the first observation of `y1`, then copy the formula to the other observations.  Here one line of code computes all the observations of a new variable `y1`.  
+If we step back for a minute, we might compare this to Excel.   If `x2` abd `x3` are columns, then we might start a new column labeled `y2`.  We would then compute the value of `y2` for the first observation and copy the formula to the other observations.  Here one line of code computes them all.  
 
 
 **Rename variables.**  If we want to change *all the names*, we can assign a list of new names to the dataframe's column labels:
@@ -432,6 +432,14 @@ Spencer   5   6  7.8  0.833333  13.8
 with `name` now used as the index.  
 
 We did something else here that's important:  We assigned the result back to `df`.  That keeps what we've done in the dataframe `df`.  If we hadn't done this, `df` would remain unchanged with a counter as its index and our effort to set the index would be lost.  
+
+We can reverse what we did here with the `reset_index()` method:
+
+```python
+df_reset = df.reset_index()
+```
+
+Try it and see.  We'll spend more time on these methods in a couple weeks.  
 
 
 **Statistics.**  We can compute the mean, the standard deviation, and other statistics for all the variables at once with 
@@ -641,7 +649,6 @@ Here are some spreadsheet datasets we find interesting.  In each one, we describ
 The data is in an [Excel spreadsheet](http://www.rug.nl/research/ggdc/data/pwt/v81/pwt81.xlsx).  If we open it, we see that it has three sheets.  The third one is the data and is named `Data`.  We read it in with the code:  
 
 ```python
-import pandas as pd 
 url = 'http://www.rug.nl/research/ggdc/data/pwt/v81/pwt81.xlsx'
 pwt = pd.read_excel(url, sheetname='Data')
 ```
@@ -659,13 +666,11 @@ In this dataset, each column is a variable and each row is an observation.  But 
 
 **Exercise.** Change the input in the last line of code to `sheetname=2`.  Why does this work?  
 
-
 **World Economic Outlook.**  Another good source of macroeconomic data for countries is the IMF's [World Economic Outlook](https://www.imf.org/external/ns/cs.aspx?id=28) or WEO.  It comes out twice a year and includes annual data from 1980 to roughly 5 years in the future (forecasts, evidently).  It includes the usual GDP, but also government debt and deficits, interest rates, and exchange rates.  
 
 This one gives us some idea of the challenges we face dealing with what looks like ordinary spreadsheet data.  The file extension is `xls`, which suggests it's an Excel spreadsheet, but that's a lie.  In fact it's a "tab-delimited" file:  essentially a csv, but with tabs rather than commas separating entries.  We read it with
 
 ```python 
-import pandas as pd
 url1 = 'https://www.imf.org/external/pubs/ft/weo/'
 url2 = '2015/02/weodata/WEOOct2015all.xls'
 weo = pd.read_csv(url1+url2, 
@@ -709,7 +714,6 @@ Plot debt ...
 We use data from a summary table in an [OECD report](http://www.oecd.org/pisa/keyfindings/pisa-2012-results-volume-I.pdf); note the data link at the bottom of Table 1.A.  This code reads the data from the link:  
 
 ```python 
-import pandas as pd
 url = 'http://dx.doi.org/10.1787/888932937035'
 pisa = pd.read_excel(url, 
                      skiprows=18,       # skip the first 18 rows 
@@ -872,7 +876,6 @@ The Pandas package has what they call a set of [Remote Data Access tools](http:/
 The Pandas docs describe how to access FRED.  Here's an example that reads in quarterly data for US real GDP and real consumption and produces a simple plot: 
 
 ```python
-import pandas as pd 
 import pandas.io.data as web    # package to access FRED 
 import datetime                 # package to handle dates 
 
@@ -900,7 +903,6 @@ click on the "Cite" tab below the figure, and look for the code in square bracke
 **World Bank.** The World Bank's [databank](http://data.worldbank.org/) covers economic and social statistics for most countries in the world.  Variables include GDP, population, education, and infrastructure.  Here's an example:  
 
 ```python
-import pandas as pd                 
 from pandas.io import wb            # World Bank api
 
 var = ['NY.GDP.PCAP.PP.KD']         # GDP per capita 
