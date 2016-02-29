@@ -15,7 +15,6 @@
 
 
 
-
 ## Reminders
 
 DataFrames:  index, columns 
@@ -24,6 +23,8 @@ DataFrames:  index, columns
 ## Wants
 
 MovieLens:  link id to title 
+
+population estimates and projections.... 
 
 Emerging market indicators 
 

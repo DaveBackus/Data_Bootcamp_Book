@@ -20,8 +20,9 @@ DataFrames:  index, columns
 
 Want operator 
 
-Chipotle 
-Yahoo finance 
+Chipotle <br>
+Yahoo finance:  Ju's example, reshape <br>
+World Bank data <br>
 
 
 

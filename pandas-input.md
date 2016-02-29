@@ -9,7 +9,7 @@
 
 **Applications.**  Income and output of countries, government debt, income by college major, old people, equity returns, George Clooney's movie roles.    
 
-**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_1.py).  
+**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_input.py).  
 
 ---
 
@@ -138,7 +138,7 @@ df = pd.read_csv(url)     # read file and assign it to df
 The syntax works like this:  
 
 * `url` is a string that tells Python where to look for the file.  We break it in two because it's too long to fit on one line.  
-* `read_csv` is a Pandas function that reads csv files.  The `pd.` before it tells Python it's a Pandas function; we established the `pd` abbreviation in the `import` statement.  
+* `read_csv()` is a Pandas function that reads csv files.  The `pd.` before it tells Python it's a Pandas function; we established the `pd` abbreviation in the `import` statement.  
 * The `df` on the left makes this an assignment:  We assign what we read to the variable `df`. 
 
 
@@ -301,7 +301,6 @@ print(type(df['x1']))
 
 we find that it's a `pandas.core.series.Series` -- **series** for short.  A series is essentially a dataframe with a single variable or column, which simplifies the bookkeeping a bit.  
 
-**Digression.** This syntax -- refer to a variable using its string name `'x1'` -- is common in our work, but we use a string only because the variable name is, in fact, a string. If the variable name is, say, an integer, we would use that.  For example, if a variable has the integer name `2011` we would refer to it as `df[2011]` -- no quotes called for.  If we're not sure, print `df.columns` to see what dtype it is.  
 
 **Construct new variables from old ones.** Now that we know how to refer to a variable, we can construct others from them.  We construct two with 
 
@@ -322,6 +321,9 @@ These statements do two things:  they perform the calculation on the right, and 
 ```
 
 If we step back for a minute, we might compare this to Excel.   If `x2` abd `x3` are columns, then we might start a new column labeled `y2`.  We would then compute the value of `y2` for the first observation and copy the formula to the other observations.  Here one line of code computes them all.  
+
+
+**Digression.** There are two syntax issues we should mention.  One is that others -- not us! -- commonly refer to a variable `df[`y1`]` by `df.y1`.  That usually works, but not always.  For example, it doesn't work if the variable name contains spaces or conflicts with an existing method.  And we can't assign to it, as we did when we defined `y1` above.  The second issue is integer variable names.  We avoid these, too, but if we somehow end up with a variable with an integer label -- `2011`, for example -- we would refer to it by that label: `df[2011]` without quotes.  If you're not sure what type the variable labels are, print `df.columns` and see whether they have quotes.  
 
 
 **Rename variables.**  If we want to change *all the names*, we can assign a list of new names to the dataframe's column labels:
