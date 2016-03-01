@@ -1,7 +1,7 @@
 # Python graphics: Matplotlib fundamentals
 
 ---
-**Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  We do this in Jupyter using an IPython notebook.  
+**Overview.**  We introduce and apply Python's popular graphics package, Matplotlib.  We produce line plots, bar charts, scatterplots, and more.  We do all this in Jupyter using an IPython notebook.  
 
 **Python tools.**  Graphing with Matplotlib: dataframe methods, the `plot(x,y)` function, figure and axis objects. 
 
@@ -51,14 +51,14 @@ We're going to change programming environments from Spyder to Jupyter and work w
 **Creating an IPython notebook.** We can open a new IPython notebook by tracing the steps we took in the first class:   
 
 * Start the Anaconda Launcher.  
-* Click on ipython-notbook to launch Jupyter.  This will open a tab in your browser with the word Jupyter at the top and your computer's directory structure below it.  
+* Click on ipython-notebook to launch Jupyter.  This will open a tab in your browser with the word Jupyter at the top and your computer's directory structure below it.  
 * In the browser tab, navigate to your `Data_Bootcamp` directory/folder.  
 * Click on the New button in the upper right and choose Python 3.  
 
 We now have an empty IPython notebook we play with.  
 
 
-**Jupyter essentials.**  In your browser, you should have an empty notebook with the word Jupyter at the top.  Below it is a **menubar** with the words File, Edit, View, Cell, Kernel, and Help.  Below that is a **toolbar** with various buttons.  You should see all of these components here:  
+**Jupyter essentials.**  In your browser, you should have an empty notebook with the word Jupyter at the top.  Below it is a **menubar** with the words File, Edit, View, Cell, Kernel, and Help.  Below that is a **toolbar** with various buttons.  You can see all of these components here:  
 
 ![Jupyter environment](figs/jupyter_notebook.png "Jupyter")
 
@@ -78,7 +78,7 @@ Let's put some of these tools to work:
   print('Today is: ', dt.date.today())
   ```
 
-  Now click on Cell in the menubar and choose Run cell.  What do you see?  
+  Now click on Cell in the menubar and choose Run cell.  You should see the welcome message and today's date below the code.  
 
 * Add another cell.  Click on the `+` to create another cell and choose Markdown in the toolbar's dropdown menu. Markdown is text; more on it shortly.  Type this in the cell:  
 
@@ -218,7 +218,7 @@ Back to  graphics.  Python's leading graphics package is **Matplotlib**.  Matplo
 * Approach #2:  Use the `plot(x,y)` function to plot `y` against `x`.  
 * Approach #3:  Create figure objects and apply methods to them.  
 
-All three call on the same functionality, but they use different syntax. We use all three at times but favor #1 and #3.  
+They call on similar functionality, but rely on different syntax to get it.  
 
 
 ## Digression:  Graphing in Excel
@@ -307,9 +307,9 @@ It produces separate histograms of the two variables with 20 "bins" in each.
 
 ## Approach #2:  `plot(x,y)`
 
-Next up:  the popular `plot(x,y)` function from the pyplot module of Matplotlib.  We used pyplot a lot when we started out, but very little since then.  
+Next up:  the popular `plot(x,y)` function from the pyplot module of Matplotlib.  We never use this and will go over it at high speed -- and perhaps not at all.  
 
-We import the module with  
+We import the pyplot module with  
 
 ```python
 import matplotlib.pyplot as plt
@@ -325,7 +325,7 @@ The `plt.` identifies `plot()` as a pyplot function.   This produces the same ki
 saw earlier, but we get there by a different route.  
 
 
-**Digression.** We're doing this in an IPython notebook, where it will work fine.  But if we use the same code in Spyder, we need to add the statement `plt.show()` to display the graph.  In IPython/Jupyter, this happens automatically when the cell ends.  **End of digression.** 
+**Digression.** We're doing this in an IPython notebook, where it will work fine.  But if we use the same code in Spyder, we need to add the statement `plt.show()` to display the graph.  In IPython/Jupyter, this happens automatically when the cell ends.  
 
 
 **Basic plots.** Compare these plots to our earlier ones.  We start with GDP on its own:  
@@ -334,7 +334,7 @@ saw earlier, but we get there by a different route.
 plt.plot(us.index, us['gdp'])
 ```
 
-Remind yourself what the `x` and `y` variables are here.  
+Remind yourself what the `x` and `y` variables are here.  With a dataframe method, x is automatically the index.  Here we must be explicit about it.  
 
 If we want two variables in the same graph, we simply add another line:
 
@@ -354,6 +354,7 @@ plt.bar(us.index, us['gdp'])
 The bars here are off center, so we typically include the argument `align='center'`.
 
 
+<!--
 **Adding things to graphs.** We just added things to our graph with arguments. We can do more with additional lines of code.  Consider these:
 
 ```python
@@ -367,7 +368,7 @@ plt.legend(['GDP', 'Consumption'])           # more descriptive variable names
 ```
 
 In this way we add a title (14-point type, left justified), add a label to the y axis, change the limits of the x axis, make the tick labels red, and use more descriptive names in the legend.  
-
+--> 
 
 **Exercise.** Experiment with
 
@@ -381,31 +382,36 @@ plt.bar(us.index, us['gdp'],
 
 Describe what each of these arguments/parameters does.
 
+<!--
 **Exercise.** Add a `plt.ylim()` statement that starts the `y` axis at zero.  *Hint:*  Use `plt.ylim?` to get the documentation.  *Bonus points:*  Change the color of the line to magenta and the linewidth to 2.  *Hint:*  Use `plt.plot?` to get the documentation.  
 
 
 **Exercise.** Create a line plot for the Fama-French dataframe `ff` that includes both returns.  *Bonus points:* Add a title.  
+--> 
 
 
 ## Approach #3:  Create figure objects and apply methods
 
-This approach is the most foreign to beginners, but now that we're used to it we like it a lot.  It's now our go-to approach.  We either use it on its own, or adapt its functionality to the dataframe plot methods we saw in Approach #1.  The idea is to generate an object -- two objects, in fact -- and apply methods to them to produce the various elements of a graph:  the data, their axes, their labels, and so on.  
+This approach is the most foreign to beginners, and was for us as well, but it's now our favorite.  We either use it on its own, or adapt its functionality to the dataframe plot methods we saw in Approach #1.  The idea is to generate an object -- two objects, in fact -- and apply methods to them to produce the various elements of a graph:  the data, their axes, their labels, and so on. 
+
+We do this -- as usual -- one step at a time.  
 
 
 **Create objects.** This is how we do it:
 
 ```python
-# create fig and ax objects
-fig, ax = plt.subplots()
+import matplotlib.pyplot as plt  # import pyplot module 
+fig, ax = plt.subplots()         # create fig and ax objects
 ```
+Note that we're using the pyplot function `subplots()`, which creates the two objects on the left.   
 
-This produces a blank figure, which is displayed in the IPython notebook.  The names `fig` and `ax` can be anything, but these are standard.  We say `fig` is a **figure object** and `ax` is an **axis object** (hint: try `type(fig)` and `type(ax)` to see why).  This means:
+This produces a blank figure, which is displayed in the IPython notebook.  The names `fig` and `ax` can be anything, but these are standard.  We say `fig` is a **figure object** and `ax` is an **axis object**.  (Try `type(fig)` and `type(ax)` to see why.)  Once more, the words don't mean what we might think they mean:  
 
 * `fig` is a blank canvas for creating a figure.  
 
 * `ax` is everything in it:  axes, labels, lines or bars, legend, and so on.  
 
-We apply methods to both objects to create data graphs.  
+Once we have the objects, we apply methods to them to create graphs.  
 
 
 **Create graphs.**  We create graphs by applying plot-like methods to `ax`.  This is an example that uses pyplot's `plot(x,y)` syntax:  
@@ -414,72 +420,42 @@ We apply methods to both objects to create data graphs.
 # create objects
 fig, ax = plt.subplots()
 
-# add things by applying methods to ax
+# apply method to ax
 ax.plot(us.index, us['gdp'], linewidth=2, color='magenta')
-ax.set_title('US GDP', fontsize=14, loc='left')
-ax.set_ylabel('Billions of USD')
 ```
 
-The first line creates a line plot with the usual `plot(x,y)` syntax.  The next two lines add a title and y-axis label.  We have access to the usual set of methods for refining figures.  We can get a list using tab completion:  type `ax.[tab]` in an IPython code cell.  
+The last line creates a line plot with the `plot(x,y)` syntax.   
 
-We don't use figure methods much, but here's one:  
-
-```python
-# a figure method: save figure as a pdf
-fig.savefig('us_gdp.pdf')
-```
-
-This saves the figure as a pdf file that we can use in a report or slide.  
-
-
+<!--
 **Exercise.** Create a bar chart of variable `rm` in the `ff` dataframe.  *Bonus points:* Make the bars red.  
+--> 
 
 
-**Multiple plots.** We use the same idea -- create and use figure and axis objects.  The difference is that the axis object has the same more than one component, one for each of the subplots.
+**Dataframe plot methods revisited.** We're now getting to our standard procedure:  create figure and axis objects, and apply dataframe plot methods.  That combines the simplicity of plot methods with the flexibility of figure and axis objects.  
 
-Here's an example that reproduces our separate graphs of US GDP and consumption.  We star by creating the objects:  
-
-```python
-fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True)  
-print('Object ax has dimension', len(ax))
-```
-
-The `subplot` statement asks for a graph with two rows (top and bottom) and one column.  That is, two graphs, one on top of the other.  The `sharex=True` argument makes the `x` axes the same. The `print` statement tells us:  "Object ax has dimension 2".  There's one for the GDP graph, and one for the consumption graph.  
-
-
-Now add the content:
+We start as we just did, creating the figure and axis objects:  
 
 ```python
-fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True)
-
-ax[0].plot(us.index, us['gdp'], color='green')   # first plot
-ax[1].plot(us.index, us['pce'], color='red')     # second plot
+fig, axe = plt.subplots()
 ```
 
-(Note that we start numbering the components of `ax` at zero, which should be getting familiar by now.) This gives us a double graph, with GDP at the top and consumption at the bottom.  
-
-
-**Approach #1 revisited.** In approach #1, we applied plot methods to dataframes.  We also used arguments to fix up the graph, but that got complicated pretty quickly.   
-
-Here we combine Approaches #1 and #3.  If we look at the documentation for `df.plot()`, we see that it "returns" an axis object.  (Do it and see)  Once we have an axis object, we can apply methods to it that do just about anything.  
-
-The first step is to grab the axis object.  We change the dataframe-based plot statement `us.plot()` to
+Now we need to direct the dataframe plot method to use them.  We do that by adding an `ax` argument to the `plot()` method:  
 
 ```python
-ax = us.plot()
+us.plot(ax=axe) 
 ```
 
-Now that we have `ax`, we dress up the graph by applying methods to it:  
+(Note again that we need to create and use the axis object in the same IPython cell.)  
 
-```python
-ax = us.plot()  
-ax.set_title('US GDP and Consumption', fontsize=14, loc='left')
-ax.set_ylabel('Billions of 2013 USD')
-ax.legend(loc='center right')
-```
 
-(Note again that we need to create and use the axis object in the same IPython cell.)  We can add as many of these as we like.  
+**Exercise.** Add the argument `kind='bar'` to convert this into a bar chart.  
 
+**Exercise.** Use the same approach (fig and ax objects, dataframe plot method) to plot the Fama-French series `rm` and `rf` over time.  
+
+**Exercise (somewhat challenging).** Use the same approach to reproduce our earlier histograms of the Fama-French series.  
+
+
+<!--
 If we want the figure object, we apply a method to the axis object `ax`:
 
 ```python
@@ -487,6 +463,60 @@ fig = ax.get_figure()
 ```
 
 We don't see ourselves doing this much, but it ties up a loose end.  
+-->
+
+
+## Bells and whistles 
+
+We're now set to produce graphs, particularly if we are graphing data that comes in a dataframe.  We create figure and axis objects, and apply a plot method to a dataframe.  
+
+But we're still left with somewhat ugly graphs.  Fortunately, that's just the start.  We have a huge number of methods available for changing our plots in any way we wish:  Add titles and axis labels, change the size, and things we have yet to dream about.  Here's a short introduction.  
+
+**Adding things to graphs.** We just added things to our graph with arguments. We can do more with additional lines of code.  Consider these:
+
+```python
+fig, ax = plt.subplots()
+
+us.plot(ax=ax)            
+ax.set_title('US GDP and Consumption', fontsize=14, loc='left')
+ax.set_ylabel('Billions of 2013 USD')
+ax.legend(['GDP', 'Consumption'])           # more descriptive variable names 
+ax.set_xlim(2002.5, 2013.5)                 # shrink x axis limits
+ax.tick_params(labelcolor='red')            # change tick labels to red
+```
+
+In this way we add a title (14-point type, left justified), add a label to the y axis, change the limits of the x axis, make the tick labels red, and use more descriptive names in the legend.  
+
+**Exercise (somewhat challenging).** Use the `set_ylim()` method to start the `y` axis at zero.  *Hint:*  Use `plt.ylim?` to get the documentation.  *Bonus points:*  Change the color of the line to magenta and the linewidth to 2.  *Hint:*  Use `plt.plot?` to get the documentation.  
+
+<!--
+**Exercise.** Create a line plot for the Fama-French dataframe `ff` that includes both returns.  *Bonus points:* Add a title.  
+--> 
+
+
+
+**Multiple plots.** We use the same idea -- create and use figure and axis objects.  The difference is that the axis object has more than one component, one for each of the subplots.
+
+Here's an example that reproduces our separate graphs of US GDP and consumption.  We start by creating the objects:  
+
+```python
+fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True)  
+print('Object ax has dimension', len(ax))
+```
+
+The `subplot` statement asks for a graph with two rows (top and bottom) and one column.  That is, two graphs, one on top of the other.  The `sharex=True` argument makes the `x` axes the same. The `print` statement tells us "Object ax has dimension 2", one for the GDP graph, and one for the consumption graph.  
+
+
+Now add the content:
+
+```python
+fig, ax = plt.subplots(nrows=2, ncols=1, sharex=True)
+
+us['gdp'].plot(ax=ax[0], color='green')   # first plot
+us['pce'].plot(ax=ax[1], color='red')     # second plot
+```
+
+(Note that we start numbering the components of `ax` at zero, which should be getting familiar by now.) This gives us a double graph, with GDP at the top and consumption at the bottom.  
 
 
 
@@ -556,7 +586,8 @@ This creates a figure that is 4 inches wide and 13 inches tall.  We added a titl
 Here's a more advanced version in which we made the US bar red.  This is ridiculously complicated, but we used our Google fu and found [a solution](http://stackoverflow.com/questions/18973404/setting-different-bar-color-in-matplotlib-python).  (Remember: The solution to many programming problems is a combination of Google fu and patience.)  The code is
 
 ```python
-ax = pisa['Math'].plot(kind='barh', figsize=(4,13))
+fig, ax = plt.subplots()
+pisa['Math'].plot(ax=ax, kind='barh', figsize=(4,13))
 ax.set_title('PISA Math Score', loc='left')
 ax.get_children()[38].set_color('r')
 ```
@@ -598,12 +629,13 @@ df = df.sort_values(by='order', ascending=False)
 df
 ```
 
-Note that the index here is the country name.  
+Note that the index here is the country name -- that will be our x axis. 
 
 Here's a horizontal bar chart for (total) GDP:
 
 ```python
-ax = df['gdp'].plot(kind='barh', alpha=0.5)
+fig, ax = plt.subplots()
+df['gdp'].plot(ax=ax, kind='barh', alpha=0.5)
 ax.set_title('GDP', loc='left', fontsize=14)
 ax.set_xlabel('Trillions of US Dollars')
 ax.set_ylabel('')
@@ -617,7 +649,8 @@ We think the horizontal bar chart looks better than the usual vertical bar chart
 Here's a similar chart for GDP per capita:  
 
 ```python
-ax = df['gdppc'].plot(kind='barh', color='m', alpha=0.5)
+fig, ax = plt.subplots()
+df['gdppc'].plot(ax=ax, kind='barh', color='m', alpha=0.5)
 ax.set_title('GDP Per Capita', loc='left', fontsize=14)
 ax.set_xlabel('Thousands of US Dollars')
 ax.set_ylabel('')
@@ -629,7 +662,8 @@ What do you see here?  What's the takeway?
 And just because it's fun, here's an example of Tufte-like axes from [Matplotlib examples](http://matplotlib.org/examples/ticks_and_spines/spines_demo_dropped.html):
 
 ```python
-ax = df['gdppc'].plot(kind='barh', color='b', alpha=0.5)
+fig, ax = plt.subplots()
+df['gdppc'].plot(ax=ax, kind='barh', color='b', alpha=0.5)
 ax.set_title('GDP Per Capita', loc='left', fontsize=14)
 ax.set_xlabel('Thousands of US Dollars')
 ax.set_ylabel('')
@@ -648,7 +682,8 @@ This gives us axes on the left and bottom only, separated slightly from the bars
 We finish off with a bubble plot:  a scatter plot in which the size of the dots ("bubbles") varies with a third variable.  (Count them:  we have `x` on the horizontal axis, `y` on the vertical axis, and a third variable represented by the size of the bubble.)  From a technical perspective, this is simply another argument in a scatter plot.  Here's an example in which `x` is GDP per capita, `y` is life expectancy, and the third variable is population:
 
 ```python
-plt.scatter(df['gdppc'], df['life'],    # x,y variables
+fig, ax = plt.subplots()
+ax.scatter(df['gdppc'], df['life'],    # x,y variables
             s=df['pop']/10**6,          # size of bubbles
             alpha=0.5)   
 plt.title('Life expectancy vs. GDP per capita', loc='left', fontsize=14)
@@ -670,7 +705,8 @@ Matplotlib has a lot of basic settings for graphs.  If we find some we like, we 
 We'll start with one of the bar charts we produced with World Bank data:
 
 ```python
-ax = df['gdp'].plot(kind='barh', alpha=0.5)
+fig, ax = plt.subplots()
+df['gdp'].plot(ax=ax, kind='barh', alpha=0.5)
 ax.set_title('GDP', loc='left', fontsize=14)
 ax.set_xlabel('Trillions of US Dollars')
 ax.set_ylabel('')
@@ -692,7 +728,8 @@ Here's another one, for fans of the popular [xkcd webcomic](http://xkcd.com/1235
 
 ```python
 plt.xkcd()
-ax = df['gdp'].plot(kind='barh', alpha=0.5)
+fig, ax = plt.subplots()
+df['gdp'].plot(ax=ax, kind='barh', alpha=0.5)
 ax.set_title('GDP', loc='left', fontsize=14)
 ax.set_xlabel('Trillions of US Dollars')
 ax.set_ylabel('')
