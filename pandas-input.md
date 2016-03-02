@@ -9,7 +9,7 @@
 
 **Applications.**  Income and output of countries, government debt, income by college major, old people, equity returns, George Clooney's movie roles.    
 
-**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas_input.py).  
+**Code.**  [Link](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/bootcamp_pandas-input.py).  
 
 ---
 

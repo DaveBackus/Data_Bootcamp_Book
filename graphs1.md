@@ -363,10 +363,10 @@ The bars here are off center, so we typically include the argument `align='cente
 
 ```python
 plt.bar(us.index, us['gdp'],
-    align='center',
-    alpha=0.65,
-    color='red',
-    edgecolor='green')
+        align='center',
+        alpha=0.65,
+        color='red',
+        edgecolor='green')
 ```
 
 Describe what each of these arguments/parameters does.
@@ -745,6 +745,7 @@ The dataframe `cals` contains the calories in 100 grams of several different foo
 We haven't found many non-technical resources we like, but here are a few:  
 
 * One of the best is Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html).  It's a great starting point for learning new things. Find an example you like, download the code, and adapt it to your needs. We also like the Pandas summary of [dataframe methods](http://pandas.pydata.org/pandas-docs/stable/visualization.html).
+* The documentation of [Pandas plot methods](http://pandas.pydata.org/pandas-docs/stable/visualization.html) is also pretty good.  
 * [Randal Olson](http://www.randalolson.com/blog/) has lots of good examples on his blog.  
 
 If you find others you like, let us know.  
