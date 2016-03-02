@@ -645,6 +645,7 @@ If this doesn't work, go back to the complete path.
 
 Here are some spreadsheet datasets we find interesting.  In each one, we describe the data using the `shape`, `columns`, and `head()` methods.  Where we can, we also produce a simple plot.  
 
+At this point you should **download the code file** for this chapter, linked on the first page.  Save it in your `Data_Bootcamp` directory and open it in Spyder.  That will save you a lot of typing.  
 
 **Penn World Table.**  The [PWT](http://www.rug.nl/research/ggdc/data/pwt/?lang=en), as we call it, is a standard database for comparing the incomes of countries.  It includes annual data for GDP, GDP per person, employment, hours worked, capital, and many other things.  The variables are measured on a comparable basis, with GDP measured in  2005 US dollars.  
 
