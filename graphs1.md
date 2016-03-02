@@ -268,7 +268,6 @@ us.plot.scatter('gdp', 'pce')
 
 The scatter here is not far from a straight line; evidently consumption and GDP go up and down together.  
 
-
 **Exercise.** Enter `us.plot(kind='bar')` and `us.plot.bar()` in separate cells.  Show that they produce the same bar chart.  
 
 **Exercise.**  Add each of these arguments, one at a time, to `us.plot()`:  
@@ -360,22 +359,6 @@ plt.bar(us.index, us['gdp'])
 The bars here are off center, so we typically include the argument `align='center'`.
 
 
-<!--
-**Adding things to graphs.** We just added things to our graph with arguments. We can do more with additional lines of code.  Consider these:
-
-```python
-plt.plot(us.index, us['gdp'])
-
-plt.title('US GDP', fontsize=14, loc='left') # add title
-plt.ylabel('Billions of 2009 USD')           # y axis label
-plt.xlim(2002.5, 2013.5)                     # shrink x axis limits
-plt.tick_params(labelcolor='red')            # change tick labels to red
-plt.legend(['GDP', 'Consumption'])           # more descriptive variable names
-```
-
-In this way we add a title (14-point type, left justified), add a label to the y axis, change the limits of the x axis, make the tick labels red, and use more descriptive names in the legend.  
---> 
-
 **Exercise.** Experiment with
 
 ```python
@@ -398,7 +381,7 @@ Describe what each of these arguments/parameters does.
 
 ## Approach #3:  Create figure objects and apply methods
 
-This approach was msyterious to us at first, but it's now our favorite.  The idea is to generate an object -- two objects, in fact -- and apply methods to them to produce the various elements of a graph:  the data, their axes, their labels, and so on. 
+This approach was mysterious to us at first, but it's now our favorite.  The idea is to generate an object -- two objects, in fact -- and apply methods to them to produce the various elements of a graph:  the data, their axes, their labels, and so on. 
 
 We do this -- as usual -- one step at a time.  
 
@@ -430,32 +413,13 @@ us.plot(ax=axe)                  # ax= looks for axis object, axe is it
 (Note again that we need to create and use the axis object in the same IPython cell.)  
 
 
-<!-- 
-This example uses pyplot's `plot(x,y)` syntax:  
-
-```python
-# create objects
-fig, ax = plt.subplots()
-
-# apply method to ax
-ax.plot(us.index, us['gdp'], linewidth=2, color='magenta')
-```
-
-The last line creates a line plot with the `plot(x,y)` syntax.   
---> 
-
-<!--
-**Exercise.** Create a bar chart of variable `rm` in the `ff` dataframe.  *Bonus points:* Make the bars red.  
---> 
-
-
 **Example.**  Let's do the same with the Fama-French data:  
 
 ```python
 fig, ax = plt.subplots()
 ff.plot(ax=ax, 
-        kind='line',          # line plot 
-        color='magenta',      # line color 
+        kind='line',                 # line plot 
+        color=['blue', 'magenta'],   # line color 
         title='Fama-French market and riskfree returns')
 ```
 
@@ -467,15 +431,6 @@ ff.plot(ax=ax,
 
 **Exercise (somewhat challenging).** Use the same approach to reproduce our earlier histograms of the Fama-French series.  
 
-<!--
-If we want the figure object, we apply a method to the axis object `ax`:
-
-```python
-fig = ax.get_figure()
-```
-
-We don't see ourselves doing this much, but it ties up a loose end.  
--->
 
 ## Let's review
 
@@ -494,7 +449,7 @@ us['gdp'].plot()                   # Approach #1
 
 plt.plot(us.index, us['gdp'])      # Approach #2
 
-fig, ax = plt.subplots()           # Approach #3
+fig, ax = plt.subplots()           # Approach #3 
 us['gdp'].plot(ax=ax)       
 ```
 
@@ -582,7 +537,7 @@ pisa = pd.read_excel(url,
 pisa = pisa.dropna()                   # drop blank lines
 pisa.columns = ['Math', 'Reading', 'Science'] # simplify variable names
 
-fig, ax = subplots()
+fig, ax = plt.subplots()
 pisa['Math'].plot(kind='barh', ax=ax)  # create bar chart
 ```
 
@@ -605,10 +560,10 @@ Here's a more advanced version in which we made the US bar red.  This is ridicul
 fig, ax = plt.subplots()
 pisa['Math'].plot(ax=ax, kind='barh', figsize=(4,13))
 ax.set_title('PISA Math Score', loc='left')
-ax.get_children()[38].set_color('r')
+ax.get_children()[36].set_color('r')
 ```
 
-The `38` comes from experimenting.  We count from the bottom starting with zero.  
+The `36` comes from experimenting.  We count from the bottom starting with zero.  
 
 
 **World Bank data.** Our second example comes from using the World Bank's API, which gives us access to a huge amount of data for countries.  We use it to produce two kinds of graphs and illustrate some tools we haven't seen yet:
@@ -701,10 +656,10 @@ fig, ax = plt.subplots()
 ax.scatter(df['gdppc'], df['life'],     # x,y variables
             s=df['pop']/10**6,          # size of bubbles
             alpha=0.5)   
-plt.title('Life expectancy vs. GDP per capita', loc='left', fontsize=14)
-plt.xlabel('GDP Per Capita')
-plt.ylabel('Life Expectancy')
-plt.text(58, 66, 'Bubble size represents population', horizontalalignment='right',)
+ax.set_title('Life expectancy vs. GDP per capita', loc='left', fontsize=14)
+ax.set_xlabel('GDP Per Capita')
+ax.set_ylabel('Life Expectancy')
+ax.text(58, 66, 'Bubble size represents population', horizontalalignment='right')
 ```
 
 The only odd thing is the `10**6` "scaling" on the second line.  The bubble size is a little tricky to calibrate.  Without the scaling, the bubbles are larger than the graph.  We played around until they looked reasonable.  
@@ -752,7 +707,7 @@ Note the wiggly lines, perfect for suggesting a hand-drawn graph.
 **Exercise.** Try one of these styles:  `ggplot`, `bmh`, `dark_background`, and `grayscale`.  Which ones do you like?  Why?  
 
 
-When you're done, reset the style with these two lines in an IPython cell:
+When we're done, we reset the style with these two lines in an IPython cell:
 
 ```python
 mpl.rcParams.update(mpl.rcParamsDefault)
