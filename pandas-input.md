@@ -124,6 +124,9 @@ The easiest way to get data into a Python program is to read it from a file -- a
 
 We prefer **csv files** ("comma separated values"), a common data format for serious data people.  Their simple structure (entries separated by commas) allows easy and rapid input. They also avoid some of [the problems](http://www.win-vector.com/blog/2014/11/excel-spreadsheets-are-hard-to-get-right/) with translating Excel files.  If we have an Excel spreadsheet, we can always save it as a "CSV (Comma delimited) (*.csv)" file.  Excel will warn us that some features are incompatible with the csv format, but we're generally happy to do it anyway.  Here's an example of a [raw csv file](https://raw.githubusercontent.com/DaveBackus/Data_Bootcamp/master/Code/Python/test.csv) (pretty basic, eh?) and [this is](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/test.csv) (roughly) how it's displayed in Excel.  
 
+<!--
+  https://twitter.com/aejolene/status/700373933141401600
+-->
 
 **Reading csv files.** It's easy to read csv files with Pandas.  We'll read one from our GitHub repository to show how it works. We like to read data from internet sources like this, especially when the data is automatically updated at the source.  That's not the case here, but we'll see how easy it is to get this kind of data into Python.  We read the cleverly-named `test.csv` with the equally clever `read_csv` function in Pandas:
 
@@ -214,13 +217,13 @@ url  = url1 + url2
 df = pd.read_csv(url)
 ```
 
-What happens?  
+What happens?  Why?
 
-**Exercise.** Add the argument `index_col=0` to the `read_csv` statement.  How does `df` change?   
+**Exercise.** Delete the `0` in `test0` and rerun the code.  What happens if you add the argument `index_col=0` to the `read_csv` statement?  How does `df` change?   
 
 **Exercise.** In the `read_excel` code, change the file extension at the end of `url2` from `.xls` to `.xlsx`.  What does the new code produce?  
 
-**Exercise.** Adapt the `read_csv` code to treat the numbers 1 and 6 as missing.  
+**Exercise.** Adapt the `read_csv` code to treat the numbers 1 and 6 as missing.  *Hint:* See the example a page or so back.  
 
 
 ## Properties of dataframes 
@@ -381,7 +384,7 @@ Here `axis=1` refers to columns; `axis=0` refers to rows.
 
 **Exercise.** How would you drop the variable `z`?  
 
-**Exercise (challenging).** Use a list comprehension to change the variable names from `['x1', 'x2', 'x3']` to `['y1', 'y2', 'y3']`.  *Hint:*  What does the method `.title()` do to a string?  
+**Exercise (very challenging).** Use a list comprehension to change the variable names from `['x1', 'x2', 'x3']` to `['y1', 'y2', 'y3']`.  *Hint:*  What does `s.replace('x', 'y')` do to the string `s`?  
 
 
 ## Dataframe methods 
@@ -479,7 +482,9 @@ Let's put what we've learned to work:
 
 **Exercise.** Copy the dataframe `df` into an empty spreadsheet on your computer using the `to_clipboard()` method.  
 
+<!--
 **Exercise.** The statement `print(df.mean())` gives us the means of each variable in a column.  How would we produce the same output as a row? 
+--> 
 
 **Exercise.**  Produce a bar chart of `df` with the statement 
 
