@@ -742,9 +742,11 @@ The dataframe `cals` contains the calories in 100 grams of several different foo
 
 ## Resources
 
-We haven't found many non-technical resources we like, but here are a few:  
+A mercifully short [markdown cheatsheet](http://commonmark.org/help/).  
 
-* One of the best is Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html).  It's a great starting point for learning new things. Find an example you like, download the code, and adapt it to your needs. We also like the Pandas summary of [dataframe methods](http://pandas.pydata.org/pandas-docs/stable/visualization.html).
+We haven't found many non-technical resources on Matplotlib we like, but these are pretty good:  
+
+* One of the best is Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html).  It's a good starting point for learning new things. Find an example you like, download the code, and adapt it to your needs. We also like the Pandas summary of [dataframe methods](http://pandas.pydata.org/pandas-docs/stable/visualization.html).
 * The documentation of [Pandas plot methods](http://pandas.pydata.org/pandas-docs/stable/visualization.html) is also pretty good.  
 * [Randal Olson](http://www.randalolson.com/blog/) has lots of good examples on his blog.  
 

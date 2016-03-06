@@ -233,7 +233,7 @@ nan = float?
 How they work, resampling... 
 
 
-
+http://chrisalbon.com/python/pandas_resample_by_time.html
 
 
 ## References 

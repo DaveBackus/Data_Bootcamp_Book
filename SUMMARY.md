@@ -8,10 +8,10 @@
 * [Python fundamentals 2](py-fun2.md)  
 * [Pandas 1:  Data input](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
-* [Pandas 2:  Cleaning data](pandas-clean.md)
 
 <!-- 
 * [Practice](practice.md)
+* [Pandas 2:  Cleaning data](pandas-clean.md)
 * [Pandas 3:  Shaping data](pandas-shape.md)
 * [Pandas 4:  Grouping data](pandas-group.md)
 * [Pandas 5:  Merging data](pandas-merge.md)
