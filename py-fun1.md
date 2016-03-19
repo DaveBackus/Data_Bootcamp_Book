@@ -13,7 +13,13 @@
 
 ---
 
-We're now ready to explore the rudiments of Python.  We're going to **jump right in** to the deep end of the pool.  For a couple weeks, you may feel like you've been dropped in a foreign country where you don't speak the language.  You'll hear terms like "strings", "floats", "objects", "methods", and "tab completion".  Don't panic, it's just jargon.  If you put some effort into this over the next 2-4 weeks, you'll be fine.  And ask questions.  Really. **Ask lots of questions.**
+We're now ready to explore the rudiments of Python.  We're going to **jump right in** to the deep end of the pool.  For a couple weeks, you may feel like you've been dropped in a foreign country where you don't speak the language.  You'll hear terms like "strings", "floats", "objects", "methods", and "tab completion".  Some of these are words you know, but even so, they tend not to mean what you think they mean.  (Insert [Princess Bride](http://www.imdb.com/title/tt0093779/quotes?item=qt0482717) joke.)
+
+<!--
+https://www.youtube.com/watch?v=qhXjcZdk5QQ	
+-->
+
+Don't panic, it's just jargon.  If you put some effort into this over the next 2-4 weeks, you'll be fine.  And ask questions.  Really. **Ask lots of questions.**
 
 <!-- 
 This is Python, of course, but similar concepts show up in pretty much any modern programming language.  We aren't ready yet to do anything of real interest, but the same logic and concepts will reappear when we start working with data.  
@@ -234,7 +240,7 @@ The same approaches work for other functions.  We use them both a lot.  If they 
 
 ## Strings 
 
-We often work with non-numerical data, collections of characters that might include letters, numbers, or other symbols.  Such things show up in a lot in data work, as variable names (GDP, income, volatility) and even as data (country or customer names, for example).  We refer these as **strings**. No, not the stuff we tie up packages with, but a "string" of characters like letters or numbers.  It's one of many mysterious uses of ordinary words we'll run across as we learn to code.  For more on this one, see [here](http://stackoverflow.com/questions/880195/the-history-behind-the-definition-of-a-string).  
+We often work with non-numerical data, collections of characters that might include letters, numbers, or other symbols.  Such things show up in a lot in data work, as variable names (GDP, income, volatility) and even as data (country or customer names, for example).  We refer these as **strings**.  This doesn't mean what we think it means.  No, not the stuff we tie up packages with, but a "string" of characters like letters or numbers.  It's one of many mysterious uses of ordinary words we'll run across as we learn to code.  For more on this one, see [here](http://stackoverflow.com/questions/880195/the-history-behind-the-definition-of-a-string).  
 
 We create strings by putting characters between quotation marks: 'Chase', "Spencer", 'Sarah', "apple", and even '12' are all strings.  Single and double quotes both work.  
 

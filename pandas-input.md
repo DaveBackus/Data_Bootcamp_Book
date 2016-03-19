@@ -874,7 +874,7 @@ https://github.com/TomAugspurger/PyDataSeattle/blob/master/notebooks/3.%20Indexi
 ## Data input 3:  APIs
 
 
-APIs are "application program interfaces".  That's a mouthful.  A dataset with an API allows access through some method other than a spreadsheet.  The API is the set of rules for accessing the data.  The bad news is the jargon.  The good news is that people have written easy-to-use code to access the APIs.  We don't need to understand the API, we just use the code and say thank you.   
+APIs are "application program interfaces".  That's a mouthful.  A dataset with an API allows access through some method other than a spreadsheet.  The API is the set of rules for accessing the data.  The bad news is the jargon.  The good news is that people have written easy-to-use code to access the APIs.  We don't need to understand the API, we just use the code -- and say thank you!    
 
 The Pandas package has what they call a set of [Remote Data Access tools](http://pandas.pydata.org/pandas-docs/stable/remote_data.html).  They break now and then, typically when the underlying data changes, but when they work they're great.  This part of Pandas is undergoing a transition, but for now this is how it works.  
 
@@ -916,14 +916,14 @@ from pandas.io import wb            # World Bank api
 var = ['NY.GDP.PCAP.PP.KD']         # GDP per capita 
 iso = ['USA', 'FRA', 'JPN', 'CHN', 'IND', 'BRA', 'MEX']  # country codes 
 year = 2013
-wb = wb.download(indicator=var, country=iso, start=year, end=year)
+wbdf = wb.download(indicator=var, country=iso, start=year, end=year)
 ```
 
-If we look at the dataframe `wb`, we see that it has a double index, `country` and `year`.  By design, all of the data is for 2013, so we kill off that index with the `reset_index` method and plot what's left as a horizontal bar chart:  
+If we look at the dataframe `wbdf`, we see that it has a double index, `country` and `year`.  By design, all of the data is for 2013, so we kill off that index with the `reset_index` method and plot what's left as a horizontal bar chart:  
 
 ```python
-wb = wb.reset_index(level='year', drop=True)
-wb.plot(kind='barh') 
+wbdf = wbdf.reset_index(level='year', drop=True)
+wbdf.plot(kind='barh') 
 ```
 
 (Trust us on the `drop=True`.  We'll come back to it in a couple weeks.)

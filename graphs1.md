@@ -276,7 +276,7 @@ The scatter here is not far from a straight line; evidently consumption and GDP 
 * `subplots=True`
 * `sharey=True`
 * `figsize=(3,6)`
-* `xlim=(0,16000)`
+* `ylim=(0,16000)`
 
 What do they do?
 
@@ -481,7 +481,7 @@ In this way we add a title (14-point type, left justified), add a label to the y
 
 **Exercise.** Use the `set_xlabel()` method to add an x-axis label.  What would you choose?  Or would you prefer to leave it empty?  
 
-**Exercise.** Enter `ax.set_legend?` to access the documentation for the `set_legend` method.  What options appeal to you?  
+**Exercise.** Enter `ax.legend?` to access the documentation for the `legend` method.  What options appeal to you?  
 
 **Exercise.**  Change the line width to 2 and the line colors to blue and magenta.  *Hint:*  Use `us.plot?` to get the documentation.  
 

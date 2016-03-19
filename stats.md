@@ -36,6 +36,11 @@ http://statweb.stanford.edu/~tibs/stat315a/glossary.pdf
 **Simpson's paradox**
 
 
+## Multivariate regression
+
+https://matloff.wordpress.com/2016/03/07/after-150-years-the-asa-says-no-to-p-values/
+
+
 # References 
 
 http://sebastianraschka.com/faq/index.html

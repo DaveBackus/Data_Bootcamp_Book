@@ -48,6 +48,7 @@ http://pbpython.com/web-scraping-mn-budget.html
 
 http://savvastjortjoglou.com/nba-shot-sharts.html
 http://www.gregreda.com/tag/scraping.html 
+http://www.gregreda.com/2013/03/03/web-scraping-101-with-python/
 
 https://blog.scrapinghub.com/2016/02/24/scrapy-tips-from-the-pros-february-2016-edition/
 
