@@ -264,7 +264,7 @@ else:
 The `else` statement adds the second branch to the decision tree:  what to do if the condition is false.  Try this with `x = 4` and `x = 7` to see both branches in action.   
 
 
-**Exercise.** Take the names `name1` and `name2`, boht of them string.  Write a program using `if` and `else` that prints the name that comes first in alphabetical order.  Test your program with `name1 = 'Dave'` and `name2 = 'Glenn'`.  
+**Exercise.** Take the names `name1` and `name2`, both of them strings.  Write a program using `if` and `else` that prints the name that comes first in alphabetical order.  Test your program with `name1 = 'Dave'` and `name2 = 'Glenn'`.  
 
 
 ## Slicing strings and lists 
@@ -778,6 +778,7 @@ Additional resources:
 * The official [Python Tutorial](https://docs.python.org/3.4/tutorial/controlflow.html) has a nice introduction to "control flow language" that includes comparisons, conditional statements, and loops.  
 * [CodingBat](http://codingbat.com/python) has a great collection of exercises.  Significantly more demanding than ours.  Runs online.  
 * Udacity has a free [Introduction to Computer Science](https://www.udacity.com/courses/cs101) course that covers Python from a more technical perspective.  Recommended for people who want to understand the structure and logic of the language.  
+* This is way [more about comprehensions](https://gist.github.com/bearfrieze/a746c6f12d8bada03589) than you ever wanted to know, but it's so beautifully done you might want to take a look.  
 
 One last one, but only if you're curious about floating point numbers.  Ok, that's approximately no one.  Try this anyway and think about what's going on:
 

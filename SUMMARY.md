@@ -8,6 +8,8 @@
 * [Python fundamentals 2](py-fun2.md)  
 * [Pandas 1:  Data input](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
+* [Pandas 2:  Cleaning and shaping data](pandas-clean.md)
+* [Updating Python:  Conda and Pip](conda-pip.md)
 
 <!-- 
 * [Practice](practice.md)

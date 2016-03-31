@@ -9,14 +9,25 @@
 
 **Applications.** Entry poll, Chipotle, World Economic Outlook.
 
-**Code.** [Link](https://github.com/DaveBackus/Data_Bootcamp/blob/master/Code/Python/bootcamp_pandas_clean.py).  
+**Code.** Link.  
 
 ---
 
 **UNDER CONSTRUCTION**
 
+Data almost never comes in the form we want.  There are more problems than we can count, but here are a few we've run across:
 
-bla bla 
+* Numerical entries are contaminated by commas (thousands) and dollar signs, leading Pandas to interpret them as strings.  
+* The row or column labels are contaminated.  In one example, country names included numbers, indicating footnotes in the source spreadsheet:  `Canada 1`, `Chile 2`, and so on. 
+* Missing values are marked in erratic ways.  The most treacherous example we've seen marked an elipsis:  ...  You might think we could represent that by the string `'...'`, but in fact it was a single character, a unicode elipsis.  How did we figure that out?  We used the `len()` function and found it had length one.  
+* Poll data comes as text that is not easily enumerated: number of people mentioning salary as an issue, for example.  
+* We want to select certain variables or observations from a larger set.  
+* Variables run across rows, rather than down columns.  
+* Columns and rows are mixed up in some way other than how we want them.  
+
+We'll surely see more than this as we proceed, but that gives us a good start.  
+
+We describe solutions to the first four issues as data **cleaning**.  The next one as **selection**.  And the last two as **shaping**.  We address them in turn, using examples from datasets we use ourselves.  
 
 
 
@@ -24,17 +35,23 @@ bla bla
 
 * Pandas.  Python's data package.  
 
-* Dataframes.  A dataframe `df` is a data structure that includes a table of data, like a spreadsheet, plus row labels (`df.index`) and column labels (`df.columns`).  Typically columns are variables and rows are observations.  
+* Dataframes.  A dataframe `df` is a data structure that includes a table of data, similar to a spreadsheet, plus row labels (`df.index`) and column labels (`df.columns`).  Typically columns are variables and rows are observations.  
 
 * Dataframe methods.  Some of our favs are `shape`, `head` and `tail`, `dtypes`, `rename`, `drop`, `set_index`, `T` (transpose), and `plot`.  Remind yourself what they do -- or look them up.  
 
+* Series.  A series is a single variable, such as a column of a dataframe:  `df['variable']`.  Similar to a dataframe, but the available methods differ a little.  
+
+<!--
+Some of these are attributes 
+-->
+
 * List comprehensions.  A clever feature of Python that lets us do implicit loops over lists.  It's particularly useful for refining variable names.  Example:  If the list of variable names is `names = ['variable1', 'variable2']`, we can capitalize them with the list comprehension
 
-```python
-[name.title() for name in names]
-```  
+   ```python
+   [name.title() for name in names]
+   ```  
 
-(The `title` method takes a string and capitalizes the first letter -- what's called "title case.")
+   (The `title` method takes a string and capitalizes the first letter -- what's called "title case.")
 
 
 **Exercise.** Consider the dataframe defined by 
@@ -52,7 +69,7 @@ af = pd.DataFrame(data)
 * What are its dtypes?  What does this mean?  
 * Set the index to `'Country'`.  
 * Change the name of the first variable to `'elect'`.  
-* Use the `plot` method to produce a bar chart of the whole dafaframe.  What does it use as the x axis? 
+* Use the `plot` method to produce a bar chart of the whole dafaframe.  What does it use as its x axis? 
 
 
 <!--
@@ -155,7 +172,7 @@ weo = pd.read_csv(url, sep='\t') #, thousands=',', na_values=['n/a', '--'])
 There's a lot here, so we carve out some pieces and print them: 
 
 ```python
-small = weo[list(weo[list(range(12))])]     # grab first 12 variables 
+small = weo[list(weo[list(range(12))])]     # grab first 12 columns 
 print('Variable dtypes:\n', small.dtypes, sep='')
 print('\nFirst 9 variables:\n', small[list(range(9))].head(), sep='')
 print('\nNext 3 variables (data):\n', small[list(range(9,12))].head(), sep='')
@@ -166,40 +183,18 @@ We see that the first nine variables are descriptions:  country, country code, v
 * Missing values need to be identified.  
 * Large numbers have commas in them that lead Python to label variables as objects.  (This is true, but it takes some effort to find examples.)  
 
-Both can be handled in the read statement by deleting the hash, so that's what we'll do.  But there's another one that's not so easy:  
+Both can be handled in the read statement by deleting the hash in the read statement, so that's what we'll do.  But there's another one that's not so easy:  
 
 * Variables run across rows, rather than down columns.  We see this in the column labels:  '1980', '1981', etc.  (And yes, dates are treated as strings here.  Try `weo['1980']`.) The plot method assumes observations run down columns, so we'll have to switch the rows and columns.  
 
 
-**Bond yields.**  Convert to quarterly so we can graph with GDP growth.  Get from FRED.  
+## Selection 
 
+Suppose we want to choose some variables or observations, but not others.  That's referred to variously as selection, subsetting, slicing, and filtering.  We'll use the term **selection* since it seems to mean what it sounds like.  We'll ignore selection based on row and column labels or numbers, which we don't use all that much.  
 
-## ??
-
-Selection = slicing = filtering...  
-
-
-## Choosing variables
-
-Boolean
+**Selecting a list of variables.** 
 
 isin 
-
-
-## Choosing observations 
-
-
-
-## Switching rows and columns 
-
-
-
-
-## Renaming indexes 
-
-Apply list comprehension to OECD doc data...  
-
-
 
 
 
@@ -217,23 +212,51 @@ extract()
 * astype 
 * Strip off excess in indexes (OECD healthcare)
 
-astype
+astype 
+
+
+
+## Renaming indexes 
+
+Apply list comprehension to OECD doc data...  
 
 
 
 
+
+## Switching rows and columns 
+
+transpose 
+
+pivot 
+
+
+
+
+
+<!--
 ## Missing values 
 
 nan = float?  
+--> 
 
 
+<!-- 
 ## Dates 
-
 
 How they work, resampling... 
 
-
 http://chrisalbon.com/python/pandas_resample_by_time.html
+--> 
+
+## Multi-indexes 
+
+
+
+## Stacking and unstacking 
+
+
+
 
 
 ## References 

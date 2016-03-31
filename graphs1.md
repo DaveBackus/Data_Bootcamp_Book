@@ -152,7 +152,7 @@ We need to do a few things before we're ready to produce graphs.
 import sys                             # system module
 import pandas as pd                    # data package
 import matplotlib as mpl               # graphics package
-import matpotlib.pyplot as plt         # pyplot module
+import matplotlib.pyplot as plt         # pyplot module
 import datetime as dt                  # date and time module
 
 # check versions (overkill, but why not?)
@@ -748,6 +748,7 @@ We haven't found many non-technical resources on Matplotlib we like, but these a
 
 * One of the best is Matplotlib's [gallery of examples](http://matplotlib.org/gallery.html).  It's a good starting point for learning new things. Find an example you like, download the code, and adapt it to your needs. We also like the Pandas summary of [dataframe methods](http://pandas.pydata.org/pandas-docs/stable/visualization.html).
 * The documentation of [Pandas plot methods](http://pandas.pydata.org/pandas-docs/stable/visualization.html) is also pretty good.  
+* The SciPy lectures are good overall.  The [Matplotlib section](http://www.scipy-lectures.org/intro/matplotlib/matplotlib.html) focusses on `plot(x,y)`, which wouldn't be our choice, but the content is very good.  
 * [Randal Olson](http://www.randalolson.com/blog/) has lots of good examples on his blog.  
 
 If you find others you like, let us know.  
