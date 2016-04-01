@@ -1,4 +1,4 @@
-# Pandas 2: Cleaning data  
+# Pandas 2: Cleaning and shaping data  
 
 ---
 **Overview.**  The dirty secret of data work is that data almost never comes in the form we want.  Here we run through a variety of methods for taking messy data and turning it into clean, nicely formatted data.  
@@ -256,7 +256,7 @@ http://chrisalbon.com/python/pandas_resample_by_time.html
 ## Stacking and unstacking 
 
 
-
+## Melt 
 
 
 ## References 

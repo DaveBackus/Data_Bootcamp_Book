@@ -1,4 +1,4 @@
-# Pandas 4: Grouping data  
+# Pandas 3: Summary statistics 
 
 ---
 **Overview.**  stats, summaries, grouping 
@@ -14,15 +14,13 @@
 ---
 
 
-## Reminders
+mean etc 
+describe
+value counts 
 
-DataFrames:  index, columns 
+groupby 
 
-Want operator 
-
-* Chipotle 
-* Yahoo finance 
-
+https://www.dropbox.com/s/7gepaazaoxgkllm/AirBnb%
 
 ## Describing variables 
 
@@ -33,5 +31,4 @@ Want operator
 
 
 * Groupby:  http://pandas.pydata.org/pandas-docs/stable/groupby.html
-* stack and unstack:  http://pandas.pydata.org/pandas-docs/stable/reshaping.html
 
