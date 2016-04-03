@@ -8,11 +8,9 @@
 * [Python fundamentals 2](py-fun2.md)  
 * [Pandas 1:  Data input](pandas-input.md)
 * [Python graphics: Matplotlib fundamentals](graphs1.md)
-* [Pandas 2:  Cleaning and shaping data](pandas-clean.md)
 * [Updating Python:  Conda and Pip](conda-pip.md)
 
 <!-- 
-* [Practice](practice.md)
 * [Pandas 2:  Cleaning data](pandas-clean.md)
 * [Pandas 3:  Shaping data](pandas-shape.md)
 * [Pandas 4:  Grouping data](pandas-group.md)
@@ -22,6 +20,7 @@
 * [Business cycle indicators](indicators.md)
 * [Describing data 1:  Distributions of things](random.md)
 * [Other cool stuff](other.md)
+* [Practice](practice.md)
 * [Glossary](glossary.md)
 --> 
 

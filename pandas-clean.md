@@ -1,11 +1,11 @@
-# Pandas 2: Cleaning and shaping data  
+# Pandas 2: Cleaning data  
 
 ---
 **Overview.**  The dirty secret of data work is that data almost never comes in the form we want.  Here we run through a variety of methods for taking messy data and turning it into clean, nicely formatted data.  
 
-**Python tools.** Choosing variables and observations, changing variable names, changing variable values, dates. 
+**Python tools.** Changing variable values and types, selecting variables and observations, transposing and pivoting data.  
 
-**Buzzwords.**  Selection, filtering, string methods, missing values.  
+**Buzzwords.**  Selection, filtering, pivoting; **want operator**.  
 
 **Applications.** Entry poll, Chipotle, World Economic Outlook.
 
@@ -15,12 +15,11 @@
 
 **UNDER CONSTRUCTION**
 
-Data almost never comes in the form we want.  There are more problems than we can count, but here are a few we've run across:
+Data rarely never comes in the form we want.  There are more problems than we can count, but here are a few we've run across:
 
 * Numerical entries are contaminated by commas (thousands) and dollar signs, leading Pandas to interpret them as strings.  
 * The row or column labels are contaminated.  In one example, country names included numbers, indicating footnotes in the source spreadsheet:  `Canada 1`, `Chile 2`, and so on. 
 * Missing values are marked in erratic ways.  The most treacherous example we've seen marked an elipsis:  ...  You might think we could represent that by the string `'...'`, but in fact it was a single character, a unicode elipsis.  How did we figure that out?  We used the `len()` function and found it had length one.  
-* Poll data comes as text that is not easily enumerated: number of people mentioning salary as an issue, for example.  
 * We want to select certain variables or observations from a larger set.  
 * Variables run across rows, rather than down columns.  
 * Columns and rows are mixed up in some way other than how we want them.  
@@ -87,26 +86,9 @@ One more reminder:  Download the code file for this chapter and save it in your 
 
 ## The "want operator"
 
-When we're writing code, it's essential that we keep our goals -- our "wants" -- in mind.  In the words of a colleague, we apply the **want operator**.  By which we mean:  Start with what we want, then figure out how to get there.  
+When we're writing code, it's essential that we keep our goals -- our "wants" -- in mind.  In the words of a colleague, we need to apply the **want operator**.  By which we mean:  Start with what we want, then figure out how to get there.  
 
 Here are some examples of data that comes in a form that's not as useful as it might be.  
-
-**Entry poll.**  We collected your responses to a short poll at the start of the term.  Google records the answers in a spreadsheet.  Each column is a question and each row is a responder (anonymous).  So far so good.  But the column labels consist of the whole question, so they're a bit unwieldy.  And the responses consist of the whole response, which is also a bit unwieldy.  
-
-What, then, are our wants?  We want to trim both the column labels and the responses.  
-
-Here we see it in action:  
-
-```python
-import pandas as pd
-url1 = 'http://pages.stern.nyu.edu/~dbackus/Data/'
-url2 = 'Data-Bootcamp-entry-poll_s16.csv'
-url = url1 + url2 
-ep = pd.read_csv(url, header=0) 
-print('Dimensions:', ep.shape)
-print('\nData types:\n', ep.dtypes, sep='')
-```
-
 
 **Chipotle.**  The [New York Times](http://www.nytimes.com/interactive/2015/02/17/upshot/what-do-people-actually-order-at-chipotle.html) wrote an article about the number of calories in a typical Chipotle order.  Even better, they posted their data on the web.   In their data, every row describes the purchase of a specific item:  the item, the quantity, the price, and so on.  Orders typically consists of multiple items.  
 
@@ -137,6 +119,23 @@ dtype: object
 
 This tells us, among other things, that the variable `item_price` has dtype object.  That means, specifically, that it's not a number.  The second print statement lists the first five entries, where we see the culprit:  the dollar signs ($).  Our want is to eliminate the dollar sign and convert the variable to a float, which we can then use to calculate the price of an order.  
 
+**Entry poll.**  We collected your responses to a short poll at the start of the term.  Google records the answers in a spreadsheet.  Each column is a question and each row is a responder (anonymous).  So far so good.  But the column labels consist of the whole question, so they're a bit unwieldy.  And the responses consist of the whole response, which is also a bit unwieldy.  
+
+What, then, are our wants?  We want to trim both the column labels and the responses.  
+
+Here we see it in action:  
+
+```python
+import pandas as pd
+url1 = 'http://pages.stern.nyu.edu/~dbackus/Data/'
+url2 = 'Data-Bootcamp-entry-poll_s16.csv'
+url = url1 + url2 
+ep = pd.read_csv(url, header=0) 
+print('Dimensions:', ep.shape)
+print('\nData types:\n', ep.dtypes, sep='')
+```
+
+
 
 **OECD healthcare stats.** The goal here is to produce a bar chart for a recent year of the number of doctors (per thousand population) for a selection of countries.  We read in the data with 
 
@@ -155,7 +154,7 @@ print(docs.head())
 
 Here we have a number of problems that we want to correct:
 
-* The data consists of numbers (number of doctors per thousand people) but the dtype is mostly object.  We can't plot that.   
+* The data consists of numbers (number of doctors per thousand people) but the dtype is mostly object.  We can't plot that, we need numbers.   
 * We want to choose data for a specific recent date (2013?) and a subset of countries (Canada, France, Germany, Japan, the UK, and the US).  
 * The index (country name) includes an integer that comes from a footnote in the file.  The plot method will use the index to label the graph and we'd prefer not to have footnotes messing it up.  
 
@@ -181,11 +180,20 @@ print('\nNext 3 variables (data):\n', small[list(range(9,12))].head(), sep='')
 We see that the first nine variables are descriptions:  country, country code, variable, variable code, variable description, units, and so on.  The next three are the start of the data, which continues to 2015 and beyond.  A close examination reveals some problems: 
 
 * Missing values need to be identified.  
-* Large numbers have commas in them that lead Python to label variables as objects.  (This is true, but it takes some effort to find examples.)  
+* Large numbers have commas in them that lead Pandas to give variables the dtype object.  (This is true, but it takes some effort to find examples.)  
 
 Both can be handled in the read statement by deleting the hash in the read statement, so that's what we'll do.  But there's another one that's not so easy:  
 
 * Variables run across rows, rather than down columns.  We see this in the column labels:  '1980', '1981', etc.  (And yes, dates are treated as strings here.  Try `weo['1980']`.) The plot method assumes observations run down columns, so we'll have to switch the rows and columns.  
+
+
+## String methods 
+
+Here the issue is that we tring data that we want to change in some way.  
+
+startswith()
+extract()
+
 
 
 ## Selection 
@@ -197,11 +205,6 @@ Suppose we want to choose some variables or observations, but not others.  That'
 isin 
 
 
-
-## String methods 
-
-startswith()
-extract()
 
 
 
