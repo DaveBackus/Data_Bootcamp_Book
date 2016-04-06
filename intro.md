@@ -86,7 +86,7 @@ As you work your way up the learning curve, keep this advice in mind:
 **Make friends.**  Coding is hard to learn on your own.  A second pair of eyes is indespensible.  So work with friends, and make new friends who know how to code.  Intense coding sessions are a great way to develop relationships.  
 -->
 
-**Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  
+**Ask for help.**  If you get stuck, ask for help -- from friends, from your Bootcamp classmates (post a problem), or from us (the teachers of the course).  We love [this one](http://rewritingthecode.com/2016/03/27/hello-world/):  "I failed my first computer class miserably. ... The next time something clicked -- I made the decision to raise my hand in class and admit publicly that I was completely lost. To my surprise, I found that not only the teacher, but also other students in class were eager to help." 
 
 **Work on your [Google fu](http://english.stackexchange.com/questions/19967/what-does-google-fu-mean).**  With a little help from Google, you will find that many of your questions have been asked before.  Even better, they have been answered.  One way to find them:  Google something like "python [problem]." Don't forget the problem; without it, you get pages and pages of snakes.   
 
